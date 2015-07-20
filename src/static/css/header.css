@@ -1,0 +1,255 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+.sprites(@spritesheet-sprites);
+*/
+.nb88 .header {
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 11;
+  overflow: hidden;
+}
+.nb88 .header .container:before {
+  content: '';
+  background: url("../imgs/icon/top_sp.png");
+  width: 28px;
+  height: 41px;
+  position: absolute;
+  left: 331px;
+  top: 69px;
+}
+.nb88 .container {
+  width: 1200px;
+  min-width: 1200px;
+}
+.nb88 .logo {
+  float: left;
+  width: 250px;
+  height: 110px;
+}
+.nb88 .logo a {
+  display: none;
+  font-size: 0px;
+  background: url("../imgs/icon/logo.png");
+  /*.sprite(@logo);*/
+  width: 250px;
+  height: 110px;
+}
+.nb88 .header-right {
+  float: left;
+  width: 950px;
+}
+.nb88 .sel-country {
+  width: 45px;
+  height: 20px;
+  background: #e8e8e6;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  position: relative;
+  cursor: pointer;
+  float: left;
+}
+.nb88 .country-img {
+  background: url("../imgs/icon/china.png") no-repeat;
+  width: 16px;
+  height: 11px;
+  position: relative;
+  top: 4px;
+  left: 7px;
+}
+.nb88 .country-triangle {
+  background: url("../imgs/icon/triangle.png") no-repeat;
+  width: 7px;
+  height: 4px;
+  position: absolute;
+  left: 30px;
+  top: 8px;
+}
+.nb88 .header-triangle {
+  background: url("../imgs/icon/top_triangle.png") no-repeat;
+  float: left;
+  width: 25px;
+  height: 30px;
+  margin-left: 80px;
+}
+.nb88 .header-time {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  width: 795px;
+  background: #1bb999;
+  position: relative;
+}
+.nb88 .header-time:before {
+  content: '';
+  height: 30px;
+  position: absolute;
+  right: -1000px;
+  width: 1000px;
+  background: #1bb999;
+}
+.nb88 .header-time .time {
+  color: #ffffff;
+  font-size: 12px;
+  float: left;
+  display: none;
+}
+.nb88 .header-op {
+  float: right;
+}
+.nb88 .header-op .login {
+  color: #ffffff;
+  float: left;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.nb88 .header-op .login.active {
+  background: #00978e;
+}
+.nb88 .header-op .reg {
+  color: #ffffff;
+  float: left;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.nb88 .header-menu {
+  margin-left: 150px;
+  font-size: 13px;
+}
+.nb88 .header-menu li {
+  float: left;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 120px;
+}
+.nb88 .header-menu li a {
+  color: #333333;
+  width: 80px;
+  height: 80px;
+  display: block;
+  position: relative;
+}
+.nb88 .header-menu li a:hover,
+.nb88 .header-menu li a.active {
+  background: url("../imgs/menu_fix.png") no-repeat bottom;
+}
+.nb88 .header-menu span {
+  display: block;
+  position: absolute;
+  left: 26px;
+  top: 17px;
+}
+.nb88 .header-menu .icon-home span {
+  background: url("../imgs/icon/home.png") no-repeat center;
+  width: 27px;
+  height: 25px;
+}
+.nb88 .header-menu .icon-home.active span,
+.nb88 .header-menu .icon-home:hover span {
+  background: url("../imgs/icon/home_active.png") no-repeat center;
+}
+.nb88 .header-menu .icon-mobile span {
+  background: url("../imgs/icon/mobile.png") no-repeat center;
+  width: 18px;
+  height: 26px;
+  left: 29px;
+}
+.nb88 .header-menu .icon-mobile.active span,
+.nb88 .header-menu .icon-mobile:hover span {
+  background: url("../imgs/icon/mobile_active.png") no-repeat center;
+}
+.nb88 .header-menu .icon-sport span {
+  background: url("../imgs/icon/sport.png") no-repeat center;
+  width: 26px;
+  height: 26px;
+}
+.nb88 .header-menu .icon-sport.active span,
+.nb88 .header-menu .icon-sport:hover span {
+  background: url("../imgs/icon/sport_active.png") no-repeat center;
+}
+.nb88 .header-menu .icon-casino span {
+  background: url("../imgs/icon/really.png") no-repeat center;
+  width: 26px;
+  height: 26px;
+}
+.nb88 .header-menu .icon-casino.active span,
+.nb88 .header-menu .icon-casino:hover span {
+  background: url("../imgs/icon/really_active.png") no-repeat center;
+}
+.nb88 .header-menu .icon-games span {
+  background: url("../imgs/icon/tiger.png") no-repeat center;
+  width: 26px;
+  height: 21px;
+  top: 21px;
+}
+.nb88 .header-menu .icon-games.active span,
+.nb88 .header-menu .icon-games:hover span {
+  background: url("../imgs/icon/tiger_active.png") no-repeat center;
+}
+.nb88 .header-menu .icon-lottery span {
+  background: url("../imgs/icon/lottery.png") no-repeat center;
+  width: 26px;
+  height: 26px;
+}
+.nb88 .header-menu .icon-lottery.active span,
+.nb88 .header-menu .icon-lottery:hover span {
+  background: url("../imgs/icon/lottery_active.png") no-repeat center;
+}
+.nb88 .header-menu .icon-pocker span {
+  background: url("../imgs/icon/pocker.png") no-repeat center;
+  width: 32px;
+  height: 25px;
+}
+.nb88 .header-menu .icon-pocker.active span,
+.nb88 .header-menu .icon-pocker:hover span {
+  background: url("../imgs/icon/pocker_active.png") no-repeat center;
+}
+.nb88 .header-menu .icon-promotion span {
+  background: url("../imgs/icon/promotion.png") no-repeat center;
+  width: 25px;
+  height: 26px;
+}
+.nb88 .header-menu .icon-promotion.active span,
+.nb88 .header-menu .icon-promotion:hover span {
+  background: url("../imgs/icon/promotion_active.png") no-repeat center;
+}
+.nb88 .header-menu .icon-vip span {
+  background: url("../imgs/icon/vip.png") no-repeat center;
+  width: 22px;
+  height: 21px;
+  top: 21px;
+}
+.nb88 .header-menu .icon-news span {
+  background: url("../imgs/icon/news.png") no-repeat center;
+  width: 26px;
+  height: 22px;
+  top: 21px;
+}

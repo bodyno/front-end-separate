@@ -1,0 +1,226 @@
+@import "var";
+
+.nb88{
+  .promotion-menu{
+    float: left;
+    width: 150px;
+    padding-left: 100px;
+    padding-top: 40px;
+  }
+  .promotion-menu li{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #1bb999;
+    text-align: center;
+    line-height: 120px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+    &.active{
+      background: #cc6600;
+    }
+    & a{
+      color:#fff;
+    }
+    span{
+      position: absolute;
+      left: 27px;
+      top: 21px;
+    }
+    .p-man span{
+      background: url("../imgs/promotion/icon/icon-man.png") no-repeat;
+      width: 26px;
+      height: 23px;
+    }
+    .p-spec span{
+      background: url("../imgs/promotion/icon/icon-star.png") no-repeat;
+      width: 26px;
+      height: 24px;
+    }
+    .p-sport span{
+      background: url("../imgs/promotion/icon/icon-sport.png") no-repeat;
+      width: 26px;
+      height: 26px;
+    }
+    .p-fun span{
+      background: url("../imgs/promotion/icon/icon-fun.png") no-repeat;
+      width: 24px;
+      height: 26px;
+      top: 18px;
+      left: 29px;
+    }
+    .p-games span{
+      background: url("../imgs/promotion/icon/icon-games.png") no-repeat;
+      width: 26px;
+      height: 21px;
+      left: 29px;
+    }
+    .p-lottery span{
+      background: url("../imgs/promotion/icon/icon-lottery.png") no-repeat;
+      width: 26px;
+      height: 26px;
+    }
+    .p-vip span{
+      background: url("../imgs/promotion/icon/icon-vip.png") no-repeat;
+      width: 22px;
+      height: 21px;
+      left: 29px;
+    }
+    .p-ward span{
+      background: url("../imgs/promotion/icon/icon-ward.png") no-repeat;
+      width: 22px;
+      height: 26px;
+      left: 29px;
+    }
+  }
+  .promotion-con{
+    background: #f2f2f2;
+  }
+  .promotion-content{
+    float: left;
+    width: 855px;
+  }
+  .promotion-top{
+    margin-top: 40px;
+  }
+  .promotion-top-item{
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    background: @primary;
+    text-indent: 26px;
+    color: @white;
+    font-size: 16px;
+    font-style: italic;
+    margin-right: 1px;
+    position: relative;
+    cursor: pointer;
+    &.active{
+      background: #cc6600;
+    }
+  }
+  .promotion-top-item span{
+    background: url("../imgs/promotion/icon/triangle.png");
+    width: 7px;
+    height: 4px;
+    position: absolute;
+    left: 72px;
+    top: 16px;
+  }
+  .promotion-list{
+    margin-top: 35px;
+  }
+  .promotion-item{
+    background: #fff;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    &:before{
+      content: '';
+      position: absolute;
+      background: url("../imgs/promotion/icon/item_bg.png");
+      width: 850px;
+      height: 11px;
+      bottom: -8px;
+      left: 0;
+    }
+  }
+  .promotion-item-top{
+    background: #00978e;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    position: relative;
+    & .name{
+      color:@white;
+      text-indent: 198px;
+    }
+    & .num{
+      background: url("../imgs/promotion/icon/num.png");
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 23px;
+      color:#333333;
+      text-align: center;
+    }
+  }
+  .promotion-item-img{
+    position: absolute;
+    z-index: 1;
+    left: 9px;
+    top: 9px;
+  }
+  .promotion-item-detail{
+    font-size: 13px;
+    padding: 25px 25px 25px 200px;
+    & img{
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+  .promotion-item-auther{
+    float: right;
+  }
+
+
+  //主promotion
+  .promotion-prim{
+    padding: 20px 25px;
+    background: #fff;
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    &:before{
+      content: '';
+      position: absolute;
+      background: url("../imgs/promotion/icon/item_bg.png");
+      width: 850px;
+      height: 11px;
+      bottom: -8px;
+      left: 0;
+    }
+  }
+  .promotion-prim-title{
+    font-size: 20px;
+    color:#00978d;
+    float: left;
+    margin-bottom: 15px;
+  }
+  .promotion-prim-right{
+    float: right;
+    text-align: right;
+    font-size: 12px;
+    color:#333333;
+    margin-right: 20px;
+  }
+  .promotion-prim-detail{
+    font-size: 14px;
+    color:#333;
+    padding-top: 19px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .promotion-item-new{
+    background: url("../imgs/promotion/icon/icon_new.png");
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .promotion-item-arrow{
+    background: url("../imgs/promotion/icon/icon_arrow.png");
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,48 @@
+<div class="footer">
+    <div class="container clearfix">
+        <ul class="help-list">
+            <li><a href="#"><span></span>如何存款</a></li>
+            <li><a href="#"><span></span>合营伙伴</a></li>
+            <li><a href="#"><span></span>联系我们</a></li>
+            <li><a href="#"><span></span>如何提款</a></li>
+            <li><a href="#"><span></span>责任条款</a></li>
+            <li><a href="#"><span></span>最新资讯</a></li>
+        </ul>
+        <div class="browser-list">
+            <div class="browser-title">推荐浏览器</div>
+            <div>
+                <a href="#" class="browser-item browser-item1"><span></span>7.0</a>
+                <a href="#" class="browser-item browser-item2"><span></span>9.0</a>
+                <a href="#" class="browser-item browser-item3"><span></span>13.0</a>
+                <a href="#" class="browser-item browser-item4"><span></span>12.0</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="container clearfix">
+        <div class="pay-list">
+            <div class="pay-title">支付方式</div>
+            <div class="clearfix">
+                <div class="icon-bank1"></div>
+                <div class="icon-bank2"></div>
+                <div class="icon-bank3"></div>
+            </div>
+        </div>
+        <div class="other-forbid"></div>
+        <div class="other-list">
+            <div>
+                <a href="#">最新获奖</a>
+                <span>/</span>
+                <a href="#">Sexy年历</a>
+                <span>/</span>
+                <a href="#">推荐有礼</a>
+                <span>/</span>
+                <a href="#">积分奖励</a>
+            </div>
+            <div class="other-s-title">
+                Copyright © 2015 nb88.com  版权所有
+            </div>
+        </div>
+    </div>
+</div>

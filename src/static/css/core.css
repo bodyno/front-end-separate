@@ -1,0 +1,87 @@
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+button,
+input,
+textarea,
+select {
+  outline: none;
+}
+.container {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+a {
+  cursor: pointer;
+}
+a:link,
+a:hover {
+  text-decoration: none;
+}
+.img-container {
+  position: relative;
+  width: 990px;
+  margin: auto;
+}
+.pos-img {
+  position: absolute;
+  z-index: 1000;
+}
+.pos-img .view {
+  padding-top: 30px;
+}
+.nb88 .cycle-pager-con {
+  width: 1000px;
+  height: 0;
+  margin: auto;
+  position: relative;
+}
+.nb88 .cycle-pager {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  z-index: 1000;
+}
+.nb88 .cycle-pager span {
+  background: url("../imgs/icon/circle.png") no-repeat center;
+  width: 8px;
+  height: 8px;
+  display: block;
+  float: left;
+  text-indent: -100em;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-left: 3px;
+}
+.nb88 .cycle-pager span.cycle-pager-active {
+  background: url("../imgs/icon/circle_active.png") no-repeat;
+  width: 14px;
+  height: 14px;
+  margin-top: -3px;
+}
+.nb88 .banner-op-item {
+  background: url("../imgs/icon/left.png") no-repeat;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+.nb88 .banner-op-left {
+  left: 5%;
+}
+.nb88 .banner-op-right {
+  background: url("../imgs/icon/right.png") no-repeat;
+  right: 5%;
+}

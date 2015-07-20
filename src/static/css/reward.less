@@ -1,0 +1,563 @@
+@import "var";
+
+.nb88{
+  body{
+    background: @bg;
+    color:@fontcolor;
+  }
+
+  .banner{
+    position: relative;
+    z-index: 10;
+    border-top:3px solid #1bb999;
+  }
+  .banner-item{
+    width:100%;
+    height: 770px;
+    background: url("../imgs/reward/reward_banner.jpg") no-repeat center;
+    height: 449px;
+  }
+  .ward-menu{
+    height: 210px;
+    background: #f2f2f2;
+    .container{
+      width: 1000px;
+    }
+  }
+  .ward-menu-item{
+    float: left;
+    width: 125px;
+    height: 177px;
+    cursor: pointer;
+    a{
+      display: block;
+      width: 80px;
+      height: 80px;
+      display: block;
+      border-radius: 50%;
+      background: @primary;
+      line-height: 190px;
+      color:#333333;
+      text-align: center;
+      margin-top: 45px;
+      margin-left: 22px;
+      position: relative;
+    }
+  }
+  .ward-menu-item span{
+    width: 28px;
+    height: 32px;
+    position: absolute;
+    left: 25px;
+    top: 22px;
+  }
+  .ward-menu-item.active,.ward-menu-item:hover{
+    background: url("../imgs/reward/icon/ward_fix.png") no-repeat;
+    a{
+      background: #ff7f00;
+    }
+  }
+  .ward-menu-item-gif span{
+    background: url("../imgs/reward/icon/icon_gift.png");
+  }
+  .ward-menu-item-photo span{
+    background: url("../imgs/reward/icon/icon_photo.png");
+    width: 34px;
+    height: 27px;
+    left: 24px;
+    top: 26px;
+  }
+  .ward-menu-item-money span{
+    background: url("../imgs/reward/icon/icon_money.png");
+    width: 34px;
+    height: 21px;
+    left: 25px;
+    top: 29px;
+  }
+  .ward-menu-item-currency span{
+    background: url("../imgs/reward/icon/icon_currency.png");
+    width: 35px;
+    height: 34px;
+  }
+  .ward-menu-item-coffee span{
+    background: url("../imgs/reward/icon/icon_coffee.png");
+    width: 32px;
+    height: 32px;
+  }
+  .ward-menu-item-sport span{
+    background: url("../imgs/reward/icon/icon_sport.png");
+    width: 36px;
+    height: 37px;
+    left: 23px;
+    top: 22px;
+  }
+  .ward-menu-item-vip span{
+    background: url("../imgs/reward/icon/icon_vip.png");
+    width: 30px;
+    height: 36px;
+  }
+  .ward-menu-item-diamond span{
+    background: url("../imgs/reward/icon/icon_diamond.png");
+    width: 32px;
+    height: 28px;
+    left: 25px;
+    top: 30px;
+  }
+
+  .product{
+    background: #f2f2f2;
+    padding-bottom: 20px;
+    .product-con{
+      width: 1000px;
+      margin: 0 auto;
+      background: @white;
+      border-top: 3px solid @primary;
+    }
+  }
+  .product-title-left{
+    float: left;
+    margin-left: 13px;
+    line-height: 47px;
+    height: 47px;
+    font-size: 15px;
+  }
+  .product-title-right{
+    float: right;
+    margin-right: 12px;
+    line-height: 47px;
+    height: 47px;
+  }
+  .product-item{
+    width: 197px;
+    float: left;
+    border-top:1px solid #f2f2f2;
+    border-right:1px solid #f2f2f2;
+    padding: 24px 26px 15px;
+    a{
+      color:#333;
+    }
+  }
+  .product-item-img{
+    display: block;
+  }
+  .product-item-name{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .product-item-num{
+    float: left;
+    color:@primary;
+  }
+  .product-item-btn{
+    float: right;
+    background: #c1ae99;
+    color:#fff;
+    width: 45px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+
+  //条款
+  .ward-bg{
+    background: #f2f2f2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .ward-con{
+      width: 1000px;
+      background: @white;
+      margin: 0 auto;
+      border-top:3px solid @primary;
+    }
+  }
+  .ward-title{
+    margin-top: 10px;
+    margin-left: 13px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .term-detail{
+    padding: 32px;
+    color:#666666;
+    line-height: 20px;
+  }
+  .rules-title{
+    font-weight: bold;
+    position: relative;
+    line-height: 50px;
+    padding-left: 62px;
+    span{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .rules-detail{
+    margin-top: 17px;
+    line-height: 20px;
+  }
+  .rules-item{
+    margin-bottom: 35px;
+  }
+  .rules-title-icon1 span{
+    background: url("../imgs/reward/rules/rules_icon1.png");
+  }
+  .rules-title-icon2 span{
+    background: url("../imgs/reward/rules/rules_icon2.png");
+  }
+  .rules-title-icon3 span{
+    background: url("../imgs/reward/rules/rules_icon3.png");
+  }
+  .rules-title-icon4 span{
+    background: url("../imgs/reward/rules/rules_icon4.png");
+  }
+  .rules-title-icon5 span{
+    background: url("../imgs/reward/rules/rules_icon5.png");
+  }
+  .rules-title-icon6 span{
+    background: url("../imgs/reward/rules/rules_icon6.png");
+  }
+  .rules-table{
+    width: 100%;
+    th{
+      height: 34px;
+      background: #00978e;
+      color:#fff;
+      border-right: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+      font-weight: normal;
+    }
+    td{
+      text-align: center;
+      background: #eeeeee;
+      height: 30px;
+      border-right: 1px solid #ffffff;
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+  .ward-search{
+    margin:10px;
+  }
+  .ward-list-left{
+    float: left;
+  }
+  .ward-list-right{
+    float: right;
+  }
+  .ward-select{
+    margin-left: 9px;
+    border:1px solid #efefef;
+    height: 24px;
+  }
+  .ward-input{
+    border:1px solid #efefef;
+    height: 22px;
+    padding: 0 4px;
+    margin-left: 9px;
+  }
+  .ward-search-btn{
+    background: @primary;
+    color:@white;
+    width: 40px;
+    height: 24px;
+    line-height: 24px;
+    border:none;
+    position: relative;
+    left: -3px;
+    top: 1px;
+  }
+  .product-footer{
+    padding: 20px;
+    border-top:1px solid #efefef;
+    span{
+      color: @primary;
+    }
+  }
+  .product-footer-left{
+    float: left;
+    margin-top: 4px;
+  }
+  .product-footer-right{
+    float: right;
+  }
+  .product-page{
+    div{
+      width: 24px;
+      height: 24px;
+      border:1px solid #f0f0f0;
+      color:#666666;
+      text-align: center;
+      line-height: 24px;
+      margin-right: 4px;
+      float: left;
+      cursor: pointer;
+      position: relative;
+    }
+    .prev span{
+      background: url("../imgs/reward/icon/page_left.png");
+      width: 6px;
+      height: 9px;
+      position: absolute;
+      left: 8px;
+      top: 8px;
+    }
+    .next span{
+      background: url("../imgs/reward/icon/page_right.png");
+      width: 6px;
+      height: 9px;
+      position: absolute;
+      left: 8px;
+      top: 8px;
+    }
+  }
+  .product-page{
+    float: left;
+  }
+  .product-page-op{
+    float: left;
+  }
+  .product-page-input{
+    width: 34px;
+    text-align: center;
+    border:1px solid #f0f0f0;
+    height: 22px;
+  }
+  .product-page-op{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .product-go{
+    background: @primary;
+    color: #ffffff;
+    width: 30px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+    position: relative;
+    top: 2px;
+  }
+  .level-table{
+    width: 100%;
+    th{
+      height: 68px;
+      background: @primary;
+      color:@white;
+      border-right: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+    td{
+      height: 68px;
+      background: #eeeeee;
+      color:#666666;
+      border-right: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      text-align: center;
+    }
+    .level-icon{
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+    .level-icon1{
+      background: url("../imgs/reward/level/level1.png");
+    }
+    .level-icon2{
+      background: url("../imgs/reward/level/level2.png");
+    }
+    .level-icon3{
+      background: url("../imgs/reward/level/level3.png");
+    }
+    .level-icon4{
+      background: url("../imgs/reward/level/level4.png");
+    }
+    .level-icon5{
+      background: url("../imgs/reward/level/level5.png");
+    }
+    .level-icon6{
+      background: url("../imgs/reward/level/level6.png");
+    }
+    .level-icon7{
+      background: url("../imgs/reward/level/level7.png");
+    }
+    .level-icon8{
+      background: url("../imgs/reward/level/level8.png");
+    }
+  }
+  .level-text{
+    color:#666666;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+
+  .faq-item{
+    margin-bottom: 30px;
+  }
+  .faq-ques{
+    position: relative;
+    padding-left: 40px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    span{
+      background: url("../imgs/reward/icon/icon_ques.png");
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .faq-answer{
+    position: relative;
+    padding-left: 40px;
+    line-height: 25px;
+    color:@primary;
+    span{
+      background: url("../imgs/reward/icon/icon_answer.png");
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .concact-title{
+    background: #f2f2f2;
+    border-radius: 10px;
+    color:#666666;
+    padding-bottom: 15px;
+    .concact-title1{
+      padding-top: 20px;
+      padding-left:  15px;
+    }
+    .concact-title2{
+      padding-top: 10px;
+      padding-left:  15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #fff;
+    }
+  }
+  .concact-img{
+    background: url("../imgs/reward/reward_concact.jpg");
+    width: 876px;
+    height: 85px;
+    margin: 0 auto;
+    margin-top: 18px;
+  }
+  .concact-text{
+    font-size: 13px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+  .concact-item{
+    background: url("../imgs/reward/contact_bg.jpg");
+    width: 940px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .concact-item-left{
+    width: 133px;
+    height: 80px;
+    float: left;
+    padding-left: 87px;
+  }
+  .concact-item-left-text1{
+    color:#ffcc00;
+    font-size: 18px;
+    margin-top: 16px;
+  }
+  .concact-item-left-text2{
+    color:#ffffff;
+    font-style: italic;
+    margin-top: 6px;
+  }
+  .concact-item-right{
+    float: left;
+    width: 680px;
+    padding-left: 25px;
+    line-height: 80px;
+    a{
+      color:@primary;
+    }
+  }
+  .concact-item-icon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 21px;
+    top: 15px;
+  }
+  .concact-item-icon1{
+    background: url("../imgs/reward/concact/icon_contact1.png");
+  }
+  .concact-item-icon2{
+    background: url("../imgs/reward/concact/icon_contact2.png");
+  }
+  .concact-item-icon3{
+    background: url("../imgs/reward/concact/icon_contact3.png");
+  }
+
+  .contact-form{
+    margin-top: 10px;
+  }
+  .contact-form-item{
+    float: left;
+    width: 444px;
+    margin-right: 37px;
+    margin-bottom: 20px;
+    label{
+      width: 34px;
+      height: 35px;
+      display: block;
+      float: left;
+    }
+    input{
+      padding: 8px 12px;
+      float: left;
+      border:1px solid #e8e8e8;
+      width: 384px;
+    }
+  }
+  .contact-form-icon1{
+    background: url("../imgs/reward/concact/concact_form1.png");
+  }
+  .contact-form-icon2{
+    background: url("../imgs/reward/concact/concact_form2.png");
+  }
+  .contact-form-icon3{
+    background: url("../imgs/reward/concact/concact_form3.png");
+  }
+  .contact-form-icon4{
+    background: url("../imgs/reward/concact/concact_form4.png");
+  }
+  .nomr{
+    margin-right: 0;
+  }
+  .contact-textarea-con{
+    margin-right: 18px;
+  }
+  .contact-textarea{
+    width: 100%;
+    border:1px solid #e8e8e8;
+  }
+  .contact-submit{
+    background: @primary;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    color:#fff;
+    border:none;
+    border-radius:20px;
+  }
+
+}

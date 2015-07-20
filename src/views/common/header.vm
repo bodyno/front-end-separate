@@ -1,0 +1,38 @@
+#macro(header,$url)
+<header class="header">
+    <div class="container clearfix">
+        <div class="logo">
+            <a href="#"></a>
+        </div>
+        <div class="header-right">
+            <div class="logo-bar clearfix">
+                <div class="sel-country">
+                    <div class="country-img"></div>
+                    <div class="country-triangle"></div>
+                </div>
+                <div class="header-triangle"></div>
+                <div class="header-time clearfix">
+                    <div class="time"><span></span>（GMT+8）</div>
+                    <div class="header-op">
+                        <a href="/login" class="login active">登&nbsp;&nbsp;&nbsp;录</a>
+                        <a href="/register" class="reg">免费注册</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="header-menu clearfix">
+                <li><a class="icon-home #if($url=='home')active#end" href="/"><span></span>首页</a></li>
+                <li><a class="icon-mobile #if($url=='mobile')active#end" href="mobile.html"><span></span>手机版</a></li>
+                <li><a class="icon-sport #if($url=='sport')active#end" href="sport.html"><span></span>体育</a></li>
+                <li><a class="icon-casino #if($url=='casino')active#end" href="casino.html"><span></span>真人娱乐</a></li>
+                <li><a class="icon-games #if($url=='games')active#end" href="games.html"><span></span>老虎机</a></li>
+                <li><a class="icon-lottery #if($url=='lottery')active#end" href="lottery.html"><span></span>快乐彩</a></li>
+                <li><a class="icon-pocker #if($url=='pocker')active#end" href="pocker.html"><span></span>扑克</a></li>
+                <li><a class="icon-promotion #if($url=='promotion')active#end" href="promotion.html"><span></span>优惠</a></li>
+                <li><a class="icon-vip #if($url=='vip')active#end" href="#"><span></span>VIP</a></li>
+                <li><a class="icon-news #if($url=='news')active#end" href="#"><span></span>资讯</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+#end
+#header($header)

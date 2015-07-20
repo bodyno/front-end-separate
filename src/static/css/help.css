@@ -1,0 +1,166 @@
+.nb88 .help-con {
+  background: #f2f2f2;
+  padding: 20px 0;
+}
+.nb88 .help-container {
+  width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+.nb88 .help-banner {
+  background: url("../imgs/help/help_banner.jpg") no-repeat center;
+  height: 480px;
+  position: relative;
+}
+.nb88 .help-text {
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
+.nb88 .help-text span {
+  color: #999999;
+  font-style: italic;
+}
+.nb88 .help-text-detail {
+  padding: 22px;
+  line-height: 22px;
+}
+.nb88 .help-text-icon {
+  background: url("../imgs/help/icon/collection.png");
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+.nb88 .concact-item {
+  background: url("../imgs/help/icon/help_bg.jpg");
+  width: 911px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 29px;
+}
+.nb88 .concact-item-left {
+  width: 133px;
+  height: 80px;
+  float: left;
+  padding-left: 87px;
+}
+.nb88 .concact-item-left-text1 {
+  color: #ffcc00;
+  font-size: 18px;
+  margin-top: 16px;
+}
+.nb88 .concact-item-left-text2 {
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 6px;
+}
+.nb88 .concact-item-right {
+  float: left;
+  width: 660px;
+  padding-left: 25px;
+  line-height: 80px;
+}
+.nb88 .concact-item-right a {
+  color: #1bb999;
+}
+.nb88 .concact-item-icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 21px;
+  top: 15px;
+}
+.nb88 .concact-item-icon1 {
+  background: url("../imgs/help/icon/icon_contact1.png");
+}
+.nb88 .concact-item-icon2 {
+  background: url("../imgs/help/icon/icon_contact2.png");
+}
+.nb88 .concact-item-icon3 {
+  background: url("../imgs/help/icon/icon_contact3.png");
+}
+.nb88 .concact-item-icon4 {
+  background: url("../imgs/help/icon/icon_contact4.png");
+}
+.nb88 .concact-item-icon5 {
+  background: url("../imgs/help/icon/icon_contact5.png");
+}
+.nb88 .help-contact {
+  position: relative;
+  padding-bottom: 10px;
+}
+.nb88 .help-contact .help-contact-left {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #1bb999;
+}
+.nb88 .help-contact-text {
+  font-size: 14px;
+  color: #ffffff;
+  position: relative;
+  z-index: 11;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+.nb88 .help-back {
+  padding-top: 20px;
+  background: #f2f2f2;
+}
+.nb88 .help-back-left {
+  width: 120px;
+  height: 100px;
+  background: #c1ae99;
+  color: #ffffff;
+  text-align: center;
+  float: left;
+}
+.nb88 .help-back-left-text1 {
+  font-size: 20px;
+  padding-top: 20px;
+}
+.nb88 .help-back-left-text2 {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.nb88 .help-back-center {
+  width: 590px;
+  float: left;
+  background: #ffffff;
+  font-size: 46px;
+  height: 100px;
+  line-height: 100px;
+  position: relative;
+  text-indent: 146px;
+}
+.nb88 .help-back-center span {
+  position: absolute;
+  background: url("../imgs/help/icon/help_back.png");
+  width: 50px;
+  height: 50px;
+  left: 80px;
+  top: 30px;
+}
+.nb88 .help-code {
+  float: left;
+  background: url("../imgs/help/code.png");
+  width: 290px;
+  height: 100px;
+}
+.nb88 .fix {
+  background: url("../imgs/fix.jpg");
+  width: 80px;
+  height: 249px;
+  position: fixed;
+  left: 50%;
+  margin-left: 550px;
+  top: 15%;
+  cursor: pointer;
+}

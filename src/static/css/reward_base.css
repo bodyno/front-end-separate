@@ -1,0 +1,370 @@
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+button,
+input,
+textarea,
+select {
+  outline: none;
+}
+.container {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+a {
+  cursor: pointer;
+}
+a:link,
+a:hover {
+  text-decoration: none;
+}
+.img-container {
+  position: relative;
+  width: 990px;
+  margin: auto;
+}
+.pos-img {
+  position: absolute;
+  z-index: 1000;
+}
+.pos-img .view {
+  padding-top: 30px;
+}
+.nb88 .cycle-pager-con {
+  width: 1000px;
+  height: 0;
+  margin: auto;
+  position: relative;
+}
+.nb88 .cycle-pager {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  z-index: 1000;
+}
+.nb88 .cycle-pager span {
+  background: url("../imgs/icon/circle.png") no-repeat center;
+  width: 8px;
+  height: 8px;
+  display: block;
+  float: left;
+  text-indent: -100em;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-left: 3px;
+}
+.nb88 .cycle-pager span.cycle-pager-active {
+  background: url("../imgs/icon/circle_active.png") no-repeat;
+  width: 14px;
+  height: 14px;
+  margin-top: -3px;
+}
+.nb88 .banner-op-item {
+  background: url("../imgs/icon/left.png") no-repeat;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+.nb88 .banner-op-left {
+  left: 5%;
+}
+.nb88 .banner-op-right {
+  background: url("../imgs/icon/right.png") no-repeat;
+  right: 5%;
+}
+.footer {
+  border-bottom: 1px solid #f4f4f4;
+  padding-top: 37px;
+  padding-bottom: 35px;
+}
+.footer .container {
+  width: 1000px;
+}
+.help-list {
+  float: left;
+  width: 302px;
+}
+.help-list li {
+  float: left;
+  padding-left: 27px;
+  margin-right: 25px;
+  line-height: 16px;
+  margin-top: 9px;
+  position: relative;
+}
+.help-list li a {
+  color: #666666;
+}
+.help-list li span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../imgs/icon/icon_help.png") no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.browser-list {
+  float: right;
+}
+.browser-title {
+  margin-bottom: 10px;
+  color: #666666;
+}
+.browser-item {
+  height: 20px;
+  line-height: 20px;
+  padding-left: 30px;
+  float: left;
+  margin-right: 17px;
+  cursor: pointer;
+  color: #666666;
+  position: relative;
+}
+.browser-item span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+.browser-item1 span {
+  background: url("../imgs/icon/icon_broswer1.png") no-repeat;
+}
+.browser-item2 span {
+  background: url("../imgs/icon/icon_broswer2.png") no-repeat;
+}
+.browser-item3 span {
+  background: url("../imgs/icon/icon_broswer3.png") no-repeat;
+}
+.browser-item4 span {
+  background: url("../imgs/icon/icon_broswer4.png") no-repeat;
+}
+.pay-list {
+  float: left;
+}
+.pay-list .icon-bank1 {
+  background: url("../imgs/icon/icon_bank1.png");
+  width: 29px;
+  height: 19px;
+  float: left;
+  margin-right: 10px;
+}
+.pay-list .icon-bank2 {
+  background: url("../imgs/icon/icon_bank2.png");
+  width: 34px;
+  height: 20px;
+  float: left;
+  margin-right: 10px;
+}
+.pay-list .icon-bank3 {
+  background: url("../imgs/icon/icon_bank3.png");
+  width: 47px;
+  height: 17px;
+  float: left;
+}
+.other-list {
+  float: right;
+  color: #666666;
+}
+.bottom {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.bottom .container {
+  width: 1000px;
+}
+.bottom .pay-title {
+  color: #666666;
+  margin-bottom: 10px;
+}
+.bottom .other-list a {
+  color: #666;
+}
+.bottom .other-list a:hover {
+  text-decoration: underline;
+}
+.bottom .other-list span {
+  margin: 0 6px;
+}
+.bottom .other-s-title {
+  color: #adacb0;
+  margin-top: 10px;
+  text-align: right;
+}
+.bottom .other-forbid {
+  float: right;
+  background: url("../imgs/icon_18.png");
+  width: 34px;
+  height: 34px;
+  margin-left: 15px;
+  margin-top: 4px;
+}
+.nb88 {
+  color: #333;
+}
+.nb88 .header {
+  background: #fff;
+  position: relative;
+  z-index: 1100;
+  overflow: hidden;
+}
+.nb88 .header .container:before {
+  content: '';
+  background: url("../imgs/icon/top_sp.png");
+  width: 28px;
+  height: 41px;
+  position: absolute;
+  left: 331px;
+  top: 69px;
+}
+.nb88 .container {
+  width: 1100px;
+}
+.nb88 .logo {
+  float: left;
+  width: 250px;
+  height: 110px;
+  position: relative;
+}
+.nb88 .logo a {
+  display: none;
+  font-size: 0px;
+  background: url("../imgs/reward/reward_logo.png");
+  width: 213px;
+  height: 107px;
+}
+.nb88 .logo-text {
+  font-size: 16px;
+  position: absolute;
+  z-index: 10;
+  left: 210px;
+  top: 60px;
+}
+.nb88 .header-right {
+  float: left;
+  width: 850px;
+}
+.nb88 .sel-country {
+  width: 45px;
+  height: 20px;
+  background: #e8e8e6;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  margin-left: 90px;
+}
+.nb88 .country-img {
+  background: url("../imgs/icon/china.png") no-repeat;
+  width: 16px;
+  height: 11px;
+  position: relative;
+  top: 4px;
+  left: 7px;
+}
+.nb88 .country-triangle {
+  background: url("../imgs/icon/triangle.png") no-repeat;
+  width: 7px;
+  height: 4px;
+  position: absolute;
+  left: 30px;
+  top: 8px;
+}
+.nb88 .header-triangle {
+  background: url("../imgs/icon/top_triangle.png") no-repeat;
+  float: left;
+  width: 25px;
+  height: 30px;
+  margin-left: 10px;
+}
+.nb88 .header-time {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  width: 675px;
+  background: #1bb999;
+  position: relative;
+}
+.nb88 .header-time:before {
+  content: '';
+  height: 30px;
+  position: absolute;
+  right: -1000px;
+  width: 1000px;
+  background: #1bb999;
+}
+.nb88 .header-time .time {
+  color: #ffffff;
+  font-size: 12px;
+  float: left;
+  display: none;
+}
+.nb88 .header-op {
+  float: right;
+  color: #ffffff;
+}
+.nb88 .header-op .login {
+  float: left;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.nb88 .header-op .login.active {
+  background: #00978e;
+}
+.nb88 .header-op .reg {
+  float: left;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.nb88 .header-menu {
+  margin-left: 150px;
+  font-size: 13px;
+}
+.nb88 .header-menu li {
+  float: left;
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  line-height: 90px;
+}
+.nb88 .header-menu li a {
+  color: #333333;
+  width: 100px;
+  height: 80px;
+  display: block;
+  position: relative;
+}
+.nb88 .header-menu li a:hover,
+.nb88 .header-menu li a.active {
+  background: url("../imgs/reward/reward_fix.png") no-repeat bottom;
+  color: #00978e;
+}
+.nb88 .header-menu li.active {
+  background: url("../imgs/reward/reward_fix.png") no-repeat bottom;
+}
+.nb88 .header-menu li.active a {
+  color: #00978e;
+}
+.nb88 .header-menu span {
+  display: block;
+  position: absolute;
+  left: 26px;
+  top: 17px;
+}

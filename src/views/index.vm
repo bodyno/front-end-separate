@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>$pageTitle</title>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/base.css"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+</head>
+<body class="nb88">
+    #parse('/common/old.vm')
+
+
+    #parse('/common/header.vm')
+    <div class="banner">
+        <div class="cycle-slideshow"
+             data-cycle-prev=".banner-op-left"
+             data-cycle-next=".banner-op-right"
+             data-cycle-slides=".banner-item"
+             data-cycle-fx="scrollHorz"
+             data-cycle-timeout="10000"
+             data-cycle-pager=">.cycle-pager-con .cycle-pager"
+                >
+            <div class="banner-item banner-item1" style='background: url("/static/imgs/banner1.jpg") no-repeat center;'></div>
+            <div class="banner-item banner-item2" style='background: url("/static/imgs/banner2.jpg") no-repeat center;'></div>
+            <div class="banner-item banner-item3" style='background: url("/static/imgs/banner3.jpg") no-repeat center;'></div>
+            <div class="banner-item banner-item4" style='background: url("/static/imgs/banner4.jpg") no-repeat center;'></div>
+            <div class="banner-item banner-item5" style='background: url("/static/imgs/banner5.jpg") no-repeat center;'></div>
+            <div class="banner-item banner-item6" style='background: url("/static/imgs/banner6.jpg") no-repeat center;'></div>
+            <div class="banner-op">
+                <div class="banner-op-item banner-op-left"></div>
+                <div class="banner-op-item banner-op-right"></div>
+            </div>
+            <div class="cycle-pager-con">
+                <div class="cycle-pager"></div>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <div class="product-s-con">
+            <div class="product-s-list clearfix">
+                <div class="product-s-item product-s-item1 active" style='background: url("/static/imgs/prod_s1.png") no-repeat;'></div>
+                <div class="product-s-item product-s-item2" style='background: url("/static/imgs/prod_s2.png") no-repeat;'></div>
+                <div class="product-s-item product-s-item3" style='background: url("/static/imgs/prod_s3.png") no-repeat;'></div>
+                <div class="product-s-item product-s-item4" style='background: url("/static/imgs/prod_s4.png") no-repeat;'></div>
+                <div class="product-s-item product-s-item5" style='background: url("/static/imgs/prod_s5.png") no-repeat;'></div>
+                <div class="product-s-item product-s-item6" style='background: url("/static/imgs/prod_s6.png") no-repeat;'></div>
+            </div>
+        </div>
+        <div class="product-item-con">
+            <div class="product-item product-item1 active">
+                <div class="container">
+                    <div class="product-item-text"></div>
+                    <div class="product-item-title">老虎机</div>
+                    <div class="product-item-detail">
+                        为您提供种类繁多的网页版老虎机及娱乐城游戏，您将在这里找到最新最齐全的游戏。<br>
+                        您不仅可以赢得高额的累积奖池，也可以同时参与老虎机竞标赛，赢取更加高额的巨奖。
+                    </div>
+                </div>
+            </div>
+            <div class="product-item product-item2">
+                <div class="container">
+                    <div class="product-item-text"></div>
+                    <div class="product-item-title">真人娱乐</div>
+                    <div class="product-item-detail">
+                        为您提供种类繁多的网页版老虎机及娱乐城游戏，您将在这里找到最新最齐全的游戏。<br>
+                        您不仅可以赢得高额的累积奖池，也可以同时参与老虎机竞标赛，赢取更加高额的巨奖。
+                    </div>
+                </div>
+            </div>
+            <div class="product-item product-item3">
+                <div class="container">
+                    <div class="product-item-text"></div>
+                    <div class="product-item-title">体育博弈</div>
+                    <div class="product-item-detail">
+                        为您提供种类繁多的网页版老虎机及娱乐城游戏，您将在这里找到最新最齐全的游戏。<br>
+                        您不仅可以赢得高额的累积奖池，也可以同时参与老虎机竞标赛，赢取更加高额的巨奖。
+                    </div>
+                </div>
+            </div>
+            <div class="product-item product-item4">
+                <div class="container">
+                    <div class="product-item-text"></div>
+                    <div class="product-item-title">快乐彩</div>
+                    <div class="product-item-detail">
+                        为您提供种类繁多的网页版老虎机及娱乐城游戏，您将在这里找到最新最齐全的游戏。<br>
+                        您不仅可以赢得高额的累积奖池，也可以同时参与老虎机竞标赛，赢取更加高额的巨奖。
+                    </div>
+                </div>
+            </div>
+            <div class="product-item product-item5">
+                <div class="container">
+                    <div class="product-item-text"></div>
+                    <div class="product-item-title">在线扑克</div>
+                    <div class="product-item-detail">
+                        为您提供种类繁多的网页版老虎机及娱乐城游戏，您将在这里找到最新最齐全的游戏。<br>
+                        您不仅可以赢得高额的累积奖池，也可以同时参与老虎机竞标赛，赢取更加高额的巨奖。
+                    </div>
+                </div>
+            </div>
+            <div class="product-item product-item6">
+                <div class="container">
+                    <div class="product-item-text"></div>
+                    <div class="product-item-title">手机版</div>
+                    <div class="product-item-detail">
+                        为您提供种类繁多的网页版老虎机及娱乐城游戏，您将在这里找到最新最齐全的游戏。<br>
+                        您不仅可以赢得高额的累积奖池，也可以同时参与老虎机竞标赛，赢取更加高额的巨奖。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notice">
+        <div class="container">
+            <div class="notice-con">
+                <div class="notice-text">呼吁所有新会员！我们为首存款的新注册会员推出的100％欢迎红利。现在申请，数量有限，送完即止！</div>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="about-container clearfix">
+            <div class="about-item">
+                <div class="about-item-title about-item-title1"></div>
+                <div class="about-item-detail clearfix">
+                    <div class="about-item-icon about-item-icon1"></div>
+                    <div class="about-item-right">
+                        <div class="about-item-text1">急速存取款</div>
+                        <div class="about-item-text2">存取款闪电入账，支持超过30家银行，支持24小时存取。</div>
+                    </div>
+                </div>
+                <div class="about-item-detail clearfix">
+                    <div class="about-item-icon about-item-icon2"></div>
+                    <div class="about-item-right">
+                        <div class="about-item-text1">娱乐不打烊</div>
+                        <div class="about-item-text2">7×24小时游戏不间断，365天服务百分百，让您随时随地娱乐。</div>
+                    </div>
+                </div>
+                <div class="about-item-detail clearfix">
+                    <div class="about-item-icon about-item-icon3"></div>
+                    <div class="about-item-right">
+                        <div class="about-item-text1">安全更可靠</div>
+                        <div class="about-item-text2">全网最高等级安全系数，保障您的资金安全，让您放心娱乐。</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-item about-item2">
+                <div class="about-item-title about-item-title2"></div>
+                <div class="about-banner-con">
+                    <div class="about-banner cycle-slideshow"
+                         data-cycle-slides=".about-banner-item"
+                         data-cycle-fx="scrollHorz"
+                         data-cycle-timeout="10000"
+                         data-cycle-pager=".about-pager"
+                            >
+                        <a href="#" class="about-banner-item about-banner-item1"></a>
+                        <a href="#" class="about-banner-item about-banner-item2"></a>
+                        <a href="#" class="about-banner-item about-banner-item3"></a>
+                        <div class="about-pager"></div>
+                    </div>
+                    <div class="about-banner-title">新注册会员20%首存红利</div>
+                    <div class="about-banner-detail">新博nb88为所有新会员奉上最高20% 首存红利，最高可达1388人民币！</div>
+                </div>
+            </div>
+            <div class="about-item about-item3">
+                <div class="about-item-title about-item-title3"></div>
+                <div class="about-ques">
+                    <div class="about-ques-item about-ques-item1"><span></span><a href="#">常见问题 ></a></div>
+                    <div class="about-ques-item about-ques-item2"><span></span><a href="#">如何存款 ></a></div>
+                    <div class="about-ques-item about-ques-item3"><span></span><a href="#">如何提款 ></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-top">
+        <div class="container footer-img"></div>
+    </div>
+    #parse('/common/footer.vm')
+
+
+    #parse('/common/script.vm')
+    <script src="/static/plugin/jquery.hoverintent/hoverintent.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script>
+        var data= {"d":"xc_monstersscratch|USD 1,000.15"};
+        function getNum(msg) {
+            return msg.d.split("|")[1]
+        }
+        getNum(data)
+    </script>
+
+</body>
+</html>

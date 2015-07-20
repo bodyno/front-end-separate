@@ -1,0 +1,163 @@
+@import "var";
+@import "core";
+
+@import "footer";
+.nb88{
+  color:#333;
+  .header{
+    background: #fff;
+    position: relative;
+    z-index: 1100;
+    overflow: hidden;
+    .container{
+      &:before{
+        content: '';
+        background: url("../imgs/icon/top_sp.png");
+        width: 28px;
+        height: 41px;
+        position: absolute;
+        left: 331px;
+        top: 69px;
+      }
+    }
+  }
+  .container{
+    width: 1100px;
+  }
+  .logo{
+    float: left;
+    width: 250px;
+    height: 110px;
+    position: relative;
+    a{
+      display: none;
+      font-size: 0px;
+      background: url("../imgs/reward/reward_logo.png");
+      width: 213px;
+      height: 107px;
+    }
+  }
+  .logo-text{
+    font-size: 16px;
+    position: absolute;
+    z-index: 10;
+    left: 210px;
+    top: 60px;
+  }
+  .header-right{
+    float: left;
+    width: 850px;
+  }
+  .sel-country{
+    width: 45px;
+    height: 20px;
+    background: #e8e8e6;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    margin-left: 90px;
+  }
+  .country-img{
+    background: url("../imgs/icon/china.png") no-repeat;
+    width: 16px;
+    height: 11px;
+    position: relative;
+    top: 4px;
+    left: 7px;
+  }
+  .country-triangle{
+    background: url("../imgs/icon/triangle.png") no-repeat;
+    width: 7px;
+    height: 4px;
+    position: absolute;
+    left: 30px;
+    top: 8px;
+  }
+
+  .header-triangle{
+    background: url("../imgs/icon/top_triangle.png") no-repeat;
+    float: left;
+    width: 25px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  .header-time{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 675px;
+    background:#1bb999;
+    position: relative;
+    &:before{
+      content: '';
+      height: 30px;
+      position: absolute;
+      right: -1000px;
+      width: 1000px;
+      background:#1bb999;
+    }
+    .time{
+      color: @white;
+      font-size: @fontsize;
+      float: left;
+      display: none;
+    }
+  }
+  .header-op{
+    float: right;
+    color: @white;
+    .login{
+      float: left;
+      width: 70px;
+      text-align: center;
+      cursor: pointer;
+      &.active{
+        background: #00978e;
+      }
+    }
+    .reg{
+      float: left;
+      width: 70px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .header-menu{
+    margin-left: 150px;
+    font-size: 13px;
+    li{
+      float: left;
+      width: 100px;
+      height: 80px;
+      text-align: center;
+      line-height: 90px;
+      a{
+        color:@fontcolor;
+        width: 100px;
+        height: 80px;
+        display: block;
+        position: relative;
+        &:hover,&.active{
+          background: url("../imgs/reward/reward_fix.png") no-repeat bottom;
+          color:#00978e;
+        }
+      }
+      &.active{
+        background: url("../imgs/reward/reward_fix.png") no-repeat bottom;
+        a{
+          color:#00978e;
+        }
+      }
+    }
+    span{
+      display: block;
+      position: absolute;
+      left: 26px;
+      top: 17px;
+    }
+  }
+}

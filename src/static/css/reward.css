@@ -1,0 +1,548 @@
+.nb88 body {
+  background: #fbfbfb;
+  color: #333333;
+}
+.nb88 .banner {
+  position: relative;
+  z-index: 10;
+  border-top: 3px solid #1bb999;
+}
+.nb88 .banner-item {
+  width: 100%;
+  height: 770px;
+  background: url("../imgs/reward/reward_banner.jpg") no-repeat center;
+  height: 449px;
+}
+.nb88 .ward-menu {
+  height: 210px;
+  background: #f2f2f2;
+}
+.nb88 .ward-menu .container {
+  width: 1000px;
+}
+.nb88 .ward-menu-item {
+  float: left;
+  width: 125px;
+  height: 177px;
+  cursor: pointer;
+}
+.nb88 .ward-menu-item a {
+  width: 80px;
+  height: 80px;
+  display: block;
+  border-radius: 50%;
+  background: #1bb999;
+  line-height: 190px;
+  color: #333333;
+  text-align: center;
+  margin-top: 45px;
+  margin-left: 22px;
+  position: relative;
+}
+.nb88 .ward-menu-item span {
+  width: 28px;
+  height: 32px;
+  position: absolute;
+  left: 25px;
+  top: 22px;
+}
+.nb88 .ward-menu-item.active,
+.nb88 .ward-menu-item:hover {
+  background: url("../imgs/reward/icon/ward_fix.png") no-repeat;
+}
+.nb88 .ward-menu-item.active a,
+.nb88 .ward-menu-item:hover a {
+  background: #ff7f00;
+}
+.nb88 .ward-menu-item-gif span {
+  background: url("../imgs/reward/icon/icon_gift.png");
+}
+.nb88 .ward-menu-item-photo span {
+  background: url("../imgs/reward/icon/icon_photo.png");
+  width: 34px;
+  height: 27px;
+  left: 24px;
+  top: 26px;
+}
+.nb88 .ward-menu-item-money span {
+  background: url("../imgs/reward/icon/icon_money.png");
+  width: 34px;
+  height: 21px;
+  left: 25px;
+  top: 29px;
+}
+.nb88 .ward-menu-item-currency span {
+  background: url("../imgs/reward/icon/icon_currency.png");
+  width: 35px;
+  height: 34px;
+}
+.nb88 .ward-menu-item-coffee span {
+  background: url("../imgs/reward/icon/icon_coffee.png");
+  width: 32px;
+  height: 32px;
+}
+.nb88 .ward-menu-item-sport span {
+  background: url("../imgs/reward/icon/icon_sport.png");
+  width: 36px;
+  height: 37px;
+  left: 23px;
+  top: 22px;
+}
+.nb88 .ward-menu-item-vip span {
+  background: url("../imgs/reward/icon/icon_vip.png");
+  width: 30px;
+  height: 36px;
+}
+.nb88 .ward-menu-item-diamond span {
+  background: url("../imgs/reward/icon/icon_diamond.png");
+  width: 32px;
+  height: 28px;
+  left: 25px;
+  top: 30px;
+}
+.nb88 .product {
+  background: #f2f2f2;
+  padding-bottom: 20px;
+}
+.nb88 .product .product-con {
+  width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-top: 3px solid #1bb999;
+}
+.nb88 .product-title-left {
+  float: left;
+  margin-left: 13px;
+  line-height: 47px;
+  height: 47px;
+  font-size: 15px;
+}
+.nb88 .product-title-right {
+  float: right;
+  margin-right: 12px;
+  line-height: 47px;
+  height: 47px;
+}
+.nb88 .product-item {
+  width: 197px;
+  float: left;
+  border-top: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  padding: 24px 26px 15px;
+}
+.nb88 .product-item a {
+  color: #333;
+}
+.nb88 .product-item-img {
+  display: block;
+}
+.nb88 .product-item-name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.nb88 .product-item-num {
+  float: left;
+  color: #1bb999;
+}
+.nb88 .product-item-btn {
+  float: right;
+  background: #c1ae99;
+  color: #fff;
+  width: 45px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.nb88 .ward-bg {
+  background: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.nb88 .ward-bg .ward-con {
+  width: 1000px;
+  background: #ffffff;
+  margin: 0 auto;
+  border-top: 3px solid #1bb999;
+}
+.nb88 .ward-title {
+  margin-top: 10px;
+  margin-left: 13px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.nb88 .term-detail {
+  padding: 32px;
+  color: #666666;
+  line-height: 20px;
+}
+.nb88 .rules-title {
+  font-weight: bold;
+  position: relative;
+  line-height: 50px;
+  padding-left: 62px;
+}
+.nb88 .rules-title span {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.nb88 .rules-detail {
+  margin-top: 17px;
+  line-height: 20px;
+}
+.nb88 .rules-item {
+  margin-bottom: 35px;
+}
+.nb88 .rules-title-icon1 span {
+  background: url("../imgs/reward/rules/rules_icon1.png");
+}
+.nb88 .rules-title-icon2 span {
+  background: url("../imgs/reward/rules/rules_icon2.png");
+}
+.nb88 .rules-title-icon3 span {
+  background: url("../imgs/reward/rules/rules_icon3.png");
+}
+.nb88 .rules-title-icon4 span {
+  background: url("../imgs/reward/rules/rules_icon4.png");
+}
+.nb88 .rules-title-icon5 span {
+  background: url("../imgs/reward/rules/rules_icon5.png");
+}
+.nb88 .rules-title-icon6 span {
+  background: url("../imgs/reward/rules/rules_icon6.png");
+}
+.nb88 .rules-table {
+  width: 100%;
+}
+.nb88 .rules-table th {
+  height: 34px;
+  background: #00978e;
+  color: #fff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  font-weight: normal;
+}
+.nb88 .rules-table td {
+  text-align: center;
+  background: #eeeeee;
+  height: 30px;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+.nb88 .ward-search {
+  margin: 10px;
+}
+.nb88 .ward-list-left {
+  float: left;
+}
+.nb88 .ward-list-right {
+  float: right;
+}
+.nb88 .ward-select {
+  margin-left: 9px;
+  border: 1px solid #efefef;
+  height: 24px;
+}
+.nb88 .ward-input {
+  border: 1px solid #efefef;
+  height: 22px;
+  padding: 0 4px;
+  margin-left: 9px;
+}
+.nb88 .ward-search-btn {
+  background: #1bb999;
+  color: #ffffff;
+  width: 40px;
+  height: 24px;
+  line-height: 24px;
+  border: none;
+  position: relative;
+  left: -3px;
+  top: 1px;
+}
+.nb88 .product-footer {
+  padding: 20px;
+  border-top: 1px solid #efefef;
+}
+.nb88 .product-footer span {
+  color: #1bb999;
+}
+.nb88 .product-footer-left {
+  float: left;
+  margin-top: 4px;
+}
+.nb88 .product-footer-right {
+  float: right;
+}
+.nb88 .product-page div {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #f0f0f0;
+  color: #666666;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 4px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+.nb88 .product-page .prev span {
+  background: url("../imgs/reward/icon/page_left.png");
+  width: 6px;
+  height: 9px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+.nb88 .product-page .next span {
+  background: url("../imgs/reward/icon/page_right.png");
+  width: 6px;
+  height: 9px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+.nb88 .product-page {
+  float: left;
+}
+.nb88 .product-page-op {
+  float: left;
+}
+.nb88 .product-page-input {
+  width: 34px;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  height: 22px;
+}
+.nb88 .product-page-op {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.nb88 .product-go {
+  background: #1bb999;
+  color: #ffffff;
+  width: 30px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border: none;
+  position: relative;
+  top: 2px;
+}
+.nb88 .level-table {
+  width: 100%;
+}
+.nb88 .level-table th {
+  height: 68px;
+  background: #1bb999;
+  color: #ffffff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.nb88 .level-table td {
+  height: 68px;
+  background: #eeeeee;
+  color: #666666;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+.nb88 .level-table .level-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-top: 5px;
+}
+.nb88 .level-table .level-icon1 {
+  background: url("../imgs/reward/level/level1.png");
+}
+.nb88 .level-table .level-icon2 {
+  background: url("../imgs/reward/level/level2.png");
+}
+.nb88 .level-table .level-icon3 {
+  background: url("../imgs/reward/level/level3.png");
+}
+.nb88 .level-table .level-icon4 {
+  background: url("../imgs/reward/level/level4.png");
+}
+.nb88 .level-table .level-icon5 {
+  background: url("../imgs/reward/level/level5.png");
+}
+.nb88 .level-table .level-icon6 {
+  background: url("../imgs/reward/level/level6.png");
+}
+.nb88 .level-table .level-icon7 {
+  background: url("../imgs/reward/level/level7.png");
+}
+.nb88 .level-table .level-icon8 {
+  background: url("../imgs/reward/level/level8.png");
+}
+.nb88 .level-text {
+  color: #666666;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.nb88 .faq-item {
+  margin-bottom: 30px;
+}
+.nb88 .faq-ques {
+  position: relative;
+  padding-left: 40px;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+.nb88 .faq-ques span {
+  background: url("../imgs/reward/icon/icon_ques.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+}
+.nb88 .faq-answer {
+  position: relative;
+  padding-left: 40px;
+  line-height: 25px;
+  color: #1bb999;
+}
+.nb88 .faq-answer span {
+  background: url("../imgs/reward/icon/icon_answer.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+}
+.nb88 .concact-title {
+  background: #f2f2f2;
+  border-radius: 10px;
+  color: #666666;
+  padding-bottom: 15px;
+}
+.nb88 .concact-title .concact-title1 {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+.nb88 .concact-title .concact-title2 {
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fff;
+}
+.nb88 .concact-img {
+  background: url("../imgs/reward/reward_concact.jpg");
+  width: 876px;
+  height: 85px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+.nb88 .concact-text {
+  font-size: 13px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+.nb88 .concact-item {
+  background: url("../imgs/reward/contact_bg.jpg");
+  width: 940px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.nb88 .concact-item-left {
+  width: 133px;
+  height: 80px;
+  float: left;
+  padding-left: 87px;
+}
+.nb88 .concact-item-left-text1 {
+  color: #ffcc00;
+  font-size: 18px;
+  margin-top: 16px;
+}
+.nb88 .concact-item-left-text2 {
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 6px;
+}
+.nb88 .concact-item-right {
+  float: left;
+  width: 680px;
+  padding-left: 25px;
+  line-height: 80px;
+}
+.nb88 .concact-item-right a {
+  color: #1bb999;
+}
+.nb88 .concact-item-icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 21px;
+  top: 15px;
+}
+.nb88 .concact-item-icon1 {
+  background: url("../imgs/reward/concact/icon_contact1.png");
+}
+.nb88 .concact-item-icon2 {
+  background: url("../imgs/reward/concact/icon_contact2.png");
+}
+.nb88 .concact-item-icon3 {
+  background: url("../imgs/reward/concact/icon_contact3.png");
+}
+.nb88 .contact-form {
+  margin-top: 10px;
+}
+.nb88 .contact-form-item {
+  float: left;
+  width: 444px;
+  margin-right: 37px;
+  margin-bottom: 20px;
+}
+.nb88 .contact-form-item label {
+  width: 34px;
+  height: 35px;
+  display: block;
+  float: left;
+}
+.nb88 .contact-form-item input {
+  padding: 8px 12px;
+  float: left;
+  border: 1px solid #e8e8e8;
+  width: 384px;
+}
+.nb88 .contact-form-icon1 {
+  background: url("../imgs/reward/concact/concact_form1.png");
+}
+.nb88 .contact-form-icon2 {
+  background: url("../imgs/reward/concact/concact_form2.png");
+}
+.nb88 .contact-form-icon3 {
+  background: url("../imgs/reward/concact/concact_form3.png");
+}
+.nb88 .contact-form-icon4 {
+  background: url("../imgs/reward/concact/concact_form4.png");
+}
+.nb88 .nomr {
+  margin-right: 0;
+}
+.nb88 .contact-textarea-con {
+  margin-right: 18px;
+}
+.nb88 .contact-textarea {
+  width: 100%;
+  border: 1px solid #e8e8e8;
+}
+.nb88 .contact-submit {
+  background: #1bb999;
+  width: 120px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}

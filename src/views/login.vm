@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>#if($pageTitle)$pageTitle #else 新博页面 #end</title>
+    #parse('common/top.vm')
+    <link rel="stylesheet" href="/static/css/base.css"/>
+    <link rel="stylesheet" href="/static/css/register.css"/>
+    <link rel="stylesheet" href="/static/plugin/jquery.ui/jquery-ui.css"/>
+</head>
+<body class="nb88">
+    #parse('common/old.vm')
+
+
+    #parse('common/header.vm')
+    <div class="register-con">
+        <div class="register-main">
+            <div class="register-title" data-i18n="page"></div>
+            <div class="clearfix">
+                <div class="reg-text-con">
+                    <div class="reg-text-bg"></div>
+                    <div class="reg-text-title" data-i18n="reg-text-title"></div>
+                    <div class="reg-item">
+                        <span>·</span><label data-i18n="reg-item.0"></label>
+                    </div>
+                    <div class="reg-item">
+                        <span>·</span><label data-i18n="reg-item.1"></label>
+                    </div>
+                    <div class="reg-item">
+                        <span>·</span><label data-i18n="reg-item.2"></label>
+                    </div>
+                    <div class="reg-item">
+                        <span>·</span><label data-i18n="reg-item.3"></label>
+                    </div>
+                    <div class="reg-item">
+                        <span>·</span><label data-i18n="reg-item.4"></label>
+                    </div>
+                </div>
+                <form id="login-form" class="reg-form">
+                    <div class="reg-group clearfix">
+                        <label class="reg-label">用户名：</label>
+                        <div>
+                            <input type="text" class="reg-input" name="operator" id="operator">
+                        </div>
+                    </div>
+                    <div class="reg-group clearfix">
+                        <label class="reg-label">密码：</label>
+                        <div>
+                            <input type="password" class="reg-input" name="passwd" id="passwd">
+                        </div>
+                    </div>
+                    <div class="reg-group clearfix">
+                        <label class="reg-label">验证码：</label>
+                        <div>
+                            <input type="text" class="reg-input reg-input-code" name="validateCode" id="validateCode" maxlength="4">
+                            <img class="reg-code-img" src="/validateCode" width="60" height="20">
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="reg-btn" id="login-btn">登录</button>
+                    </div>
+                    <img src="">
+                </form>
+            </div>
+        </div>
+    </div>
+    #parse('common/footer.vm')
+
+
+    #parse('common/script.vm')
+    <script src="/static/plugin/jquery.validation/jquery.validate.js"></script>
+    <script src="/static/plugin/xss/xss.js"></script>
+    <script src="/static/js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+.footer {
+  border-bottom: 1px solid #f4f4f4;
+  padding-top: 37px;
+  padding-bottom: 35px;
+}
+.footer .container {
+  width: 1000px;
+}
+.help-list {
+  float: left;
+  width: 302px;
+}
+.help-list li {
+  float: left;
+  padding-left: 27px;
+  margin-right: 25px;
+  line-height: 16px;
+  margin-top: 9px;
+  position: relative;
+}
+.help-list li a {
+  color: #666666;
+}
+.help-list li span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../imgs/icon/icon_help.png") no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.browser-list {
+  float: right;
+}
+.browser-title {
+  margin-bottom: 10px;
+  color: #666666;
+}
+.browser-item {
+  height: 20px;
+  line-height: 20px;
+  padding-left: 30px;
+  float: left;
+  margin-right: 17px;
+  cursor: pointer;
+  color: #666666;
+  position: relative;
+}
+.browser-item span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+.browser-item1 span {
+  background: url("../imgs/icon/icon_broswer1.png") no-repeat;
+}
+.browser-item2 span {
+  background: url("../imgs/icon/icon_broswer2.png") no-repeat;
+}
+.browser-item3 span {
+  background: url("../imgs/icon/icon_broswer3.png") no-repeat;
+}
+.browser-item4 span {
+  background: url("../imgs/icon/icon_broswer4.png") no-repeat;
+}
+.pay-list {
+  float: left;
+}
+.pay-list .icon-bank1 {
+  background: url("../imgs/icon/icon_bank1.png");
+  width: 29px;
+  height: 19px;
+  float: left;
+  margin-right: 10px;
+}
+.pay-list .icon-bank2 {
+  background: url("../imgs/icon/icon_bank2.png");
+  width: 34px;
+  height: 20px;
+  float: left;
+  margin-right: 10px;
+}
+.pay-list .icon-bank3 {
+  background: url("../imgs/icon/icon_bank3.png");
+  width: 47px;
+  height: 17px;
+  float: left;
+}
+.other-list {
+  float: right;
+  color: #666666;
+}
+.bottom {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.bottom .container {
+  width: 1000px;
+}
+.bottom .pay-title {
+  color: #666666;
+  margin-bottom: 10px;
+}
+.bottom .other-list a {
+  color: #666;
+}
+.bottom .other-list a:hover {
+  text-decoration: underline;
+}
+.bottom .other-list span {
+  margin: 0 6px;
+}
+.bottom .other-s-title {
+  color: #adacb0;
+  margin-top: 10px;
+  text-align: right;
+}
+.bottom .other-forbid {
+  float: right;
+  background: url("../imgs/icon_18.png");
+  width: 34px;
+  height: 34px;
+  margin-left: 15px;
+  margin-top: 4px;
+}

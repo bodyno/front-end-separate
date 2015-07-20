@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>#if($pageTitle)$pageTitle #else 新博页面 #end</title>
+    #parse('common/top.vm')
+    <link rel="stylesheet" href="/static/css/base.css"/>
+    <link rel="stylesheet" href="/static/css/register.css"/>
+    <link rel="stylesheet" href="/static/plugin/jquery.ui/jquery-ui.css"/>
+</head>
+<body class="nb88">
+    #parse('common/old.vm')
+
+
+    #parse('common/header.vm')
+    <div class="register-con">
+        <div class="register-main">
+            <div class="register-title">注册账户</div>
+            <div class="clearfix">
+                <div class="reg-text-con">
+                    <div class="reg-text-bg"></div>
+                    <div class="reg-text-title">会员福利一览</div>
+                    <div class="reg-item">
+                        <span>·</span>为了账户安全，验证您的个人信息，提款100元后即可获得红利**
+                    </div>
+                    <div class="reg-item">
+                        <span>·</span>快捷支付立即到账，多种存款方式选择，极速提款！
+                    </div>
+                    <div class="reg-item">
+                        <span>·</span>高达2,888人民币的首存红利，5大老虎机平台，立即获得！
+                    </div>
+                    <div class="reg-item">
+                        <span>·</span>加入贵宾厅VIP俱乐部，尊享属于您的特权及奖励积分！
+                    </div>
+                    <div class="reg-item">
+                        <span>·</span>多个游戏平台，提供更好更全面的盘口，智能手机网和手机客户端，欢乐尽在掌中！
+                    </div>
+                </div>
+                <form class="reg-form" id="reg-form">
+                    <div class="reg-group clearfix">
+                        <label class="reg-label"><span>*</span>用户名：</label>
+                        <div>
+                            <input type="text" class="reg-input" name="operator" maxlength="12">
+                        </div>
+                        <label class="reg-help">用户名由6~12位小写英文a~z或数字组成</label>
+                    </div>
+                    <div class="reg-group clearfix">
+                        <label class="reg-label"><span>*</span>设置密码：</label>
+                        <div>
+                            <input type="password" class="reg-input" name="passwd" id="passwd">
+                        </div>
+                        <label class="reg-help">密码长度6～20位a-z,0-9,只允许以下特殊字符@*_-.,;&</label>
+                    </div>
+                    <div class="reg-group clearfix">
+                        <label class="reg-label"><span>*</span>确认密码：</label>
+                        <div>
+                            <input type="password" class="reg-input" name="repasswd">
+                        </div>
+                        <label class="reg-help">再次输入密码</label>
+                    </div>
+                    <div class="reg-group clearfix">
+                        <label class="reg-label"><span>*</span>test：</label>
+                        <div>
+                            <input type="text" class="reg-input" name="test">
+                        </div>
+                        <label class="reg-help">test</label>
+                    </div>
+                    <div class="reg-group clearfix">
+                        <label class="reg-label"><span>*</span>验证码：</label>
+                        <div>
+                            <input type="text" class="reg-input reg-input-code" name="validateCode" id="validateCode" maxlength="4">
+                            <img class="reg-code-img" src="/validateCode" width="60" height="20">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="reg-agree">
+                            <input type="checkbox" checked>
+                            我确认我的法定年龄，已阅读并愿意遵守虎牌相关的规则与条款和隐私策略。
+                        </label>
+                    </div>
+                    <div>
+                        <button type="button" class="reg-btn" id="reg-btn">注册帐号</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    #parse('common/footer.vm')
+
+
+    #parse('common/script.vm')
+    <script src="/static/plugin/jquery.validation/jquery.validate.js"></script>
+    <script src="/static/plugin/jquery.mailAutoComplete/jquery.mail.js"></script>
+    <script src="/static/plugin/xss/xss.js"></script>
+    <script src="/static/js/reg.js"></script>
+
+</body>
+</html>

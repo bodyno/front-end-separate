@@ -1,0 +1,129 @@
+@import "var";
+
+.nb88{
+  .refer-con{
+    background: #f2f2f2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .refer-main{
+    width: 1060px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-top:3px solid #1bb999;
+    padding: 30px;
+    position: relative;
+  }
+  .refer-title{
+    color:#333333;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+  .refer-item{
+    position: relative;
+    height: 58px;
+    padding-left: 80px;
+    margin-bottom: 10px;
+    span{
+      width: 58px;
+      height: 58px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .refer-item-link span{
+    background: url("../imgs/refer/icon/share_1.png");
+  }
+  .refer-item-mail span{
+    background: url("../imgs/refer/icon/share_2.png");
+  }
+  .refer-item-weibo span{
+    background: url("../imgs/refer/icon/share_3.png");
+  }
+  .refer-item-tencent span{
+    background: url("../imgs/refer/icon/share_4.png");
+  }
+  .refer-item-value{
+    color:#666666;
+    font-size: 12px;
+    padding: 4px 8px;
+    width: 300px;
+    border:1px solid #e8e8e8;
+    margin-top: 6px;
+  }
+  .refer-text{
+    font-size: 16px;
+    color:#333;
+    line-height: 58px;
+  }
+  .refer-bg{
+    background: url("../imgs/refer/share_bg.jpg") no-repeat;
+    width: 637px;
+    height: 519px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .refer-item-con{
+    margin-bottom: 30px;
+  }
+  .answer-title{
+    color:#333333;
+    font-size: 12px;
+    position: relative;
+    background: #dddddd;
+    padding-left: 40px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    span{
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      background: url("../imgs/refer/icon/icon_q.png");
+      width: 26px;
+      height: 26px;
+    }
+  }
+  .answer-title i{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    background: url("../imgs/refer/icon/arrow_down.png");
+    width: 11px;
+    height: 6px;
+  }
+  .active .answer-title i{
+    background: url("../imgs/refer/icon/arrow_up.png");
+  }
+  .answer-detail{
+    background: #f2f2f2;
+    position: relative;
+    padding-left: 40px;
+    line-height: 20px;
+    padding-top: 7px;
+    padding-bottom: 12px;
+    padding-right: 70px;
+    span{
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      background: url("../imgs/refer/icon/icon_a.png");
+      width: 26px;
+      height: 26px;
+    }
+  }
+  .answer-item{
+    margin-bottom: 10px;
+  }
+  .answer-item .answer-detail{
+    display: none;
+  }
+  .answer-item.active .answer-detail{
+    display: block;
+  }
+}

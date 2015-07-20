@@ -1,0 +1,634 @@
+@import "var";
+
+.nb88{
+  .user-con{
+    background: #f2f2f2;
+    padding: 20px 0;
+  }
+  .user-main{
+    width: 1060px;
+    margin: 0 auto;
+    background: @white;
+  }
+  .user-info{
+    float: left;
+    width: 260px;
+    padding-right: 20px;
+    background: #f2f2f2;
+  }
+  .user-operate{
+    width: 780px;
+    float: left;
+    border-top:3px solid @primary;
+  }
+  .user-top{
+    height: 80px;
+    background: @primary;
+    color: @white;
+    padding-left: 80px;
+    position: relative;
+  }
+  .user-top-text{
+    padding-top: 20px;
+  }
+  .user-top-name{
+    padding-top: 4px;
+    font-size: 14px;
+  }
+  .user-remain{
+    background: #fff;
+    position: relative;
+  }
+  .user-top-head{
+    background: url("../imgs/user/icon/user_head.jpg");
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  .user-remain-item{
+    float: left;
+    width: 130px;
+    position: relative;
+    height: 90px;
+  }
+  .user-remain-name{
+    color:#666666;
+    text-align: center;
+    margin-top: 12px;
+    position: relative;
+  }
+  .user-remain-money{
+    color:#cc6600;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 6px;
+  }
+  .user-remain-refresh{
+    position: absolute;
+    background: url("../imgs/user/icon/refresh.png");
+    width: 11px;
+    height: 12px;
+    left: 60px;
+    top: 65px;
+    cursor: pointer;
+  }
+  .user-remain-item .user-remain-icon{
+    position: absolute;
+    width: 12px;
+    height: 14px;
+    left: 35px;
+    top: 0px;
+  }
+  .user-remain-item1 .user-remain-icon{
+    background: url("../imgs/user/icon/remain1.png");
+  }
+  .user-remain-item2 .user-remain-icon{
+    background: url("../imgs/user/icon/remain2.png");
+    width: 16px;
+    height: 16px;
+    left: 32px;
+  }
+  .user-remain-spa{
+    height: 70px;
+    border-left: 1px solid #efefef;
+    position: absolute;
+    left: 130px;
+    top: 10px;
+  }
+  .user-op{
+    text-align: center;
+    background: #fff;
+    padding-bottom: 15px;
+    padding-top: 14px;
+    border-top: 1px solid #f0f0f0;
+  }
+  .user-btn{
+    background: #1bb999;
+    color:@white;
+    float: left;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border:none;
+  }
+  .user-in{
+    margin-left: 24px;
+    margin-right: 10px;
+  }
+  .user-out{
+    background: #cc6600;
+  }
+
+  .user-list-name{
+    background: @primary;
+    height: 40px;
+    line-height: 40px;
+    color: @white;
+    padding-left: 30px;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    span{
+      background: url("../imgs/user/icon/icon_list1.png");
+      width: 11px;
+      height: 10px;
+      position: absolute;
+      left: 10px;
+      top: 15px;
+    }
+  }
+  .user-list-detail{
+    font-size: 12px;
+    color:#333333;
+    background: @white;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 32px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    span{
+      background: url("../imgs/user/icon/list_left.png");
+      width: 4px;
+      height: 5px;
+      position: absolute;
+      left: 18px;
+      top: 16px;
+    }
+    &.active{
+      background: url("../imgs/user/icon/user_list_bg.png");
+      color:#cc6600;
+      span{
+        background: url("../imgs/user/icon/list_left_active.png");
+      }
+    }
+  }
+  .user-list-item2 .user-list-name span{
+    background: url("../imgs/user/icon/icon_list2.png");
+    width: 10px;
+    height: 12px;
+    top: 14px;
+  }
+  .user-list-item3 .user-list-name span{
+    background: url("../imgs/user/icon/icon_list3.png");
+    width: 9px;
+    height: 13px;
+  }
+  .user-operate-con{
+    padding: 15px;
+  }
+
+  .user-title{
+    font-size: 13px;
+    color:#333333;
+  }
+  .user-address{
+    text-align: center;
+  }
+  .user-address-con{
+    width: 333px;
+    display: inline-block;
+    text-align: left;
+  }
+  .user-label{
+    color:#666666;
+    font-size: 12px;
+    width: 40px;
+    float: left;
+    margin-right: 25px;
+    text-align: right;
+    margin-top: 5px;
+    span{
+      color:red;
+      font-size: 15px;
+      font-weight: bold;
+      position: absolute;
+      margin-left: -10px;
+    }
+  }
+  .user-label-value{
+    float: left;
+    color:#333333;
+    margin-top: 5px;
+  }
+  .user-group{
+    margin-bottom: 10px;
+    min-height: 30px;
+  }
+  .user-input{
+    float: left;
+    border: 1px solid #e8e8e8;
+    width: 238px;
+    height: 12px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .user-select{
+    float: left;
+    border: 1px solid #e8e8e8;
+    padding-left: 4px;
+    width: 260px;
+    height: 30px;
+  }
+  .user-textarea{
+    float: left;
+    border: 1px solid #e8e8e8;
+    width: 238px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .user-address-op{
+    margin-top: 20px;
+  }
+  .user-address-submit{
+    margin-left: 65px;
+  }
+
+
+  .user-bank-titile{
+    font-size: 12px;
+    color:#333333;
+    position: relative;
+    line-height: 50px;
+    padding-left: 60px;
+    margin-top: 30px;
+    margin-bottom:20px;
+    & span{
+      background: url("../imgs/user/icon/bank_icon1.png");
+      width: 50px;
+      height: 50px;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .user-operate-bank{
+    margin-left: 13px;
+  }
+  .user-table{
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    tr{
+      th{
+        background: #00978e;
+        color: @white;
+        border-left:1px solid @white;
+      }
+      td{
+        background: #eeeeee;
+        height: 29px;
+        line-height: 29px;
+        border-left:1px solid @white;
+        border-top:1px solid @white;
+      }
+    }
+  }
+  .user-form{
+    margin-left: 175px;
+    .user-label{
+      width: 70px;
+    }
+  }
+  .user-select-s{
+    width: 125px;
+  }
+  .user-select-s-2{
+    margin-left: 10px;
+  }
+  .user-btn-bank{
+    margin-left: 100px;
+  }
+  .user-bank-op{
+    margin-top: 20px;
+  }
+  .user-btn-bank,.user-btn-pwd{
+    margin-left: 95px;
+  }
+
+  .user-form-change{
+    position: relative;
+    .user-label{
+      width: 80px;
+    }
+  }
+  .user-package-item{
+    width: 139px;
+    height: 79px;
+    float: left;
+    border-right:1px solid #eaeaea;
+    border-top:1px solid #eaeaea;
+  }
+  .user-package-item-big{
+    width: 219px;
+  }
+  .user-package{
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  .user-no-con{
+    padding: 0;
+    .user-title{
+      padding: 15px;
+    }
+  }
+  .user-package-name{
+    font-size: 12px;
+    color:#333333;
+    text-align: center;
+    margin-top: 18px;
+  }
+  .user-package-money{
+    margin-top: 7px;
+    font-size: 16px;
+    color:#cc6600;
+    text-align: center;
+  }
+  .user-package-row-last .user-package-item{
+    border-bottom:1px solid #eaeaea;
+  }
+  .user-package-item-spec{
+    border-right: none;
+    border-bottom:1px solid #eaeaea;
+  }
+
+  .user-deposit-top{
+    margin-top: 20px;
+    background: #dedede;
+    border-radius: 5px;
+    padding: 10px 15px;
+    input{
+      position: relative;
+      top: 2px;
+    }
+    label{
+      margin-right: 30px;
+    }
+  }
+
+  .user-form-no{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .user-help{
+    font-style: italic;
+    color:#999999;
+    margin-top: 5px;
+    float: left;
+    margin-left: 15px;
+  }
+  
+  .deposit-step{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+  .deposit-step-con{
+    margin-left: 176px;
+  }
+  .deposit-step-text{
+    float: left;
+    width: 60px;
+    text-align: right;
+    margin-right: 40px;
+    color:#666666;
+  }
+  .deposit-step-value{
+    float: left;
+  }
+  .deposit-step-group{
+    margin-bottom: 25px;
+  }
+  .deposit-step-con{
+    padding: 40px 0 20px;
+  }
+  .user-btn-prev{
+    background: #bbbdc1;
+    margin-right: 10px;
+  }
+  .deposit-step-fix{
+    position: fixed;
+    background: rgba(0,0,0,.4);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+  }
+  .deposit-step-last{
+    width: 550px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -210px;
+    margin-top: -210px;
+    z-index: 2100;
+    background: #fff;
+    padding: 10px;
+  }
+  .deposit-step-last-title{
+    color:#00978e;
+    font-size: 13px;
+    background: #e8e8e8;
+    padding: 6px 8px;
+
+  }
+  .deposit-step-last-text{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
+  .deposit-step-last-close{
+    position: absolute;
+    background: url("../imgs/user/icon/user_close.png");
+    width: 13px;
+    height: 10px;
+    right: 20px;
+    top: 19px;
+    cursor: pointer;
+  }
+  .deposit-step-last-item{
+    margin-bottom: 25px;
+    a{
+      color:@primary;
+      text-decoration: underline;
+      display: inline-block;
+      width: 90px;
+    }
+  }
+  .deposit-step-last-ok{
+    display: inline-block;
+    padding-left: 20px;
+    position: relative;
+    margin-left: 30px;
+    span{
+      background: url("../imgs/user/icon/user_ok.png");
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+  }
+  .deposit-step-last-ok2{
+    span{
+      background: url("../imgs/user/icon/user_info.png");
+    }
+  }
+  .deposit-step-text2{
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  .user-btn-change2{
+    margin-left: 106px;
+  }
+  .user-change-icon{
+    background: url("../imgs/user/icon/icon_change.png");
+    width: 22px;
+    height: 40px;
+    position: absolute;
+    left: 374px;
+    top: 15px;
+  }
+
+  .user-title-money{
+    background: #dedede;
+    padding: 6px 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    position: relative;
+    span{
+      font-size: 16px;
+      color:#cc6600;
+    }
+  }
+  .user-title-money-icon{
+    background: url("../imgs/user/icon/refresh_2.png");
+    width: 11px;
+    height: 12px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .user-form-payment{
+    margin-left: 10px;
+    .user-input{
+      width: 178px;
+    }
+  }
+  .label-payment{
+    margin-top: 5px;
+    float: left;
+    margin-left: 15px;
+    a{
+      color:#00978e;
+      margin-right: 10px;
+    }
+  }
+  .user-form-payment .user-label{
+    width: 90px;
+  }
+  .user-btn-payment{
+    margin-left: 115px;
+  }
+  .payment-bank-con{
+    float: left;
+  }
+  .payment-bank{
+    width: 564px;
+    th{
+      background: #00978e;
+      color:#fff;
+      height: 32px;
+      line-height: 32px;
+    }
+    td{
+      border:1px solid #e8e8e8;
+      height: 30px;
+      text-align: center;
+    }
+  }
+  .user-form-profile{
+    margin-top: 30px;
+    .user-label{
+      width: 72px;
+    }
+  }
+  .user-btn-profile{
+    margin-left: 97px;
+  }
+
+  .user-history-item{
+    background: #bbbdc1;
+    float: left;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color:@white;
+    margin-right: 5px;
+    cursor: pointer;
+    &.active{
+      background: #1bb999;
+    }
+  }
+  .user-history{
+    margin-top: 25px;
+  }
+
+  .user-search{
+    color:#333;
+    margin-top: 25px;
+    .user-search-label{
+      float: left;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    .user-search-input{
+      float: left;
+      width: 78px;
+      margin-right: 20px;
+      padding: 6px 10px;
+    }
+    .user-search-select{
+      float: left;
+      height: 26px;
+    }
+    .user-search-select{
+      width: 80px;
+      margin-right: 20px;
+    }
+    .user-search-btn{
+      width: 60px;
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+  .user-search-table{
+    width: 100%;
+    margin-top: 30px;
+    th{
+      background: #00978e;
+      height: 30px;
+      color:@white;
+    }
+  }
+  .user-search-no{
+    color:#333333;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 1px;
+    background: #eeeeee;
+  }
+  .user-history-type{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+}

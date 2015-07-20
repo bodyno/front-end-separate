@@ -1,0 +1,225 @@
+@import "var";
+@import "sprite";
+.nb88{
+  .header{
+    background: rgba(255,255,255,.9);
+    position: relative;
+    z-index: 11;
+    overflow: hidden;
+    .container{
+      &:before{
+        content: '';
+        background: url("../imgs/icon/top_sp.png");
+        width: 28px;
+        height: 41px;
+        position: absolute;
+        left: 331px;
+        top: 69px;
+      }
+    }
+  }
+  .container{
+    width: 1200px;
+    min-width: 1200px;
+  }
+  .logo{
+    float: left;
+    width: 250px;
+    height: 110px;
+    a{
+      display: none;
+      font-size: 0px;
+      background: url("../imgs/icon/logo.png");
+      /*.sprite(@logo);*/
+      width: 250px;
+      height: 110px;
+    }
+  }
+  .header-right{
+    float: left;
+    width: 950px;
+  }
+  .sel-country{
+    width: 45px;
+    height: 20px;
+    background: #e8e8e6;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+  }
+  .country-img{
+    background: url("../imgs/icon/china.png") no-repeat;
+    width: 16px;
+    height: 11px;
+    position: relative;
+    top: 4px;
+    left: 7px;
+  }
+  .country-triangle{
+    background: url("../imgs/icon/triangle.png") no-repeat;
+    width: 7px;
+    height: 4px;
+    position: absolute;
+    left: 30px;
+    top: 8px;
+  }
+
+  .header-triangle{
+    background: url("../imgs/icon/top_triangle.png") no-repeat;
+    float: left;
+    width: 25px;
+    height: 30px;
+    margin-left: 80px;
+  }
+  .header-time{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 795px;
+    background:#1bb999;
+    position: relative;
+    &:before{
+      content: '';
+      height: 30px;
+      position: absolute;
+      right: -1000px;
+      width: 1000px;
+      background:#1bb999;
+    }
+    .time{
+      color: @white;
+      font-size: @fontsize;
+      float: left;
+      display: none;
+    }
+  }
+  .header-op{
+    float: right;
+    .login{
+      color: @white;
+      float: left;
+      width: 70px;
+      text-align: center;
+      cursor: pointer;
+      &.active{
+        background: #00978e;
+      }
+    }
+    .reg{
+      color: @white;
+      float: left;
+      width: 70px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .header-menu{
+    margin-left: 150px;
+    font-size: 13px;
+    li{
+      float: left;
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      line-height: 120px;
+      a{
+        color:@fontcolor;
+        width: 80px;
+        height: 80px;
+        display: block;
+        position: relative;
+        &:hover,&.active{
+          background: url("../imgs/menu_fix.png") no-repeat bottom;
+        }
+      }
+    }
+    span{
+      display: block;
+      position: absolute;
+      left: 26px;
+      top: 17px;
+    }
+    .icon-home span{
+      background: url("../imgs/icon/home.png") no-repeat center;
+      width: 27px;
+      height: 25px;
+    }
+    .icon-home.active span,.icon-home:hover span{
+      background: url("../imgs/icon/home_active.png") no-repeat center;
+    }
+    .icon-mobile span{
+      background: url("../imgs/icon/mobile.png") no-repeat center;
+      width: 18px;
+      height: 26px;
+      left: 29px;
+    }
+    .icon-mobile.active span,.icon-mobile:hover span{
+      background: url("../imgs/icon/mobile_active.png") no-repeat center;
+    }
+    .icon-sport span{
+      background: url("../imgs/icon/sport.png") no-repeat center;
+      width: 26px;
+      height: 26px;
+    }
+    .icon-sport.active span,.icon-sport:hover span{
+      background: url("../imgs/icon/sport_active.png") no-repeat center;
+    }
+    .icon-casino span{
+      background: url("../imgs/icon/really.png") no-repeat center;
+      width: 26px;
+      height: 26px;
+    }
+    .icon-casino.active span,.icon-casino:hover span{
+      background: url("../imgs/icon/really_active.png") no-repeat center;
+    }
+    .icon-games span{
+      background: url("../imgs/icon/tiger.png") no-repeat center;
+      width: 26px;
+      height: 21px;
+      top:21px;
+    }
+    .icon-games.active span,.icon-games:hover span{
+      background: url("../imgs/icon/tiger_active.png") no-repeat center;
+    }
+    .icon-lottery span{
+      background: url("../imgs/icon/lottery.png") no-repeat center;
+      width: 26px;
+      height: 26px;
+    }
+    .icon-lottery.active span,.icon-lottery:hover span{
+      background: url("../imgs/icon/lottery_active.png") no-repeat center;
+    }
+    .icon-pocker span{
+      background: url("../imgs/icon/pocker.png") no-repeat center;
+      width: 32px;
+      height: 25px;
+    }
+    .icon-pocker.active span,.icon-pocker:hover span{
+      background: url("../imgs/icon/pocker_active.png") no-repeat center;
+    }
+    .icon-promotion span{
+      background: url("../imgs/icon/promotion.png") no-repeat center;
+      width: 25px;
+      height: 26px;
+    }
+    .icon-promotion.active span,.icon-promotion:hover span{
+      background: url("../imgs/icon/promotion_active.png") no-repeat center;
+    }
+    .icon-vip span{
+      background: url("../imgs/icon/vip.png") no-repeat center;
+      width: 22px;
+      height: 21px;
+      top: 21px;
+    }
+    .icon-news span{
+      background: url("../imgs/icon/news.png") no-repeat center;
+      width: 26px;
+      height: 22px;
+      top: 21px;
+    }
+  }
+}
