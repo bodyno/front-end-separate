@@ -1,0 +1,9 @@
+module.exports=function(app){
+    app.get('/checkOperate',function(req,res){
+        if(req.param("operator")!="1234"){
+            res.end("true")
+        }else{
+            res.end("false")
+        }
+    });
+};

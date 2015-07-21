@@ -1,0 +1,9 @@
+module.exports=function(app){
+    app.get('/checkValidateCode',function(req,res){
+        if(req.param("validateCode")=="1234"){
+            res.end("true")
+        }else{
+            res.end("false")
+        }
+    });
+};

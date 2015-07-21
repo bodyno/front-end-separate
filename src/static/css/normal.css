@@ -54,8 +54,9 @@ The `.sprites` mixin generates identical output to the CSS template
 .nb88 .logo a {
   display: none;
   font-size: 0px;
-  background: url("../imgs/icon/logo.png");
-  /*.sprite(@logo);*/
+  /*background: url("../imgs/icon/logo.png");*/
+  background-image: url(/static/imgs/sprite/sprite.png);
+  background-position: 0px 0px;
   width: 250px;
   height: 110px;
 }
