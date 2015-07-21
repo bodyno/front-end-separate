@@ -7,3 +7,9 @@
 grunt md5 打包合并
 
 漂亮
+
+使用:npm install
+
+npm start
+
+打包 grunt
