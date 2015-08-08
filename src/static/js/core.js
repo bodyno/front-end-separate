@@ -1,35 +1,27 @@
 $(function(){
 
-    /*logo处理*/
-    if(localStorage.getItem("logo")){
-        $(".logo").html(localStorage.getItem("logo"))
-    }else{
-        $(".logo a").css("display","block");
-    }
+    var lngTime;
+    //语言
+    $(".language").hoverIntent(function(){
+        $(this).find(".language-list").show();
+    },function(){
+        var _this=$(this)
+        lngTime=setTimeout(function(){
+            _this.find(".language-list").hide();
+        },200)
+    })
 
-    /*时钟*/
-    var tempTimeEle=$(".header .time span");
-    tempTimeEle.parent().show();
-    tempTimeEle.text(moment().format("YYYY-M-D hh:mm:ss"))
-    setInterval(function(){
-        tempTimeEle.text(moment().format("YYYY-M-D hh:mm:ss"))
-    },1000)
-
-    /*logo跳转*/
-    $(".logo").click(function(){
-        var tempurl=$(this).children().attr("href");
-        if(tempurl){
-            location.href=url
-        }else{
-
-        }
+    $(".language-list").mouseenter(function(){
+        clearTimeout(lngTime);
+    }).mouseleave(function(){
+        $(this).fadeOut(200)
     })
 
 })
 
 /*form转json*/
-function toObj(ele){
-    var obj=ele.serializeArray(),
+$.fn.form=function(){
+    var obj=this.serializeArray(),
         result={};
     for(var item in obj){
         result[obj[item].name]=filterXSS(obj[item].value);

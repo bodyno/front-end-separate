@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/account.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/page_header.vm')
+    <div class="account-con">
+        <div class="account-main container clearfix">
+            <div class="account-main-left">
+                <ul>
+                    <li class="active"><a href="/profile">编辑资料</a></li>
+                    <li><a href="/safe">更改密码</a></li>
+                </ul>
+            </div>
+            <div class="account-main-right">
+                <div class="account-main-title">
+                    <h2>编辑资料</h2>
+                    <div class="account-main-title-text">为了增强您的账户安全，请提交详细信息，便于工作人员审核。</div>
+                </div>
+                <div class="account-form">
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">邮箱：</label>
+                        <div class="account-group-value">leom9888@gmail.com</div>
+                    </div>
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">手机号：</label>
+                        <div class="account-group-value">13918433458</div>
+                    </div>
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">注册时间：</label>
+                        <div class="account-group-value">2014-07-15 15:18:22</div>
+                    </div>
+                    <div class="account-group-spa"></div>
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">真实姓名：</label>
+                        <input type="text" class="account-input">
+                    </div>
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">登录账号：</label>
+                        <input type="text" class="account-input">
+                    </div>
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">性别：</label>
+                        <label class="account-radio">男<input type="radio" name="sex" class="account-input" checked></label>
+                        <label class="account-radio">女<input type="radio" name="sex" class="account-input"></label>
+                    </div>
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">出生日期：</label>
+                        <input type="text" class="account-input">
+                    </div>
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">身份证：</label>
+                        <input type="text" class="account-input">
+                    </div>
+                    <div class="account-group clearfix">
+                        <label class="account-group-label">QQ：</label>
+                        <input type="text" class="account-input">
+                    </div>
+                    <div class="account-btn account-btn-profile">提交</div>
+                </div>
+                <div class="account-service">
+                    如有任何问题，请联系我们的<a href="#">在线客服</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse('/common/page_footer.vm')
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    #set($header='sports')
+    <link rel="stylesheet" href="/static/css/common.css"/>
+</head>
+<body class="lottery">
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+    <div class="sports">
+        <div class="container">
+            <h1>体育</h1>
+        </div>
+    </div>
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script src="/static/plugin/jquery.hoverintent/hoverintent.js"></script>
+    <script src="/static/js/lottery.js"></script>
+</body>
+</html>

@@ -60,7 +60,7 @@
 			}).addClass(params.className).bind("click", function(e) {
 				var target = e && e.target;
 				if (target && target.tagName.toLowerCase() === "li") {
-				    $(element).val(target.innerHTML).trigger("input").focus();
+				    $(element).val(target.innerHTML).trigger("input").focus().trigger("focusout");
 					$(this).css(visibility, "hidden");
 				}				
 			});			
@@ -89,7 +89,7 @@
 				"click": function(e) {
 					var target = e && e.target, htmlList = '';
 					if (target == element && element.value && (htmlList = fnEmailList(element, params.email))) {
-						eleUl.css(visibility, "visible").html(htmlList);	
+						eleUl.css(visibility, "visible").html(htmlList);
 					} else if (target != eleUl.get(0) && target.parentNode != eleUl.get(0)) {
 						eleUl.css(visibility, "hidden");
 					}
@@ -115,9 +115,10 @@
 								break;
 							}
 							case key.enter: {		
-								e.preventDefault();		
+								e.preventDefault();
 								eleLi.get(element.indexSelected) && $(element).val(eleLi.eq(element.indexSelected).html());
 								eleUl.css("visibility", "hidden");
+                                $(element).trigger("focusout");
 								break;
 							}
 							case key.tab: case key.esc: {

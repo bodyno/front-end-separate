@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/account.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/page_header.vm')
+    <div class="account-con">
+        <div class="account-main container clearfix">
+            <div class="account-main-left">
+                <ul>
+                    <li><a href="/profile">发件箱</a></li>
+                    <li class="active"><a href="/safe">收件箱</a></li>
+                    <li><a href="/safe">发送建议</a></li>
+                </ul>
+            </div>
+            <div class="account-main-right">
+                <div class="account-main-title">
+                    <h2>站内信</h2>
+                    <div class="account-main-title-text">这里显示本站发给您个人的信息</div>
+                </div>
+                <div class="account-form account-form2">
+
+                </div>
+                <div class="account-service">
+                    如有任何问题，请联系我们的<a href="#">在线客服</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse('/common/page_footer.vm')
+</body>
+</html>

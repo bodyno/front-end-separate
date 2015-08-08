@@ -1,0 +1,11 @@
+<!--[if lt IE 9]>
+    <div class="browser-updatetips">
+        <div class="container">
+            <div class="mw">
+                系统检测到您浏览器版本太低，黑客容易利用其植入木马或病毒，从而对您的游戏体验和资金管理构成威胁。建议您下载&nbsp;<a href="http://chrome.360.cn/" target="_blank" class="brow">360极速浏览器</a>，并保持打开右上角&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;极速模式
+                <div class="speed"></div>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <![endif]-->

@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/account.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/page_header.vm')
+    <div class="account-con">
+        <div class="account-main container clearfix">
+            <div class="account-main-left">
+                <ul>
+                    <li class="active"><a href="/cashier">余额</a></li>
+                    <li><a href="/deposit">存款</a></li>
+                    <li><a href="/withdraw">提款</a></li>
+                    <li><a href="/transfer">转账</a></li>
+                </ul>
+            </div>
+            <div class="account-main-right">
+                <div class="account-main-title">
+                    <h2>余额</h2>
+                    <div class="account-main-title-text">这里显示您的所有余额</div>
+                </div>
+                <div class="account-form account-form2">
+                    <div class="cashier-con clearfix">
+                        <div class="cashier-center">
+                            <div class="cashier-center-title">中心钱包余额</div>
+                            <div class="cashier-center-money">0.00元</div>
+                        </div>
+                        <div class="cashier-center-spa"></div>
+                        <div class="cashier-center">
+                            <div class="cashier-center-title">锁定余额</div>
+                            <div class="cashier-center-money">0.00元</div>
+                        </div>
+                    </div>
+                    <div class="cashier-list clearfix">
+                        <div class="cashier-item">
+                            <div class="cashier-item-title">AG平台</div>
+                            <div class="cashier-item-money">0.00</div>
+                        </div>
+                        <div class="cashier-item">
+                            <div class="cashier-item-title">AG平台</div>
+                            <div class="cashier-item-money">0.00</div>
+                        </div>
+                        <div class="cashier-item">
+                            <div class="cashier-item-title">AG平台</div>
+                            <div class="cashier-item-money">0.00</div>
+                        </div>
+                        <div class="cashier-item">
+                            <div class="cashier-item-title">AG平台</div>
+                            <div class="cashier-item-money">0.00</div>
+                        </div>
+                        <div class="cashier-item">
+                            <div class="cashier-item-title">AG平台</div>
+                            <div class="cashier-item-money">0.00</div>
+                        </div>
+                        <div class="cashier-item">
+                            <div class="cashier-item-title">AG平台</div>
+                            <div class="cashier-item-money">0.00</div>
+                        </div>
+                        <div class="cashier-item">
+                            <div class="cashier-item-title">AG平台</div>
+                            <div class="cashier-item-money">0.00</div>
+                        </div>
+                    </div>
+                    <div class="cashier-all clearfix">
+                        <div class="cashier-all-right clearfix">
+                            <div class="cashier-all-text">
+                                总计余额：<span>0.00</span>元
+                            </div>
+                            <div class="account-btn cashier-all-btn">刷新</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-service">
+                    如有任何问题，请联系我们的<a href="#">在线客服</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse('/common/page_footer.vm')
+</body>
+</html>

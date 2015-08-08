@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    #set($header='promotion')
+    <link rel="stylesheet" href="/static/css/common.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+    <div class="promotion-img"></div>
+    <div class="promotion">
+        <div class="container">
+            <ul class="promotion-top clearfix">
+                <li class="active"><a href="#">最新优惠</a></li>
+                <li><a href="#">返水优惠</a></li>
+                <li><a href="#">特别优惠</a></li>
+            </ul>
+            <img src="/static/images/pro_up.png" style="display: none;">
+            <div class="promotion-list">
+                <div class="promotion-item">
+                    <div class="promotion-item-title">七月M88新会员 注册即送58元免费奖金！</div>
+                    <div class="promotion-item-img">
+                        <img src="/static/images/promotion_img1.jpg">
+                    </div>
+                    <div class="promotion-item-op">
+                        <div class="promotion-btn-op clearfix">
+                            <div class="promotion-btn-more">更多信息</div>
+                            <div class="promotion-btn-join">立即加入</div>
+                        </div>
+                    </div>
+                    <div class="promotion-detail">
+                        <div class="promotion-detail-title">
+                            规则与条款:
+                        </div>
+                        <div class="promotion-detail-text">
+                            1.优惠开始于7月16日00:00:01至7月31日23:59:59截止。<br>
+                            2.此优惠面向所有M88中国新会员。<br>
+                            3.在优惠期间注册的新会员，将直接获得58元注册奖金。<br>
+                            4.会员需在提款前将所得注册奖金20倍流水投注于所有产品（除扑克），并有不少于1000元的累积存款。
+                        </div>
+                    </div>
+                </div>
+                <div class="promotion-item">
+                    <div class="promotion-item-title">七月M88新会员 注册即送58元免费奖金！</div>
+                    <div class="promotion-item-img">
+                        <img src="/static/images/promotion_img2.jpg">
+                    </div>
+                    <div class="promotion-item-op">
+                        <div class="promotion-btn-op clearfix">
+                            <div class="promotion-btn-more">更多信息</div>
+                            <div class="promotion-btn-join">立即加入</div>
+                        </div>
+                    </div>
+                    <div class="promotion-detail">
+                        <div class="promotion-detail-title">
+                            规则与条款:
+                        </div>
+                        <div class="promotion-detail-text">
+                            1.优惠开始于7月16日00:00:01至7月31日23:59:59截止。<br>
+                            2.此优惠面向所有M88中国新会员。<br>
+                            3.在优惠期间注册的新会员，将直接获得58元注册奖金。<br>
+                            4.会员需在提款前将所得注册奖金20倍流水投注于所有产品（除扑克），并有不少于1000元的累积存款。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script src="/static/js/promotion.js"></script>
+</body>
+</html>

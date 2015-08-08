@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/account.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/page_header.vm')
+    <div class="account-con">
+        <div class="account-main container clearfix">
+            <div class="account-main-left">
+                <ul>
+                    <li><a href="/cashier">余额</a></li>
+                    <li><a href="/deposit">存款</a></li>
+                    <li class="active"><a href="/withdraw">提款</a></li>
+                    <li><a href="/transfer">转账</a></li>
+                </ul>
+            </div>
+            <div class="account-main-right">
+                <div class="account-main-title">
+                    <h2>提款</h2>
+                    <div class="account-main-title-text">可以选择提款方式</div>
+                </div>
+                <div class="account-form account-withdraw">
+                    <div class="account-withdraw-text">
+                        <div class="b">*为保障您的资金安全，提款前请完善您的个人资料，谢谢配合。</div>
+                        <div class="clearfix">
+                            <span>最低限额：RMB 50.00</span>
+                            <span>最高限额：RMB 200,000.00</span>
+                        </div>
+                        <div class="clearfix">
+                            <span>最高余额：RMB 1,000,000.00</span>
+                            <span>当前余额：RMB 0.00</span>
+                        </div>
+                    </div>
+                    <div class="account-withdraw-con">
+                        <div class="account-group clearfix">
+                            <label class="account-group-label">请输入提款金额：</label>
+                            <input type="text" class="account-input">
+                        </div>
+                        <div class="account-group clearfix">
+                            <label class="account-group-label">银行名称：</label>
+                            <select class="account-select">
+                                <option>中国工商银行</option>
+                            </select>
+                        </div>
+                        <div class="account-group clearfix">
+                            <label class="account-group-label">银行支行或者分行名称：</label>
+                            <input type="text" class="account-input">
+                        </div>
+                        <div class="account-group clearfix">
+                            <label class="account-group-label">银行地址：</label>
+                            <input type="text" class="account-input">
+                        </div>
+                        <div class="account-group clearfix">
+                            <label class="account-group-label">卡（账）号姓名：</label>
+                            <input type="text" class="account-input">
+                        </div>
+                        <div class="account-group clearfix">
+                            <label class="account-group-label">卡（账）号：</label>
+                            <input type="text" class="account-input">
+                        </div>
+                        <div class="account-btn account-btn-normal">提交</div>
+                    </div>
+
+                </div>
+                <div class="account-service">
+                    如有任何问题，请联系我们的<a href="#">在线客服</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse('/common/page_footer.vm')
+</body>
+</html>

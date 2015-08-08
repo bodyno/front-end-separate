@@ -1,0 +1,550 @@
+@import "core";
+@import "var";
+@import "sprite_account";
+
+body{
+  background: url("../images/account_bg.jpg");
+}
+.page-header{
+  border-bottom: 1px solid #bcbcbd;
+  padding-bottom: 10px;
+}
+.page-header-left{
+  float: left;
+  margin-left: 108px;
+  a{
+    display: block;
+    float: left;
+    margin-top: 8px;
+    margin-right: 15px;
+  }
+  .page-header-left-spa{
+    float: left;
+    border-left: 1px solid #61c275;
+    height: 59px;
+    margin-top: 23px;
+    margin-right: 15px;
+  }
+  .page-header-left-text{
+    float: left;
+    color:#666666;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+}
+.page-header-right{
+  float: right;
+  margin-right: 50px;
+  margin-top: 41px;
+  .page-header-name{
+    color:#666666;
+    font-size: 12px;
+    float: left;
+    margin-right: 7px;
+    margin-top: 4px;
+  }
+  .page-header-service{
+    float: left;
+    background: @primary;
+    background: linear-gradient(lighten(@primary,10%),@primary);
+    color:#fff;
+    width: 91px;
+    padding-left: 40px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    &:hover{
+      background: lighten(@primary,5%);
+      background: linear-gradient(lighten(@primary,12%),lighten(@primary,5%));
+    }
+    i{
+      position: absolute;
+      .sprite(@service);
+      width: 18px;
+      height: 14px;
+      left: 13px;
+      top: 5px;
+    }
+  }
+  .page-header-spa{
+    float: left;
+    border-right: 1px solid #afafaf;
+    height: 12px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 6px;
+  }
+  .page-header-logout{
+    float: left;
+    width: 44px;
+    height: 24px;
+    line-height: 24px;
+    background: #606465;
+    background: linear-gradient(lighten(#606465,10%),#606465);
+    color:#fff;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover{
+      background: lighten(#606465,8%);
+      background: linear-gradient(lighten(#606465,15%),lighten(#606465,8%));
+    }
+  }
+}
+.page-footer{
+  background: #1c1c1c;
+  height: 80px;
+  line-height: 75px;
+  color: #999999;
+  text-align: center;
+}
+.container{
+  width: 1000px;
+}
+.page-menu{
+  border-top:1px solid #ffffff;
+  padding-top: 65px;
+  margin-bottom: 14px;
+}
+.page-menu-list{
+  li{
+    float: left;
+    &.active a,&:hover a{
+      border-bottom: 3px solid @primary;
+      color:#333333;
+      font-weight: bold;
+    }
+  }
+  a{
+    font-size: 14px;
+    color:#999999;
+    width: 119px;
+    display: block;
+    text-align: center;
+    border-bottom: 3px solid #bcbcbd;
+    padding-bottom: 19px;
+  }
+}
+.page-menu-con{
+  width: 740px;
+  margin-left: 250px;
+}
+.page-menu-btn{
+  width: 108px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #17adea;
+  color:#fff;
+  display: block;
+  float: left;
+  border-radius: 20px;
+  margin-left: 35px;
+  font-size: 14px;
+  &:hover{
+    background: lighten(#17adea,10%);
+  }
+}
+.account-con{
+  background: url("../images/account_img.jpg") no-repeat center bottom;
+  padding-bottom: 58px;
+}
+.account-main{
+  background: #f4f6f7;
+  min-height: 736px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+}
+.account-main-left{
+  float: left;
+  width: 168px;
+  min-height: 736px;
+  background: #e4e5e6;
+  font-size: 14px;
+  ul{
+    margin-top: 97px;
+    margin-left: 70px;
+  }
+  li{
+    margin-top: 10px;
+    &.active a{
+      color:@primary;
+    }
+    a{
+      color:#a8a8a8;
+      font-weight: bold;
+    }
+  }
+}
+.account-main-right{
+  width: 770px;
+  padding-left: 30px;
+  padding-right: 30px;
+  float: left;
+}
+.account-main-title{
+  margin-top: 58px;
+  border-bottom: 1px solid #a8a8a8;
+  padding-bottom: 25px;
+  h2{
+    font-weight: bold;
+    color:#333333;
+  }
+  .account-main-title-text{
+    font-size: 12px;
+    color:#666666;
+    margin-top: 10px;
+  }
+}
+.account-group{
+  font-size: 14px;
+  color:#a8a8a8;
+  margin-bottom: 10px;
+  padding-left: 125px;
+  .account-group-label{
+    float: left;
+    width: 70px;
+    margin-right: 12px;
+    margin-top: 7px;
+    position: relative;
+    span{
+      position: absolute;
+      left: -9px;
+      top: 1px;
+      font-size: 16px;
+    }
+  }
+  .account-group-value{
+    float: left;
+    margin-top: 9px;
+  }
+}
+.account-form{
+  padding-top: 20px;
+}
+.account-safe{
+  padding-top: 40px;
+  .account-btn{
+    margin-left: 130px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+  }
+}
+.account-group-spa{
+  border-bottom: 1px solid #dadada;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.account-input[type=text],.account-input[type=password]{
+  float: left;
+  border: 1px solid #ccc;
+  height: 14px;
+  font-size: 14px;
+  padding: 8px 10px;
+  width: 230px;
+}
+.account-select{
+  float: left;
+  border: 1px solid #ccc;
+  height: 32px;
+  font-size: 14px;
+  padding: 0px 10px;
+  width: 140px;
+}
+.account-radio{
+  margin-top: 7px;
+  float: left;
+  input{
+    position: relative;
+    top: 2px;
+    margin-left: 4px;
+    margin-right: 20px;
+  }
+}
+.account-btn{
+  text-align: center;
+  background:lighten(@primary,5%);
+  text-align: center;
+  color:#fff;
+  font-size: 16px;
+  width: 292px;
+  height: 46px;
+  line-height: 46px;
+  cursor: pointer;
+  border-radius: 5px;
+  &:hover{
+    background:lighten(@primary,2%);
+  }
+}
+.account-btn-profile{
+  margin-left: 125px;
+  margin-top: 20px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+}
+.account-service{
+  text-align: right;
+  color:#a8a8a8;
+  margin-top: 50px;
+  a{
+    color:@primary;
+  }
+}
+.account-nav{
+  position: absolute;
+  left: 50%;
+  z-index: 111;
+  top: 372px;
+}
+.account-nav-left{
+  .sprite(@arrow_left);
+  cursor: pointer;
+  margin-left: -650px;
+}
+.account-nav-right{
+  .sprite(@arrow_right);
+  cursor: pointer;
+  margin-left: 610px;
+}
+.cashier-con{
+  background: #ffffff;
+  border:1px solid #cecece;
+  margin: 0 39px;
+}
+.cashier-center{
+  float: left;
+  width: 300px;
+  padding-left: 44px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+.cashier-center-title{
+  color:#999999;
+  font-size: 14px;
+}
+.cashier-center-spa{
+  height: 50px;
+  border-right: 1px solid #cccccc;
+  float: left;
+  margin-top: 28px;
+}
+.cashier-center-money{
+  margin-top: 6px;
+  color:#cc3333;
+  font-size: 14px;
+}
+.cashier-list{
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+.cashier-item{
+  float: left;
+  border-right:1px solid #cccccc;
+  padding-left: 25px;
+  padding-right: 20px;
+  .cashier-item-title{
+    font-size: 14px;
+    color:#999999;
+  }
+  .cashier-item-money{
+    font-size: 14px;
+    color:#ff6600;
+    margin-top: 4px;
+  }
+}
+.cashier-all{
+  margin-top: 47px;
+  .cashier-all-text{
+    color:#999999;
+    font-size: 14px;
+    float: left;
+    margin-top: 13px;
+    margin-right: 15px;
+    font-weight: bold;
+    span{
+      color:#cc0000;
+    }
+  }
+  .cashier-all-btn{
+    width: 78px;
+    float: left;
+  }
+}
+.cashier-all-right{
+  float: right;
+  margin-bottom: 100px;
+  margin-right: 40px;
+}
+.account-withdraw{
+  padding-top: 10px;
+}
+.account-withdraw-text{
+  background: #dcf2e8;
+  padding: 15px 27px;
+  font-size: 14px;
+  color:#666666;
+  line-height: 20px;
+  margin: 0 10px;
+  .b{
+    color:#cc0000;
+    margin-bottom: 4px;
+  }
+  span{
+    float: left;
+    width: 218px;
+  }
+}
+.account-withdraw-con{
+  margin-top: 45px;
+  .account-group{
+    color:#666666;
+    padding-left: 40px;
+  }
+  .account-group-label{
+    width: 160px;
+    text-align: right;
+  }
+  .account-input{
+    width: 272px;
+  }
+}
+.account-withdraw-con{
+  .account-btn-normal{
+    margin-left: 214px;
+  }
+}
+.account-btn-normal{
+  width: 158px;
+}
+.account-transfer{
+  padding-top: 70px;
+  margin-bottom: 200px;
+  .account-group{
+    padding-left: 84px;
+  }
+  .account-group-label{
+    width: 90px;
+  }
+  .account-input[type=text]{
+    width: 274px;
+  }
+  .account-btn-normal{
+    margin-left: 186px;
+  }
+}
+.account-group-help{
+  margin-top: 5px;
+  margin-left: 25px;
+  float: left;
+}
+.page-fix{
+  position: fixed;
+  top: 20%;
+  right: 0;
+  margin-right: 25px;
+  z-index: 111;
+}
+.fix-icon{
+  cursor: pointer;
+  margin-bottom: 12px;
+  position: relative;
+  .fix-icon-text{
+    .sprite(@pop);
+    position: absolute;
+    left: -143px;
+    top: 14px;
+    color:#666666;
+    font-size: 12px;
+    line-height: 32px;
+    padding-left: 10px;
+    display: none;
+    span{
+      color:@primary;
+      margin-left: 5px;
+    }
+  }
+}
+.fix-we{
+  .sprite(@wei);
+  &:hover{
+    .sprite(@wei_a);
+  }
+}
+.fix-sina{
+  .sprite(@sina);
+  &:hover{
+    .sprite(@sina_a);
+  }
+}
+.fix-code{
+  .sprite(@code);
+  &:hover{
+    .sprite(@code_a);
+  }
+}
+.fix-qcode{
+  .sprite(@qcode);
+  position: absolute;
+  left: -117px;
+  top: -16px;
+  display: none;
+}
+
+//历史
+.account-history{
+  padding-top: 40px;
+}
+.history-group{
+  font-size: 14px;
+  color:#a8a8a8;
+  margin-bottom: 15px;
+  padding-left: 39px;
+  .history-b{
+    float: left;
+    margin-top: 7px;
+    width: 84px;
+  }
+  .history-spa{
+    float: left;
+    margin: 0 10px;
+    margin-top: 7px;
+  }
+  .account-input-con{
+    float: left;
+    position: relative;
+    .icon-date{
+      .sprite(@date);
+      position: absolute;
+      right: 8px;
+      top: 9px;
+      &:hover{
+        .sprite(@date_a);
+      }
+    }
+  }
+  .account-input{
+    border-color:#bababa;
+  }
+}
+.history-btn{
+  width: 158px;
+  margin-left: 124px;
+}
+.history-table-con{
+  margin-top: 35px;
+}
+.history-table{
+  color:#a8a8a8;
+  width: 100%;
+  td,th{
+    border:1px solid #cccccc;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+    background: #fff;
+  }
+}

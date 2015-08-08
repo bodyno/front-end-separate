@@ -1,28 +1,38 @@
+@import "normalize";
+@import "sprite";
+@import "var";
 ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  font-weight: normal;
 }
 button,input,textarea,select{
   outline: none;
 }
 
 .container{
-  width: 1000px;
+  width: 980px;
   margin: auto;
   position: relative;
 }
 .clearfix(){
-  &:after{
+  *zoom:1;
+  &:before{
     content: "";
     display: table;
+  }
+  &:after{
+    display: table;
     clear: both;
+    content: "";
   }
 }
-.clearfix:after{
-  content: "";
-  display: table;
-  clear: both;
+.clearfix{
+  .clearfix;
 }
 a{
   cursor: pointer;
@@ -30,66 +40,68 @@ a{
 a:link,a:hover {
   text-decoration: none;
 }
+.nomr{
+  margin-right: 0;
+}
 
-
-.img-container {
-  position: relative;
-  width: 990px;
+/*轮播*/
+.cycle-pager {
+  width: 100%;
   margin: auto;
-}
-.pos-img {
   position: absolute;
-  z-index: 1000;
-}
-.pos-img .view {
-  padding-top: 30px;
-}
-
-.nb88{
-  .cycle-pager-con{
-    width: 1000px;
-    height: 0;
-    margin: auto;
-    position: relative;
-  }
-  .cycle-pager {
-    position: absolute;
-    right: 0;
-    top: -40px;
-    z-index: 1000;
-    span {
-      background: url("../imgs/icon/circle.png") no-repeat center;
-      width: 8px;
-      height: 8px;
-      display: block;
-      float: left;
-      text-indent: -100em;
-      overflow: hidden;
-      cursor: pointer;
-      margin-right: 2px;
-      margin-left: 3px;
-      &.cycle-pager-active {
-        background: url("../imgs/icon/circle_active.png") no-repeat;
-        width: 14px;
-        height: 14px;
-        margin-top: -3px;
-      }
+  bottom: 22px;
+  text-align: center;
+  z-index: 111;
+  span {
+    width: 62px;
+    height: 8px;
+    margin-right: 12px;
+    background: #fff;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    &.cycle-pager-active {
+      background: @primary;
     }
   }
-  .banner-op-item{
-    background: url("../imgs/icon/left.png") no-repeat;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
-    z-index: 1000;
+}
+.banner-op-item{
+  .sprite(@arrow_left);
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+  z-index: 111;
+}
+.banner-op-left{
+  left: 5%;
+}
+.banner-op-right{
+  .sprite(@arrow_right);
+  right: 5%;
+}
+.mt10{
+  margin-top: 10px;
+}
+
+/*低版本浏览器*/
+.browser-updatetips {
+  text-align: center;
+  background: lighten(@primary,10%);
+  color: #ffffff;
+  height: 38px;
+  line-height: 38px;
+  border-top: 1px solid #33a2ff;
+  border-bottom: 1px solid #006fcc;
+  a{
+    color:@primary;
   }
-  .banner-op-left{
-    left: 5%;
-  }
-  .banner-op-right{
-    background: url("../imgs/icon/right.png") no-repeat;
-    right: 5%;
-  }
+}
+
+span.customSelect {
+  font:12px sans-serif;
+  //background:#fff url(../imgs/icon/select.png) right center no-repeat;
+  border:1px solid #ddd;
+  color:#555;
+  padding:7px 9px;
+  width:100px;
 }

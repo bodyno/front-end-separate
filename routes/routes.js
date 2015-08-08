@@ -1,18 +1,9 @@
 module.exports=function(app){
 
-    var index = require('./web/index')(app);
-
-    var login = require('./web/login')(app);
-
-    var validateCode=require('./web/validateCode')(app);
-
-    var checkValidateCode=require('./web/checkValidateCode')(app);
-
-    var register=require('./web/register')(app);
-
-    var checkOperate=require('./web/checkOperate')(app);
-
-    var test=require('./web/test')(app);
+    require('./web/site')(app);
+    require('./web/login')(app);
+    require('./web/validateCode')(app);
+    require('./web/account')(app);
 
 
     // catch 404 and forward to error handler
@@ -40,7 +31,7 @@ module.exports=function(app){
     // no stacktraces leaked to user
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
-        res.render('error', {
+        res.render('404', {
             message: err.message,
             error: {}
         });

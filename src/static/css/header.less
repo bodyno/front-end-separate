@@ -1,225 +1,184 @@
 @import "var";
 @import "sprite";
-.nb88{
-  .header{
-    background: rgba(255,255,255,.9);
-    position: relative;
-    z-index: 11;
-    overflow: hidden;
-    .container{
-      &:before{
-        content: '';
-        background: url("../imgs/icon/top_sp.png");
-        width: 28px;
-        height: 41px;
-        position: absolute;
-        left: 331px;
-        top: 69px;
-      }
-    }
-  }
-  .container{
-    width: 1200px;
-    min-width: 1200px;
-  }
-  .logo{
-    float: left;
-    width: 250px;
-    height: 110px;
-    a{
-      display: none;
-      font-size: 0px;
-      /*background: url("../imgs/icon/logo.png");*/
-      .sprite(@logo);
-      width: 250px;
-      height: 110px;
-    }
-  }
-  .header-right{
-    float: left;
-    width: 950px;
-  }
-  .sel-country{
-    width: 45px;
-    height: 20px;
-    background: #e8e8e6;
-    border-radius: 5px;
-    margin-left: 5px;
-    margin-top: 5px;
-    position: relative;
-    cursor: pointer;
-    float: left;
-  }
-  .country-img{
-    background: url("../imgs/icon/china.png") no-repeat;
-    width: 16px;
-    height: 11px;
-    position: relative;
-    top: 4px;
-    left: 7px;
-  }
-  .country-triangle{
-    background: url("../imgs/icon/triangle.png") no-repeat;
-    width: 7px;
-    height: 4px;
-    position: absolute;
-    left: 30px;
-    top: 8px;
-  }
-
-  .header-triangle{
-    background: url("../imgs/icon/top_triangle.png") no-repeat;
-    float: left;
-    width: 25px;
-    height: 30px;
-    margin-left: 80px;
-  }
-  .header-time{
-    float: left;
-    height: 30px;
-    line-height: 30px;
-    width: 795px;
-    background:#1bb999;
-    position: relative;
-    &:before{
-      content: '';
-      height: 30px;
-      position: absolute;
-      right: -1000px;
-      width: 1000px;
-      background:#1bb999;
-    }
-    .time{
-      color: @white;
-      font-size: @fontsize;
-      float: left;
-      display: none;
-    }
-  }
-  .header-op{
-    float: right;
-    .login{
-      color: @white;
-      float: left;
-      width: 70px;
-      text-align: center;
-      cursor: pointer;
-      &.active{
-        background: #00978e;
-      }
-    }
-    .reg{
-      color: @white;
-      float: left;
-      width: 70px;
-      text-align: center;
-      cursor: pointer;
-    }
-  }
-
-  .header-menu{
-    margin-left: 150px;
-    font-size: 13px;
+.header-top{
+  background: @primary;
+  position: relative;
+  z-index: 112;
+}
+.header-top-left{
+  float: left;
+}
+.header-top-right{
+  float: right;
+  ul{
     li{
       float: left;
-      width: 80px;
-      height: 80px;
-      text-align: center;
-      line-height: 120px;
       a{
-        color:@fontcolor;
-        width: 80px;
-        height: 80px;
+        color:#fff;
+        font-size: 12px;
         display: block;
-        position: relative;
-        &:hover,&.active{
-          background: url("../imgs/menu_fix.png") no-repeat bottom;
+        padding: 0 14px;
+        line-height: 36px;
+        border-left: 1px solid lighten(@primary,5%);
+        &:hover{
+          background:lighten(@primary,5%);
         }
       }
     }
-    span{
-      display: block;
+  }
+}
+.top-menu-right{
+  border-right: 1px solid lighten(@primary,5%);
+}
+.header-btn{
+  color:#fff;
+  padding: 0px 9px;
+  font-size: 14px;
+  border-radius: 3px;
+  display: block;
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  height: 25px;
+  line-height: 25px;
+}
+.header-btn1{
+  background: lighten(@primary,5%);
+  &:hover{
+    background: lighten(@primary,6%);
+  }
+}
+.header-btn2{
+  background: @second;
+  &:hover{
+    background: lighten(@second,6%);
+  }
+}
+.logo{
+  float: left;
+  margin-top: 18px;
+  padding-bottom: 10px;
+  a{
+    display: block;
+    background: url("../images/logo.png");
+    width: 230px;
+    height: 71px;
+  }
+}
+.header{
+  border-bottom: 1px solid #a5a5a5;
+  box-shadow: 0px 1px 5px rgba(0,0,0,.5);
+  position: relative;
+  z-index: 111;
+  .menu{
+    float: right;
+    margin-top: 48px;
+    li{
+      float: left;
+      margin-left: 46px;
+      &.active a,&:hover a{
+        color:@primary;
+        border-bottom: 2px solid @primary;
+      }
+      a{
+        color:#7b7b7b;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 6px;
+        display: block;
+      }
+    }
+  }
+  .login-menu{
+    float: right;
+    margin-top: 48px;
+    li{
+      float: left;
+      &.active a,&:hover a{
+        color:@primary;
+        border-bottom: 2px solid @primary;
+      }
+      a{
+        color:#7b7b7b;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 6px;
+      }
+      span{
+        border-right: 1px solid #666666;
+        display: block;
+        height: 14px;
+        margin: 0 10px;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+.language{
+  position: relative;
+  a{
+    b{
+      .sprite(@arrow_down);
       position: absolute;
-      left: 26px;
-      top: 17px;
+      right: 8px;
+      top: 15px;
     }
-    .icon-home span{
-      background: url("../imgs/icon/home.png") no-repeat center;
-      width: 27px;
-      height: 25px;
+  }
+  .language-list{
+    position: absolute;
+    display: none;
+    z-index: 1111;
+    border:4px solid #999999;
+    padding: 8px 0;
+    width: 431px;
+    background:#fff;
+    left: -180px;
+    top: 37px;
+    b{
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #999999;
+      position: absolute;
+      left: 209px;
+      top: -10px;
     }
-    .icon-home.active span,.icon-home:hover span{
-      background: url("../imgs/icon/home_active.png") no-repeat center;
+    .language-list-col{
+      float: left;
+      width: 131px;
+      border-right: 1px solid lighten(@primary,10%);
+      padding: 0 6px;
     }
-    .icon-mobile span{
-      background: url("../imgs/icon/mobile.png") no-repeat center;
-      width: 18px;
-      height: 26px;
-      left: 29px;
+    .language-col-last{
+      border-right: none;
     }
-    .icon-mobile.active span,.icon-mobile:hover span{
-      background: url("../imgs/icon/mobile_active.png") no-repeat center;
+    .language-item{
+      text-align: center;
+      color:#999999;
+      background: #fff;
+      padding: 7px 0;
+      cursor: pointer;
+      font-size: 14px;
+      &:hover{
+        background: @primary;
+        color:#fff;
+      }
     }
-    .icon-sport span{
-      background: url("../imgs/icon/sport.png") no-repeat center;
-      width: 26px;
-      height: 26px;
-    }
-    .icon-sport.active span,.icon-sport:hover span{
-      background: url("../imgs/icon/sport_active.png") no-repeat center;
-    }
-    .icon-casino span{
-      background: url("../imgs/icon/really.png") no-repeat center;
-      width: 26px;
-      height: 26px;
-    }
-    .icon-casino.active span,.icon-casino:hover span{
-      background: url("../imgs/icon/really_active.png") no-repeat center;
-    }
-    .icon-games span{
-      background: url("../imgs/icon/tiger.png") no-repeat center;
-      width: 26px;
-      height: 21px;
-      top:21px;
-    }
-    .icon-games.active span,.icon-games:hover span{
-      background: url("../imgs/icon/tiger_active.png") no-repeat center;
-    }
-    .icon-lottery span{
-      background: url("../imgs/icon/lottery.png") no-repeat center;
-      width: 26px;
-      height: 26px;
-    }
-    .icon-lottery.active span,.icon-lottery:hover span{
-      background: url("../imgs/icon/lottery_active.png") no-repeat center;
-    }
-    .icon-pocker span{
-      background: url("../imgs/icon/pocker.png") no-repeat center;
-      width: 32px;
-      height: 25px;
-    }
-    .icon-pocker.active span,.icon-pocker:hover span{
-      background: url("../imgs/icon/pocker_active.png") no-repeat center;
-    }
-    .icon-promotion span{
-      background: url("../imgs/icon/promotion.png") no-repeat center;
-      width: 25px;
-      height: 26px;
-    }
-    .icon-promotion.active span,.icon-promotion:hover span{
-      background: url("../imgs/icon/promotion_active.png") no-repeat center;
-    }
-    .icon-vip span{
-      background: url("../imgs/icon/vip.png") no-repeat center;
-      width: 22px;
-      height: 21px;
-      top: 21px;
-    }
-    .icon-news span{
-      background: url("../imgs/icon/news.png") no-repeat center;
-      width: 26px;
-      height: 22px;
-      top: 21px;
-    }
+  }
+}
+.header-top-right ul li.language a{
+  padding: 0 24px 0 14px;
+}
+.header-top-right ul li.avatars_con a{
+  padding: 0 14px 0 50px;
+}
+.avatars_con{
+  position: relative;
+  .avatars{
+    position: absolute;
+    left: 15px;
+    top: 2px;
   }
 }

@@ -1,0 +1,328 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    #set($header='slot')
+    <link rel="stylesheet" href="/static/css/slot.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+
+    <div class="slot">
+        <div class="container">
+            <div class="cycle-slideshow"
+                 data-cycle-slides=".banner-item"
+                 data-cycle-fx="scrollHorz"
+                 data-cycle-timeout="10000"
+                 data-cycle-pager=">.cycle-pager"
+                 data-cycle-pager-template="<span></span>"
+                    >
+                <div class="banner-item" style='background: url("/static/images/slot_banner1.jpg") no-repeat center;'></div>
+                <div class="banner-item" style='background: url("/static/images/slot_banner1.jpg") no-repeat center;'></div>
+                <div class="cycle-pager"></div>
+            </div>
+            <div class="slot-main-con">
+                <div class="slot-con">
+                    <div class="slot-top clearfix">
+                        <ul class="slot-menu clearfix">
+                            <li class="active"><a href="#">本站推荐</a><b></b></li>
+                            <li><a href="#">老虎机</a><b></b></li>
+                            <li><a href="#">桌面游戏</a><b></b></li>
+                            <li><a href="#">刮刮卡</a><b></b></li>
+                            <li><a href="#">游戏厅</a><b></b></li>
+                            <li><a href="#">视频扑克</a><b></b></li>
+                        </ul>
+                        <div class="slot-search">
+                            <input type="text" placeholder="游戏搜索">
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="slot-list-con clearfix">
+                        <div class="slot-list">
+                            <div class="slot-list-big clearfix">
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                                <div class="slot-item">
+                                    <a href="#" class="slot-item-main">
+                                        <img src="/static/images/slot_tmp.jpg">
+                                        <div class="slot-item-btn">
+                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
+                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                        </div>
+                                    </a>
+                                    <div class="slot-item-name">游戏名</div>
+                                </div>
+                            </div>
+                            <div class="slot-page">
+                                <span class="active"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="slot-right">
+                            <div class="slot-pot">
+                                <div class="slot-pot-title">JACKPOT</div>
+                                <div class="slot-pot-money">888,999,8888.00 $</div>
+                            </div>
+                            <div class="slot-top-list">
+                                <div class="slot-top-title">TOP 6 GAMES</div>
+                                <div class="slot-top-item clearfix">
+                                    <a href="#" class="slot-top-item-img">
+                                        <img src="/static/images/slot_top_img.jpg" width="130" height="70">
+                                        <span>1</span>
+                                    </a>
+                                    <div class="slot-top-item-detail">
+                                        <div class="slot-top-item-name clearfix">
+                                            <span>游戏名。。。</span>
+                                            <b>老虎机</b>
+                                        </div>
+                                        <div class="slot-top-item-begin">
+                                            <a href="#">进入游戏</a>
+                                            <span>|</span>
+                                            <a href="#">免费试玩</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slot-top-item clearfix">
+                                    <a href="#" class="slot-top-item-img">
+                                        <img src="/static/images/slot_top_img.jpg" width="130" height="70">
+                                        <span>2</span>
+                                    </a>
+                                    <div class="slot-top-item-detail">
+                                        <div class="slot-top-item-name clearfix">
+                                            <span>游戏名。。。</span>
+                                            <b>老虎机</b>
+                                        </div>
+                                        <div class="slot-top-item-begin">
+                                            <a href="#">进入游戏</a>
+                                            <span>|</span>
+                                            <a href="#">免费试玩</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slot-top-item clearfix">
+                                    <a href="#" class="slot-top-item-img">
+                                        <img src="/static/images/slot_top_img.jpg" width="130" height="70">
+                                        <span>3</span>
+                                    </a>
+                                    <div class="slot-top-item-detail">
+                                        <div class="slot-top-item-name clearfix">
+                                            <span>游戏名。。。</span>
+                                            <b>老虎机</b>
+                                        </div>
+                                        <div class="slot-top-item-begin">
+                                            <a href="#">进入游戏</a>
+                                            <span>|</span>
+                                            <a href="#">免费试玩</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slot-top-item clearfix">
+                                    <a href="#" class="slot-top-item-img">
+                                        <img src="/static/images/slot_top_img.jpg" width="130" height="70">
+                                        <span>4</span>
+                                    </a>
+                                    <div class="slot-top-item-detail">
+                                        <div class="slot-top-item-name clearfix">
+                                            <span>游戏名。。。</span>
+                                            <b>老虎机</b>
+                                        </div>
+                                        <div class="slot-top-item-begin">
+                                            <a href="#">进入游戏</a>
+                                            <span>|</span>
+                                            <a href="#">免费试玩</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slot-top-item clearfix">
+                                    <a href="#" class="slot-top-item-img">
+                                        <img src="/static/images/slot_top_img.jpg" width="130" height="70">
+                                        <span>5</span>
+                                    </a>
+                                    <div class="slot-top-item-detail">
+                                        <div class="slot-top-item-name clearfix">
+                                            <span>游戏名。。。</span>
+                                            <b>老虎机</b>
+                                        </div>
+                                        <div class="slot-top-item-begin">
+                                            <a href="#">进入游戏</a>
+                                            <span>|</span>
+                                            <a href="#">免费试玩</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slot-top-item clearfix">
+                                    <a href="#" class="slot-top-item-img">
+                                        <img src="/static/images/slot_top_img.jpg" width="130" height="70">
+                                        <span>6</span>
+                                    </a>
+                                    <div class="slot-top-item-detail">
+                                        <div class="slot-top-item-name clearfix">
+                                            <span>游戏名。。。</span>
+                                            <b>老虎机</b>
+                                        </div>
+                                        <div class="slot-top-item-begin">
+                                            <a href="#">进入游戏</a>
+                                            <span>|</span>
+                                            <a href="#">免费试玩</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slot-fix slot-fix1"></div>
+    <div class="slot-fix slot-fix2"></div>
+
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script src="/static/js/slot.js"></script>
+
+</body>
+</html>

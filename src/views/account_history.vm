@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/account.css"/>
+    <link rel="stylesheet" href="/static/plugin/jquery.ui/jquery-ui.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/page_header.vm')
+    <div class="account-con">
+        <div class="account-main container clearfix">
+            <div class="account-main-left">
+                <ul>
+                    <li class="active"><a href="/safe">历史记录</a></li>
+                    <li><a href="/safe">历史记录</a></li>
+                </ul>
+            </div>
+            <div class="account-main-right">
+                <div class="account-main-title">
+                    <h2>历史记录</h2>
+                    <div class="account-main-title-text">这里显示你的存款记录</div>
+                </div>
+                <div class="account-form account-history">
+                    <div>
+                        <div class="history-group clearfix">
+                            <label class="history-b">选择日期从：</label>
+                            <div class="account-input-con">
+                                <input type="text" class="account-input input-date">
+                                <i class="icon-date"></i>
+                            </div>
+                            <span class="history-spa">至</span>
+                            <div class="account-input-con">
+                                <input type="text" class="account-input input-date">
+                                <i class="icon-date"></i>
+                            </div>
+                        </div>
+                        <div class="history-group clearfix">
+                            <label class="history-b">状态：</label>
+                            <select class="account-select">
+                                <option>所有的</option>
+                                <option>所有的</option>
+                                <option>所有的</option>
+                            </select>
+                        </div>
+                        <div class="account-btn history-btn">查询</div>
+                    </div>
+                    <div class="history-table-con">
+                        <table class="history-table">
+                            <tr>
+                                <th>ID</th>
+                                <th>日期/时间（GMT+8）</th>
+                                <th>交易号码</th>
+                                <th>转账方式</th>
+                                <th>交易类型</th>
+                                <th>金额（RMB）</th>
+                                <th>状态</th>
+                            </tr>
+                            <tr>
+                                <td>58193</td>
+                                <td>2014-07-15 15:26:02</td>
+                                <td>000070a353c4d9200731</td>
+                                <td>YEE</td>
+                                <td>存款</td>
+                                <td>50.00</td>
+                                <td>处理失败</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+                <div class="account-service">
+                    如有任何问题，请联系我们的<a href="#">在线客服</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse('/common/page_footer.vm')
+    <script src="/static/plugin/jquery.ui/jquery-ui.js"></script>
+    <script src="/static/plugin/jquery.ui/jquery.ui.datepicker-zh-cn.js"></script>
+    <script src="/static/js/account-history.js"></script>
+    <script>
+
+
+    </script>
+</body>
+</html>

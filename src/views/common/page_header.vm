@@ -1,0 +1,30 @@
+<div class="page-header clearfix">
+        <div class="page-header-left clearfix">
+            <a href="/"><img src="/static/images/logo.png"></a>
+            <div class="page-header-left-spa"></div>
+            <div class="page-header-left-text">
+                账户中心<br>
+                MyAccount
+            </div>
+        </div>
+        <div class="page-header-right clearfix">
+            <div class="page-header-name">欢迎, m88test888</div>
+            <div class="page-header-service"><i></i>7*24客户服务</div>
+            <span class="page-header-spa"></span>
+            <a href="/signout" class="page-header-logout">退出</a>
+        </div>
+    </div>
+    <div class="page-menu">
+        <div class="container">
+            <div class="page-menu-con clearfix">
+                <ul class="page-menu-list">
+                    <li #if($header=='profile')class="active"#end><a href="/profile">个人信息</a></li>
+                    <li #if($header=='cashier')class="active"#end><a href="/cashier">出纳中心</a></li>
+                    <li #if($header=='history')class="active"#end><a href="/history">交易记录</a></li>
+                    <li #if($header=='message')class="active"#end><a href="/message">消息中心</a></li>
+                    <li #if($header=='credits')class="active"#end><a href="/credits">积分</a></li>
+                </ul>
+                <a href="#" class="page-menu-btn">全民坐庄</a>
+            </div>
+        </div>
+    </div>

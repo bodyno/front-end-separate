@@ -36,18 +36,34 @@ $(function(){
                 "minlength":"请输入4位验证码"
             }
         },
-        success: 'success',
+        success: function(label) {
+            label.addClass("success");
+        },
+        unhighlight:function(element){
+            $(element).parent().addClass("ok").removeClass("red");
+            if(!$(element).parent().find("b").length){
+                $(element).parent().append("<b></b>")
+            }
+        },
         highlight: function(element, errorClass) {
-            $(element).parent().find("." + errorClass).removeClass("success");
+            $(element).parent().addClass("red").removeClass("ok").find("." + errorClass).removeClass("success");
+            if(!$(element).parent().find("b").length){
+                $(element).parent().append("<b></b>")
+            }
+        },
+        errorPlacement:function(error, element) {
+            //element.parent().next(".reg-help").remove();
+            error.appendTo(element.parent());
         }
     });
 
     //登录按钮
     $("#login-btn").click(function(){
+        $("#login-form").form()
         if($("#login-form").valid()){
             var _this=$(this)
             _this.btn("loading")
-            $.post("/login",toObj($("#login-form"))).success(function(result){
+            $.post("/login",$("#login-form").form()).success(function(result){
                 if(result.code=="200"){
                     dialog.error("提示","登录成功，下一步?")
                 }else{
@@ -59,7 +75,7 @@ $(function(){
     })
 
     //验证码刷新
-    $(".reg-code-img").click(function () {
+    $(".reg-code-img,.code-text span").click(function () {
         changeCode()
     })
     function changeCode(){

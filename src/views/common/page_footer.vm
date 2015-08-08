@@ -1,0 +1,22 @@
+<div class="account-nav account-nav-left"></div>
+    <div class="account-nav account-nav-right"></div>
+    <div class="page-fix">
+        <div class="fix-icon fix-we">
+            <div class="fix-icon-text">
+                WeiChat:<span>iG888</span>
+            </div>
+        </div>
+        <div class="fix-icon fix-sina">
+            <div class="fix-icon-text">
+                WeiBo:<span>iG888</span>
+            </div>
+        </div>
+        <div class="fix-icon fix-code">
+            <div class="fix-qcode"></div>
+        </div>
+    </div>
+    <div class="page-footer">
+        Copyright©2015  www.com
+    </div>
+    #parse('/common/script.vm')
+    <script src="/static/js/account.js"></script>

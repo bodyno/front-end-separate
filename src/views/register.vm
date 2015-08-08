@@ -1,95 +1,121 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>#if($pageTitle)$pageTitle #else 新博页面 #end</title>
-    #parse('common/top.vm')
-    <link rel="stylesheet" href="/static/css/base.css"/>
-    <link rel="stylesheet" href="/static/css/register.css"/>
+    <title>全民坐庄</title>
+    <script>var translate_page='register';</script>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/common.css"/>
     <link rel="stylesheet" href="/static/plugin/jquery.ui/jquery-ui.css"/>
 </head>
-<body class="nb88">
-    #parse('common/old.vm')
+<body class="login-body">
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
 
-
-    #parse('common/header.vm')
-    <div class="register-con">
-        <div class="register-main">
-            <div class="register-title">注册账户</div>
-            <div class="clearfix">
-                <div class="reg-text-con">
-                    <div class="reg-text-bg"></div>
-                    <div class="reg-text-title">会员福利一览</div>
-                    <div class="reg-item">
-                        <span>·</span>为了账户安全，验证您的个人信息，提款100元后即可获得红利**
+    <div class="reg-con">
+        <div class="container">
+            <div class="reg-main clearfix">
+                <div class="reg-left">
+                    <div class="reg-header clearfix">
+                        <h2 class="reg-header-title">新用户注册</h2>
+                        <div class="reg-header-text">如您已有帐户，立刻在此  <a href="/login">登录</a></div>
                     </div>
-                    <div class="reg-item">
-                        <span>·</span>快捷支付立即到账，多种存款方式选择，极速提款！
-                    </div>
-                    <div class="reg-item">
-                        <span>·</span>高达2,888人民币的首存红利，5大老虎机平台，立即获得！
-                    </div>
-                    <div class="reg-item">
-                        <span>·</span>加入贵宾厅VIP俱乐部，尊享属于您的特权及奖励积分！
-                    </div>
-                    <div class="reg-item">
-                        <span>·</span>多个游戏平台，提供更好更全面的盘口，智能手机网和手机客户端，欢乐尽在掌中！
-                    </div>
-                </div>
-                <form class="reg-form" id="reg-form">
-                    <div class="reg-group clearfix">
-                        <label class="reg-label"><span>*</span>用户名：</label>
-                        <div>
-                            <input type="text" class="reg-input" name="operator" maxlength="12">
+                    <form id="reg-form" class="reg-form">
+                        <div class="reg-group clearfix">
+                            <label class="reg-label"><em data-i18n="operator.name"></em></label>
+                            <input type="text" class="reg-input" name="operator" id="operator" maxlength="12">
+                            <span class="require">*</span>
                         </div>
-                        <label class="reg-help">用户名由6~12位小写英文a~z或数字组成</label>
-                    </div>
-                    <div class="reg-group clearfix">
-                        <label class="reg-label"><span>*</span>设置密码：</label>
-                        <div>
+                        <div class="reg-group clearfix">
+                            <label class="reg-label"><em data-i18n="passwd.name"></em></label>
                             <input type="password" class="reg-input" name="passwd" id="passwd">
+                            <span class="require">*</span>
                         </div>
-                        <label class="reg-help">密码长度6～20位a-z,0-9,只允许以下特殊字符@*_-.,;&</label>
-                    </div>
-                    <div class="reg-group clearfix">
-                        <label class="reg-label"><span>*</span>确认密码：</label>
-                        <div>
-                            <input type="password" class="reg-input" name="repasswd">
+                        <div class="reg-group clearfix">
+                            <label class="reg-label"><em data-i18n="repasswd.name"></em></label>
+                            <input type="password" class="reg-input" name="repasswd" id="repasswd">
+                            <span class="require">*</span>
                         </div>
-                        <label class="reg-help">再次输入密码</label>
-                    </div>
-                    <div class="reg-group clearfix">
-                        <label class="reg-label"><span>*</span>test：</label>
-                        <div>
-                            <input type="text" class="reg-input" name="test">
+
+
+
+                        #foreach($item in $form)
+
+                        ##国家
+                        #if($item.name=='country')
+                        <div class="reg-group reg-group-select clearfix" #if($item.require)data-require="true"#end #if($item.require)data-valid="true"#end>
+                            <label class="reg-label"><em data-i18n="${item.name}.name"></em></label>
+                            <select class="reg-select" name="country" id="country">
+                                <option value="" data-i18n="base:select"></option>
+                                #foreach($item in $country)
+                                <option value="$item.value" data-i18n="country_name.${item.key}"></option>
+                                #end
+                            </select>
+                            #if($item.require)<span class="require">*</span>#end
                         </div>
-                        <label class="reg-help">test</label>
-                    </div>
-                    <div class="reg-group clearfix">
-                        <label class="reg-label"><span>*</span>验证码：</label>
-                        <div>
+                        #elseif($item.name=='validateCode')
+                        <div class="reg-group reg-group-code clearfix" #if($item.require)data-require="true"#end #if($item.require)data-valid="true"#end>
+                            <label class="reg-label"><em data-i18n="${item.name}.name"></em></label>
                             <input type="text" class="reg-input reg-input-code" name="validateCode" id="validateCode" maxlength="4">
-                            <img class="reg-code-img" src="/validateCode" width="60" height="20">
+                            <img class="reg-code-img" src="/validateCode">
+                            #if($item.require)<span class="require">*</span>#end
                         </div>
-                    </div>
-                    <div>
-                        <label class="reg-agree">
-                            <input type="checkbox" checked>
-                            我确认我的法定年龄，已阅读并愿意遵守虎牌相关的规则与条款和隐私策略。
-                        </label>
-                    </div>
-                    <div>
-                        <button type="button" class="reg-btn" id="reg-btn">注册帐号</button>
-                    </div>
-                </form>
+                        #elseif($item.name=='card')
+                        <div class="reg-group reg-group-select clearfix" #if($item.require)data-require="true"#end #if($item.require)data-valid="true"#end>
+                            <label class="reg-label"><em data-i18n="${item.name}.name"></em></label>
+                            <select class="reg-select" name="card" id="card">
+                                <option value="" data-i18n="base:select"></option>
+                                <option value="2BA" data-i18n="card_type.0"></option>
+                                <option value="2BA" data-i18n="card_type.1"></option>
+                                <option value="2BC" data-i18n="card_type.2"></option>
+                                <option value="2BE" data-i18n="card_type.3"></option>
+                            </select>
+                            #if($item.require)<span class="require">*</span>#end
+                        </div>
+                        #else
+                        <div class="reg-group clearfix" #if($item.require)data-require="true"#end #if($item.require)data-valid="true"#end>
+                            <label class="reg-label"><em data-i18n="${item.name}.name"></em></label>
+                            <input #if($item.name=="moneypassword")type="password"#else type="text"#end class="reg-input" name="$item.name" id="$item.name" #if($item.name=="email")autocomplete="off"#end>
+                            #if($item.require)<span class="require">*</span>#end
+                        </div>
+                        #end
+
+                        #end
+
+                        <div class="reg-group clearfix mt10">
+                            <label class="reg-ck">
+                                <input type="checkbox">我确认已年满18岁，并已阅读和接受本网站政策、隐私声明、条款和条件。
+                            </label>
+                        </div>
+                        <div class="reg-group clearfix">
+                            <label class="reg-ck">
+                                <input type="checkbox">是的，我想收到your caisno的通讯
+                            </label>
+                        </div>
+                        <div class="reg-ok mt10" id="reg-btn">马上注册</div>
+                        <div class="reg-text">
+                            注册时有任何问题，请联系我们24小时<a href="#">在线客服</a>协助解决<br>
+                            本网站采用Global Trust最先进的128/256 bit SSL服务器加密机制
+                        </div>
+
+                    </form>
+                </div>
+                <div class="reg-right">
+                    <img src="/static/images/reg_banner.jpg">
+                </div>
             </div>
         </div>
     </div>
-    #parse('common/footer.vm')
 
+    <div class="login-footer">
+        <div class="login-footer-text">
+            2013 ~ 2015 © iG99.com All Rights Reserved.
+        </div>
+    </div>
 
-    #parse('common/script.vm')
+    #parse('/common/script.vm')
     <script src="/static/plugin/jquery.validation/jquery.validate.js"></script>
     <script src="/static/plugin/jquery.mailAutoComplete/jquery.mail.js"></script>
+    <script src="/static/plugin/jquery.ui/jquery.ui.datepicker-zh-cn.js"></script>
     <script src="/static/plugin/xss/xss.js"></script>
     <script src="/static/js/reg.js"></script>
 

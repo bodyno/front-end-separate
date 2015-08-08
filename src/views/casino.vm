@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    #set($header='casino')
+    <link rel="stylesheet" href="/static/css/casino.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+    <div class="casino">
+        <div class="container">
+            <div class="feature-con">
+                <div class="feature feature-left">
+                    <div class="feature-text">GPI 娱乐城 》</div>
+                    <a href="#"><img src="/static/images/casino_img2.jpg"></a>
+                </div>
+                <div class="feature feature-center active">
+                    <div class="feature-text">PT 娱乐城 》</div>
+                    <a href="#"><img src="/static/images/casino_img1.jpg"></a>
+                </div>
+                <div class="feature feature-right">
+                    <div class="feature-text">AG 娱乐城 》</div>
+                    <a href="#"><img src="/static/images/casino_img3.jpg"></a>
+                </div>
+            </div>
+            <div class="casino-btn-con">
+                <div class="clearfix"></div>
+                <div class="casino-btn casino-btn1">立即游戏</div>
+                <div class="casino-btn">客户端下载</div>
+            </div>
+        </div>
+    </div>
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script src="/static/js/casino.js"></script>
+</body>
+</html>

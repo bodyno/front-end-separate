@@ -1,6 +1,7 @@
 <!-- build:js(.tmp/concat) /static/js/nb88/base.js -->
-<script src="/static/plugin/moment/moment.js"></script>
-<script src="/static/plugin/jquery.cycle2/jquery.cycle2.js"></script>
-<script src="/static/plugin/jquery.ui/jquery-ui.js"></script>
-<script src="/static/js/core.js"></script>
-<!-- endbuild -->
+    <script src="/static/plugin/moment/moment.js"></script>
+    <script src="/static/plugin/jquery.cycle2/jquery.cycle2.js"></script>
+    <script src="/static/plugin/jquery.hoverintent/hoverintent.js"></script>
+    <script src="/static/plugin/jquery.ui/jquery-ui.js"></script>
+    <script src="/static/js/core.js"></script>
+    <!-- endbuild -->
