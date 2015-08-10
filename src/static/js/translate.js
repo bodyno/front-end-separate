@@ -1,6 +1,6 @@
 i18n.init({
     lng:getNowLng(),
-    resGetPath: '/static/locales/__lng__/__ns__.json',
+    resGetPath: '/static/local/lng/__lng__/__ns__.json',
     fallbackLng:[],
     ns:{
         namespaces: [translate_page,'base'],
@@ -44,9 +44,9 @@ function loadLngCss(lng){
     }
     if(lng=="en"){
         if(!$("#lng-css").length){
-            $("head").append('<link rel="stylesheet" id="lng-css" href="/static/css/'+lng+'/'+lng+'.css"/>')
+            $("head").append('<link rel="stylesheet" id="lng-css" href="/static/local/css/'+lng+'.css"/>')
         }else{
-            $("#lng-css").attr("href","/static/css/"+lng+"/"+lng+".css")
+            $("#lng-css").attr("href","/static/local/css/"+lng+".css")
         }
     }
 }

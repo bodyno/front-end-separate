@@ -1,6 +1,6 @@
 #macro( lng_css )
 #if($language=="en")
-<link rel="stylesheet" id="lng-css" href="/static/css/en/en.css"/>
+<link rel="stylesheet" id="lng-css" href="/static/local/css/en.css"/>
 #elseif($language=="en")
 #end
 #end
@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="/static/images/favicon.ico"/>
     <link rel="bookmark" href="/static/images/favicon.ico"/>
     #lng_css()
-    <!-- build:js(.tmp/concat) /static/js/concat/instant.js -->
+    <!-- build:js(.tmp) /static/js/concat/instant.js -->
     <script src="/static/plugin/jquery/jquery.js"></script>
     <script src="/static/plugin/i18next/i18next.js"></script>
     <script src="/static/plugin/jquery.cookie/jquery.cookie.js"></script>

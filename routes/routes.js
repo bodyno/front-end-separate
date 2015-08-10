@@ -1,4 +1,4 @@
-module.exports=function(app){
+module.exports = function (app) {
 
     require('./web/site')(app);
     require('./web/login')(app);
@@ -7,7 +7,7 @@ module.exports=function(app){
 
 
     // catch 404 and forward to error handler
-    app.use(function(req, res, next) {
+    app.use(function (req, res, next) {
         var err = new Error('Not Found');
         err.status = 404;
         next(err);
@@ -18,7 +18,7 @@ module.exports=function(app){
     // development error handler
     // will print stacktrace
     if (app.get('env') === 'development') {
-        app.use(function(err, req, res, next) {
+        app.use(function (err, req, res, next) {
             res.status(err.status || 500);
             res.render('error', {
                 message: err.message,
@@ -29,7 +29,7 @@ module.exports=function(app){
 
     // production error handler
     // no stacktraces leaked to user
-    app.use(function(err, req, res, next) {
+    app.use(function (err, req, res, next) {
         res.status(err.status || 500);
         res.render('404', {
             message: err.message,

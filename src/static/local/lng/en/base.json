@@ -1,0 +1,26 @@
+{
+  "msg":{
+    "sid-error_SID_ERROR_00":"sid-error_SID_ERROR_00",
+    "sid-error_SID_ERROR_01":"sid-error_SID_ERROR_01",
+    "sid-error_SID_ERROR_02":"验证码输入错误!",
+    "sid-error_SID_ERROR_03":"数据查询失败!不存在该用户!",
+    "sid-error_SID_ERROR_04":"输入密码错误!请重新输入!",
+    "sid-success_SID_SUC_00":"登录成功!",
+    "sid-success_SID_SUC_02":"该用户己经存在!",
+    "sid-error_SID_ERROR_00":"出现异常,操作失败!"
+  },
+  "select":"请选择...",
+  "header":{
+    "home":"home",
+    "sports":"sports",
+    "casino":"casino",
+    "slot":"slot",
+    "lottery":"lottery",
+    "promotion":"promotion",
+    "reg":"register",
+    "login":"login",
+    "service":"service",
+    "go":"go to",
+    "down":"down"
+  }
+}

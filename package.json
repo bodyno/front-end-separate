@@ -6,8 +6,8 @@
     "start": "node ./bin/www"
   },
   "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
     "grunt": "0.4.5",
-    "grunt-autoprefixer": "2.1.0",
     "grunt-contrib-clean": "0.5.0",
     "grunt-contrib-concat": "0.5.0",
     "grunt-contrib-copy": "0.7.0",
@@ -15,6 +15,7 @@
     "grunt-contrib-less": "1.0.0",
     "grunt-contrib-uglify": "0.7.0",
     "grunt-nodemon": "^0.4.0",
+    "grunt-postcss": "^0.5.5",
     "grunt-rev": "0.1.0",
     "grunt-spritesmith": "3.5.0",
     "grunt-usemin-nobody": "^1.0.1",

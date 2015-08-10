@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function (grunt) {
 
     require('time-grunt')(grunt);
@@ -15,30 +13,30 @@ module.exports = function (grunt) {
 
     var config = {
 
-    // 路径配置
-    yo: appConfig,
+        // 路径配置
+        yo: appConfig,
 
-    clean: require('./config/grunt/clean'),
+        clean: require('./config/grunt/clean'),
 
-    copy: require('./config/grunt/copy'),
+        copy: require('./config/grunt/copy'),
 
-    less: require('./config/grunt/less'),
+        less: require('./config/grunt/less'),
 
-    autoprefixer: require('./config/grunt/autoprefixer'),
+        postcss: require('./config/grunt/postcss'),
 
-    uglify: require('./config/grunt/uglify'),
+        uglify: require('./config/grunt/uglify'),
 
-    cssmin: require('./config/grunt/cssmin'),
+        cssmin: require('./config/grunt/cssmin'),
 
-    useminPrepare: require('./config/grunt/usemin-prepare'),
+        useminPrepare: require('./config/grunt/usemin-prepare'),
 
-    usemin: require('./config/grunt/usemin')(),
+        usemin: require('./config/grunt/usemin')(),
 
-    sprite: require('./config/grunt/sprite'),
+        sprite: require('./config/grunt/sprite'),
 
-    rev: require('./config/grunt/rev'),
+        rev: require('./config/grunt/rev'),
 
-    nodemon: require('./config/grunt/nodemon')
+        nodemon: require('./config/grunt/nodemon')
 
     };
 
@@ -52,16 +50,18 @@ module.exports = function (grunt) {
         'copy:js',
         'copy:plugin',
         'copy:others',
+        'copy:local',
         'copy:image',
         'useminPrepare',
-        'less:dist',
-        'autoprefixer:dist',
+        'less',
+        'postcss',
         'concat',
         'uglify',
         'cssmin',
         'rev:dist',
         'copy:vm',
         'usemin',
+        'clean:tmp'
     ]);
 
     // 注册Grunt默认任务
