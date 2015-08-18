@@ -12,7 +12,9 @@
             </div>
         </div>
         <div class="fix-icon fix-code">
-            <div class="fix-qcode"></div>
+            <div class="fix-qcode">
+                <div class="fix-qcode-img"></div>
+            </div>
         </div>
     </div>
     <div class="page-footer">

@@ -5,7 +5,6 @@
     <script>var translate_page='register';</script>
     #parse('/common/top.vm')
     <link rel="stylesheet" href="/static/css/common.css"/>
-    <link rel="stylesheet" href="/static/plugin/jquery.ui/jquery-ui.css"/>
 </head>
 <body class="login-body">
     #parse('/common/old.vm')
@@ -16,13 +15,14 @@
             <div class="reg-main clearfix">
                 <div class="reg-left">
                     <div class="reg-header clearfix">
-                        <h2 class="reg-header-title">新用户注册</h2>
-                        <div class="reg-header-text">如您已有帐户，立刻在此  <a href="/login">登录</a></div>
+                        <h2 class="reg-header-title" data-i18n="reg-header-title"></h2>
+                        <div class="reg-header-text" data-i18n="[html]reg-header-text"></div>
                     </div>
                     <form id="reg-form" class="reg-form">
+                        <input type="hidden" class="reg-input" name="affiliateId" id="affiliateId-hidden" value="111">
                         <div class="reg-group clearfix">
-                            <label class="reg-label"><em data-i18n="operator.name"></em></label>
-                            <input type="text" class="reg-input" name="operator" id="operator" maxlength="12">
+                            <label class="reg-label"><em data-i18n="custCode.name"></em></label>
+                            <input type="text" class="reg-input" name="custCode" id="custCode" maxlength="12">
                             <span class="require">*</span>
                         </div>
                         <div class="reg-group clearfix">
@@ -36,66 +36,69 @@
                             <span class="require">*</span>
                         </div>
 
-
-
                         #foreach($item in $form)
 
-                        ##国家
-                        #if($item.name=='country')
-                        <div class="reg-group reg-group-select clearfix" #if($item.require)data-require="true"#end #if($item.require)data-valid="true"#end>
-                            <label class="reg-label"><em data-i18n="${item.name}.name"></em></label>
-                            <select class="reg-select" name="country" id="country">
-                                <option value="" data-i18n="base:select"></option>
-                                #foreach($item in $country)
-                                <option value="$item.value" data-i18n="country_name.${item.key}"></option>
-                                #end
-                            </select>
-                            #if($item.require)<span class="require">*</span>#end
-                        </div>
-                        #elseif($item.name=='validateCode')
-                        <div class="reg-group reg-group-code clearfix" #if($item.require)data-require="true"#end #if($item.require)data-valid="true"#end>
-                            <label class="reg-label"><em data-i18n="${item.name}.name"></em></label>
-                            <input type="text" class="reg-input reg-input-code" name="validateCode" id="validateCode" maxlength="4">
-                            <img class="reg-code-img" src="/validateCode">
-                            #if($item.require)<span class="require">*</span>#end
-                        </div>
-                        #elseif($item.name=='card')
-                        <div class="reg-group reg-group-select clearfix" #if($item.require)data-require="true"#end #if($item.require)data-valid="true"#end>
-                            <label class="reg-label"><em data-i18n="${item.name}.name"></em></label>
-                            <select class="reg-select" name="card" id="card">
-                                <option value="" data-i18n="base:select"></option>
-                                <option value="2BA" data-i18n="card_type.0"></option>
-                                <option value="2BA" data-i18n="card_type.1"></option>
-                                <option value="2BC" data-i18n="card_type.2"></option>
-                                <option value="2BE" data-i18n="card_type.3"></option>
-                            </select>
-                            #if($item.require)<span class="require">*</span>#end
-                        </div>
-                        #else
-                        <div class="reg-group clearfix" #if($item.require)data-require="true"#end #if($item.require)data-valid="true"#end>
-                            <label class="reg-label"><em data-i18n="${item.name}.name"></em></label>
-                            <input #if($item.name=="moneypassword")type="password"#else type="text"#end class="reg-input" name="$item.name" id="$item.name" #if($item.name=="email")autocomplete="off"#end>
-                            #if($item.require)<span class="require">*</span>#end
-                        </div>
-                        #end
+                        #if($item.isShow)
+                            #if($item.formCode=='country')
+                                <div class="reg-group reg-group-select clearfix" #if($item.isRequire)data-require="true"#end #if($item.validator)data-valid="true"#end>
+                                    <label class="reg-label"><em data-i18n="${item.formCode}.name"></em></label>
+                                    <select class="reg-select" name="country" id="country">
+                                        <option value="" data-i18n="base:select"></option>
+                                        #foreach($item in $country)
+                                            <option value="$item.value" data-i18n="country_name.${item.key}"></option>
+                                        #end
+                                    </select>
+                                    #if($item.isRequire)<span class="require">*</span>#end
+                                </div>
+                            #elseif($item.formCode=='validateCode')
+                                <div class="reg-group reg-group-code clearfix" #if($item.isRequire)data-require="true"#end #if($item.validator)data-valid="true"#end>
+                                    <label class="reg-label"><em data-i18n="${item.formCode}.name"></em></label>
+                                    <input type="text" class="reg-input reg-input-code" name="validateCode" id="validateCode" maxlength="4">
+                                    <img class="reg-code-img" src="/validateCode">
+                                    #if($item.isRequire)<span class="require">*</span>#end
+                                </div>
+                            #elseif($item.formCode=='certificateType')
+                                <div class="reg-group reg-group-select clearfix" #if($item.isRequire)data-require="true"#end #if($item.validator)data-valid="true"#end>
+                                    <label class="reg-label"><em data-i18n="${item.formCode}.name"></em></label>
+                                    <select class="reg-select" name="certificateType" id="certificateType">
+                                        <option value="" data-i18n="base:select"></option>
+                                        #foreach($item in $certificateType)
+                                            <option value="$item.value" data-i18n="certificate_type.${item.key}"></option>
+                                        #end
+                                    </select>
+                                    #if($item.isRequire)<span class="require">*</span>#end
+                                </div>
+                            #elseif($item.formCode=='custGender')
+                                <div class="reg-group reg-group-select clearfix" #if($item.isRequire)data-require="true"#end #if($item.validator)data-valid="true"#end>
+                                    <label class="reg-label"><em data-i18n="${item.formCode}.name"></em></label>
+                                    <label class="reg-radio"><input type="radio" name="custGender" value="01M" checked><span data-i18n="sex.male"></span></label>
+                                    <label class="reg-radio"><input type="radio" name="custGender" value="01F"><span data-i18n="sex.female"></span></label>
+                                    #if($item.isRequire)<span class="require">*</span>#end
+                                </div>
+                            #else
+                                <div class="reg-group clearfix" #if($item.isRequire)data-require="true"#end #if($item.validator)data-valid="true"#end>
+                                    <label class="reg-label"><em data-i18n="${item.formCode}.name"></em></label>
+                                    <input #if($item.formCode=="drawPwd")type="password"#else type="text"#end class="reg-input" name="$item.formCode" id="$item.formCode" #if($item.formCode=="email")autocomplete="off"#end>
+                                    #if($item.isRequire)<span class="require">*</span>#end
+                                </div>
+                            #end
 
                         #end
+                        #end
+
 
                         <div class="reg-group clearfix mt10">
-                            <label class="reg-ck">
-                                <input type="checkbox">我确认已年满18岁，并已阅读和接受本网站政策、隐私声明、条款和条件。
+                            <label class="reg-ck" data-i18n="[append]ck1">
+                                <input type="checkbox" checked>
                             </label>
                         </div>
                         <div class="reg-group clearfix">
-                            <label class="reg-ck">
-                                <input type="checkbox">是的，我想收到your caisno的通讯
+                            <label class="reg-ck" data-i18n="[append]ck2">
+                                <input type="checkbox" checked>
                             </label>
                         </div>
-                        <div class="reg-ok mt10" id="reg-btn">马上注册</div>
-                        <div class="reg-text">
-                            注册时有任何问题，请联系我们24小时<a href="#">在线客服</a>协助解决<br>
-                            本网站采用Global Trust最先进的128/256 bit SSL服务器加密机制
-                        </div>
+                        <div class="reg-ok mt10" id="reg-btn" data-i18n="reg-btn"></div>
+                        <div class="reg-text" data-i18n="[html]reg-text"></div>
 
                     </form>
                 </div>
@@ -113,10 +116,8 @@
     </div>
 
     #parse('/common/script.vm')
-    <script src="/static/plugin/jquery.validation/jquery.validate.js"></script>
     <script src="/static/plugin/jquery.mailAutoComplete/jquery.mail.js"></script>
     <script src="/static/plugin/jquery.ui/jquery.ui.datepicker-zh-cn.js"></script>
-    <script src="/static/plugin/xss/xss.js"></script>
     <script src="/static/js/reg.js"></script>
 
 </body>

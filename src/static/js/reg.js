@@ -1,8 +1,8 @@
 $(function(){
 
     var tempRule={
-        operator: {
-            remote: "/checkOperate",
+        custCode: {
+            remote: "/checkCustCode",
             required:true,
             rangelength:[2,15]
         },
@@ -16,8 +16,8 @@ $(function(){
         }
     }
     var tempMessage={
-        operator:{
-            "remote": "对不起，用户名已经被使用",
+        custCode:{
+            "remote": "对不起,用户名已经被使用",
             "required":"用户名必须填写",
             "rangelength":"用户名长度为2-15位"
         },
@@ -33,38 +33,6 @@ $(function(){
 
     !function(){
 
-        $.validator.addMethod("chinese", function(value, element) {
-            return this.optional(element) || /^[A-Za-z0-9\u4E00-\u9FA5]+$/.test(value);
-        }, "只能包括中文字、英文字母、数字");
-
-        $.validator.addMethod("string", function(value, element) {
-            return this.optional(element) || /^[A-Za-z0-9]+$/.test(value);
-        }, "只能包括英文字母、数字");
-
-        $.validator.addMethod("zh", function(value, element) {
-            return this.optional(element) || /^[A-Za-z\u4E00-\u9FA5]+$/.test(value);
-        }, "只能包括英文字母、中文");
-
-        $.validator.addMethod("en", function(value, element) {
-            return this.optional(element) || /^[A-Za-z]+$/.test(value);
-        }, "只能包括英文字母");
-
-        $.validator.addMethod("date", function(value, element) {
-            return this.optional(element) || /^\d{4}-\d{2}-\d{2}$/.test(value);
-        }, "请选择正确的日期");
-
-        $.validator.addMethod("qq", function(value, element) {
-            return this.optional(element) || /^\d{5,12}$/.test(value);
-        }, "请输入正确的QQ");
-
-        $.validator.addMethod("phone", function(value, element) {
-            return this.optional(element) || /^\d{7,11}$/.test(value);
-        }, "请输入正确的手机号");
-
-        $.validator.addMethod("cardno", function(value, element) {
-            return this.optional(element) || /^\S{9,18}$/.test(value);
-        }, "请输入正确的证件");
-
         //国家
         var tempEle=$("#country")
         if(tempEle.length){
@@ -73,26 +41,26 @@ $(function(){
             }
         }
         //邮箱
-        tempEle=$("#email")
+        tempEle=$("#emailAddress")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('email','请输入邮箱')
+                initRequire('emailAddress','请输入邮箱')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['email']['email']=true;
-                    tempMessage['email']['email']='请输入正确的邮箱';
+                    tempRule['emailAddress']['email']=true;
+                    tempMessage['emailAddress']['email']='请输入正确的邮箱';
                 }
             }
         }
         //介绍人
-        tempEle=$("#introduce")
+        tempEle=$("#affiliateId")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('introduce','请输入介绍人')
+                initRequire('affiliateId','请输入介绍人')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['introduce']['minlength']=2;
-                    tempRule['introduce']['maxlength']=50;
-                    tempMessage['introduce']['minlength']='介绍人最少2个字符';
-                    tempMessage['introduce']['maxlength']='介绍人最多50个字符';
+                    tempRule['affiliateId']['minlength']=2;
+                    tempRule['affiliateId']['maxlength']=50;
+                    tempMessage['affiliateId']['minlength']='介绍人最少2个字符';
+                    tempMessage['affiliateId']['maxlength']='介绍人最多50个字符';
                 }
             }
         }
@@ -113,72 +81,72 @@ $(function(){
             }
         }
         //姓
-        tempEle=$("#surname")
+        tempEle=$("#firstName")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('surname','姓不能为空')
+                initRequire('firstName','姓不能为空')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['surname']['minlength']=2;
-                    tempRule['surname']['maxlength']=30;
-                    tempRule['surname']['zh']=true;
+                    tempRule['firstName']['minlength']=2;
+                    tempRule['firstName']['maxlength']=30;
+                    tempRule['firstName']['zh']=true;
 
-                    tempMessage['surname']['minlength']='最少2位';
-                    tempMessage['surname']['maxlength']='最多30位';
+                    tempMessage['firstName']['minlength']='最少2位';
+                    tempMessage['firstName']['maxlength']='最多30位';
                 }
             }
         }
         //名
-        tempEle=$("#name")
+        tempEle=$("#lastName")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('name','名不能为空')
+                initRequire('lastName','名不能为空')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['name']['minlength']=2;
-                    tempRule['name']['maxlength']=30;
-                    tempRule['name']['zh']=true;
+                    tempRule['lastName']['minlength']=2;
+                    tempRule['lastName']['maxlength']=30;
+                    tempRule['lastName']['zh']=true;
 
-                    tempMessage['name']['minlength']='最少2位';
-                    tempMessage['name']['maxlength']='最多30位';
+                    tempMessage['lastName']['minlength']='最少2位';
+                    tempMessage['lastName']['maxlength']='最多30位';
                 }
             }
         }
         //昵称
-        tempEle=$("#realname")
+        tempEle=$("#nickName")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('realname','昵称不能为空')
+                initRequire('nickName','昵称不能为空')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['realname']['minlength']=2;
-                    tempRule['realname']['maxlength']=30;
-                    tempRule['realname']['chinese']=true;
+                    tempRule['nickName']['minlength']=2;
+                    tempRule['nickName']['maxlength']=30;
+                    tempRule['nickName']['chinese']=true;
 
-                    tempMessage['realname']['minlength']='最少2位';
-                    tempMessage['realname']['maxlength']='最多30位';
+                    tempMessage['nickName']['minlength']='最少2位';
+                    tempMessage['nickName']['maxlength']='最多30位';
                 }
             }
         }
         //英文姓名
-        tempEle=$("#enname")
+        tempEle=$("#enName")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('enname','英文姓名不能为空')
+                initRequire('enName','英文姓名不能为空')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['enname']['minlength']=2;
-                    tempRule['enname']['maxlength']=30;
-                    tempRule['enname']['en']=true;
+                    tempRule['enName']['minlength']=2;
+                    tempRule['enName']['maxlength']=30;
+                    tempRule['enName']['en']=true;
 
-                    tempMessage['enname']['minlength']='最少2位';
-                    tempMessage['enname']['maxlength']='最多30位';
+                    tempMessage['enName']['minlength']='最少2位';
+                    tempMessage['enName']['maxlength']='最多30位';
                 }
             }
         }
         //生日
-        tempEle=$("#birthday")
+        tempEle=$("#birthDate")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('birthday','生日不能为空')
+                initRequire('birthDate','生日不能为空')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['birthday']['date']=true;
+                    tempRule['birthDate']['date']=true;
                 }
             }
         }
@@ -193,40 +161,40 @@ $(function(){
             }
         }
         //取款密码
-        tempEle=$("#moneypassword")
+        tempEle=$("#drawPwd")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('moneypassword','取款密码不能为空')
+                initRequire('drawPwd','取款密码不能为空')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['moneypassword']['maxlength']=16;
-                    tempMessage['moneypassword']['maxlength']='最多16位';
+                    tempRule['drawPwd']['maxlength']=16;
+                    tempMessage['drawPwd']['maxlength']='最多16位';
                 }
             }
         }
         //手机
-        tempEle=$("#phone")
+        tempEle=$("#mobileNumber")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('phone','手机不能为空')
+                initRequire('mobileNumber','手机不能为空')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['phone']['phone']=true;
+                    tempRule['mobileNumber']['phone']=true;
                 }
             }
         }
         //证件类型
-        tempEle=$("#card")
+        tempEle=$("#certificateType")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('card','证件类型不能为空')
+                initRequire('certificateType','证件类型不能为空')
             }
         }
         //证件
-        tempEle=$("#cardno")
+        tempEle=$("#certificate")
         if(tempEle.length){
             if(tempEle.parents(".reg-group").data("require")){
-                initRequire('cardno','证件不能为空')
+                initRequire('certificate','证件不能为空')
                 if(tempEle.parents(".reg-group").data("valid")){
-                    tempRule['cardno']['cardno']=true;
+                    tempRule['certificate']['cardno']=true;
                 }
             }
         }
@@ -242,29 +210,10 @@ $(function(){
     }
 
     //注册验证
-    $("#reg-form").validate({
+    $("#reg-form").validate($.extend({},validBase,{
         rules: tempRule,
-        messages:tempMessage,
-        success: function(label) {
-            label.addClass("success");
-        },
-        unhighlight:function(element){
-            $(element).parent().addClass("ok").removeClass("red");
-            if(!$(element).parent().find("b").length){
-                $(element).parent().append("<b></b>")
-            }
-        },
-        highlight: function(element, errorClass) {
-            $(element).parent().addClass("red").removeClass("ok").find("." + errorClass).removeClass("success");
-            if(!$(element).parent().find("b").length){
-                $(element).parent().append("<b></b>")
-            }
-        },
-        errorPlacement:function(error, element) {
-            //element.parent().next(".reg-help").remove();
-            error.appendTo(element.parent());
-        }
-    });
+        messages:tempMessage
+    }));
 
     //邮箱自动完成
     $("#email").mailAutoComplete();
@@ -279,18 +228,11 @@ $(function(){
 
     //注册按钮
     $("#reg-btn").click(function(){
-        if($("#reg-form").valid()){
-            var _this=$(this)
-            _this.btn("loading")
-            $.post("/register",$("#reg-form").form()).success(function(result){
-                if(result.code=="200"){
-                    dialog.error("提示","注册成功，下一步?")
-                }else{
-                    showError(result.msg)
-                }
-                _this.btn("reset")
-            })
-        }
+        $(this).commit($("#reg-form"),"/register",function(){
+            location.href="/profile"
+        },function(){
+
+        })
     })
 
     //验证码刷新
@@ -301,10 +243,27 @@ $(function(){
         $(".reg-code-img").attr("src","/validateCode?"+new Date().getTime())
     }
 
+    function refHandle() {
+        var refId = getQueryString("affiliateId");
+        if (refId) {
+            var date = new Date();
+            date.setMinutes(new Date().getMinutes() + 30)
+            $.cookie("refId", refId, {
+                expires: date
+            })
+        } else {
+            refId = $.cookie("refId")
+        }
+        if(refId){
+            setref(refId)
+        }
+    }
+    refHandle()
+
+    function setref(refId){
+        $("#affiliateId").val(refId)
+        $("#affiliateId-hidden").val(refId)
+    }
+
 
 })
-
-/*
-function afterTran(){
-    $("#country,#card").customSelect();
-}*/

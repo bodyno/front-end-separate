@@ -1,0 +1,8 @@
+{
+  "certificate_type":{
+    "ID number":"身份证",
+    "Driver license":"驾驶证",
+    "Military officer":"军官证",
+    "Passport":"护照"
+  }
+}

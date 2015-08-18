@@ -1,0 +1,67 @@
+$(function(){
+
+    $("#profile-btn").click(function(){
+        $(this).commit($("#profile-form"),"/sidCustInfo/savePersonInfo",function(){
+            dialog.info("编辑资料成功",function(){
+                location.reload()
+            })
+        })
+    });
+
+    //注册验证
+    $("#profile-form").validate($.extend({},validBase,{
+        rules: {
+            firstName:{
+                required:true,
+                minlength:2,
+                maxlength:30,
+                zh:true
+            },
+            lastName:{
+                required:true,
+                minlength:2,
+                maxlength:30,
+                zh:true
+            },
+            birthDate:{
+                required:true
+            },
+            certificateType:{
+                required:true
+            },
+            certificate:{
+                required:true,
+                cardno:true
+            },
+            qq:{
+                required:true,
+                qq:true
+            }
+        },
+        messages:{
+            firstName:{
+                required:"姓不能为空",
+                minlength:"最少2位",
+                maxlength:"最多30位"
+            },
+            lastName:{
+                required:"名不能为空",
+                minlength:"最少2位",
+                maxlength:"最多30位"
+            },
+            birthDate:{
+                required:"生日不能为空"
+            },
+            certificateType:{
+                required:"证件类型不能为空"
+            },
+            certificate:{
+                required:"证件不能为空"
+            },
+            qq:{
+                required:"QQ不能为空"
+            }
+        }
+    }));
+
+})

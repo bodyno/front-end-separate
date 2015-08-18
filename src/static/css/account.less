@@ -1,6 +1,7 @@
 @import "core";
 @import "var";
 @import "sprite_account";
+@import "errro";
 
 body{
   background: url("../images/account_bg.jpg");
@@ -202,6 +203,7 @@ body{
   color:#a8a8a8;
   margin-bottom: 10px;
   padding-left: 125px;
+  position: relative;
   .account-group-label{
     float: left;
     width: 70px;
@@ -251,10 +253,14 @@ body{
   height: 32px;
   font-size: 14px;
   padding: 0px 10px;
+  width: 252px;
+}
+.account-select-small{
   width: 140px;
 }
 .account-radio{
   margin-top: 7px;
+  margin-bottom: 6px;
   float: left;
   input{
     position: relative;
@@ -487,11 +493,15 @@ body{
   }
 }
 .fix-qcode{
-  .sprite(@qcode);
+  width: 125px;
+  height: 106px;
+  display: none;
   position: absolute;
   left: -117px;
   top: -16px;
-  display: none;
+}
+.fix-qcode-img{
+  .sprite(@qcode);
 }
 
 //历史
@@ -547,4 +557,71 @@ body{
     font-size: 12px;
     background: #fff;
   }
+}
+//分页
+.page{
+  margin-top: 20px;
+  overflow: hidden;
+}
+.simple-pagination ul{
+  text-align: center;
+}
+.simple-pagination li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+}
+.light-theme a, .light-theme span {
+  float: left;
+  color: #666;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid #BBB;
+  min-width: 14px;
+  padding: 0 7px;
+  margin: 0 5px 0 0;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  background: #efefef;;
+  background: linear-gradient(top, #ffffff 0%,#efefef 100%);
+}
+.light-theme .current {
+  background: #666;
+  color: #FFF;
+  border-color: #444;
+  box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+  cursor: default;
+}
+.account-link{
+  font-size: 14px;
+  color: #a8a8a8;
+  margin-left: 125px;
+  margin-top: 30px;
+  a{
+    color:@primary;
+  }
+}
+
+.account-transfer .account-group.ok b,.account-transfer .account-group.red b {
+  left: 411px;
+}
+.account-group-money{
+  &.account-group{
+    &.ok,&.red{
+      b{
+        left: 461px;
+      }
+    }
+  }
+}
+.account-group.account-group-select .error{
+  left: 445px;
+}
+.account-group.account-group-money .error{
+  left: 490px;
 }

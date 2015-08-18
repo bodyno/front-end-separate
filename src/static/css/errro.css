@@ -1,0 +1,91 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+.sprites(@spritesheet-sprites);
+*/
+.account-group .error {
+  position: absolute;
+  display: block;
+  text-align: left;
+  left: 460px;
+  top: 0px;
+  color: #333;
+  font-size: 12px;
+  background-image: url(/static/images/sprite/sprite_account.png);
+  background-position: 0px -226px;
+  width: 159px;
+  height: 32px;
+  line-height: 32px;
+  width: 137px;
+  padding-left: 22px;
+}
+.account-group .error.success {
+  display: none !important;
+}
+.account-group.red b,
+.account-group.red b {
+  background-image: url(/static/images/sprite/sprite_account.png);
+  background-position: -277px -32px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 441px;
+  top: 12px;
+}
+.account-group.ok b {
+  background-image: url(/static/images/sprite/sprite_account.png);
+  background-position: -287px -32px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 441px;
+  top: 12px;
+}
+.account-group.red input,
+.account-group.red select {
+  border: 1px solid #ff9999;
+}
+.account-group.ok input,
+.account-group.ok input,
+.account-group.ok select,
+.account-group.ok select {
+  border: 1px solid #66cc99;
+}
+.account-group.red b,
+.account-group.red b {
+  background-image: url(/static/images/sprite/sprite_account.png);
+  background-position: -277px -32px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 441px;
+  top: 12px;
+}
+.account-group.account-group-select.ok b,
+.account-group.account-group-select.red b {
+  left: 431px;
+}

@@ -3,5 +3,8 @@
     <script src="/static/plugin/jquery.cycle2/jquery.cycle2.js"></script>
     <script src="/static/plugin/jquery.hoverintent/hoverintent.js"></script>
     <script src="/static/plugin/jquery.ui/jquery-ui.js"></script>
+    <script src="/static/plugin/jquery.validation/jquery.validate.js"></script>
+    <script src="/static/plugin/xss/xss.js"></script>
     <script src="/static/js/core.js"></script>
     <!-- endbuild -->
+    <link rel="stylesheet" href="/static/plugin/jquery.ui/jquery-ui.css"/>

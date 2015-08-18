@@ -63,8 +63,8 @@
     background: url("../images/error_arrow.png") no-repeat;
     height: 32px;
     line-height: 32px;
-    width: 137px;
-    padding-left: 22px;
+    width: 141px;
+    padding-left: 18px;
     &.success{
       display: none !important;
     }
@@ -499,6 +499,19 @@
   width: 230px;
   float: left;
 }
+.reg-radio{
+  margin-top: 7px;
+  margin-bottom: 6px;
+  float: left;
+  font-size: 14px;
+  color: #999999;
+  margin-right: 20px;
+  input{
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+  }
+}
 .reg-select{
   float: left;
   border: 1px solid #ccc;
@@ -530,6 +543,13 @@
   margin-left: 160px;
   &:hover{
     background: lighten(@primary,5%);
+  }
+  &.disabled{
+    opacity: .5;
+    filter:alpha(opacity=50);
+  }
+  &.disabled:hover{
+    background: @primary;
   }
 }
 .reg-text{

@@ -21,14 +21,18 @@
     "United States":"美国",
     "Vietnam":"越南"
   },
-  "card_type":{
-    "0":"身份证",
-    "1":"驾驶",
-    "2":"军官证",
-    "3":"护照"
+  "certificate_type":{
+    "ID number":"身份证",
+    "Driver license":"驾驶证",
+    "Military officer":"军官证",
+    "Passport":"护照"
   },
-  "operator":{
-    "filed":"operator",
+  "sex":{
+    "male":"男",
+    "female":"女"
+  },
+  "custCode":{
+    "filed":"custCode",
     "name":"用户名：",
     "help":"用户名由6~12位小写英文a~z或数字组成"
   },
@@ -46,44 +50,48 @@
     "filed":"country",
     "name":"国家："
   },
-  "introduce":{
-    "filed":"introduce",
+  "affiliateId":{
+    "filed":"affiliateId",
     "name":"介绍人："
   },
-  "surname":{
-    "filed":"surname",
+  "firstName":{
+    "filed":"firstName",
     "name":"姓："
   },
-  "name":{
-    "filed":"name",
+  "lastName":{
+    "filed":"lastName",
     "name":"名："
   },
-  "realname":{
-    "filed":"realname",
+  "nickName":{
+    "filed":"nickName",
     "name":"昵称："
   },
-  "enname":{
-    "filed":"enname",
+  "enName":{
+    "filed":"enName",
     "name":"英文姓名："
   },
-  "birthday":{
-    "filed":"birthday",
+  "birthDate":{
+    "filed":"birthDate",
     "name":"生日："
   },
-  "card":{
-    "filed":"card",
+  "certificateType":{
+    "filed":"certificateType",
     "name":"证件类型："
   },
-  "cardno":{
-    "filed":"cardno",
+  "certificate":{
+    "filed":"certificate",
     "name":"证件："
   },
-  "phone":{
-    "filed":"phone",
+  "custGender":{
+    "filed":"custGender",
+    "name":"性别："
+  },
+  "mobileNumber":{
+    "filed":"mobileNumber",
     "name":"手机："
   },
-  "moneypassword":{
-    "filed":"moneypassword",
+  "drawPwd":{
+    "filed":"drawPwd",
     "name":"取款密码："
   },
   "qq":{
@@ -94,8 +102,14 @@
     "filed":"validateCode",
     "name":"验证码："
   },
-  "email":{
-    "filed":"email",
+  "emailAddress":{
+    "filed":"emailAddress",
     "name":"邮箱："
-  }
+  },
+  "reg-header-title":"新用户注册",
+  "reg-header-text":"如您已有帐户，立刻在此  <a href='/login'>登录</a>",
+  "reg-text":"注册时有任何问题，请联系我们24小时协助解决<a href='#'>在线客服</a><br>本网站采用Global Trust最先进的128/256 bit SSL服务器加密机制",
+  "ck1":"我确认已年满18岁，并已阅读和接受本网站政策、隐私声明、条款和条件。",
+  "ck2":"是的，我想收到your caisno的通讯",
+  "reg-btn":"马上注册"
 }

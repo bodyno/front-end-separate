@@ -4,8 +4,10 @@ $(function(){
     //语言
     $(".language").hoverIntent(function(){
         $(this).find(".language-list").show();
+        clearTimeout(lngTime);
     },function(){
         var _this=$(this)
+        clearTimeout(lngTime);
         lngTime=setTimeout(function(){
             _this.find(".language-list").hide();
         },200)
@@ -19,27 +21,78 @@ $(function(){
 
 })
 
-/*form转json*/
-$.fn.form=function(){
-    var obj=this.serializeArray(),
-        result={};
-    for(var item in obj){
-        result[obj[item].name]=filterXSS(obj[item].value);
-    }
-    return result;
-}
+$.validator.addMethod("chinese", function(value, element) {
+    return this.optional(element) || /^[A-Za-z0-9\u4E00-\u9FA5]+$/.test(value);
+}, "只能包括中文字、英文字母、数字");
+
+$.validator.addMethod("string", function(value, element) {
+    return this.optional(element) || /^[A-Za-z0-9]+$/.test(value);
+}, "只能包括英文字母、数字");
+
+$.validator.addMethod("zh", function(value, element) {
+    return this.optional(element) || /^[A-Za-z\u4E00-\u9FA5]+$/.test(value);
+}, "只能包括英文字母、中文");
+
+$.validator.addMethod("en", function(value, element) {
+    return this.optional(element) || /^[A-Za-z]+$/.test(value);
+}, "只能包括英文字母");
+
+$.validator.addMethod("date", function(value, element) {
+    return this.optional(element) || /^\d{4}-\d{2}-\d{2}$/.test(value);
+}, "请选择正确的日期");
+
+$.validator.addMethod("qq", function(value, element) {
+    return this.optional(element) || /^\d{5,12}$/.test(value);
+}, "请输入正确的QQ");
+
+$.validator.addMethod("phone", function(value, element) {
+    return this.optional(element) || /^\d{7,11}$/.test(value);
+}, "请输入正确的手机号");
+
+$.validator.addMethod("cardno", function(value, element) {
+    return this.optional(element) || /^\S{9,18}$/.test(value);
+}, "请输入正确的证件");
+
+$.validator.addMethod("notEqual", function(value, element, param) {
+    var target = $( param );
+    return value !== target.val();
+}, "原密码与新密码不能相同");
 
 //ajax显示错误信息
 function showError(text){
-    dialog.error('错误', $.t("base:msg."+text));
+    dialog.error($.t("base:msg."+text));
 }
+$.fn.extend({
+    /*form转json*/
+    form:function(){
+        var obj=this.serializeArray(),
+            result={};
+        for(var item in obj){
+            result[obj[item].name]=filterXSS(obj[item].value);
+        }
+        return result;
+    },
+    commit:function(form,url,func,func2){
+        if(form.valid()){
+            if(func2){
+                if(!func2()) return false
+            }
+            var _this=$(this)
+            _this.btn("loading")
+            $.post(url,form.form()).success(function(result){
+                if(result.code=="200"){
+                    func()
+                }else{
+                    showError(result.msg)
+                }
+                _this.btn("reset")
+            })
+        }
+    }
+})
 
 /*button禁用*/
 +function ($) {
-    'use strict';
-
-    // BUTTON PUBLIC CLASS DEFINITION
-    // ==============================
 
     var Button = function (element, options) {
         this.$element  = $(element)
@@ -75,9 +128,6 @@ function showError(text){
         }, this), 0)
     }
 
-    // BUTTON PLUGIN DEFINITION
-    // ========================
-
     function Plugin(option) {
         return this.each(function () {
             var $this   = $(this)
@@ -96,10 +146,6 @@ function showError(text){
     $.fn.btn             = Plugin
     $.fn.btn.Constructor = Button
 
-
-    // BUTTON NO CONFLICT
-    // ==================
-
     $.fn.btn.noConflict = function () {
         $.fn.btn = old
         return this
@@ -107,7 +153,6 @@ function showError(text){
 
 }(jQuery);
 
-//#region dialog
 var dialog = {
     openned: false,
     //#region close
@@ -115,9 +160,7 @@ var dialog = {
         window.top.$('#dialog').dialog("close").remove();
         dialog.openned = false;
     }
-    //#endregion
 
-    //#region _getHTML
     , _getHTML: function (htmlArray) {
         if (htmlArray.join) {
             return "<div class='msg'><p>" + htmlArray.join("</p><p>") + "</p></div>";
@@ -126,9 +169,7 @@ var dialog = {
             return "<div class='msg'><p>" + htmlArray + "</p></div>";
         }
     }
-    //#endregion
 
-    //#region _show
     , _show: function (title, messageHtml, buttons) {
         var _buttons;
         if (buttons.each) {
@@ -157,45 +198,74 @@ var dialog = {
         });
         dialog.openned = true;
     },
-    //#endregion
 
-    //#region info
-    info: function (title, messageHtml, buttons) {
-        if (messageHtml == null) {
-            messageHtml = l.UpdatedSuccess;
+    info: function (messageHtml, func) {
+        buttons = {};
+        if(!func){
+            buttons[$.t("base:button.ok")] = function () { dialog.close(); };
+        }else{
+            buttons[$.t("base:button.ok")] = function () {
+                func()
+                dialog.close();
+            };
         }
-        if (buttons == null) {
-            buttons = {};
-            buttons["确定"] = function () { dialog.close(); };
-        }
-        dialog._show(title, '<span class="icon true"></span>' + dialog._getHTML(messageHtml), buttons);
+        dialog._show($.t("base:button.info"), '<span class="icon true"></span>' + dialog._getHTML(messageHtml), buttons);
     },
-    //#endregion
 
-    //#region error
-    error: function (title, messageHtml, buttons) {
-        if (messageHtml == null) {
-            messageHtml = l.UpdatedSuccess;
-        }
+    error: function (messageHtml, buttons) {
         if (buttons == null) {
             buttons = {};
-            buttons["确定"] = function () { dialog.close(); };
+            buttons[$.t("base:button.ok")] = function () { dialog.close(); };
         }
-        dialog._show(title, '<span class="icon error"></span>' + dialog._getHTML(messageHtml), buttons);
+        dialog._show($.t("base:button.error"), '<span class="icon error"></span>' + dialog._getHTML(messageHtml), buttons);
     },
-    //#endregion
 
-    //#region confirm
-    confirm: function (title, messageHtml, buttons) {
-        if (messageHtml == null) {
-            messageHtml = l.UpdatedSuccess;
-        }
-        if (buttons == null) {
-            buttons = {};
-            buttons["确定"] = function () { dialog.close(); };
-        }
+    custom: function (title, messageHtml, buttons) {
         dialog._show(title, '<span class="icon confirm"></span>' + dialog._getHTML(messageHtml), buttons);
     }
-    //#endregion
 };
-//#endregion
+
+var showPopUp = function(html, title, width, height, closefn) {
+    $("#popup").remove();
+    var $div = window.top.$('<div id="popup"></div>');
+    $div.html(html);
+    $div.css("width", width);
+    $div.find("iframe").css("width", width);
+    $div.dialog({
+        height: height,
+        width: width,
+        resizable: false,
+        modal: true,
+        title: title,
+        dialogClass: 'popup',
+        close: closefn
+    });
+}
+
+var validBase={
+    success: function(label) {
+        label.addClass("success");
+    },
+    unhighlight:function(element){
+        $(element).parent().addClass("ok").removeClass("red");
+        if(!$(element).parent().find("b").length){
+            $(element).parent().append("<b></b>")
+        }
+    },
+    highlight: function(element, errorClass) {
+        $(element).parent().addClass("red").removeClass("ok").find("." + errorClass).removeClass("success");
+        if(!$(element).parent().find("b").length){
+            $(element).parent().append("<b></b>")
+        }
+    },
+    errorPlacement:function(error, element) {
+        error.appendTo(element.parent());
+    }
+}
+
+function getQueryString(name)
+{
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return  unescape(r[2]); return null;
+}

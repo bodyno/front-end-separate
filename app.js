@@ -13,7 +13,7 @@ var app = express();
 
 //设置vm模版
 app.engine(".vm", vm({root: __dirname + "/src/views"}))
-app.set('view engine', 'vm');
+app.set('view engine', 'vm')
 app.set("views", __dirname + "/src/views")
 
 

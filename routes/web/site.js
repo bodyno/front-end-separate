@@ -1,3 +1,4 @@
+var _=require("underscore");
 module.exports = function (app) {
 
     //登录中间件
@@ -22,7 +23,12 @@ module.exports = function (app) {
     });
 
     app.get('/slot', function (req, res) {
-        res.render('slot', app.locals.middle);
+        res.render('slot', _.extend({},app.locals.middle,{
+            game:[
+                1,2,3,4,5,6,7,8,9,10,11,12
+            ],
+            top:[1,2,3,4,5,6]
+        }));
     });
 
     app.get('/casino', function (req, res) {

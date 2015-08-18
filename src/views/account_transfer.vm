@@ -2,8 +2,9 @@
 <html class="no-js" lang="en">
 <head>
     <title>全民坐庄</title>
-    <script>var translate_page='index';</script>
+    <script>var translate_page='account';</script>
     #parse('/common/top.vm')
+    #set($header='cashier')
     <link rel="stylesheet" href="/static/css/account.css"/>
 </head>
 <body>
@@ -24,26 +25,30 @@
                     <h2>转账</h2>
                     <div class="account-main-title-text">这里可以转账到其他账户</div>
                 </div>
-                <div class="account-form account-transfer">
+                <form class="account-form account-transfer" id="transfer-form">
                     <div class="account-group clearfix">
                         <label class="account-group-label">转出自：</label>
-                        <select class="account-select">
-                            <option>中心钱包</option>
+                        <select class="account-select" name="fromType" id="fromType">
+                            <option value="curAccount">中心钱包</option>
+                            <option value="w88">W88</option>
+                            <option value="pt">PT</option>
                         </select>
                         <label class="account-group-help">您可转出0.00元</label>
                     </div>
-                    <div class="account-group clearfix">
+                    <div class="account-group account-group-select clearfix">
                         <label class="account-group-label">转入自：</label>
-                        <select class="account-select">
-                            <option>GD</option>
+                        <select class="account-select" name="toType" id="toType">
+                            <option value="w88">W88</option>
+                            <option value="pt">PT</option>
+                            <option value="curAccount">中心钱包</option>
                         </select>
                     </div>
-                    <div class="account-group clearfix">
+                    <div class="account-group account-group-money clearfix">
                         <label class="account-group-label">金额(RMB)：</label>
-                        <input type="text" class="account-input">
+                        <input type="text" class="account-input" name="ammount" id="ammount">
                     </div>
-                    <div class="account-btn account-btn-normal">提交</div>
-                </div>
+                    <div class="account-btn account-btn-normal" id="transfer-btn">提交</div>
+                </form>
                 <div class="account-service">
                     如有任何问题，请联系我们的<a href="#">在线客服</a>
                 </div>
@@ -51,5 +56,6 @@
         </div>
     </div>
     #parse('/common/page_footer.vm')
+    <script src="/static/js/transfer.js"></script>
 </body>
 </html>

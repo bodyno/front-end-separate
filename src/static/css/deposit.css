@@ -1,0 +1,2775 @@
+@charset "utf-8";
+/* CSS Document */
+/*version: 1121*/
+
+/*#region colors*/
+.g-c1 { color: #08F; }
+/*#endregion*/
+
+.g-logorecommend-1 { display: inline-block; width: 31px; height: 18px; background: url(../images/deposit/uedbet_bank_img.png) -40px -440px; }
+
+
+.g-num-tips { display: inline-block; height: 15px; line-height: 15px; background: url(../images/num_tipsbg.png); }
+.g-num-tips span { display: inline-block; height: 15px; line-height: 14px; margin-left: 5px; margin-right: -5px; padding-right: 5px; background: url(../images/num_tipsbg.png) right 0; color: #FFF; }
+
+.g-hidden { display: none; }
+
+.ubloading { width:30px; height:30px; background:url(../images/deposit/ubloading_1.png) no-repeat; }
+
+.uedbet-logo-gray { width:230px; height:50px;background: url(../images/uedbet_com_footer.png); }
+.htf-jt-logo { width:76px; height:82px; background: url(../images/uedbet_com_footer.png) 0 -120px; }
+.htf-jt-logo:hover { background-position: -80px -120px; }
+.htf-jt-title { width:330px; height:23px;background: url(../images/uedbet_com_footer.png) 0 -60px; }
+.htf-jt-title:hover { background-position: 0 -90px; }
+
+/*#region buttons*/
+.uedbtn-1 { display: inline-block; height: 36px; line-height: 36px; background: url(../images/btn_img.png) 0 -200px; cursor: pointer; }
+.uedbtn-1 .caption { display: inline-block; margin-left: 20px; padding-right: 20px; background: url(../images/btn_img.png) right -200px #FFF; color: #FFF; }
+.uedbtn-1:hover { background-position: 0 -240px; }
+.uedbtn-1:hover .caption { background-position: right -240px; }
+
+
+.btn-login, .btn-register, .btn-cs { display: inline-block; height: 26px; line-height: 26px; background: url(../images/uedbet_img.png); cursor: pointer; text-align: center; }
+.btn-login { width: 50px; background-position: 0 -680px; color: #666; }
+.btn-register { width: 50px; background-position: -60px -680px; color: #FFF; }
+.btn-cs { width: 90px; background-position: -120px -680px; color: #FFF; position:relative;}
+.btn-cs a { color: #FFF; }
+.btn-login:hover { background-position: 0 -720px; }
+.btn-register:hover { background-position: -60px -720px; }
+.btn-cs:hover { background-position: -120px -720px; }
+.btn-cs span{ margin-left:23px;}
+.btn-cs .gif{ width:20px; height:18px; position:absolute; top:4px; left:10px; background:url(../images/livechat_ico.gif) no-repeat 0 0;}
+.btn-cs:hover .gif{ background-position: -20px 0;}
+.vip-gif{ width:21px; height:9px; position:absolute; top:9px; left:9px; background:url(../images/livechat_ico_vip.gif) no-repeat 0 0;}
+
+.btn-login2{ display: inline-block; width: 70px; height: 26px; border: 1px solid; text-align: center; line-height: 26px; color: #FFF; }
+.btn-cs2 { display: inline-block; width: 73px; height: 26px; text-align: center; line-height: 26px; color: #FFF; }
+.btn-login2:hover {
+    -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+}
+.btn-login2 { border-color: #009bda; background: #00abf1; }
+.btn-cs2 {background: url(../images/uedbet_img.png) no-repeat -130px -680px; }
+.btn-login2:hover { background: #00b5ff; border-color: #0092ce; }
+.btn-cs2:hover { background: url(../images/uedbet_img.png) no-repeat -130px -720px; }
+.btn-register2 { width: 190px; height: 36px; line-height: 36px; border: 1px solid #009bda; background: #00abf1; text-align: center; color: #FFF; cursor: pointer; }
+.btn-register2:hover { background: #00b5ff; border-color: #0092ce; }
+.btn-bigblue { width: 190px; height: 36px; line-height: 36px; border: 1px solid #009bda; background: #00abf1; text-align: center; color: #FFF; cursor: pointer; }
+.btn-bigblue:hover { background: #00b5ff; border-color: #0092ce; }
+
+.btn-refresh { display: block; width: 16px; height: 16px; background: url(../images/uedbet_img_2.png) 0 -670px; cursor: pointer; }
+.btn-refresh:hover { background-position: -120px -670px; }
+.btn-refresh-2 { display: block; width: 19px; height: 20px; background: url(../images/deposit/uedbet_bank_img.png) 0 -340px no-repeat; cursor: pointer; }
+.btn-refresh-2:hover { background-position: -30px -340px; }
+
+.btn-blue, .btn-white { display: block; width: 152px; height: 36px; line-height: 35px; text-align: center; background: #00abf1; cursor: pointer; font-size: 14px; border: none; }
+.btn-blue { background-position: 0 -990px; color: #FFF; }
+.btn-white { background-position: 0 -1100px; color: #429bd1; }
+.btn-blue:hover { background-position: 0 -1035px; }
+.btn-white:hover { background-position: 0 -1145px; }
+
+.btn-blue-2, .btn-gray-2 { display: block; width: 85px; height: 30px; line-height: 29px; text-align: center; border: none; cursor: pointer; background: url(../images/uedbet_img.png); font-size: 14px; }
+.btn-blue-2 { background-position: 0 -1190px; color: #FFF; }
+.btn-gray-2 { background-position: -120px -1190px; color: #666; }
+.btn-blue-2:hover { background-position: 0 -1230px; }
+.btn-gray-2:hover { background-position: -120px -1230px; }
+
+.btn-exchange { display: block; width: 19px; height: 20px; background: url(../images/deposit/uedbet_bank_img.png) -120px -70px no-repeat; cursor: pointer; }
+.btn-exchange:hover { background-position: -150px -70px; }
+
+.btn-captcha { display: block; padding: 0 10px; height: 23px; line-height: 23px; text-align: center; border: 1px solid #dddddd; background: #f4f4f4; cursor: pointer; color: #555; }
+
+.btn-close { display: block; width: 14px; height: 14px; background: url(../../../static/images/close.png) no-repeat; cursor: pointer; }
+.btn-close:hover { background-position: 0 -14px; }
+
+.btn-datepicker { display: block; width: 15px; height: 14px; background: url(../images/deposit/uedbet_bank_img.png) -240px -100px no-repeat; }
+.btn-datepicker:hover { background-position: -240px -120px; }
+
+.btn-disable, .btn-disable:hover { background: #f3f3f3; color: #bababa; border: 1px solid #dcdcdc; }
+.btn-disabled, .btn-disabled:hover { background: #f3f3f3; color: #bababa; border: none; }
+.btn-disabled .caption { background: none; color: #bababa; }
+/*#endregion*/
+
+.ios-onoff { position: relative; width: 54px; height: 22px; cursor: pointer; }
+.ios-onoff >div {
+    -webkit-transition: all .3s ease-in-out .0s;
+    -moz-transition: all .3s ease-in-out .0s;
+    -ms-transition: all .3s ease-in-out .0s;
+    -o-transition: all .3s ease-in-out .0s;
+    transition: all .3s ease-in-out .0s;
+}
+.ios-onoff .on, .ios-onoff .off { width: 100%; height: 100%; }
+.ios-onoff .on { background: url(../images/bg_open.png); }
+.ios-onoff .off { background: url(../images/bg_close.png); }
+.ios-onoff .slider { position: absolute; top: 0; left: 0; display: block; width: 22px; height: 23px; background: url(../images/dot.png); }
+
+
+
+.ico-icbc,.ico-cmb,.ico-ccb,.ico-abc,.ico-boc,.ico-spdb,.ico-sdb,.ico-cib,.ico-bob,.ico-cebb,.ico-boco,.ico-cmbc,.ico-ecitic,.ico-gdb,.ico-pingan,.ico-post,.ico-union,.ico-jsb,.ico-srcb,.ico-hkb,.ico-nbcb,.ico-njcb,.ico-bosh,.ico-hxb,.ico-hzb,.ico-hkbea,.ico-ordos,.ico-cbhb,.ico-jzb,.ico-gdrcu,.ico-nccb,.ico-glccb,.ico-bsb,.ico-ynrcc,.ico-gzcb,.ico-cqrcb,.ico-zjcb { margin: 0 6px 0 8px; background: url(../images/deposit/bank_ico.png) no-repeat; display: inline-block; width: 18px; height: 18px; margin-right: 3px; _margin-top: 4px; vertical-align: -4px; }
+
+/*工商银行*/
+.ico-icbc {	background-position:0 0; }
+/*招商银行*/
+.ico-cmb { background-position:-18px 0; }
+/*中国农业银行*/
+.ico-abc { background-position:-54px 0; }
+/*建设银行*/
+.ico-ccb { background-position:-36px 0; }
+/*北京银行*/
+.ico-bob { background-position:-126px -18px; }
+/*交通银行*/
+.ico-boco {	background-position:-36px -18px; }
+/*兴业银行*/
+.ico-cib { background-position:0 -18px;}
+
+/*南京银行*/
+.ico-njcb {	background-position:-108px -36px; }
+/*中国民生银行*/
+.ico-cmbc {	background-position:-90px -18px; }
+/*光大银行*/
+.ico-cebb {	background-position:-90px 0; }
+/*中国银行*/
+.ico-boc { background-position:-72px 0; }
+
+/*平安银行*/
+.ico-pingan { background-position:0 -36px; }
+
+/*渤海银行*/
+.ico-cbhb{background-position:-108px -54px;}
+/*东亚银行*/
+.ico-hkbea{	background-position:-54px -54px;}
+/*宁波银行*/
+.ico-nbcb{	background-position:-90px -36px;}
+/*中信银行*/
+.ico-ecitic{background-position:-126px 0;}
+/*深圳发展银行*/
+.ico-sdb{background-position:-108px -18px;}
+/*广发银行*/
+.ico-gdb{background-position:-72px -18px;}
+/*上海银行*/
+.ico-bosh{background-position:0 -54px;}
+
+/*上海浦东发展银行*/
+.ico-spdb{	background-position:-54px -18px;}
+/*中国邮政*/
+.ico-post{	background-position:-18px -18px;}
+/*华夏银行*/
+.ico-hxb{background-position:-18px -54px;}
+/*杭州银行*/
+.ico-hzb{background-position:-36px -54px;}
+/*上海农商银行*/
+.ico-srcb{background-position:-72px -37px;}
+
+.ico-bjrcb, .ico-cz, .ico-ncb, .ico-sccb, .ico-zjtlcb { margin: 0 6px 0 8px; background: url(../images/deposit/bank_ico2.png) no-repeat; display: inline-block; width: 16px; height: 17px; margin-right: 3px; _margin-top: 4px; vertical-align: -4px; }
+
+/*北京农村商业银行*/
+.ico-bjrcb { background-position: -32px 0; }
+/*浙商银行*/
+.ico-cz { background-position: 0 0; }
+/*南洋商业银行*/
+.ico-ncb { background-position: -16px 0; }
+/*河北银行*/
+.ico-sccb { background-position: -48px 0; }
+/*泰隆银行*/
+.ico-zjtlcb { background-position: -64px 0; }
+
+
+/*#region triangle logos*/
+.logo-down { display: block; width: 20px; height: 20px; background: url(../images/uedbet_img_2.png) 0 -640px no-repeat; cursor: pointer; }
+.logo-down:hover { background-position:  -120px -640px; }
+.logo-sj1, .logo-sj2, .logo-sj3 { background: url(../images/uedbet_img_2.png) no-repeat; }
+.logo-sj1 { display: block; width: 6px; height: 6px; background-position: 0 -690px; }
+.logo-sj2 { display: block; width: 6px; height: 6px; background-position: -24px -700px;  }
+.logo-sj3 { display: block; width: 9px; height: 15px; background-position: 0 -700px; }
+.logo-sj4, .logo-sj4-t, .logo-sj4-b, .logo-sj4-l, .logo-sj4-r { display: block; width: 7px; height: 4px; background: url(../images/deposit/uedbet_bank_img.png) -155px -45px no-repeat; }
+.logo-sj4-t { background-position: -245px -75px; }
+.logo-sj5 { display: block; width: 20px; height: 14px; background: url(../images/deposit/uedbet_bank_img.png) -180px -40px no-repeat; }
+.logo-sj6-t, .logo-sj6-b, .logo-sj6-l, .logo-sj6-r { display: block; background: url(../images/deposit/uedbet_bank_img.png); }
+.logo-sj6-t, .logo-sj6-b { width: 18px; height: 10px; }
+.logo-sj6-l, .logo-sj6-r { width: 10px; height: 18px; }
+.logo-sj6-t { background-position: -150px 0; }
+.logo-sj6-b { background-position: -180px 0; }
+.logo-sj6-l { background-position: -150px -20px; }
+.logo-sj6-r { background-position: -180px -20px; }
+.logo-sj7-t, .logo-sj7-b, .logo-sj7-l, .logo-sj7-r { display: block; width: 8px; height: 4px; background: url(../images/deposit/uedbet_bank_img.png) -215px -75px no-repeat; }
+.logo-sj7-b { background-position: -185px -75px; }
+.logo-sj8-r { display: block; width: 10px; height: 20px; background: url(../images/deposit/uedbet_bank_img.png) -210px -490px no-repeat; }
+/*#endregion*/
+
+.logo-plus { display: block; width: 12px; height: 12px; background: url(../images/deposit/uedbet_bank_img.png) no-repeat -150px -490px; }
+
+.logo-th, .logo-th-2, .logo-right { display: block; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.logo-th { width: 12px; height: 12px; background-position: -120px -40px; }
+.logo-th-2 { width: 32px; height: 32px; background-position: 0 0; }
+.logo-right { width: 32px; height: 32px; background-position: -40px 0; }
+.logo-th-3, .logo-right-3 { display: block; width: 72px; height: 72px; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.logo-th-3 { background-position: 0 -780px; }
+.logo-right-3 { background-position: -80px -780px ; }
+
+.logo-right-1, .logo-th-1 { display: inline-block; background: url(../images/uedbet_img.png) no-repeat; width: 12px; height: 12px; }
+.logo-right-1 { background-position: -20px -840px; }
+.logo-th-1 { background-position: -40px -840px; }
+
+
+.logo-user { display: block; width: 15px; height: 15px; background: url(../images/uedbet_img.png) no-repeat 0 -960px; }
+.logo-trueinfo, .logo-bindcard, .logo-bindphone, .logo-bindemail, .logo-trueinfo-on, .logo-bindcard-on, .logo-bindphone-on, .logo-bindemail-on { display: block; width: 25px; height: 18px; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; cursor: pointer; }
+.logo-trueinfo { background-position: 0 -40px; }
+.logo-bindcard { background-position: -40px -40px; }
+.logo-bindphone { background-position: -80px -40px; }
+.logo-bindemail { background-position: -210px -690px; }
+.logo-trueinfo-on { background-position: 0 -70px; }
+.logo-bindcard-on { background-position: -40px -70px; }
+.logo-bindphone-on { background-position: -80px -70px; }
+.logo-bindemail-on { background-position: -210px -590px; }
+.logo-phone { display: block; width: 25px; height: 17px; background: url(../images/deposit/uedbet_bank_img.png) -210px -640px no-repeat; }
+.logo-phone:hover { background-position: -210px -660px; }
+.logo-key { display: block; width: 30px; height: 18px; background: url(../images/deposit/uedbet_bank_img.png) -150px -640px no-repeat;  }
+.logo-key:hover { background-position: -150px -660px; }
+
+.logo-rect-1, .logo-rect-2, .logo-rect-3, .logo-rect-4, .logo-rect-5, .logo-rect-6 { display: block; width: 12px; height: 12px; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.logo-rect-1 { background-position: -210px 0; }
+.logo-rect-2 { background-position: -210px -20px; }
+.logo-rect-3 { background-position: -210px -40px; }
+.logo-rect-4 { background-position: -240px 0; }
+.logo-rect-5 { background-position: -240px -20px; }
+.logo-rect-6 { background-position: -240px -40px; }
+
+.logo-circle-1, .logo-circle-2,.logo-circle-3, .logo-circle-4, .logo-circle-5,.logo-circle-6,  .logo-circle-7, .logo-circle-8,.logo-circle-9 { display: block; width: 12px; height: 12px; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.logo-circle-1 { background-position: -210px 0; }
+.logo-circle-2 { background-position: -225px 0; }
+.logo-circle-3 { background-position: -240px 0; }
+.logo-circle-4 { background-position: -210px -20px; }
+.logo-circle-5 { background-position: -225px -20px; }
+.logo-circle-6 { background-position: -240px -20px; }
+.logo-circle-7 { background-position: -210px -40px; }
+.logo-circle-8 { background-position: -225px -40px; }
+.logo-circle-9 { background-position: -240px -40px; }
+
+
+/*#region bank logos*/
+.logo-ICBC-1, .logo-CCB-1, .logo-ABC-1, .logo-BOC-1, .logo-CMBC-1 { display: block; width: 187px; height: 39px; background: url(../images/deposit/uedbet_bank_img.png); }
+.logo-ICBC-1 { background-position: 0 -540px; } /**/
+.logo-ABC-1 { background-position: 0 -590px; }  /*ũҵ*/
+.logo-CCB-1 { background-position: 0 -640px; }  /**/
+.logo-CMBC-1 { background-position: 0 -690px; }  /**/
+.logo-BOC-1 { background-position: 0 0; }       /*й*/
+
+.logo--2, .logo-ICBC-2, .logo-CCB-2, .logo-ABC-2, .logo-BOC-2, .logo-CMBC-2, .logo-ALIPAY-2 { display: block; width: 120px; height: 30px; background: url(../images/deposit/uedbet_bank_img.png?00); }
+.logo-ICBC-2 { background-position: 0 -540px; }
+.logo-ABC-2 { background-position: 0 -590px; }
+.logo-CCB-2 { background-position: 0 -640px; }
+.logo-CMBC-2 { background-position: 0 -690px; }
+.logo-ALIPAY-2{background-position: 0 -1120px;}
+.logo--2 { background: none; }
+.logo-CMSB-2 { display: block; width: 120px; height: 30px; background: url(../images/uedbet_bank_ico.png); }
+
+.logo-DONGA-2,.logo-VIETIN-2,.logo-ACB-2,.logo-VIET-2,.logo-TECH-2,.logo-BIDV-2,.logo-SA-2{display: block; width: 140px; height: 30px;background:url(../images/vn_bank.png);}
+.logo-DONGA-2{background-position:0 0px;}
+.logo-VIETIN-2{background-position:0 -50px;}
+.logo-ACB-2{background-position:0 -100px;}
+.logo-VIET-2{background-position:0 -150px;}
+.logo-TECH-2{background-position:0 -200px;}
+.logo-BIDV-2{background-position:0 -250px;}
+.logo-SA-2{background-position:0 -300px;}
+
+.logo-DONGA-3,.logo-TECH-3,.logo-VIETIN-3,.logo-ACB-3,.logo-VIET-3,.logo-BIDV-3,.logo-SA-3{display: block; width: 22px; height: 22px;background:url(../images/vn_sbank.png);}
+.logo-BIDV-3{background-position:0 0;}
+.logo-TECH-3{background-position:-22px 0;}
+.logo-VIET-3{background-position:-44px 0;}
+.logo-ACB-3{background-position:-66px 0;}
+.logo-VIETIN-3{background-position:-88px 0;}
+.logo-DONGA-3{background-position:0 -22px;}
+.logo-SA-3{background-position:-22px -22px;}
+
+.logo-ICBC-3,.logo-ABC-3,.logo-CCB-3,.logo-CMBC-3,.logo-BOC-3,.logo-CMSB-3,.logo-BOCO-3,.logo-SHB-3,.logo-PINGANBANK-3,.logo-ECITIC-3,.logo-GDB-3,.logo-CIB-3,.logo-NBCB-3,.logo-CBHB-3,.logo-POST-3,.logo-HKBEA-3,.logo-HXB-3,.logo-CEB-3,.logo-CZ-3,.logo-HZBANK-3,.logo-BCCB-3,.logo-SDB-3,.logo-BJRCB-3,.logo-ALIPAY-3,.logo-EGB-3,.logo-WOORI-3,.logo-OTHB-3,
+.logo-SPD-3
+{ display: block; width: 22px; height: 22px; background: url(../images/s_bank_logos.png); }
+
+/*.logo-ICBC-3, .logo-CCB-3, .logo-ABC-3, .logo-BOC-3, .logo-CMBC-3, .logo-CMSB-3 { display: block; width: 24px; height: 30px; background: url(../images/deposit/uedbet_bank_img.png?00); }*/
+
+/*.logo-ICBC-3 { background-position: 0 -540px; }
+.logo-ABC-3 { background-position: 0 -590px; }
+.logo-CCB-3 { background-position: 0 -640px; }
+.logo-CMBC-3 { background-position: 0 -690px; }
+.logo-BOC-3 { background-position: 0 -486px; }
+.logo-CMSB-3 { background-position: -40px -486px; }*/
+
+/*工商银行*/
+.logo-ICBC-3 { background-position: 0px 0; }
+/*农业银行*/
+.logo-ABC-3 { background-position: -22px 0; }
+/*建设银行*/
+.logo-CCB-3 { background-position: -44px 0; }
+/*招商银行*/
+.logo-CMBC-3 { background-position: -66px 0; }
+/*中国银行*/
+.logo-BOC-3 { background-position: -88px 0; }
+
+/*民生银行*/
+.logo-CMSB-3 { background-position: 0px -22px; }
+/*交通银行*/
+.logo-BOCO-3 { background-position: -22px -22px; }
+/*上海银行*/
+.logo-SHB-3 { background-position: -44px -22px; }
+/*平安银行*/
+.logo-PINGANBANK-3 { background-position: -66px -22px; }
+/*中信银行*/
+.logo-ECITIC-3 { background-position: -88px -22px; }
+
+/*广发银行*/
+.logo-GDB-3 { background-position: 0px -44px; }
+/*兴业银行*/
+.logo-CIB-3 { background-position: -22px -44px; }
+/*宁波银行*/
+.logo-NBCB-3 { background-position: -44px -44px; }
+/*渤海银行*/
+.logo-CBHB-3 { background-position: -66px -44px; }
+/*邮政银行*/
+.logo-POST-3 { background-position: -88px -44px; }
+
+/*东亚银行*/
+.logo-HKBEA-3 { background-position: 0px -66px; }
+/*华夏银行*/
+.logo-HXB-3 { background-position: -22px -66px; }
+/*光大银行*/
+.logo-CEB-3 { background-position: -44px -66px; }
+/*浙商银行*/
+.logo-CZ-3 { background-position: -66px -66px; }
+/*杭州银行*/
+.logo-HZBANK-3 { background-position: -88px -66px; }
+
+
+/*北京银行*/
+.logo-BCCB-3 { background-position: 0px -88px; }
+/*深发银行*/
+.logo-SDB-3 { background-position: -22px -88px; }
+/*北京农村*/
+.logo-BJRCB-3 { background-position: -44px -88px; }
+/*支付宝*/
+.logo-ALIPAY-3 { background-position: -66px -88px; }
+/*恒丰银行*/
+.logo-EGB-3 { background-position: -88px -88px; }
+
+/*友利银行*/
+.logo-WOORI-3 { background-position: 0px -110px; }
+/*其他银行*/
+.logo-OTHB-3 { background-position: -22px -110px; }
+/*浦发银行*/
+.logo-SPD-3 { background-position: -44px -110px; }
+
+/*#endregion*/
+
+.logo-checked { display: block; width: 19px; height: 19px; background: url(../images/deposit/uedbet_bank_img.png) -221px -521px; }
+
+
+.logo-lock-1, .logo-lock-2, .logo-lock-3 { display: inline-block; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.logo-lock-1 { width: 13px; height: 15px; background-position: -180px -100px; }
+.logo-lock-2 { width: 28px; height: 33px; background-position: -150px -100px; }
+.logo-lock-3 { width: 13px; height: 15px; background-position: -210px -100px; }
+
+
+
+.logo-msg, .logo-bell, .logo-id, .logo-lock, .logo-promo, .logo-bets { display: block; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.logo-bell { width: 24px; height: 24px; background-position: -210px -340px; }
+.logo-id { width: 25px; height: 22px; background-position: -210px -390px; }
+.logo-lock { width: 25px; height: 23px; background-position: -210px -440px; }
+.logo-msg { width: 24px; height: 16px; background-position: -80px -103px; }
+.logo-promo { width: 25px; height: 17px; background-position: -210px -780px; }
+.logo-bets { width: 21px; height: 18px; background-position: -210px -860px; }
+
+.logo-msgbox-r, .logo-msgbox-s, .logo-msgbox-n { width: 24px; height: 20px; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.mcj_c .logo-msgbox-r { background-position: -40px -740px; margin-top:12px;}
+.mcj_c .logo-msgbox-s { background-position: -80px -740px; margin-top: 12px;}
+.mcj_c .logo-msgbox-n { background-position: 0 -740px; margin-top: 9px;}
+
+.logo-email { display: block; width: 25px; height: 17px; background: url(../images/deposit/uedbet_bank_img.png) -210px -590px no-repeat; }
+.logo-email-2 { display: block; width: 25px; height: 17px; background: url(../images/deposit/uedbet_bank_img.png) -210px -690px no-repeat; }
+.logo-email-2:hover { background-position: -210px -710px; }
+
+.logo-weibo { display: block; width: 30px; height: 18px; background: url(../images/deposit/uedbet_bank_img.png) -150px -690px no-repeat; }
+.logo-weibo:hover { background-position: -150px -710px; }
+.logo-qq { display: block; width: 30px; height: 18px; background: url(../images/deposit/uedbet_bank_img.png) -150px -740px no-repeat; }
+.logo-qq:hover { background-position: -150px -760px; }
+
+.logo-money { display: block; width: 20px; height: 20px; background: url(../images/deposit/uedbet_bank_img.png) -120px -340px no-repeat ; }
+
+.line-1 { font-size: 1px; height: 0; border: 1px solid; border-width: 1px 0; border-top-color: #cdcdcd; border-bottom-color: #ffffff; }
+.line-2 { font-size: 1px; height: 60px; width: 1px; border: none; background: #e2e2e2; }
+.line-950 { margin: 0 auto; width: 950px; height: 1px; background: #E5E5E5; display:none;}
+
+.big-small { text-align: center; }
+.big-small strong { font-size: 80px; }
+.big-small span { font-size: 20px; }
+
+.tbl { width: 251px; }
+.tbl .head { margin: 12px 0; }
+.tbl .hd-2, .tbl .i-value { color: #79a8d6; }
+
+
+.tbl-2 { float: left; padding: 1px 0 0 1px; background: #cccccc;}
+.tbl-2 .tbl-th, .tbl-2 .tbl-tr { clear: both; }
+.tbl-2 li { float: left; margin: 0 1px 1px 0; width: 149px; height: 33px; line-height: 33px; text-align: center; color: #333; font-size: 14px; }
+.tbl-2 .odd { background: #eee; }
+.tbl-2 .even { background: #e2e2e2; }
+
+.s-admin-popupmenu { position: absolute; top: 2px; right: -6px; width: 60px; border: 1px solid #ccc; background: #FFF; line-height: 25px; text-align: center; border-radius:2px; z-index: 10; display: none; }
+.s-admin-popupmenu .title{cursor:default;}
+#withdraw-form .admin .icon1{width:10px; height:6px; position:absolute; background:url(../images/deposit/uedbet_bank_img.png) no-repeat -184px -74px; top:12px; right:1px;}
+.s-admin-popupmenu .icon2{width:10px; height:6px; position:absolute; background:url(../images/deposit/uedbet_bank_img.png) no-repeat -214px -74px; top:9px; right:5px; cursor:default;}
+.s-admin-popupmenu li, .s-admin-popupmenu li a { color: #0098CF; }
+.s-admin-popupmenu li:hover, .s-admin-popupmenu li a:hover { color: #0088ff; text-decoration:underline;}
+
+
+
+.radio-bank { cursor: pointer; background: #FFF; }
+.radio-bank > div { border: 1px solid #D3D3D3; width: 180px; *width: 201px; height: 39px;  }
+.radio-bank .radio { float: left; }
+.radio-bank .radio-label{ float:right;}
+.radio-bank .radio-label { position: relative; width: 155px; height: 39px; /*border: 1px solid #d3d3d3;*/ background: #FFF; }
+.radio-bank .radio { padding: 14px 7px 0 5px; *padding: 12px 7px 0 5px; }
+.radio-bank .radio-label .bank-logo { margin: 5px 0 0 5px; }
+.radio-bank .radio-label .logo-checked { position: absolute; display: none; right: 0; bottom: 0; }
+.radio-bank:hover > div { width: 178px; *width: 199px; height: 37px; border: 2px solid #CBDFF6; }
+.radio-bank:hover .radio { padding: 13px 7px 0 4px; *padding: 11px 7px 0 4px; }
+.radio-bank:hover .radio-label { width: 154px; height: 37px; }
+.radio-bank:hover .radio-label .bank-logo { margin: 4px 0 0 5px; }
+.radio-bank > div.checked { width: 178px; *width: 201px; height: 37px; border: 2px solid #138FFF; }
+.radio-bank > div.checked .radio { padding: 13px 7px 0 4px; *padding: 11px 7px 0 4px; }
+.radio-bank > div.checked .radio-label { width: 154px; height: 37px; }
+.radio-bank > div.checked .radio-label .bank-logo { margin: 4px 0 0 5px; }
+.radio-bank > div.checked .radio-label .logo-checked { display: block; }
+.radio-label .bank-type { position: absolute; right: 0; top: 0; display: block; width: 28px; height: 15px; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.radio-label .bank-type-1 { background-position: -80px -440px; }
+.radio-label .bank-type-2 { background-position: -120px -440px; }
+.radio-label .bank-type-3 { background-position: -80px -460px; }
+
+
+.bank-list-2 { padding: 1px 1px 0; background: #90c1dd; }
+.radio-bank-2 { margin-bottom: 1px; width: 328px; height: 46px; background: #ecf3f9; }
+.radio-bank-2 .radio, .radio-bank-2 .radio-label{ margin-top: 9px; float: left; cursor: pointer; color: #333; }
+.radio-bank-2 .name { margin-left: 10px; }
+.radio-bank-2 .tail { margin-left: 20px; }
+.radio-bank-2 .admin { position: relative; margin: 9px 5px 0 0; float: right; width: 50px; line-height: 30px; color: #0098cf; cursor: pointer; text-align: center; }
+.radio-bank-2 .admin:hover .s-admin-popupmenu { display: block; }
+.radio-bank-2 .radio { padding: 7px 12px 0 12px; }
+.radio-bank-2 .radio-label span { float: left; line-height: 30px; }
+.radio-bank-2 .radio-label .blogo { margin-top: 5px; }
+#withdraw-form .radio-bank-2 .radio{padding: 10px 12px 0 12px;}
+
+.bankinfo-ls { position: absolute; top: 145px; right: 0; width: 285px; height: 280px; }
+.bankinfo-ls .bank-card-info { float: left; margin: 0 10px 10px 0; display: none; }
+.bankinfo-ls .bank-card-info li { line-height: 30px; }
+.bankinfo-ls .bank-card-info .c { margin-top: 5px; line-height: 20px; display: none; }
+
+.radio-bank-3 > div { width: 115px; height: 30px; line-height: 30px; border: 1px solid #d3d3d3; cursor: pointer; }
+.radio-bank-3 .radio{ float: left; }
+.radio-bank-3 .radio-label { float:right;}
+.radio-bank-3 .radio-label { position: relative; width: 92px; line-height: 31px; }
+.radio-bank-3 .radio { padding: 9px 5px 0 5px; }
+.radio-bank-3 .radio-label i { margin: 0 6px 0 8px; _margin-top: 4px; vertical-align: -4px; display: inline-block; }
+.radio-bank-3 .radio-label .logo-checked { position: absolute; display: none; right: 0; bottom: 0; }
+
+.radio-bank-3:hover > div { border: 1px solid #CBDFF6; }
+
+.radio-bank-3 > div.checked { border: 1px solid #138FFF; }
+.radio-bank-3 > div.checked .radio-label {  }
+.radio-bank-3 > div.checked .radio-label i { }
+.radio-bank-3 > div.checked .radio-label .logo-checked { display: block; }
+
+
+.address-list { float: left; padding: 1px 1px 0; background: #90C1DD; }
+.radio-address { margin-bottom: 1px; width: 600px; height: 46px; line-height: 46px; background: #ecf3f9; }
+.radio-address .radio, .radio-address .radio-label{ float: left; cursor: pointer; color: #333; }
+.radio-address .radio { padding: 7px 12px 0 12px; margin-top: 9px; }
+.radio-address .admin { position: relative; margin: 9px 5px 0 0; float: right; width: 50px; line-height: 30px; color: #0098cf; cursor: pointer; text-align: center; }
+.radio-address .admin:hover .s-admin-popupmenu { display: block; }
+
+
+.input-box { float: left; border: 1px solid #8ebbcc; }
+.input-box label { padding-left: 5px; position: absolute; height: 28px; line-height: 28px; }
+.input-box input { padding: 0 5px; width: 188px; height: 24px; line-height: 24px; border: 1px solid #FFF; border-width: 2px 0; border-top-color: #e5e5e5; }
+.input-box input:focus { border-bottom-color: #00acf5; }
+
+.input-box-2 {  }
+.input-box-2 label {  padding-left: 5px; position: absolute;height: 28px; line-height: 28px; color: #ccc; }
+.input-box-2 input { border: 2px solid #93BDEE; height: 26px; line-height: 26px; padding: 0 0 0 5px; }
+.input-box-2 input:focus { border-color: #009CFF; }
+
+.input-box-3 { float: left; }
+.input-box-3 label { padding-left: 5px; position: absolute; height: 28px; line-height: 28px; }
+.input-box-3 input, .input-datepicker input { padding: 0 5px; width: 140px; height: 26px; line-height: 26px; border: 1px solid #ccc; border-width: 1px;
+    -webkit-border-radius: 2px; -webkit-box-shadow: 0 1px 2px 0 #E8E8E8 inset;
+    -moz-border-radius: 2px; -moz-box-shadow: 0 1px 2px 0 #E8E8E8 inset;
+    -o-border-radius: 2px; -o-box-shadow: 0 1px 2px 0 #E8E8E8 inset;
+    -ms-border-radius: 2px; -ms-box-shadow: 0 1px 2px 0 #E8E8E8 inset;
+    border-radius: 2px; box-shadow: 0 1px 2px 0 #E8E8E8 inset;
+}
+.input-box-3 input{padding: 7px 5px;height: 12px; line-height: 12px;}
+.input-box-3 .s { width: 65px; }
+.input-box-3 .input-validation-error { border-color: #00ACF5; }
+
+.input-box-4 { border: 2px solid #93BDEE;  }
+.input-box-4 label {  padding-left: 5px; position: absolute;height: 35px; line-height: 35px; color: #08f; }
+.input-box-4 input { margin:2px; padding:5px 0 5px 5px; border: none; height: 22px; line-height: 22px; background: #e6eefd; color:#08f; font-family: tahoma; font-size:22px; }
+.input-box-4 input:focus { border-color: #009CFF; }
+
+.uedinput-4 { display: inline-block; *display: inline; *zoom: 1; border: 2px solid #93BDEE;  }
+.uedinput-4 .lab { position: absolute; padding-left: 5px; color: #08F; line-height: 36px; }
+.uedinput-4 input { margin: 2px; width: 200px; border: none; background: #E6EEFD; color: #08F; font-size: 22px; height: 22px; line-height: 22px; padding: 5px 0 5px 5px; }
+.focus .uedinput-4 {  border: 2px solid #009CFF; }
+
+
+.input-datepicker { float: left; }
+.input-datepicker input { padding: 0 20px 0 5px; width: 125px; }
+.input-datepicker .btn-datepicker { position: absolute; margin: 7px 0 0 133px; }
+
+
+.input-tips { display: none; height: 23px; line-height: 23px; color: #999; }
+.input-tips .logo-sj1 { margin: 9px 5px 0; float: left; }
+.input-tips .logo-th { margin: 5px 7px 0 0; float: left; }
+.input-valid-tip { float: left; margin: 9px 0 0 5px; }
+.f-tips { display: inline-block; font-size: 10px; -webkit-transform:scale(0.875) translateX(-8px); }
+.rgs_f_ipt .f-tips{-webkit-transform:scale(1) translateX(0px);}
+.f-tips-2 { color: #F4ABA1; }
+
+
+.select-box { }
+.select-box select { padding: 5px 0; -webkit-padding-end: 20px; border: 1px solid #CCC; color: #999;
+    -webkit-border-radius: 2px; -webkit-box-shadow: 0 -1px 0 0 #CCC;
+    -moz-border-radius: 2px; -moz-box-shadow: 0 -1px 0 0 #CCC;
+    -o-border-radius: 2px; -o-box-shadow: 0 -1px 0 0 #CCC;
+    -ms-border-radius: 2px; -ms-box-shadow: 0 -1px 0 0 #CCC;
+    border-radius: 2px; box-shadow: 0 1px 2px 0 #E8E8E8 inset;
+
+    -webkit-appearance: none;
+    background: url(../images/dropdown_logo_2.png) no-repeat right #FFF;
+}
+
+.select-box select option { vertical-align: middle; }
+
+.address-select-box { }
+.address-select-box li { float: left; margin-right: 10px; }
+.address-select-box select { }
+
+
+/*fields*/
+.field { clear: both; margin-bottom: 15px; }
+.field { zoom: 1; _height: 1px; }
+.field:after { content: "."; display: block; height: 0;	clear: both; visibility: hidden }
+.field .col-1, .field .col-2 { float: left; }
+.field .field-left, .field .field-right { float: left; }
+.field .field-left { width: 90px; text-align: right; }
+.field .label { font-size: 14px; color: #333; line-height: 26px; }
+.field .btn-blue, .field .btn-white { margin-left: 90px; }
+.field .input-box-3, .field .input-tips { float: left; }
+.field .input-tips { margin-top: 4px; margin-left: 10px; }
+/*.field .btn-captcha { float: left; margin: 3px 0 0 10px; }*/
+
+
+.radio-gender {}
+.radio-gender label { margin-left: 5px; color: #333; font-size: 14px; }
+.radio-gender #female { margin-left: 20px; }
+
+.g-hello { }
+.g-hello .time { color: #79A8D6; font-size: 20px; }
+.g-hello .name { color: #666; font-size: 20px; }
+.g-hello .tips { margin-left: 15px; color: #CCC; font-size: 14px; }
+
+.g-title-1 { }
+.g-title-1 .logo-right, .g-title-1 .logo-th-2 { float: left; }
+.g-title-1 h3 { margin-left: 40px; padding-top: 0px; color: #000; font-size: 20px; }
+
+.title-1 { font-size: 14px; color: #000; }
+
+/*#region  tip*/
+.g-poptips {
+    position: absolute; z-index: 10; border: 1px solid #DDD; background: #FFF; padding: 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -o-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -ms-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+}
+.g-poptips .ar-1, .g-poptips .ar-2, .g-poptips .ar-3, .g-poptips .ar-4, .g-poptips .ar-5, .g-poptips .ar-6, .g-poptips .ar-7, .g-poptips .ar-8 { position: absolute; }
+.g-poptips .ar-tc, .g-poptips .ar-rc, .g-poptips .ar-bc, .g-poptips .ar-lc { position: absolute; }
+.g-poptips .ar em { position: absolute; font-size: 14px; font-style: normal; z-index: 10; line-height: 21px; color: #d5d5d5; font-family: SimSun,Hiragino Sans GB; }
+.g-poptips .ar span { position: absolute; font-size: 14px; font-style: normal; z-index: 10; line-height: 21px; color: #FFF; font-family: SimSun,Hiragino Sans GB; top: 0; left: 0; }
+
+.g-poptips .ar-7, .g-poptips .ar-bc { bottom: 9px; }
+.g-poptips .ar-7 em, .g-poptips .ar-bc em { top: 1px; left: 0; }
+
+.g-poptips .ar-7 { left: 14px; }
+.g-poptips .ar-bc { left: 50%; margin-left: -7px; }
+.g-poptips .close { float: right; width: 14px; height: 14px; background: url(../images/close.png) no-repeat; cursor: pointer;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+.g-poptips .close:hover {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.g-tips-block { position: absolute; padding: 15px; width: 265px; left: 50%; top: 100px; z-index: 2001; background: #FFF;
+    border: 1px solid #DDD;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -o-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -ms-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+}
+.g-tips-block .close { float: right; width: 14px; height: 14px; background: url(../images/close.png) no-repeat; cursor: pointer;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+.g-tips-block .close:hover {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.g-tips-block .title { color: #e56a6a; font-size: 18px; }
+.g-tips-block p { margin-top: 3px; color: #333; font-size: 14px; line-height: 21px; }
+.g-tips-block .logo-sj6-b{ position: absolute; margin-left: -9px;  left: 50%; bottom: -10px; }
+
+.g-tips-block2 { position: absolute; padding: 15px; width: 100px; left: 50%; top: 50%; z-index: 10; background: #FFF; text-align: center;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -o-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    -ms-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 22px 0px;
+}
+
+.g-tips-block3 { text-align: center; padding-top: 1px; border: 1px solid #F6DCB6; -webkit-border-radius: 3px; border-radius: 3px; background: #FFF;  }
+.g-tips-block3 p { padding: 10px 0; background: #FFF3C8; width: 220px; color: #F78D38; }
+/*#endregion*/
+
+
+.send-verifycode { line-height: 25px; }
+.send-verifycode .btn-captcha, .send-verifycode .tips { display: inline-block; }
+.send-verifycode .tips { margin-left: 10px; }
+
+
+#balances-mask { position: absolute; right: 0px; top: 10px; z-index: 10; width: 480px; height: 185px; background: url(../images/loading.gif) #FFF center no-repeat; }
+
+/*Coupon*/
+.coupon { width: 166px;height: 65px; background: url(../images/deposit/uedbet_bank_img.png) 0 -900px no-repeat; text-align: center; color:#666; cursor: pointer;}
+.coupon:hover { background-position: 0 -970px; color:#fff;}
+.coupon .desc, .coupon .amount { display: block;}
+.coupon .desc { padding-top:4px;}
+.coupon .amount { font-size:30px; line-height: 40px; }
+.coupon .name { float: left; margin-left: 25px; }
+.coupon .expire { float: right; margin-right: 25px;}
+
+
+/*#region exchange control*/
+.s-d-exchange { }
+.s-d-exchange .b-tr, .s-d-exchange .b-rb { display: block; width: 20px; height: 10px; border: solid #ccc; }
+.s-d-exchange .b-tr { border-width: 1px 1px 0 0; }
+.s-d-exchange .b-rb { border-width: 0 1px 1px 0; }
+.s-d-exchange .btn-exchange { margin: 5px 10px; }
+/*#endregion*/
+
+
+/*#region progress*/
+.progress { position: relative; width: 717px; height: 100px; }
+.progress span { position: absolute; }
+.progress .bar { top: 58px; display: block; width: 717px; height: 16px; background: url(../images/progress_img.png) no-repeat; }
+.progress .txt-1 { left: 0; top: 25px; }
+.progress .txt-2 { left: 228px; top: 25px; }
+.progress .txt-3 { left: 462px; top: 25px; }
+.progress .txt-4 { right: 0px; top: 25px; }
+.progress .step-1 .bar { background-position: 0 0; }
+.progress .step-2 .bar { background-position: 0 -30px; }
+.progress .step-3 .bar { background-position: 0 -60px; }
+.progress .step-4 .bar { background-position: 0 -90px; }
+.progress .step-1 .txt-1, .progress .step-2 .txt-1, .progress .step-2 .txt-2, .progress .step-3 .txt-1, .progress .step-3 .txt-2, .progress .step-3 .txt-3, .progress .step-4 .txt-1,.progress .step-4 .txt-2, .progress .step-4 .txt-3, .progress .step-4 .txt-4 { color: #9fcde9; }
+
+.wd-progress { position: relative; height: 89px; }
+.wd-progress .bar { position: absolute; top: 42px; display: block; width: 410px; height: 16px; background: url(../images/s_progress_img.png) no-repeat; }
+.wd-progress .step-1 .bar { background-position: 0 0; }
+.wd-progress .step-2 .bar { background-position: 0 -30px; }
+.wd-progress .step-3 .bar { background-position: 0 -60px; }
+.wd-progress .txt-1, .wd-progress .txt-2, .wd-progress .txt-3, .wd-progress .count-down, .wd-progress .txt-4 { position: absolute; }
+.wd-progress .txt-1 { left: 0; top: 0; }
+.wd-progress .txt-2 { left: 161px; top: 0; }
+.wd-progress .txt-3 { left: 387px; top: 0; }
+.wd-progress .txt-4 { width: 56px; height: 34px; left: 60px; top: 8px; text-align: center; color: #9fcde9; background: url(../images/deposit/uedbet_bank_img.png) -150px -540px no-repeat; }
+.wd-progress .step-1 .txt-1, .wd-progress .step-2 .txt-1, .wd-progress .step-3 .txt-1, .wd-progress .step-2 .txt-2, .wd-progress .step-3 .txt-2, .wd-progress .step-3 .txt-3 { color: #9fcde9; }
+.wd-progress .count-down { left: 61px; top: 61px; width: 56px; height: 24px; line-height: 31px; text-align: center; color: #FFF; background: url(../images/deposit/uedbet_bank_img.png) -150px -596px no-repeat; }
+.wd-progress .step-2 .count-down, .wd-progress .step-3 .count-down { display: none; }
+.wd-progress .step-2 .txt-4, .wd-progress .step-3 .txt-4 { display: none; }
+
+.s-progress { position: relative; height: 89px; width: 410px; }
+.s-progress .bar { position: absolute; top: 42px; display: block; width: 410px; height: 16px; background: url(../images/t_progress_img.png) no-repeat; }
+.s-progress .step-1 .bar { background-position: 0 0; }
+.s-progress .step-2 .bar { background-position: 0 -30px; }
+.s-progress .step-3 .bar { background-position: 0 -60px; }
+.s-progress .txt-1, .s-progress .txt-2, .s-progress .txt-3 { position: absolute; }
+.s-progress .txt-1 { left: 0; top: 0; }
+.s-progress .txt-2 { left: 161px; top: 0; }
+.s-progress .txt-3 { left: 385px; top: 0; }
+.s-progress .step-1 .txt-1, .s-progress .step-2 .txt-1, .s-progress .step-3 .txt-1, .s-progress .step-2 .txt-2, .s-progress .step-3 .txt-2, .s-progress .step-3 .txt-3 { color: #9fcde9; }
+/*#endregion*/
+
+/*#region funds persent drawing*/
+.funds-drawing { width: 426px; cursor: pointer; }
+.funds-drawing li { position: relative; float: left; height: 30px; }
+.funds-drawing li .detail { display: none; position: absolute; width: 80px; background: #FFF; border: 1px solid #e5e5e5; }
+.funds-drawing .detail span { display: block; }
+
+.funds-drawing .col-1, .funds-drawing .col-2, .funds-drawing .col-3, .funds-drawing .col-4, .funds-drawing .col-5, .funds-drawing .col-6, .funds-drawing .col-7, .funds-drawing .col-8, .funds-drawing .col-9{ overflow: hidden; background: url(../images/ratio_img.png) repeat-x; height: 40px; }
+.funds-drawing .col-1 { background-position: 0 -400px; }
+.funds-drawing .col-2 { background-position: 0 -440px; }
+.funds-drawing .col-3 { background-position: 0 -480px; }
+.funds-drawing .col-4 { background-position: 0 -520px; }
+.funds-drawing .col-5 { background-position: 0 -560px; }
+.funds-drawing .col-6 { background-position: 0 -600px; }
+.funds-drawing .col-7 { background-position: 0 -640px; }
+.funds-drawing .col-8 { background-position: 0 -680px; }
+.funds-drawing .col-9 { background-position: 0 -480px; }
+
+.funds-drawing .col-1 { width: 2%; }
+.funds-drawing .col-2 { width: 48%; }
+.funds-drawing .col-3 { width: 31%; }
+.funds-drawing .col-4 { width: 14%; }
+.funds-drawing .col-5 { width: 5%; }
+
+.funds-drawing .h, .funds-drawing .f, .funds-drawing .s {
+    position: absolute; background: url(../images/ratio_img.png) no-repeat; width: 10px; height: 40px; z-index: 3;
+}
+.funds-drawing .h { left: 0; display: none; }
+.funds-drawing .f { right: 0; display: none; }
+.funds-drawing .s { right: 0; background-position: 0 -1080px; }
+.funds-drawing .bar { top: 0; position: absolute; width: 100%; height: 20px; z-index: 4; }
+
+.funds-drawing .col-1 .h { background-position: 0 -40px; }
+.funds-drawing .col-2 .h { background-position: 0 -80px; }
+.funds-drawing .col-3 .h { background-position: 0 -120px; }
+.funds-drawing .col-4 .h { background-position: 0 -160px; }
+.funds-drawing .col-5 .h { background-position: 0 -200px; }
+.funds-drawing .col-6 .h { background-position: 0 -240px; }
+.funds-drawing .col-7 .h { background-position: 0 -280px; }
+.funds-drawing .col-8 .h { background-position: 0 -320px; }
+.funds-drawing .col-9 .h { background-position: 0 -360px; }
+.funds-drawing .col-1 .f { background-position: 0 -760px; }
+.funds-drawing .col-2 .f { background-position: 0 -800px; }
+.funds-drawing .col-3 .f { background-position: 0 -840px; }
+.funds-drawing .col-4 .f { background-position: 0 -880px; }
+.funds-drawing .col-5 .f { background-position: 0 -920px; }
+.funds-drawing .col-6 .f { background-position: 0 -960px; }
+.funds-drawing .col-7 .f { background-position: 0 -1000px; }
+.funds-drawing .col-8 .f { background-position: 0 -1040px; }
+.funds-drawing .col-9 .f { background-position: 0 -840px; }
+
+.funds-drawing .first .h { display: block; }
+.funds-drawing .end .f { display: block; }
+.funds-drawing .end .s { display: none; }
+
+.funds-drawing .col-0 { overflow: hidden; width: 0; background: url(../images/ratio_img.png) repeat-x 0 -360px; }
+.funds-drawing .col-0 .h { display: block; background-position: 0 0; }
+.funds-drawing .col-0 .f { display: block; background-position: 0 -720px; }
+
+.funds-drawing .detail { display: none; position: absolute; max-width: 228px; left: 0; top: 0; padding: 10px; background: #FFF; border: 1px solid #ddd;
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.25);
+}
+.funds-drawing .detail span { display: block; }
+.funds-drawing .detail .name, .funds-drawing .detail .amount { color: #333; }
+.funds-drawing .detail .amount, .funds-drawing .detail .percent { float: left; }
+.funds-drawing .detail .amount { margin-right: 10px; }
+.funds-drawing .detail .logo-sj6-b { position: absolute; margin-left: -9px; left: 50%; bottom: -10px; }
+.funds-drawing .detail .name span { display: inline; float: none; }
+.funds-drawing .detail .name .amount { margin: 0 5px; }
+
+
+
+.bank-card-info { width: 260px; height: 153px; line-height: 20px; overflow: hidden; background: url(../images/deposit/uedbet_bank_img.png) 0 -170px no-repeat; }
+.bank-card-info .img { margin:  6px 0 12px 14px; }
+.bank-card-info .t { margin: 0 5px 0 15px; text-align: right; color: #666; }
+.bank-card-info .v { color: #333; overflow: hidden; display: inline-block; width:155px; vertical-align: -5px; white-space: nowrap;}
+.bank-card-info .c { margin-right: 5px; float: right; display: block; width: 40px; height: 20px; background: url(../images/deposit/uedbet_bank_img.png) -80px 0 no-repeat; text-align: center; cursor: pointer; }
+.bank-card-info .msg { color: #36ad7f; font-weight: bold; font-size:12px;}
+/*#endregion*/
+
+.wallet-logos li { float: left; width: 80px; margin-bottom: 5px; margin-right: 5px; }
+.wallet-logos span { float: left; }
+.wallet-logos .n { margin: -3px 0 0 5px; }
+
+/*#region member balances*/
+.member-balances { height: 90px; border-bottom: 1px solid #e5e5e5; position:relative; }
+/*.member-balances li { float: left; height: 88px; width: 140px; position:relative;}*/
+.member-balances li { float: left; height: 88px; width: 123px; position:relative;}
+.member-balances .btn-refresh-2 { position: absolute; left: auto; right: 10px; top: 10px; display: none; }
+.member-balances li:hover { }
+.member-balances li:hover .btn-refresh-2 { display: block; }
+.member-balances .ea { display: ; }
+.member-balances .pt { display: ; }
+
+
+.member-balances .l { width: 70px; float: left; text-align: center; }
+.member-balances .r { margin-left: 85px;  }
+.member-balances .amount { /*font-size: 16px; font-weight: bold; color: #333;*/ font-family: "Microsoft YaHei"; }
+.member-balances .amount .loading { display: inline-block; background: url(../images/bank_loading.gif); width: 110px; height: 10px; display: none; }
+.member-balances .un { color: #999; font-size: 15px; }
+.member-balances .percent { margin: 0 auto 3px; width: 40px; height: 40px; text-align: center; line-height: 40px; color: #FFF; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; cursor: pointer; }
+.member-balances .main .percent { background-position: 0 -370px; }
+.member-balances .sport .percent { background-position: -60px -370px; }
+.member-balances .casino .percent { background-position: 0 -420px; color: #999; }
+.member-balances .keno .percent { background-position: -60px -420px; color: #999; }
+.member-balances .t1 { color: #999; }
+
+.tsf_rs_s{position:absolute; top:42px; left:110px;}
+.tsf_icon{width:23px; height:23px; margin:7px auto; background:url(../images/deposit/uedbet_bank_img.png) no-repeat 0px 100px;}
+.tsf_num{width:100%; height:22px; line-height:22px; font-size:20px; color:#08F; text-align:center; margin-bottom:7px;}
+.tsf_type{width:100%; height:12px; line-height:12px; font-size:12px; color:#999999; text-align:center;}
+.tsf_line{width:1px; height:90px; background:url(../images/deposit/uedbet_bank_img.png) no-repeat 0px -370px; position:absolute; top:0px; right:0px;}
+.tsf_sd{width:100%; height:10px; background:url(../images/deposit/uedbet_bank_img.png) repeat-x 0px -150px; position:absolute; left:0px; bottom:-1px;}
+.tsf_refresh{width:120px; height:20px; position:absolute; left:645px; top:280px; display:block; display:none;}
+.tsf_rf_icon{float:left; display: block; width: 19px; height: 20px; background: url(../images/deposit/uedbet_bank_img.png) 0 -340px no-repeat; cursor: pointer;}
+.tsf_refresh:hover .tsf_rf_icon{ background-position: -30px -340px; }
+.tsf_rf_txt{width:84px; height:20px; line-height:20px; font-size:12px; color:#999999; text-align:center;}
+
+.in .tsf_num, .in .tsf_type, .out .tsf_num, .out .tsf_type{ color:#0088ff;}
+.out .tsf_icon{ background-position: 0px -100px;}
+.in .tsf_icon{ background-position: -40px -100px;}
+
+.transferbalance{position: relative; min-height: 564px;}
+/*#endregion*/
+
+
+
+/*#region select list*/
+
+/*#region select list 1*/
+.sl-1 ul.newList * {margin:0; padding:0;}
+.sl-1 ul.newList a {color: #0088ff; text-decoration:none; display:block;}
+.sl-1 ul.newList {margin:0; padding:0; list-style:none; color:#000; width:88px; line-height: 23px; background:#fff; position:absolute;  border: none; top:30px; left: -1px; overflow:auto; z-index:9999;}
+.sl-1 .newListSelected { color:#0088ff; padding:0; float:left; background:url(../images/dropdown_logo.png) 95% 50% no-repeat; border: none; }
+.sl-1 .newListSelected span {width:284px; display:block;}
+.sl-1 ul.newList li a {padding:3px 8px; display: block; text-align: left; }
+.sl-1 ul.newList li a:focus {-moz-outline-style: none;}
+.sl-1 .selectedTxt { width:80px; height:28px; line-height: 28px; text-align: left; overflow:hidden; padding: 0; padding-left: 8px; }
+.sl-1 .hiLite {background:#e0f6fd!important; color:#0088ff!important;}
+.sl-1 .hiLite a {background:#e0f6fd!important; color:#0088ff!important;}
+.sl-1 .newListHover {background:#e0f6fd!important; color:#0088ff!important; cursor: pointer;}
+.sl-1 .newListSelHover, .sl-1 .newListSelFocus {cursor:pointer;}
+.sl-1 .newListOptionTitle {font-weight:bold;}
+.sl-1 .newListOptionTitle ul {margin:3px 0 0;}
+.sl-1 .newListOptionTitle li {font-weight:normal; border-left:1px solid #ccc;}
+/*#endregion*/
+.sl-2 ul.newList * {margin:0; padding:0;}
+.sl-2 ul.newList a {color: #999; text-decoration:none; display:block;}
+.sl-2 ul.newList {margin:0; padding:0; list-style:none; color:#000; width:150px; background:#fff; position:absolute;  border:1px solid #ccc; top:30px; left: -1px; overflow:auto; z-index:9999;}
+.sl-2 .newListSelected { color:#999; padding:0; float:left; background:url(../images/dropdown_logo.png) 95% 50% no-repeat; border: 1px solid #cacaca;
+    -webkit-border-radius: 2px; -moz-border-radius: 2px; -mo-border-radius: 2px; o-border-radius: 2px; border-radius: 2px;
+}
+.sl-2 .newListSelected span {width:284px; display:block;}
+.sl-2 ul.newList li a {padding:3px 8px; display: block;}
+.sl-2 ul.newList li a:focus {-moz-outline-style: none;}
+.sl-2 .selectedTxt { padding-left:8px; width:142px; height:28px; line-height: 28px; text-align: left; overflow:hidden; }
+.sl-2 .hiLite {background:#0088ff!important; color:#fff!important;}
+.sl-2 .hiLite a {background:#0088ff!important; color:#fff!important;}
+.sl-2 .newListHover {background:#0088ff!important; color:#fff!important; cursor:default;}
+.sl-2 .newListSelHover, .sl-2 .newListSelFocus {cursor:default;}
+.sl-2 .newListOptionTitle {font-weight:bold;}
+.sl-2 .newListOptionTitle ul {margin:3px 0 0;}
+.sl-2 .newListOptionTitle li {font-weight:normal; border-left:1px solid #ccc;}
+/*#endregion*/
+
+/*#region mailbox*/
+.emailist { padding-top: 5px; background: #FFF; border: 1px solid #c9c9c9; width: 270px; cursor: pointer; }
+.emailist li { padding-left: 10px; line-height: 23px; color: #999; }
+.emailist .on, .emailist li:hover { background: #e0f6fd; }
+/*#endregion*/
+
+/*#region Elevator*/
+#elevator_item { width: 40px; height: 80px; position: fixed; right: 15px; bottom: 50px; z-index: 100020; background: #444; background: rgba(0, 0, 0, .6); border-radius: 2px; box-shadow: 0 1px 3px rgba(0, 0, 0, .2); left: 50%; margin-left: 500px; }
+#elevator { margin: 5px auto 20px; display: block; width: 24px; height: 24px; background: url(../images/uedbet_img.png) -160px -760px no-repeat;cursor: pointer; }
+#elevator_item .qr { margin: 0 auto; display: block; width: 24px; height: 24px; cursor: pointer; background: url(../images/uedbet_img.png) -160px -808px no-repeat; }
+#elevator_item .qr-popup { width: 190px; height: 220px; background: white; box-shadow: 0 1px 8px rgba(0, 0, 0, .1); position: absolute; left: -204px; bottom: 0; border-radius: 2px; display: none; text-align: center; border: 1px solid #d3d3d3; }
+#elevator_item .qr-popup .code-link { display: block; margin: 10px 0 0 20px; color: #777; }
+#elevator_item .qr-popup .code { display: block; margin-bottom: 10px; }
+#elevator_item .qr-popup .logo-sj6-r { position: absolute; right: -10px; bottom: 18px; }
+/*#endregion*/
+
+.browser-updatetips { text-align: center; background:#008bff; color:#ffffff; height:38px; line-height:38px; border-top:1px solid #33a2ff; border-bottom:1px solid #006fcc; }
+.browser-updatetips .mw{ position:relative; height:38px; line-height:38px;}
+.browser-updatetips .brow{color: #0F3; text-decoration:underline;}
+.browser-updatetips span { cursor: pointer; width:13px; height:13px; background: url(../images/uedbet_img.png) no-repeat -40px -760px; display: block;  position:absolute; top:13px; left:970px;}
+.browser-updatetips .speed{ display:block; width:12px; height:16px; background: url(../images/uedbet_img.png) no-repeat -20px -760px; position:absolute; top:12px; left:880px;}
+
+#wrapper { width: 100%;}
+#content { background: #F7F7F8; }
+.mw { margin: 0 auto; width: 990px; }
+.mw2 { position: absolute; left: 50%; bottom: 40px; margin-left: -500px; margin-top: -300px; width: 1000px; height: 560px; }
+
+#headerPanel .fright{ margin-right:-3px;}
+#hd-login { width: 100%; height: 32px; min-width:1000px; background: url(../images/uedbet_img.png) 0 0 repeat-x;  }
+
+#hd-login .time {height: 32px;line-height: 31px; color: #cccccc; -webkit-text-shadow: 0 -1px 0 #000; -moz-text-shadow: 0 -1px 0 #000; -ms-text-shadow: 0 -1px 0 #000; -o-text-shadow: 0 -1px 0 #000; text-shadow: 0 1px 0 #000; }
+
+/*#region small login form*/
+.login-form { position: relative; margin: 3px 0 0; }
+.login-form input {
+    width: 180px; *width: 130px;
+    height: 26px; line-height: 12px; *height: 10px; *line-height: 10px;
+    background-color: #c6c6c6;
+    text-shadow: 0 1px 0 rgb(214, 214, 214);
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,.15),0 2px 2px rgba(0,0,0,0.2) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .15),0 2px 2px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .15),0 2px 2px rgba(0, 0, 0, 0.2) inset;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #5c5c5e;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+}
+.login-form .long { padding: 5px 30px 5px 10px; }
+.login-form .short { padding: 5px 55px 5px 10px; *width: 109px;}
+#username-box, #password-box { position: relative; float: left; }
+#password-box { margin-left: 10px; }
+a.lf-forget { position: absolute; right: 4px; top: 4px; *top: 5px; padding: 0 6px; display: inline-block; height: 16px; line-height: 16px; text-align: center; border: 1px solid #999; background: #e5e5e5; color: #999;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;}
+/*#endregion*/
+
+/*#region logined nav*/
+.logined-nav { }
+.logined-nav li a { color: #ccc; -webkit-text-shadow: 0 -1px 0 #000; -moz-text-shadow: 0 -1px 0 #000; -ms-text-shadow: 0 -1px 0 #000; -o-text-shadow: 0 -1px 0 #000; text-shadow: 0 -1px 0 #000; }
+.logined-nav li a:hover { color: #FFF; }
+.logined-nav li .loginednav-a { float: left; display: block; height: 100%; }
+.logined-nav ul { float: right; height: 32px; line-height: 32px; }
+.logined-nav li { margin-right: 35px; float: left; height: 100%; }
+.logined-nav .i-last { margin-right: 0px; }
+.logined-nav .logo-user { float: left; margin: 7px 6px 0 0; }
+.logined-nav .btn-cs { margin-top: 3px; }
+.loginednav-i2 { position: relative; }
+.logined-nav .lognavi2-num { left: -30px; top: 8px; position: absolute; display: none; }
+/*#endregion*/
+
+
+/*login register cs*/
+#hd-btns { margin: 3px -3px 0 10px; }
+#hd-btns .btn-login, #hd-btns .btn-register, #hd-btns .btn-cs { float: left; }
+#hd-btns .btn-register { margin: 0 5px; }
+
+/*header nav*/
+#site-nav {width:100%; height: 58px; min-width:1000px; background: url(../images/uedbet_img.png) 0 -50px repeat-x; }
+#site-nav a { color: #666; }
+#site-nav a:hover { color: #333; }
+#site-nav .site-logo { width: 230px; height: 58px; }
+#site-nav .site-logo a, #site-nav-r .logo_rgs a{ width: 220px; height: 56px; background: url(../images/uedbet_logo.png) no-repeat; display: block;}
+#site-nav .site-logo .press , #site-nav-r .logo_rgs .press{background-position: 0 -60px;}
+#site-nav .nav-items { margin-left: 288px;/* margin-right: 115px; */ position:relative;}
+#site-nav .nav-items li {width:100px; height: 58px; text-align: center; font-size: 14px;/* background: url(../images/uedbet_img.png) 0 -760px no-repeat; */cursor: pointer; position: absolute; top:0px;}
+#site-nav .nav-items .it_sport{left:35px;}
+#site-nav .nav-items .it_csn{left:135px;}
+#site-nav .nav-items .it_keno{left:235px;}
+#site-nav .nav-items .it_game{left:335px;}
+#site-nav .nav-items .it_lotto{left:435px;}
+/*#site-nav .nav-items .it_act{left:400px;}*/
+#site-nav .nav-items .it_promocode{left:535px;}
+#site-nav .nav-items .it_mobile{left:635px;width: 65px;}
+#site-nav .nav-items .i1 { background: none; }
+#site-nav .nav-items .line{width:2px; height:58px; background:url(../images/uedbet_img.png) no-repeat 0px -762px; position:absolute; top:0px; left:0px;}
+#site-nav .nav-items .lineEnd{ width:2px; height:58px; background:url(../images/uedbet_img.png) no-repeat 0px -760px; position:absolute; top:0px; left:700px;}
+#site-nav .nav-items .over .line{width:5px; background-position:-20px -900px;}
+#site-nav .nav-items .over{ background:#e3e6eb;background: #e3e6eb;width: 101px;z-index: 2;border-right: 1px solid #d6d8dd;}
+
+#site-nav .nav-items a {position: absolute; top:0px; left:2px; display: block; width: 99px; height: 58px; line-height: 30px; font-weight: 600; text-shadow:0 1px 0 #ffffff; }
+#site-nav .rotate-triangle { position: absolute; top: 23px; right: 14px; width: 14px; height: 14px; background: url(../images/ico_triangle.png) no-repeat; -moz-transition:all 0.4s ease 0s; -webkit-transition:all 0.4s ease 0s; transition:all 0.4s ease 0s;}
+#site-nav .nav-items .over .rotate-triangle { -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+
+#site-nav .nav-items .txt { position:absolute; top:23px; left:22px; height: 20px; width:75px; background:url(../images/header_img.png) no-repeat; }
+
+#site-nav .it_sport .txt { background-position: 0px 0px; width:60px; left: 32px;}
+#site-nav .it_sport a:hover .txt { background-position: 0px -20px; }
+
+#site-nav .it_csn .txt { background-position: -100px 0px; }
+#site-nav .it_csn a:hover .txt { background-position: -100px -20px; }
+
+#site-nav .it_keno .txt { background-position: -200px 0px; }
+#site-nav .it_keno a:hover .txt { background-position: -200px -20px; }
+
+#site-nav .it_game .txt { background-position: -300px 0px; }
+#site-nav .it_game a:hover .txt { background-position: -300px -20px; }
+
+/*#site-nav .it_act .txt { background-position: -400px 0px; left:37px; }
+#site-nav .it_act a:hover .txt { background-position: -400px -20px; }*/
+
+#site-nav .it_lotto .txt { background-position: -500px 0px; left:37px; }
+#site-nav .it_lotto a:hover .txt { background-position: -500px -20px; }
+
+#site-nav .it_promocode .txt { background-position: -400px 0px; }
+#site-nav .it_promocode a:hover .txt { background-position: -400px -20px; }
+
+#site-nav .it_mobile a { width:64px; }
+#site-nav .it_mobile .txt { background-position: -585px 0px; left:11px; top:20px;width: 50px;}
+#site-nav .it_mobile a:hover .txt { background-position: -600px -20px; top:23px; }
+
+
+
+#site-nav .news { padding-left: 10px; width: 150px; line-height: 58px;/* background: url(../images/uedbet_img.png) 0 -870px no-repeat; */}
+#header{ position:relative; z-index:2000; min-width:990px;}
+.header_sd{ position:absolute; left:0px; width:100%; min-width:1000px; height:4px; top:90px; background: url(../images/header_shadow.png) repeat-x; z-index:101; }
+.trans_sd{ position:absolute; left:0px; width:100%; height:4px; bottom:-4px; background: url(../images/header_shadow.png) repeat-x; z-index:0; }
+#content-wrapper{margin-top:1px;}
+
+/*register or login*/
+#site-nav-r{height:100px;background:none;}
+#wrapper-r{width:100%;}
+
+
+/*switch images*/
+#switch-images { height: 480px; overflow: hidden; background: none; text-align: center; }
+
+/*site intro*/
+#site-intro { position: relative; height: 242px; background: url(../images/uedbet_img.png) 0 -130px repeat-x; }
+#site-intro .fb { position: absolute; left: 50%; top: -66px; margin-left: -500px; width: 1000px;}
+#site-intro li { padding-right: 50px; float: left; width: 300px; background: url(../images/home_line.png) 319px 116px no-repeat; }
+#site-intro .i3 { padding: 0; }
+#site-intro h3 { margin: 10px 0; font-size: 22px; color: #333; }
+#site-intro p { margin: 10px 0px; height: 85px; }
+a.show-all { color: #007ec6; font-size: 14px; }
+
+/*#footer { overflow: hidden; }
+#footer a { color: #666; }
+#footer a:hover { color: #333; }*/
+#ft-nav { margin-top: 1px; height: 45px; line-height: 45px; background: url(../images/uedbet_img.png) 0 -390px repeat-x; }
+#ft-nav li { margin-right: 40px; float: left; text-align: center; }
+
+#ft-bottom { padding-top: 1px; height: 200px; background: url(../images/uedbet_img.png) 0 -460px; color: #CCC; }
+#ft-bottom a { color: #CCC; }
+
+#ftb-nav { padding-top: 5px; height: 41px; line-height: 41px; }
+#ftb-nav a { margin-right: 30px; }
+#ftb-nav a:hover { color: #FFF; }
+
+#copy-right, #ft-tips { margin-top: 10px; }
+
+#ftb-items { margin-top: 60px; color: #7c8088; }
+#ftb-items a { display: block; }
+#ftb-items .item { float: left; height: 22px; line-height: 22px; background: url(../images/uedbet_img_2.png); }
+#ftb-items .ls { margin-top: 8px; }
+#partners { width: 300px; }
+#browsers { margin-left: 50px; width: 300px; }
+#shares { margin-left: 50px; width: 300px; }
+
+#partners .partner-fc { width: 120px; background-position: 0 0; }
+#partners .partner-fc:hover { background-position: -120px 0; }
+#partners .partner-libianc { width: 120px; background-position: 0 -40px; }
+#partners .partner-libianc:hover { background-position: -120px -40px; }
+#partners .partner-pu18 { width: 130px; background-position: 0 -720px; }
+#partners .partner-pu18:hover { background-position: -130px -720px; }
+#partners .partner-gc { margin-left: 20px; width: 130px; background-position: 0 -750px;  }
+#partners .partner-gc:hover { background-position: -130px -750px; }
+
+#browsers .item { width: 75px; background: none; }
+#browsers .bv { display: block; padding-left: 30px; background: url(../images/uedbet_img_2.png) no-repeat; color: #7c8088; }
+#browsers .bv:hover { color: #7c8088; }
+#browsers .browser-ff { background-position: 0 -280px; }
+#browsers .browser-ff:hover { background-position: -120px -280px; }
+#browsers .browser-ie { background-position: 0 -160px; }
+#browsers .browser-ie:hover { background-position: -120px -160px; }
+#browsers .browser-chrome { background-position: 0 -200px; }
+#browsers .browser-chrome:hover { background-position: -120px -200px; }
+#browsers .browser-360 { background-position: 0 -240px; }
+#browsers .browser-360:hover { background-position: -120px -240px; }
+
+#shares .item { width: 50px; padding-left: 30px; margin-right: 15px; }
+#shares .item a, #shares .item a:hover { color: #7C8088; }
+#shares .share-xweibo { background-position: 0 -320px; }
+#shares .share-xweibo:hover { background-position: -120px -320px; }
+#shares .share-qqzone { background-position: 0 -400px; }
+#shares .share-qqzone:hover { background-position: -120px -400px; }
+#shares .share-qqweibo { background-position: 0 -440px; }
+#shares .share-qqweibo:hover { background-position: -120px -440px; }
+#shares .share-qq { background-position: 0 -360px; }
+#shares .share-qq:hover { background-position: -120px -360px; }
+#shares .share-weixin { background-position: 0 -480px; }
+#shares .share-weixin:hover { background-position: -120px -480px; }
+
+#lang-switch { margin-top: 13px; float: right; width: 88px; }
+#lang-switch span { float: right; width: 22px; height: 22px; background: url(../images/uedbet_img_2.png); cursor: pointer; }
+#lang-switch .lang-zh { background-position: 0 -80px; }
+#lang-switch .lang-en { background-position: 0 -120px; }
+
+
+/*#region logo animation*/
+#user-experience { position: relative; overflow: hidden; width: 199px; height: 100px; cursor: pointer; }
+#user-experience div { position: absolute; bottom: 0; }
+#ue-inner { width: 100%; height: 100%; }
+#ue-limages { left: 0; width: 90px; height: 89px; background: url(../images/anim/1step-left.png) 0 -534px no-repeat; z-index: 1;
+}
+#ue-rimages { left: 54px; width: 126px; height: 69px; background: url(../images/anim/1step-right.png) 0 -345px no-repeat; z-index: 2;
+}
+#ue-limages-inner, #ue-rimages-inner { width: 100%; height: 100%; }
+#ue-limages-inner { background: url(../images/anim/1step-left.png)0 100px no-repeat; }
+#ue-rimages-inner { background: url(../images/anim/1step-right.png) 0 100px no-repeat; }
+
+/*
+#user-experience:hover #ue-inner {
+-webkit-animation: fadeOutDown .2s linear .1s  both;
+-moz-animation: fadeOutDown .2s linear .1s  both;
+-ms-animation: fadeOutDown .2s linear .1s  both;
+-o-animation: fadeOutDown .2s linear .1s  both;
+animation: fadeOutDown .2s linear .1s  both;
+}
+#user-experience:hover #ue-limages {
+-webkit-animation: Down2 .2s linear .5s  both;
+-moz-animation: Down2 .2s linear .5s  both;
+-ms-animation: Down2 .2s linear .5s  both;
+-o-animation: Down2 .2s linear .5s  both;
+animation: Down2 .2s linear .5s  both;
+}
+#user-experience:hover #ue-limages-inner {
+-webkit-animation: changeBGposition1 1s step-end .9s  both;
+-moz-animation: changeBGposition1 1s step-end .9s  both;
+-ms-animation: changeBGposition1 1s step-end .9s  both;
+-o-animation: changeBGposition1 1s step-end .9s  both;
+animation: changeBGposition1 1s step-end .9s  both;
+}
+#user-experience:hover #ue-rimages {
+-webkit-animation: Down2 .2s linear 2s  both;
+-moz-animation: Down2 .2s linear 2s  both;
+-ms-animation: Down2 .2s linear 2s  both;
+-o-animation: Down2 .2s linear 2s  both;
+animation: Down2 .2s linear 2s  both;
+}
+#user-experience:hover #ue-rimages-inner {
+-webkit-animation: changeBGposition2 1s step-end 2.4s  both;
+-moz-animation: changeBGposition2 1s step-end 2.4s  both;
+-ms-animation: changeBGposition2 1s step-end 2.4s  both;
+-o-animation: changeBGposition2 1s step-end 2.4s  both;
+animation: changeBGposition2 1s step-end 2.4s  both;
+}
+*/
+
+
+.move #ue-inner {
+    -webkit-animation: fadeOutDown .2s linear .1s  both;
+    -moz-animation: fadeOutDown .2s linear .1s  both;
+    -ms-animation: fadeOutDown .2s linear .1s  both;
+    -o-animation: fadeOutDown .2s linear .1s  both;
+    animation: fadeOutDown .2s linear .1s  both;
+}
+.move #ue-limages {
+    -webkit-animation: Down2 .2s linear .5s  both;
+    -moz-animation: Down2 .2s linear .5s  both;
+    -ms-animation: Down2 .2s linear .5s  both;
+    -o-animation: Down2 .2s linear .5s  both;
+    animation: Down2 .2s linear .5s  both;
+}
+.move #ue-limages-inner {
+    -webkit-animation: changeBGposition1 1s step-end .9s  both;
+    -moz-animation: changeBGposition1 1s step-end .9s  both;
+    -ms-animation: changeBGposition1 1s step-end .9s  both;
+    -o-animation: changeBGposition1 1s step-end .9s  both;
+    animation: changeBGposition1 1s step-end .9s  both;
+}
+.move #ue-rimages {
+    -webkit-animation: Down2 .2s linear 2s  both;
+    -moz-animation: Down2 .2s linear 2s  both;
+    -ms-animation: Down2 .2s linear 2s  both;
+    -o-animation: Down2 .2s linear 2s  both;
+    animation: Down2 .2s linear 2s  both;
+}
+.move #ue-rimages-inner {
+    -webkit-animation: changeBGposition2 1s step-end 2.4s  both;
+    -moz-animation: changeBGposition2 1s step-end 2.4s  both;
+    -ms-animation: changeBGposition2 1s step-end 2.4s  both;
+    -o-animation: changeBGposition2 1s step-end 2.4s  both;
+    animation: changeBGposition2 1s step-end 2.4s  both;
+}
+
+#rocket { position: relative; width: 200px; height: 100px; overflow: hidden; cursor: pointer; }
+#rocket div { position: absolute;
+    -webkit-transition: all 1s ease 0s; -moz-transition: all 1s ease 0s; -ms-transition: all 1s ease 0s; -o-transition: all 1s ease 0s; transition: all 1s ease 0s;
+}
+#rk-cloud { bottom: 0px; left: 4px; width: 142px; height: 56px; background: url(../images/anim/2cloud.png) no-repeat; z-index: 3;
+}
+#rk-main { bottom: -92px; left: 86px; width: 49px; height: 169px; background: url(../images/anim/2rocket.png) no-repeat; z-index: 1; }
+#rk-earth { bottom: 0px; right: 3px; width: 60px; height: 56px; background: url(../images/anim/2earth.png) no-repeat; z-index: 1; }
+#rk-hill { bottom: 0px; right: 0px; width: 123px; height: 19px; background: url(../images/anim/2hill.png) no-repeat; z-index: 2; }
+
+/*
+#rocket:hover #rk-cloud { left: 0px; }
+#rocket:hover #rk-main {
+-webkit-animation: rocketUp .7s ease-out .2s both;
+-moz-animation: rocketUp .7s ease-out .2s both;
+-ms-animation: rocketUp .7s ease-out .2s both;
+-o-animation: rocketUp .7s ease-out .2s both;
+animation: rocketUp .7s ease-out .2s both;
+}
+#rocket:hover #rk-earth { right: 0px;
+} */
+
+.move #rk-cloud { left: 0px; }
+.move #rk-main {
+    -webkit-animation: rocketUp .7s ease-out .2s both;
+    -moz-animation: rocketUp .7s ease-out .2s both;
+    -ms-animation: rocketUp .7s ease-out .2s both;
+    -o-animation: rocketUp .7s ease-out .2s both;
+    animation: rocketUp .7s ease-out .2s both;
+}
+.move #rk-earth { right: 0px;
+}
+
+#services { position: relative; overflow: hidden; width: 200px; height: 100px; cursor: pointer; }
+#services div { position: absolute; }
+#s-inner { width: 100%; height: 100%; }
+#s-b1 { width: 100%; height: 100%; }
+#s-qq { left: 50px; bottom: 0; width: 45px; height: 52px; background: url(../images/anim/3qq.png) no-repeat; }
+#s-gugong { right: 0; bottom: 0; width: 91px; height: 72px; background: url(../images/anim/3gugong.png) no-repeat; }
+#s-lm { left: 0; bottom: 0; width: 65px; height: 61px; background: url(../images/anim/3lm.png) no-repeat; }
+#s-green { bottom: 0; left: 79px; width: 51px; height: 41px; background: url(../images/anim/3wechat-green.png) no-repeat; }
+#s-white { bottom: 0; left: 107px; width: 36px; height: 26px; background: url(../images/anim/3wechat-white.png) no-repeat; }
+/*
+#services:hover #s-inner {
+-webkit-animation: fadeOutDown .3s ease-in 0s both;
+-moz-animation: fadeOutDown .3s ease-in 0s both;
+-ms-animation: fadeOutDown .3s ease-in 0s both;
+-o-animation: fadeOutDown .3s ease-in 0s both;
+animation: fadeOutDown .3s ease-in 0s both;
+}
+
+#services:hover #s-qq, #services:hover #s-lm, #services:hover #s-green, #services:hover #s-white, #services:hover #s-gugong {
+-webkit-animation: Down .2s ease both;
+-moz-animation: Down .2s ease both;
+-ms-animation: Down .2s ease both;
+-o-animation: Down .2s ease both;
+animation: Down .2s ease both;
+}
+
+#services:hover #s-qq {
+-webkit-animation-delay: .5s;
+-moz-animation-delay: .5s;
+-ms-animation-delay: .5s;
+-o-animation-delay: .5s;
+animation-delay: .5s;
+}
+#services:hover #s-green {
+-webkit-animation-delay: .7s;
+-moz-animation-delay: .7s;
+-ms-animation-delay: .7s;
+-o-animation-delay: .7s;
+animation-delay: .7s;
+}
+#services:hover #s-white {
+-webkit-animation-delay: .9s;
+-moz-animation-delay: .9s;
+-ms-animation-delay: .9s;
+-o-animation-delay: .9s;
+animation-delay: .9s;
+}
+#services:hover #s-lm {
+-webkit-animation-delay: 1.1s;
+-moz-animation-delay: 1.1s;
+-ms-animation-delay: 1.1s;
+-o-animation-delay: 1.1s;
+animation-delay: 1.1s;
+}
+#services:hover #s-gugong {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+-ms-animation-delay: 1.6s;
+-o-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+
+#services:hover #s-b1 {
+-webkit-animation: Jump .1s ease 1.9s both;
+-moz-animation: Jump .2s ease 1.9s both;
+-ms-animation: Jump .2s ease 1.9s both;
+-o-animation: Jump .2s ease 1.9s both;
+animation: Jump .2s ease 1.9s both;
+}
+*/
+
+.move #s-inner {
+    -webkit-animation: fadeOutDown .3s ease-in 0s both;
+    -moz-animation: fadeOutDown .3s ease-in 0s both;
+    -ms-animation: fadeOutDown .3s ease-in 0s both;
+    -o-animation: fadeOutDown .3s ease-in 0s both;
+    animation: fadeOutDown .3s ease-in 0s both;
+}
+
+.move #s-qq, .move #s-lm, .move #s-green, .move #s-white, .move #s-gugong {
+    -webkit-animation: Down .2s ease both;
+    -moz-animation: Down .2s ease both;
+    -ms-animation: Down .2s ease both;
+    -o-animation: Down .2s ease both;
+    animation: Down .2s ease both;
+}
+
+.move #s-qq {
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    -ms-animation-delay: .5s;
+    -o-animation-delay: .5s;
+    animation-delay: .5s;
+}
+.move #s-green {
+    -webkit-animation-delay: .7s;
+    -moz-animation-delay: .7s;
+    -ms-animation-delay: .7s;
+    -o-animation-delay: .7s;
+    animation-delay: .7s;
+}
+.move #s-white {
+    -webkit-animation-delay: .9s;
+    -moz-animation-delay: .9s;
+    -ms-animation-delay: .9s;
+    -o-animation-delay: .9s;
+    animation-delay: .9s;
+}
+.move #s-lm {
+    -webkit-animation-delay: 1.1s;
+    -moz-animation-delay: 1.1s;
+    -ms-animation-delay: 1.1s;
+    -o-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+}
+.move #s-gugong {
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    -ms-animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+
+.move #s-b1 {
+    -webkit-animation: Jump .1s ease 1.9s both;
+    -moz-animation: Jump .2s ease 1.9s both;
+    -ms-animation: Jump .2s ease 1.9s both;
+    -o-animation: Jump .2s ease 1.9s both;
+    animation: Jump .2s ease 1.9s both;
+}
+
+/*#endregion*/
+
+#hd-logincs { margin-top: 17px; float: right; }
+#hd-logincs .btn-login2 { margin: 0 10px; }
+
+
+.first-loading { position: fixed; width: 100%; height: 100%; opacity: 1;  z-index: 21; background: url(../../../static/images/load.gif) center no-repeat #000; }
+
+#resize-img { overflow: hidden; }
+#resize-img img { width: 100%; height: auto; }
+
+
+#blue-info, #blue-info-txt { position: absolute; left: 6px; top: 0px; width: 400px; height: 560px; }
+#blue-info { background: #00aaf6; opacity: .8; z-index: 9; }
+#blue-info-txt { background: none; z-index: 10; }
+#blue-info-txt h3 { margin: 20px 0 0 20px; font-size: 41px; color: #FFF; }
+#blue-info-txt p { margin: 0 20px; font-size: 18px; color: #FFF; }
+#blue-info-txt a { color: #FFF; }
+#blue-info-txt .about { position: absolute; margin: 0 0 5px 17px; padding: 0; bottom: 8px; font-size: 14px; }
+#blue-info-txt .logo-down { margin: 1px 7px 0 0; float: left; }
+
+
+/*#region validation plugin*/
+.field-valid { display: inline-block; width: 12px; height: 12px; background: url(../images/uedbet_img_2.png) -50px -690px no-repeat; }
+/*#endregion*/
+
+
+/*#region form*/
+.field-validation-error .f-tips { color: #aa0000; }
+.field-validation-error .f-tips-2 { color: #f4aba1; }
+.field-validation-valid .logo-sj1 { display: none; }
+.field-validation-error .logo-sj1 { background-position: -24px -690px; }
+
+
+.form-1 { position: absolute; width: 1000px; height: 155px; left: 50%; margin-left: -500px; top: 360px; z-index: 10; background: #FFF; color: #999; }
+.form-1 .logo-sj2 { position: absolute; left: 0; top: -6px; }
+.form-1 .slider { position: absolute; left: 214px; top: 12px; z-index: 5; }
+.form-1 .input-tips { display: none; }
+/*#endregion*/
+
+
+/*#region register form*/
+.rf-left { margin: 25px 0 0; float: left; width: 175px; }
+.rf-left h3 { color: #333; font-size: 20px; text-align: center; }
+
+.rf-items { float: left; width: 215px; background: #CCC; }
+.rf-items li { margin-top: 1px; width: 214px; height: 38px; line-height: 38px; background: #FFF; cursor: pointer; }
+.rf-items .s { margin: 0; }
+.rf-items .logo { margin: 8px 30px 0; float: left; display: block; width: 24px; height: 24px; background: url(../images/uedbet_img_2.png) no-repeat; }
+.i-account .logo { background-position: 0 -520px; }
+.i-account:hover .logo { background-position: -120px -520px; }
+.i-phone .logo { background-position: 0 -550px; }
+.i-phone:hover .logo { background-position: -120px -550px; }
+.i-email .logo { background-position: 0 -580px; }
+.i-email:hover .logo { background-position: -120px -580px; }
+.i-qq .logo { background-position: 0 -610px; }
+.i-qq:hover .logo { background-position: -120px -610px; }
+
+.rf-forms { margin: 0 178px; width: 520px; position: relative; }
+.rf-forms li { margin-left: 20px; float: left; height: 53px; }
+
+#main-register-form .field-username, #main-register-form .field-password, #main-register-form .field-email, #main-register-form .field-cmfpassword, #main-register-form .field-phone, #main-register-form .field-qq { position: absolute; }
+#main-register-form .form-account .field-username, #main-register-form .form-phone .field-phone, #main-register-form .form-email .field-email, #main-register-form .form-qq .field-qq { left: 5px; top: 32px; }
+#main-register-form .form-account .field-password, #main-register-form .form-phone .field-password, #main-register-form .form-email .field-password, #main-register-form .form-qq .field-password { left: 290px; top: 32px; }
+#main-register-form .form-account .field-email, #main-register-form .form-phone .field-email, #main-register-form .form-email .field-username, #main-register-form .form-qq .field-username { left: 5px; top: 87px; }
+#main-register-form .form-account .field-cmfpassword, #main-register-form .form-phone .field-cmfpassword, #main-register-form .form-email .field-cmfpassword, #main-register-form .form-qq .field-cmfpassword { left: 290px; top: 87px; }
+#main-register-form .form-account .field-phone, #main-register-form .form-phone .field-username, #main-register-form .form-email .field-phone, #main-register-form .form-qq .field-email { display: none; }
+#main-register-form .form-account .field-qq, #main-register-form .form-phone .field-qq, #main-register-form .form-email .field-qq, #main-register-form .form-qq .field-phone { display: none; }
+
+.rf-right { margin: 32px 0 0; float: right; width: 260px; }
+.verify-code input { width: 70px; }
+.verify-code .field-virifycode, .verify-code .vc-img, .verify-code .btn-refresh { float: left; }
+.verify-code .btn-refresh { margin-top: 6px; }
+.field-virifycode { height: 55px; }
+.vc-img { margin: 0 10px; cursor: pointer; }
+.rf-right .register-box { margin: 0px 0 8px; }
+a.agreement { margin-left: 5px; color: #00abf1; text-decoration: underline; }
+a.agreement:hover { color: #00B5FF; }
+/*#endregion*/
+
+/*#region login form*/
+#main-login-form { }
+#main-login-form h3 { width: 175px; margin: 27px 0 5px; color: #333; font-size: 20px; text-align: center; }
+#main-login-form .field-username { margin-left:  185px; }
+#main-login-form .field-username, #main-login-form .field-password, #main-login-form .login-box { float: left; }
+#main-login-form .field-password { margin: 0 50px; }
+
+/*#endregion*/
+
+#r-footer { margin-top: 1px; }
+#r-footer #ft-nav { background: none; }
+#r-footer #copy-right { text-align: center; }
+
+#reg-success {}
+#reg-success #box-1 { width: 100%; height: 300px; overflow: hidden; background: url(../images/bg1.jpg) center #EBEBEB; text-align: center; color: #FFF; text-shadow: 1px 1px 0px #7A6565; }
+#reg-success #box-1 img { margin-top: 30px; }
+#reg-success #box-1 h3 { margin-top: 50px; font-size: 30px; }
+#reg-success #box-1 p { margin-top: 20px;  font-size: 13px; color: #FFF; }
+
+#summarys { margin: -70px auto 20px; width: 880px; height: 603px; }
+#summarys p { padding: 0; margin: 0; color: #666; }
+#summarys .btn-blue, #summarys .btn-white { margin: 14px auto 0; }
+#summarys .big-small { height: 113px; }
+#summarys .box-1 p { text-align: center; font-size: 14px; }
+#summarys .box-1 { height: 200px; }
+#summarys .box-2 { height: 158px; padding: 1px 20px 0 30px ; }
+#summarys .box-3 { height: 181px; }
+#summarys .summary-deposits .box-3 { height: 241px; }
+#summarys .box-2 h3 { padding-top: 20px; font-size: 14px; }
+#summarys .box-2 .p-1 { margin: 15px 0; text-indent: 10pt; line-height: 23px; color: #999; }
+#summarys .box-2 .p-1 a { text-decoration: underline; }
+#summarys .box-3 .p-2 { margin-top: 19px; }
+#summarys .box-3 .p-2 a { color: #67c1f7; font-size: 14px; }
+#summarys .box-3 { text-align: center; }
+#summarys .box-3 img { padding-top: 20px; }
+.summary-deposits .box-2 h3 { text-align: left; }
+.summary-promotions, .summary-deposits, .summary-products { background: #d9dee1; }
+.summary-promotions .box-1, .summary-promotions .box-2, .summary-promotions .box-3 { background: #ecf2f7; }
+.summary-deposits .box-1, .summary-deposits .box-2, .summary-deposits .box-3 { background: #FFF; }
+.summary-products .box-1, .summary-products .box-2, .summary-products .box-3 { background: #ecf2f7; }
+.summary-promotions { width: 279px; padding: 1px 0 1px 1px; -webkit-border-radius: 2px 0 0 2px ; -moz-border-radius: 2px 0 0 2px; -ms-border-radius: 2px 0 0 2px; -o-border-radius: 2px 0 0 2px; border-radius: 2px 0 0 2px; }
+.summary-deposits { width: 318px; margin-top: -30px; padding: 1px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
+.summary-products { width: 279px; padding: 1px 1px 1px 0px; -webkit-border-radius: 0 2px 2px 0; -moz-border-radius: 0 2px 2px 0; -ms-border-radius: 0 2px 2px 0; -o-border-radius: 0 2px 2px 0; border-radius: 0 2px 2px 0; }
+.summary-promotions .box-2, .summary-deposits .box-2, .summary-products .box-2 { margin: 1px 0; }
+.summary-promotions .box-2 ul { margin-top: 14px; line-height: 21px; }
+
+
+/*#region member funds page*/
+
+.funds-btns li { margin-right: 10px; float: left; }
+.funds-btns .logo-sj5 { position: absolute; margin-left: 33px; bottom: -21px; }
+
+#funds { margin: 0px auto 20px; padding-bottom: 20px;width: 990px; min-height: 620px; border: 1px solid #d3d3d3; border-top:none;  background: #F9FAFD; padding-bottom: 0px;border-bottom: none;}
+#funds .progress { margin: 0 auto; }
+
+#account-info { position: relative; padding: 30px 0 13px 30px; background: #FFF; }
+#account-info h3 { margin-bottom: 15px; }
+#account-info .hello { color: #79a8d6; font-size: 20px; }
+#account-info .membername { color: #666; font-size: 20px; }
+#account-info .tips { margin-left: 15px; color: #ccc; font-size: 14px; }
+#account-info .title { color: #333; font-size: 14px; }
+
+.account-safe { width: 260px; }
+.account-safe .r { margin-left: 60px; }
+.account-safe .logo-trueinfo, .account-safe .logo-bindcard, .account-safe .logo-bindphone, .account-safe .logo-bindemail,
+.account-safe .logo-trueinfo-on, .account-safe .logo-bindcard-on, .account-safe .logo-bindphone-on, .account-safe .logo-bindemail-on { margin-right: 10px; float: left; }
+.account-safe .safe-level { color: #0088ff; font-size: 14px; }
+.account-safe .box-2 { margin-top: 10px; }
+
+.wallet { margin-left: 25px; width: 175px; }
+.wallet .balance, .wallet .btn-refresh-2 { float: left; }
+.wallet .balance { margin-top: -6px; display: block; height: 42px; color: #0088ff; font-size: 26px; font-family: "Microsoft Yahei" }
+.wallet .balance .loading { margin-top: 15px; display: inline-block; background: url(../images/bank_loading.gif); width: 110px; height: 10px; }
+.wallet .btn-refresh-2 { margin: 5px 0 0 10px; }
+
+.funds-proportion { margin-left: 30px; width: 450px; height: 110px; }
+.funds-proportion .funds-drawing { margin: 10px 0 2px 0; overflow: hidden; }
+
+.illustration { float: left; width: 52px; height: 52px; }
+/*
+.illustration div { width: 100%; height: 100%; background: url(../images/deposit/uedbet_bank_img.png) no-repeat; }
+.illustration .i-1 { background-position: 0 -100px; }
+.illustration .i-2 { background-position: -60px -100px; }
+.illustration .i-3 { background-position: -120px -100px; }
+.illustration .i-4 { background-position: -180px -100px; }
+*/
+.illustration .safe-percent { position: absolute; width: 52px; height: 52px; color: #98C2F3; line-height: 53px; text-align: center; }
+
+
+#account-info .funds-btns { position: absolute; margin-top: -34px; z-index:2; }
+
+
+.deposit-tags { margin-left: 150px; width: 520px; }
+.deposit-tags li { float: left; cursor: pointer; }
+.deposit-tags span{ position: relative; z-index: 1; display: block; margin-right: 10px; margin-bottom: -2px; width: 115px; height: 36px; line-height: 34px; border: 2px solid #cbdff6; text-align: center; color: #333; background: #FFF; border-bottom: none; font-size: 14px; font-weight: bold; }
+.deposit-tags .on { z-index: 3; border-color: #93BDEE; background: #F9FAFD; }
+
+.deposit-content {background: #fafbfd; position: relative; margin-bottom: 0px; padding: 10px 20px 0px ; width: auto; height: 414px; border: 2px solid #93BDEE; z-index: 2; }
+.deposit-content .guide { margin: 0 0 25px 75px; width: 360px; height: 80px; }
+.deposit-content .tips { margin: 58px 0 25px 105px; }
+.deposit-content .bank-list { width: 100%; }
+.deposit-content .bank-list li { margin: 0 20px 28px 0; float: left; }
+.deposit-content .btns { /*margin-left: 105px;*/ overflow: hidden; height: 36px; position: absolute; left: 125px; top: 365px; margin-left:0px;}
+.deposit-content .third-party-3 .btns{position: absolute; left: 125px; top: 365px; margin-left:0px;}
+
+.deposit-content .bl { position: relative; }
+.deposit-content .bl-mask { position: absolute; z-index: 1; left: 0px; top: 0px; width: 100%; height: 200px; line-height: 185px; background: #FFF; opacity: .5; filter:alpha(opacity=85); font-size: 80px; color: #999; text-align: center; }
+.deposit-content .bl .third-banks { height: auto; }
+
+.deposit-content .forbidden { margin: 30px 0 0 152px; }
+
+.deposit-content .remittance-1 .bank-list { width: 500px; }
+.deposit-content .remittance-1 .tips { margin-top: -35px; }
+
+#deposit-help-images { position: absolute; top: 15px; right: 25px; width: 330px; height: 345px; overflow: hidden; }
+#deposit-help-images h3 { margin: 0; margin-left: 10px; color: #7caa19; font-size: 16px; }
+#deposit-help-images ul { width: 990px; }
+#deposit-help-images li { width: 330px; height: 280px; float: left; }
+#deposit-help-images img { width: 310px; }
+#deposit-help-images .nav { position: absolute; left: 145px; bottom: 0px; }
+#deposit-help-images .nav span { display: inline-block; margin-right: 10px; width: 13px; height: 13px; background: url(../images/deposit/uedbet_bank_img.png) -80px -355px; cursor: pointer; color: #FFF; font-size: 11px; text-align: center; line-height: 13px; }
+#deposit-help-images .nav .on { background-position: -60px -355px; }
+
+
+.deposit-form { width: 990px; margin: 0px auto;}
+.deposit-form .field-label { margin: 8px 10px 0 25px; font-size: 14px; color: #000; }
+.deposit-form .box-1 { margin: 30px 0 ; }
+.deposit-form .box-1 .input-tips { position: absolute; }
+.deposit-form #amount { width: 169px; background: #E6EEFD; color: #08F; font-size: 22px; font-family: tahoma; height: 22px; line-height: 22px; padding:5px 0 5px 5px;}
+.deposit-form .lblamont { line-height: 35px; color: #08F; }
+.deposit-form .field { margin-bottom: 25px; }
+.deposit-form .input-box-2 { float: left; border: 2px solid #93BDEE; }
+.deposit-form .input-box-2 input { margin: 2px; border: none; }
+.deposit-form .input-tips { margin-top: 9px; }
+.deposit-form .focus .input-box-2 { border: 2px solid #009CFF; }
+
+.course_a{margin-left: 30px; color:#0088ff; text-decoration: none;}
+.course_a:hover{text-decoration: underline !important;}
+
+#withdraw-form .blist { position: relative; }
+#withdraw-form .blist .bank-tips { position: absolute; left: -9px; top: -35px; display: none; }
+#withdraw-form .blist .bank-tips .input-tips { display: block; }
+#withdraw-form .field-left { margin: 7px 10px 0 25px; font-size: 14px; color: #000; }
+#withdraw-form #Amount { width: 169px; background: #E6EEFD; color: #08F; font-size: 22px; font-family: tahoma; height: 22px; line-height: 22px; padding:5px 0 5px 5px; }
+#withdraw-form .lblamont { line-height: 35px; color: #08F; }
+#withdraw-form .field { margin-bottom: 30px; }
+#withdraw-form .input-box-2 { float: left; border: 2px solid #93BDEE; }
+#withdraw-form .input-box-2 input { margin: 2px; border: none; }
+#withdraw-form .input-tips { margin-top: 8px; }
+#withdraw-form .focus .input-box-2 { border: 2px solid #009CFF; }
+#withdraw-form .field-left { width: 90px; }
+#withdraw-form .box-2 { height: 18px; font-size: 1px; }
+#withdraw-form .txt-1 { margin: 10px 0 45px 0; font-size: 14px; color: #0098cf; cursor: pointer; }
+#withdraw-form .txt-1 a { color: #0098CF; }
+#withdraw-form .txt-1 a .logo-plus { margin-right: 5px; display: inline-block; }
+#withdraw-form .txt-2 label { margin-left: 5px; color: #999; }
+#withdraw-form .btns { overflow: hidden; height: 36px; }
+
+
+.deposit-result { text-align: center; line-height: 30px; }
+.deposit-result .txt-1 a { margin-right: 15px; color: #0088ff; }
+.deposit-result .txt-2 { margin: 0 auto; width: 150px; height: 33px; line-height: 33px; text-align: center; color: #999; border: 1px solid #f0f0f0;
+    -webkit-border-radius: 2px;
+}
+
+
+.rapid-mode-2 { }
+.rapid-mode-2 h3 {  font-size: 16px; color: #333; font-weight: bold; margin: 10px 0; }
+.rapid-mode-2 .bank-card-info { margin: 15px 0; }
+.rapid-mode-2 .btns { margin-top: 14px; }
+.rapid-mode-2 .btns a { display: inline-block; }
+.rapid-mode-2 .btns .close { margin-left: 71px; }
+.rapid-mode-2 #spend-time { position: absolute; right: 20px; font-size: 20px; top: -3px; }
+.rapid-mode-2 #outtime-tips { display: none; width: 350px; position: absolute; background: #FFF; height: 35px; line-height: 35px; font-size: 14px; }
+.rapid-mode-2 #outtime-tips a { color: #08F; text-decoration: underline; }
+.rapid-mode-2 .status { margin-top: 10px; margin-bottom: 6px;  font-size: 20px; color: #999; }
+.rapid-mode-2 .status .s1 { color: #79A8D6; }
+.rapid-mode-2 .status .s2 { color: #9FE2AE; }
+.rapid-mode-2 .status .s3 { color: #aa0000; }
+.rapid-mode-2 .status .s4 { color: #08F; }
+
+.rapid-mode-2 .t2 { position: absolute; right: 55px; top: 179px; }
+.rapid-mode-2 .t3 { color: #000; font-weight: bold; margin: 20px 0;  }
+.rapid-mode-2 .a { color: #999; text-decoration: underline; }
+
+.rapid-mode-2 .step-3 p, .rapid-mode-2 .step-3 a { color: #36ad7f; }
+.rapid-mode-2 .step-2 .status .v { padding-right: 30px; background: url(../images/bank_loading.gif) no-repeat right 6px; }
+
+.rapid-mode-success .g-title-1 { margin-left: 53px; margin-top: 50px; }
+.rapid-mode-success .btns { margin-top: 80px; }
+.rapid-mode-success .btn-blue-2 { display: inline-block; }
+.rapid-mode-success  #btnclose { margin-left: 140px; }
+
+
+.third-party  { margin-left: 298px; }
+.third-party .logo-th-2 { float: left; }
+.third-party .title-1 { margin-left: 40px; padding-top: 5px; }
+.third-party .btn-blue { float: left; }
+.third-party .txt-1 { float: left; margin-left:20px; padding-top: 10px; }
+.third-party .tp-btn-box { margin-top: 25px; }
+.third-party .btn-blue { margin-left: 40px; }
+
+
+.open-third-party { padding-top: 1px; height: 320px; background: url(../images/uedpay_bg.jpg) center 0; }
+.open-third-party .logo-th-3 { margin: 20px auto 0; }
+.open-third-party .t1 { margin: 15px 0 30px 0; text-align: center; font-size: 24px; color: #0D6FFE; }
+.open-third-party h3 { margin-left: 315px; font-size: 14px; color: black; margin-bottom: 11px; }
+.open-third-party h3 a { color: #999; text-decoration: underline; margin-left: 15px; }
+.open-third-party .field { margin-left: 295px; }
+.open-third-party .input-box-3, .open-third-party .btn-captcha, .open-third-party .input-tips { float: left; }
+.open-third-party .field-left { width: 90px; }
+.open-third-party .btn-captcha { margin: 3px 0 0 10px; }
+.open-third-party .input-tips { margin: 3px 0 0 10px; }
+.open-third-party .btn-blue { margin-left: 90px; }
+.open-third-party .ft { margin-left: 316px; }
+.open-third-party .ft .t2 { color: #333; font-size: 14px; margin-bottom: 5px; }
+
+
+.third-party-use .thirdpay-activetips { position: absolute; top: 30px; background: #F9FAFD;  height: 58px; padding-top: 22px; width: 500px; }
+.third-party-use .b1 { margin: 0 0 35px 55px; }
+.third-party-use .b1 .logo-right-3 { float: left; }
+.third-party-use .b1 h3 { margin-left: 48px; font-size: 14px; color: #7CAA19; padding-top: 9px; }
+.third-party-use .logo-right { margin-top: 4px; float: left; }
+.third-party-use .tpu-box-1 { margin-left: 40px; }
+.third-party-use .tpu-box-1 a { color: #999; text-decoration: underline; margin-left: 15px; }
+.third-party-use .tp-btn-box { margin-top: 25px; }
+.third-party-use .btn-blue {  }
+.third-party-use .more { /*margin-left: 105px; margin-bottom: 10px;*/ position: absolute; left: 125px; top: 326px; }
+.third-party-use .more a { color: #08F; }
+.third-party-use .more .logo-sj4-b { margin-left: 5px; display: inline-block; vertical-align: 1px; }
+.third-party-use .collapse { position: absolute; top: 369px; right:112px; display: none; }
+.third-party-use .collapse a { color: #08F; }
+.third-party-use .collapse .logo-sj4-t { margin-left: 5px; vertical-align: 1px; display: inline-block; }
+.third-party-use .field .lb2 { margin-top: 8px; }
+
+
+.third-banks { overflow: hidden; height: 83px; padding-top:3px;}
+.third-banks .bank { float: left; margin: 0 2px 2px 0; }
+.third-banks .radio-bank-3 { float: left; margin: 0 5px -1px 0; background: #FFF; }
+
+
+.remittance-2 .input-box-3, .remittance-2 .btn-captcha { float: left; }
+.remittance-2 .txt-1 { margin: 10px 0; }
+.remittance-2 .rm-box-1 { margin: 15px 0; }
+.remittance-2 .btn-captcha { margin: 3px 10px 0 10px; }
+.remittance-2 .txt-2 { margin-top: 5px; float: left; color: #333; }
+
+
+
+
+/*#region transfer-form */
+#transfer .tbl-2 { margin:16px 0 0 59px; }
+
+.transfer-content { margin-left: -1px; width: 988px; min-height: 469px; border: 2px solid #93BDEE; }
+.transfer-form { position: relative; margin: 65px auto 0; width: 230px; }
+.transfer-form .s-d-exchange { position: absolute; left: 200px; top: 9px; }
+.transfer-form .field .field-left { width: auto; }
+.transfer-form .label { font-size: 14px; color: #333;}
+.transfer-form .btn-blue { margin: 93px 0 0 42px; }
+.transfer-form .field .input-tips { float: none; position: absolute; margin-left: 0; margin-top: 30px; }
+.ea_p .transfer-form .field .input-tips{ margin-top:0px; left:205px; top:88px;}
+.ea_p .field-validation-error .f-tips-2{ width:140px; margin-top:4px; margin-left:20px;}
+.transfer-form #source-transfer, .transfer-form #desc-transfer { width: 152px; height: 28px; color: #999; }
+.transfer-form #source-transfer{ padding-left:2px;}
+.transfer-form #amount { width: 172px;}
+/*#endregion*/
+
+/*#endregion*/
+
+.form-box .btn-blue { margin-left: 90px; }
+#withdraw-form .btn-blue { margin-left: 125px; }
+.form-box form { margin: 30px 0 0 280px; }
+
+
+#withdraw h3 { color: #000; font-size: 14px; }
+#withdraw .form-box { margin-left:-1px; padding-top:35px; width:988px; min-height:425px; border: 2px solid #93BDEE; }
+#withdraw .field-right .input-box-3, #withdraw .field-right .input-box-2 { float: left; }
+
+.withdraw-content .t-tips { margin: 0 0 40px 328px; }
+
+
+
+#bindcard-form .field-left { width: 90px; }
+#bindcard-form .address-tips { margin-top: 3px; }
+#bindcard-form .btn-blue { margin-left: 90px; }
+#bindcard-form .bank-select { width: 153px; }
+
+/*
+#withdraw .box-1 { margin: 30px auto; width: 240px; height: 32px; }
+#withdraw .box-1 .logo-th-2 { float: left; }
+#withdraw .box-1 h3 { margin-left: 40px; padding-top: 5px; color: #000; font-size: 14px; }
+*/
+
+#withdraw .box-1 { margin: 20px auto 60px; width: 240px; text-align: center; }
+#withdraw .box-1 .logo-th-2, #withdraw .box-1 .logo-th-3 { margin: 0 auto; }
+#withdraw .box-1 h3 { margin-top: 15px; color: #333; font-size: 14px; }
+
+#withdraw .withdraw-content{ position:relative;}
+#withdraw .withdraw-content .com-1 { margin-bottom: 10px; }
+#withdraw .withdraw-content .com-1 h3 { float: left; color: #333; font-size: 20px; }
+#withdraw .withdraw-content .com-1 span { float: left; display: block; padding: 5px 0 0 15px; color: #999; font-size: 14px; }
+
+
+#withdraw-result .box-3 { margin: 30px auto 0; width: 166px; }
+#withdraw-result .box-3 .logo-right { float: left; }
+#withdraw-result .box-3 h3 { margin-left: 40px; padding-top: 5px; }
+#withdraw-result .wd-progress { width: 421px; margin: 43px auto; }
+#withdraw-result p { margin-left: 25px; text-align: center; }
+#withdraw-result .p2 { margin-top: 5px; }
+#withdraw-result .p2 a { color: #0098cf; margin-right: 25px; }
+#withdraw-result .proccessing { position: relative; text-align: center; margin: 35px; }
+#withdraw-result .proccessing .s { display: block; position: absolute; margin-left: -170px; left: 50%; width: 340px; height: 40px; font-size: 37px; }
+#withdraw-result .proccessing p { margin-left: 0; padding-top: 70px; font-size: 14px; }
+#withdraw-result .proccessing a { text-decoration: underline; }
+
+
+/*#region dialogs*/
+#modifypw-form { }
+#modifypw-form .field-left { width: 90px; }
+#modifypw-form .input-box-3, #modifypw-form .btn-captcha { float: left; }
+#modifypw-form .btn-captcha{ margin-left: 10px; margin-top: 3px; }
+#modifypw-form .btn-blue { margin-left: 90px; }
+
+
+.dialog-bind .g-title-1 { margin-left: 58px; }
+.dialog-bind .box-1 { margin: 20px 0 0 100px; }
+.dialog-bind .box-1 p { color: #333; margin-right: 26px; line-height: 23px; }
+.dialog-bind .box-1 .btn-blue { margin-top: 30px; }
+
+#bind-phone { }
+#bind-phone .s-progress { margin: 0 auto; }
+#bind-phone .b-phone { margin-left: 40px; }
+#bind-phone .b-phone .t { margin-left: 21px; font-size: 12px; padding-top: 15px; }
+#bind-phone .b-phone .btn-blue { margin-top: 17px; }
+#bind-phone .b-captcha { margin-left: 77px; }
+#bind-phone .p-1 { margin: 15px 0 15px 42px; color: #333; font-size: 14px; }
+#bind-phone .a { margin-left: 10px; color: #999; font-size: 12px; text-decoration: underline; }
+#bind-phone .input-box-3 { margin-left: 2px; margin-right: 10px; }
+#bind-phone .btn-captcha { float: left; margin-top: 3px; margin-left: 2px; }
+
+#bind-email {}
+#bind-email .s-progress { margin: 0 auto; }
+#bind-email .b-email { margin: 15px 0 0 25px; }
+#bind-email .b-email .t { margin-left: 21px; font-size: 12px; padding-top: 5px; }
+#bind-email .b-email .btn-blue { margin-top: 19px; }
+#bind-email .b-email .input-box-3 input { width: 187px; }
+#bind-email .p-1 { margin-left: 13px; color: #333; font-size: 14px; }
+#bind-email .p-2 { margin: 2px 0 15px 110px; }
+#bind-email .p-2 .a { color: #0088ff; font-size: 12px; text-decoration: underline; }
+#bind-email .b-captcha { margin-left: 20px; }
+#bind-email .input-box-3 { margin-right: 10px; }
+#bind-email .btn-captcha { float: left; margin-top: 3px; }
+
+
+#statement-detail { margin-left: 30px; }
+#statement-detail .ls { margin-left: 2px; line-height: 23px; }
+#statement-detail .ls .v { color: #333; }
+#statement-detail .bank-card-info { margin-top: 10px; }
+#statement-detail .blue { color: #08F; }
+#statement-detail .green { color: #9FE2AE; }
+#statement-detail .red { color: #A00; }
+#statement-detail .gray { color: #999; }
+#statement-detail .tbl-ls { }
+#statement-detail .tbl-ls span { float: left; line-height: 32px; margin-right: 20px; }
+#statement-detail .tbl-ls .hd { border-bottom: 1px solid #ccc; }
+#statement-detail .tbl-ls .no { margin-left: 30px; width: 150px; }
+#statement-detail .tbl-ls .time { width: 120px; }
+#statement-detail .tbl-ls .amount { width: 100px; text-align: right; }
+#statement-detail .tbl-ls .currency { width: 30px; }
+#statement-detail .tbl-ls .source { width: 80px; }
+#statement-detail .tbl-ls .destination { width: 80px; }
+#statement-detail .tbl-ls .status { width: 60px; }
+#statement-detail .tbl-ls .bd .amount { color: #08F; }
+#statement-detail .tbl-ls .ft { border-top: 1px solid #ccc; text-align: center; }
+#statement-detail .tbl-ls .ft .btn-blue-2 { margin-top: 20px; margin-bottom: 10px; display: inline-block; }
+
+
+#simplelogin-form .logined { margin-left: 100px; }
+#simplelogin-form .logined p { margin: 20px 0 0 39px; font-size: 14px; }
+#simplelogin-form .logined .btn-blue { margin: 30px 0 0 39px; }
+/*#endregion*/
+
+/*#region member center page*/
+#member-center .com-1 h3 { float: left; color: #333; font-size: 20px; }
+#member-center .com-1 span, #member-center .com-1 a { float: left; display: block; padding: 5px 0 0 15px; color: #999; font-size: 14px; }
+#member-center .com-1 a { text-decoration: underline; }
+
+#member-center .title-2 { font-size: 14px; color: #99c2f3; }
+#member-center .s-line { width: 700px; border-bottom: 1px dashed #ccc; }
+
+#member-center {  position: relative; margin: 0px auto 20px; width: 990px; background: url(../images/membercenter-bg.png) #d3d3d3; overflow: hidden; border-bottom:1px solid #d3d3d3; }
+.mc-side { float: left; margin:0px 1px; width: 208px; min-height: 620px; background: #FFF; }
+.mc-main { float: right; margin: 1px 1px 1px 0px; width: 779px; }
+.mc-progress, .mc-hd, .mc-nav, .mc-content { background: #FFF; overflow: hidden; }
+.mc-progress { float: left; width: 210px; height: 158px; border-bottom: 1px solid #d3d3d3; text-align: center; }
+.mc-progress img { margin-top: 18px; }
+.mc-progress .bd { position: absolute; margin: 21px 0 0 50px; width: 110px; height: 110px; text-align: center; }
+.mc-progress .bd h3 { margin-top: 25px; font-size: 18px; color: #333; }
+.mc-progress .bd p { color: #666; }
+.mc-progress .bd span { display: block; margin-top: 2px; color: #98C2F3; font-size: 14px; }
+.mc-progress canvas { margin: 21px 0 0 0; }
+
+.mc-hd { margin: 0px 1px 0 1px; height: 158px; border:1px solid #d3d3d3; border-top:none; padding-top:20px; border-width:1px 0; }
+.mc-content { min-height: 620px; }
+
+.mc-nav { position: absolute; left: 0; /*margin-top: 20px;*/ width: 210px; }
+.mc-nav li { height: 80px; border: solid #d3d3d3; border-width: 0 1px; cursor: pointer; }
+.mc-nav li a { display: block; width: 100%; height: 100%; }
+.mc-nav .bd .t-1, .mc-nav .bd .t-2 { display: block; }
+.mc-nav .bd .t-1 { font-size: 16px; color: #333; }
+.mc-nav .bd .t-2 { color: #666; }
+.mc-nav .logo-msg, .mc-nav .logo-bell, .mc-nav .logo-id, .mc-nav .logo-lock, .mc-nav .logo-promo, .mc-nav .logo-bets, .mc-nav .bd, .mc-nav .logo-sj8-r { margin-top: 23px; float: left; }
+.mc-nav .logo-msg, .mc-nav .logo-bell, .mc-nav .logo-id, .mc-nav .logo-lock, .mc-nav .logo-promo { margin-left: 20px; }
+.mc-nav .logo-bets { margin-left: 22px; margin-right: 3px; }
+.mc-nav .bd { width: 110px; margin: 19px 10px 0 10px; }
+.mc-nav .logo-sj8-r { margin-top: 30px; }
+.mc-nav li:hover, .mc-nav li.on { border-color: #99c2f3; background: #99c2f3; }
+.mc-nav li:hover .bd strong, .mc-nav li:hover .bd span, .mc-nav li.on .bd strong, .mc-nav li.on .bd span { color: #FFF; }
+.mc-nav li:hover .logo-lock, .mc-nav li.on .logo-lock, .mc-nav li:hover .logo-id, .mc-nav li.on .logo-id, .mc-nav li:hover .logo-bell, .mc-nav li.on .logo-bell { background-position-x: -150px; }
+.mc-nav li:hover .logo-msg { background-position-x: -120px; }
+.mc-nav li:hover .logo-promo, .mc-nav li.on .logo-promo { background-position:-120px -740px; }
+.mc-nav li:hover .logo-bets, .mc-nav li.on .logo-bets { background-position:-210px -810px; }
+
+
+
+.mc-hd .comp-tips { margin: 134px 0 0; position: absolute; color: #ccc; width: 210px; text-align: center; }
+.mc-hd .ls { margin-left: 210px; }
+.mc-hd .g-hello { margin: 5px 0 0 39px; }
+.mc-hd .info { margin: 17px 0 0 60px; color: #333; font-size: 14px; }
+.mc-hd .info li { float: left; height: 40px; line-height: 40px; }
+.mc-hd .info label, .mc-hd .info span { display: inline-block; }
+.mc-hd .info .k { width: 70px; text-align: right; color: #666; }
+.mc-hd .info .v { width: 190px; }
+.mc-hd .info .a { color: #0088ff; }
+.mc-hd .info .ed { color: #333; }
+
+/*
+.mc-main .info { margin: 17px 0 0 60px; color: #333; font-size: 14px; }
+.mc-main .info li { float: left; line-height: 40px; }
+.mc-main .info label, .mc-main .info span { display: inline-block; }
+.mc-main .info .k { width: 70px; text-align: right; }
+.mc-main .info .v { width: 190px; }
+.mc-main .info .a { color: #0088ff; }
+*/
+
+.mc-content .com-1 { margin: 20px 0 20px 39px; height:34px;}
+.mc-content .box-1, .mc-content .box-2 { margin-left: 20px; }
+.mc-content .title-2 { margin: 0 0 15px 0; width: 100px; text-align: right; }
+.mc-content .s-line { margin: 20px auto 20px; }
+.mc-content .t-1 { margin: 10px 0 45px 0; font-size: 14px; color: #0098CF; cursor: pointer; }
+.mc-content .lists { margin-left: 90px; }
+
+.mc-content .box-1 .a { color: #999; text-decoration: underline; }
+
+.mc-content #realinfo-form .field .field-left { width: 100px; }
+.mc-content #realinfo-form .field .btn-blue { margin-left: 100px; }
+#realinfo-form .birth .select-box { float: left; margin-right: 10px; }
+#realinfo-form .v { color: #000; font-size: 14px; line-height: 26px; }
+
+#realinfo-form .radio-gender { margin-top: 3px; }
+#realinfo-form #view-box #reedit { margin-left: 100px; font-size: 14px; cursor: pointer; text-decoration: underline; color: #999; }
+
+.mc-content .safe #realinfo-form { margin-left: 15px; margin-bottom: 60px; }
+.mc-content .safe .btn-white { position: relative; margin: 0 0 10px 0px; }
+.mc-content .safe .btn-white a { display: block; width: 100%; height: 100%; }
+.mc-content .safe .btn-white span { float: left; color: #666; }
+.mc-content .safe .btn-white .logo { margin: 9px 15px 0 20px; }
+.mc-content .safe .btn-white .logo-key { margin-top: 8px; }
+.mc-content .safe .btn-white:hover .logo-key { background-position: -150px -660px; }
+.mc-content .safe .btn-white:hover .logo-phone { background-position: -210px -660px; }
+.mc-content .safe .btn-white:hover .logo-email-2 { background-position: -210px -710px; }
+.mc-content .safe .btn-white:hover .logo-weibo { background-position: -150px -710px; }
+.mc-content .safe .btn-white:hover .logo-qq { background-position: -150px -760px; }
+.mc-content .safe .btn-white .logo-money { position: absolute; left: -9px; top: -5px; }
+
+.mc-content .safe .binded { padding: 10px 30px 5px 10px;  border: 1px solid #d9d9d9; }
+.mc-content .safe .binded .logo { float: left; }
+.mc-content .safe .binded .bd { margin-left: 35px; }
+.mc-content .safe .binded .bd span { display: block; }
+.mc-content .safe .binded .bd .k { color: #999; }
+.mc-content .safe .binded .bd .v { color: #666; }
+
+.mc-content .safe .box-1 .b-1-1, .mc-content .safe .box-1 .b-1-2, .mc-content .safe .box-1 .b-1-3 { float: left; }
+.mc-content .safe .box-1 .b-1-1 { margin-left: 10px; }
+.mc-content .safe .box-1 .b-1-2 { margin: 0 60px; }
+
+.mc-content .safe .box-2 .btn-white { margin-right: 60px; float: left; }
+
+.mc-content .message { margin-bottom:30px; }
+.mc-content .message a { color: #666; }
+.mc-content .message a:hover { text-decoration: underline; }
+
+/*#region realinfo-form*/
+#realinfo-form #FirstName { margin-right: 10px; }
+#realinfo-form #street { width: 350px; }
+#realinfo-form .name { margin-right: 20px; font-size: 14px; color: #000; }
+
+/*#endregion*/
+
+
+/*#endregion*/
+
+/*#region reset password page*/
+#reset-password { margin: 20px auto; width: 808px; border: 1px solid #dbdbdb; background: #fff; }
+#reset-password .field { overflow: hidden; margin-bottom: 25px; }
+#reset-password .field .label{ line-height: 29px; }
+#reset-password .input-box-3 input { }
+#reset-password .input-box-3 label { }
+#reset-password .btn-white { margin-top: 20px; }
+#reset-password .progress { margin: 0 auto; }
+#reset-password .line { font-size: 1px; width: 100%; height: 1px; background: #dbdbdb; }
+#reset-password .bd { margin: 0; padding: 1px 0; height: 300px; }
+
+#reset-password .manual { margin: 70px 0 0 250px; }
+#reset-password .manual .btn-white { margin: 55px 0 0 90px; }
+#reset-password .manual .logo-th-2 { margin-top: 7px; }
+
+#reset-password .mname { margin-left: 200px; }
+#reset-password .captcha-img, #reset-password .btn-refresh { float: left; }
+#reset-password .captcha-img { margin: 0 5px; cursor: pointer; }
+#reset-password .mname .g-title-1 { padding-top: 10px; margin: 0 0 20px 33px; }
+
+#reset-password .title .logo { margin-top: 4px; float: left; }
+#reset-password .title h3 { margin-left: 34px; font-size: 16px; color: #333; }
+#reset-password .title h3 .fg { color: #999; }
+
+#reset-password .send-captcha { padding: 15px 0 35px 40px; width: 363px; float: left; }
+#reset-password .send-captcha .input-box-3, #reset-password .send-captcha .qt { float: left; }
+#reset-password .send-captcha .btn-captcha { margin-top: 3px; }
+#reset-password .send-captcha .qt { line-height: 28px; margin-left: 10px; cursor: pointer; }
+#reset-password .send-captcha .tips { position: absolute; margin-top: 35px; }
+#reset-password .send-captcha .title { margin: 18px 0; }
+#reset-password .send-captcha .sc-bd { margin-left: 15px; }
+#reset-password .phone { border-right: 1px solid #dbdbdb; }
+
+#reset-password .reset { margin-left: 260px; }
+#reset-password .reset .pwd-strong { float: left; line-height: 28px; margin-left: 10px; }
+#reset-password .reset .title-2 { margin: 0 0 15px -5px; padding-top: 10px; font-size: 16px; color: #333; }
+
+#reset-password .complete { width: 155px; margin: 0 auto; }
+#reset-password .complete .g-title-1 { margin: 0 0 70px; padding-top: 10px; }
+
+#reset-password .bd { position: relative; }
+#reset-password .phone-mask, #reset-password .email-mask { position: absolute; width: 400px; height: 300px; }
+#reset-password .phone-mask { left: 0; top: 0;  }
+#reset-password .email-mask { right: 0; top: 0; }
+/*#endregion*/
+
+/*#region simple transfer page*/
+#simple-transfer {}
+#simple-transfer .wm { width: 700px; margin: 0 auto; }
+#simple-transfer .site-logo { float: left; }
+#simple-transfer .help { margin-right: 10px; }
+#simple-transfer .cs { margin-top: 15px; float: right; }
+#simple-transfer .balances { padding-top: 1px; height: 169px; background: #FFF; border-bottom: 1px solid #E5E5E5; }
+#simple-transfer .balances h3 { margin: 25px 0; color: #333; font-size: 23px; text-align: center; }
+#simple-transfer .balances .main { float: left; margin-left: 63px;  }
+#simple-transfer .balances .casino { float: right; margin-right: 63px; }
+#simple-transfer .balances span { float: left; line-height: 31px; }
+#simple-transfer .balances .k { color: #333; font-size: 14px; }
+#simple-transfer .balances .v { margin-right: 20px;  color: #79A8D6; font-size: 20px; }
+#simple-transfer .balances .btn-refresh-2 { margin-top: 5px; }
+#simple-transfer .content { padding: 1px 0 12px; background: #F5F5F5; }
+#simple-transfer .transfer-content { position: relative; }
+#simple-transfer .transfer-content .g-tips-block3 { position: absolute; left: 175px; top: 170px; }
+/*#endregion*/
+
+
+/*#region deposit popup*/
+.popup-autodeposit-info { margin-left: 30px; background: #FFF; }
+.popup-autodeposit-info .a { color: #999; text-decoration: underline; }
+.popup-autodeposit-info .time { position: absolute; font-size: 38px; }
+.popup-autodeposit-info .step-1 h3 { margin: 15px 0; font-size: 16px; color: #333; }
+.popup-autodeposit-info .step-1 .bank-card-info {}
+.popup-autodeposit-info .step-1 .bank-card-info li { height: 20px; overflow: hidden; }
+.popup-autodeposit-info .step-1 .bank-card-info .tt { margin-left: 10px; }
+.popup-autodeposit-info .step-1 .p1 { margin: 15px 0; color: #333; }
+.popup-autodeposit-info .step-1 .p2 { margin: 67px 0 45px; color: #333; }
+.popup-autodeposit-info .step-1 .time { left: 100px; top: 254px; }
+.popup-autodeposit-info .step-1 .s2 { margin-top: 30px; }
+.popup-autodeposit-info .step-1 .tips-bg {margin-top:20px;padding-top:1px;width: 260px;height: 80px;background: url(../images/bank_tips.jpg) no-repeat;}
+.popup-autodeposit-info .step-1 .p3{padding:0;margin:24px 0 5px 10px;font-size: 14px; font-style: italic;color:#666;}
+.popup-autodeposit-info .step-1 .p4{padding:0;margin:0 0 0 10px;color:#999;}
+.popup-autodeposit-info .step-1 .ps{color:#08F;}
+.popup-autodeposit-info .step-1 .tips-2{margin-left:20px;color:#666;}
+.popup-autodeposit-info .step-1 .btn-blue-2{display: inline-block;}
+
+.popup-autodeposit-info .step-2 .logo-th-3 { margin: 30px auto 0; }
+.popup-autodeposit-info .step-2 h3 { margin: 10px 0; font-size: 25px; color: #79A8D6; text-align: center; }
+.popup-autodeposit-info .step-2 p { color: #333; text-align: center; }
+.popup-autodeposit-info .step-2 .b1 { margin-top: 100px; margin-left: 76px; text-align: center; }
+.popup-autodeposit-info .step-2 .btn-blue, .popup-autodeposit-popup .step-2 .a { display: inline-block; }
+.popup-autodeposit-info .step-2 .btn-blue { margin-right: 20px; }
+
+.popup-autodeposit-info .step-3 .logo-right-3 { margin: 30px auto 0; }
+.popup-autodeposit-info .step-3 h3 { margin: 10px 0; font-size: 25px; color: #7caa19; text-align: center; }
+.popup-autodeposit-info .step-3 .ls { overflow: hidden; margin: 10px 0 0 150px; }
+.popup-autodeposit-info .step-3 li { float: left; margin-right: 0px; min-width: 130px; min-height: 100px; background: #f5f5f5; text-align: center; }
+.popup-autodeposit-info .step-3 li .k { color: #666; display: block; }
+.popup-autodeposit-info .step-3 li .v { margin: 21px 0 10px; color: #000; font-size: 18px; display: block; font-weight: bold; }
+.popup-autodeposit-info .step-3 .b1 { text-align: center; margin-top: 70px; }
+.popup-autodeposit-info .step-3 .btn-blue { display: inline-block; margin-left: 90px; margin-right: 20px; }
+.popup-autodeposit-info .step-3 .b1 a { color: #666; text-decoration: underline; }
+
+.popup-thirdpay-info {}
+.popup-thirdpay-info .ubloading { margin: 20px auto; }
+.popup-thirdpay-info a { color: #999; text-decoration: underline; }
+.popup-thirdpay-info .time { position: absolute; right: 252px; top: 119px; font-size: 38px; }
+
+.popup-thirdpay-info .step-1 h3 { color: #009b72; font-size: 18px; text-align: center; }
+.popup-thirdpay-info .step-1 .p1 { margin: 40px 0 30px -75px; text-align: center; font-size: 14px; color: #666; }
+.popup-thirdpay-info .step-1 .tips { margin: 50px 0 0 215px; }
+
+.popup-thirdpay-info .step-2 .logo-th-3 { margin: 30px auto 0; }
+.popup-thirdpay-info .step-2 h3 { margin: 10px 0; font-size: 25px; color: #79A8D6; text-align: center; }
+.popup-thirdpay-info .step-2 p { color: #333; text-align: center; }
+.popup-thirdpay-info .step-2 .b1 { margin-top: 100px; margin-left: 76px; text-align: center; }
+.popup-thirdpay-info .step-2 .btn-blue, .popup-autodeposit-popup .step-2 .a { display: inline-block; }
+.popup-thirdpay-info .step-2 .btn-blue { margin-right: 20px; }
+
+.popup-thirdpay-info .step-3 .logo-right-3 { margin: 30px auto 0; }
+.popup-thirdpay-info .step-3 h3 { margin: 10px 0; font-size: 25px; color: #7caa19; text-align: center; }
+.popup-thirdpay-info .step-3 .ls { overflow: hidden; margin: 10px 0 0 150px; }
+.popup-thirdpay-info .step-3 li { float: left; margin-right: 0px; min-width: 130px; min-height: 100px; background: #f5f5f5; text-align: center; }
+.popup-thirdpay-info .step-3 li .k { color: #666; display: block; }
+.popup-thirdpay-info .step-3 li .v { margin: 21px 0 10px; color: #000; font-size: 18px; display: block; font-weight: bold; }
+.popup-thirdpay-info .step-3 .b1 { text-align: center; margin-top: 70px; }
+.popup-thirdpay-info .step-3 .btn-blue { display: inline-block; margin-left: 90px; margin-right: 20px; }
+.popup-thirdpay-info .step-3 .b1 a { color: #666; text-decoration: underline; }
+
+
+.popup-transfer-info { margin-left: 30px; }
+.popup-transfer-info .bank-card-info { margin: 20px 0; }
+.popup-transfer-info .btn-blue { margin-top: 20px; }
+.popup-transfer-info .bind-phone { margin-bottom: 20px; }
+.popup-transfer-info .bind-phone .btn-captcha { margin: 2px 0 0 10px; float: left; }
+.popup-transfer-info .bind-phone .step-1 .input-tips { float: left; margin-left: 10px; margin-top: 3px; }
+.popup-transfer-info .bind-phone .step-2 .back { float: left; margin-left: 10px; margin-top: 5px; color: #999; cursor: pointer; }
+.popup-transfer-info .bind-phone .step-2 .backon { color: #08F; }
+.popup-transfer-info .sendmsg { padding-top: 1px; margin-bottom: 20px; }
+.popup-transfer-info .sendmsg div { float: left; margin-right: 10px; }
+.popup-transfer-info .sendmsg .t { color: #333; margin-top: 5px; }
+.popup-transfer-info .sendmsg .input-box-3 { }
+.popup-transfer-info .sendmsg .btn-captcha { margin-top: 2px; }
+.popup-transfer-info .sendmsg .other { color: #08f; margin-top: 5px; cursor: pointer; }
+.popup-transfer-info .sendmsg .phone-no { color: #000; }
+.popup-transfer-info .sendmsg .input-tips { margin-top: 3px; }
+.popup-transfer-info .send-success { margin-bottom: 20px; }
+.popup-transfer-info .send-success .logo-right-1 { display: inline-block; vertical-align: -1px; }
+.popup-transfer-info .send-success .txt { margin-left: 5px; color: #000; font-size: 12px; }
+.popup-transfer-info .send-success .phone-no { color: #08F; }
+
+
+
+/*#endregion*/
+
+/*#region secrecy-agreement*/
+.secrecy-agreement { padding-top: 20px; }
+.secrecy-agreement h3 { text-align: center; }
+.secrecy-agreement p { margin-left: 20px; }
+.secrecy-agreement .t { margin-left: 20px; margin-top: 45px; }
+
+
+
+
+/*#endregion*/
+
+
+
+/*new foot*/
+.foot_f{width:100%;height:340px; min-width:1000px;}
+.f_center{width:1000px;	height:100%;margin:0 auto;}
+.ff_l,.ff_c,.ff_r{width:330px;height:100%;float:left;}
+.ff_l{margin-left:5px;}
+.ff_c{width:300px;padding-left:30px;}
+.ff_r{width:300px;padding-left:30px;}
+.ff_title{width:100%;height:45px;margin:12px 0px 48px;}
+.fft_img{width:140px;height:45px;background:url(../images/uedbet_img.png) no-repeat;}
+.ffti_l{background-position: 0px -400px;}
+.ffti_c{background-position: 0px -450px;}
+.ffti_r{background-position: 0px -500px;}
+.ff_abtu{width:300px;height:150px;position:relative;}
+.ff_logo_b{width:100px;height:100px;background:url(../images/uedbet_img.png) no-repeat 0 -550px;}
+.ff_cpr{width:100px;height:14px;position:absolute;left:0px;top:115px;font-size:12px;color:#555555;text-align:center; text-shadow:0 1px 0 #ffffff;}
+.ff_cprt{width:170px;height:150px;position:absolute;top:-7px;left:130px;font-size:12px;line-height:24px;color:#555555;white-space:nowrap; text-shadow:0 1px 0 #ffffff;}
+.ff_cprt a{color:#555555;text-decoration:underline; text-shadow:0 1px 0 #ffffff;}
+.ff_pt{width:260px;height:200px;position:absolute;}
+.ff_pti{width:130px;height:26px;background:url(../images/uedbet_img.png) no-repeat;float:left;margin-bottom:10px;}
+.pti1{background-position:-160px -250px; -webkit-transform:translate(-20px,0);opacity:0;}
+.pti2{background-position:-160px -430px; -webkit-transform:translate(20px,0);opacity:0;}
+.pti3{background-position:-160px -370px; -webkit-transform:translate(-20px,0);opacity:0;}
+.pti4{background-position:-160px -400px; -webkit-transform:translate(20px,0);opacity:0;}
+.pti5{background-position:-160px -310px; -webkit-transform:translate(-20px,0);opacity:0;cursor: default;}
+.pti6{background-position:-160px -460px; -webkit-transform:translate(20px,0);opacity:0;}
+.pti7{background-position:-160px -280px; -webkit-transform:translate(-20px,0);opacity:0;cursor: default;}
+.pti8{background-position:-160px -490px; -webkit-transform:translate(20px,0);opacity:0;}
+.pti9{background-position:-160px -340px; -webkit-transform:translate(-20px,0);opacity:0;}
+.show .pti1,.show .pti2,.show .pti3,.show .pti4,.show .pti5,.show .pti6,.show .pti7,.show .pti8,.show .pti9{
+    opacity:1;
+    -webkit-transform:translate(0,0);
+    -moz-transform:translate(0,0);
+    -ms-transform:translate(0,0);
+    -o-transform:translate(0,0);
+    transform:translate(0,0);
+}
+.show .pti1{-webkit-transition:all 0.5s ease-out 0s;
+    -moz-transition:all 0.5s ease-out 0s;
+    -ms-transition:all 0.5s ease-out 0s;
+    -o-transition:all 0.5s ease-out 0s;
+    transition:all 0.5s ease-out 0s;}
+.show .pti3{-webkit-transition:all 0.5s ease-out 0.2s;
+    -moz-transition:all 0.5s ease-out 0.2s;
+    -ms-transition:all 0.5s ease-out 0.2s;
+    -o-transition:all 0.5s ease-out 0.2s;
+    transition:all 0.5s ease-out 0.2s;}
+.show .pti5{-webkit-transition:all 0.5s ease-out 0.4s;
+    -moz-transition:all 0.5s ease-out 0.4s;
+    -ms-transition:all 0.5s ease-out 0.4s;
+    -o-transition:all 0.5s ease-out 0.4s;
+    transition:all 0.5s ease-out 0.4s;}
+.show .pti7{-webkit-transition:all 0.5s ease-out 0.6s;
+    -moz-transition:all 0.5s ease-out 0.6s;
+    -ms-transition:all 0.5s ease-out 0.6s;
+    -o-transition:all 0.5s ease-out 0.6s;
+    transition:all 0.5s ease-out 0.6s;}
+.show .pti9{-webkit-transition:all 0.5s ease-out 0.8s;
+    -moz-transition:all 0.5s ease-out 0.8s;
+    -ms-transition:all 0.5s ease-out 0.8s;
+    -o-transition:all 0.5s ease-out 0.8s;
+    transition:all 0.5s ease-out 0.8s;}
+.show .pti2{-webkit-transition:all 0.5s ease-out 1s;
+    -moz-transition:all 0.5s ease-out 1s;
+    -ms-transition:all 0.5s ease-out 1s;
+    -o-transition:all 0.5s ease-out 1s;
+    transition:all 0.5s ease-out 1s;}
+.show .pti4{-webkit-transition:all 0.5s ease-out 1.2s;
+    -moz-transition:all 0.5s ease-out 1.2s;
+    -ms-transition:all 0.5s ease-out 1.2s;
+    -o-transition:all 0.5s ease-out 1.2s;
+    transition:all 0.5s ease-out 1.2s;}
+.show .pti6{-webkit-transition:all 0.5s ease-out 1.4s;
+    -moz-transition:all 0.5s ease-out 1.4s;
+    -ms-transition:all 0.5s ease-out 1.4s;
+    -o-transition:all 0.5s ease-out 1.4s;
+    transition:all 0.5s ease-out 1.4s;}
+.show .pti8{-webkit-transition:all 0.5s ease-out 1.6s;
+    -moz-transition:all 0.5s ease-out 1.6s;
+    -ms-transition:all 0.5s ease-out 1.6s;
+    -o-transition:all 0.5s ease-out 1.6s;
+    transition:all 0.5s ease-out 1.6s;}
+
+.ff_help{width:285px;height:60px;border-bottom:1px solid #dde1e3;}
+.ffh_item{width:94px;height:16px;float:left;display:block;margin-bottom:8px;}
+.ffh_arrow{width:17px;height:16px;float:left;background:url(../images/uedbet_img.png) no-repeat -59px -760px;
+    -webkit-transform:scale(0,0);
+    -moz-transform:scale(0,0);
+    -ms-transform:scale(0,0);
+    -o-transform:scale(0,0);
+    transform:scale(0,0);
+}
+.show .ffh_arrow{-webkit-transform:scale(1,1);
+    -moz-transform:scale(1,1);
+    -ms-transform:scale(1,1);
+    -o-transform:scale(1,1);
+    transform:scale(1,1);}
+.show .arr1{-webkit-transition:-webkit-transform 0.3s ease-out 0s;
+    -moz-transition:-moz-transform 0.3s ease-out 0s;
+    -ms-transition:-ms-transform 0.3s ease-out 0s;
+    -o-transition:-0-transform 0.3s ease-out 0s;
+    transition:transform 0.3s ease-out 0s;}
+.show .arr2{-webkit-transition:-webkit-transform 0.3s ease-out 0.15s;
+    -moz-transition:-moz-transform 0.3s ease-out 0.15s;
+    -ms-transition:-ms-transform 0.3s ease-out 0.15s;
+    -o-transition:-o-transform 0.3s ease-out 0.15s;
+    transition:transform 0.3s ease-out 0.15s;}
+.show .arr3{-webkit-transition:-webkit-transform 0.3s ease-out 0.3s;
+    -moz-transition:-moz-transform 0.3s ease-out 0.3s;
+    -ms-transition:-ms-transform 0.3s ease-out 0.3s;
+    -o-transition:-o-transform 0.3s ease-out 0.3s;
+    transition:transform 0.3s ease-out 0.3s;
+}
+.show .arr4{-webkit-transition:-webkit-transform 0.3s ease-out 0.45s;
+    -moz-transition:-moz-transform 0.3s ease-out 0.45s;
+    -ms-transition:-ms-transform 0.3s ease-out 0.45s;
+    -o-transition:-o-transform 0.3s ease-out 0.45s;
+    transition:transform 0.3s ease-out 0.45s;
+}
+.show .arr5{-webkit-transition:-webkit-transform 0.3s ease-out 0.6s;
+    -moz-transition:-moz-transform 0.3s ease-out 0.6s;
+    -ms-transition:-ms-transform 0.3s ease-out 0.6s;
+    -o-transition:-o-transform 0.3s ease-out 0.6s;
+    transition:transform 0.3s ease-out 0.6s;}
+.show .arr6{-webkit-transition:-webkit-transform 0.3s ease-out 0.75s;
+    -moz-transition:-moz-transform 0.3s ease-out 0.75s;
+    -ms-transition:-ms-transform 0.3s ease-out 0.75s;
+    -o-transition:-o-transform 0.3s ease-out 0.75s;
+    transition:transform 0.3s ease-out 0.75s;}
+
+.ffh_item:hover .ffh_arrow{background:url(../images/uedbet_img.png) no-repeat -59px -784px;}
+.ffhi_a{width:59px;height:16px;float:left;color:#555555;margin-left:5px;line-height:16px;white-space:nowrap; text-shadow:0 1px 0 #ffffff;}
+.ff_brow{width:285px;height:76px;border-bottom:1px solid #dde1e3;overflow:hidden;}
+.ffb_title,.ffs_title{width:100%;height:14px;line-height:14px;margin-top:16px;color:#1b1b1c;}
+.ffb_all,.ffs_all{width:100%;height:20px;position: relative;margin-top:10px;}
+.ffb_item{width:70px;height:20px;position:absolute;display:block;top:0px;}
+.ffb_all .js{left:0px;}
+.ffb_all .ie{left:75px;}
+.ffb_all .cm{left:150px;}
+.ffb_all .fx{left:225px;}
+.ffb_icon{width:21px;height:20px;background:url(../images/uedbet_img.png) no-repeat ;float:left;
+    -webkit-transform:scale(0,0);
+    -moz-transform:scale(0,0);
+    -ms-transform:scale(0,0);
+    -o-transform:scale(0,0);
+    transform:scale(0,0);
+}
+.show .ffb_icon{-webkit-transform:scale(1,1);
+    -moz-transform:scale(1,1);
+    -ms-transform:scale(1,1);
+    -o-transform:scale(1,1);
+    transform:scale(1,1);}
+
+.js .ffb_icon{background-position:-39px -900px;}
+.ie .ffb_icon{background-position:-69px -900px;}
+.cm .ffb_icon{background-position:-99px -900px;}
+.fx .ffb_icon{background-position:-129px -900px;}
+
+.show .js .ffb_icon{-webkit-transition:-webkit-transform 0.4s ease-out 0s;
+    -moz-transition:-moz-transform 0.4s ease-out 0s;
+    -ms-transition:-ms-transform 0.4s ease-out 0s;
+    -o-transition:-o-transform 0.4s ease-out 0s;
+    transition:transform 0.4s ease-out 0s;}
+.show .ie .ffb_icon{-webkit-transition:-webkit-transform 0.4s ease-out 0.2s;
+    -moz-transition:-moz-transform 0.4s ease-out 0.2s;
+    -ms-transition:-ms-transform 0.4s ease-out 0.2s;
+    -o-transition:-o-transform 0.4s ease-out 0.2s;
+    transition:transform 0.4s ease-out 0.2s;}
+.show .cm .ffb_icon{-webkit-transition:-webkit-transform 0.4s ease-out 0.4s;
+    -moz-transition:-moz-transform 0.4s ease-out 0.4s;
+    -ms-transition:-ms-transform 0.4s ease-out 0.4s;
+    -o-transition:-o-transform 0.4s ease-out 0.4s;
+    transition:transform 0.4s ease-out 0.4s;}
+.show .fx .ffb_icon{-webkit-transition:-webkit-transform 0.4s ease-out 0.6s;
+    -moz-transition:-moz-transform 0.4s ease-out 0.6s;
+    -ms-transition:-ms-transform 0.4s ease-out 0.6s;
+    -o-transition:-o-transform 0.4s ease-out 0.6s;
+    transition:transform 0.4s ease-out 0.6s;}
+
+.js:hover .ffb_icon{background-position:-159px -900px;}
+.ie:hover .ffb_icon{background-position:-189px -900px;}
+.cm:hover .ffb_icon{background-position:-219px -900px;}
+.fx:hover .ffb_icon{background-position:-249px -900px;}
+.ffb_vsion{width:30px;height:20px;float:left;font-size:11px;line-height:20px;margin-left:5px;/*color:#7c8088;*/ color:#555555; text-shadow:0 1px 0 #ffffff;}
+.ff_shall{width:285px;height:90px;overflow:hidden;}
+.ffs_item{width:80px;height:20px;position:absolute;display:block;top:0px;
+}
+.ffs_icon{width:21px;height:20px; position:absolute; top:0px; left:0px;background:url(../images/uedbet_img.png) no-repeat;
+    -webkit-transform:scale(0,0);
+    -moz-transform:scale(0,0);
+    -ms-transform:scale(0,0);
+    -o-transform:scale(0,0);
+    transform:scale(0,0);
+}
+.ffs_txt{width:50px;height:20px; position:absolute; top:0px; left:25px; /*color:#7c8088*/ color:#555555; text-shadow:0 1px 0 #ffffff;}
+.ffs_all .xl{left:0px;}
+.ffs_all .tx{left:85px;}
+.ffs_all .wx{left:170px;}
+.ffs_all .qq{left:230px;}
+
+.xl .ffs_icon{background-position:-39px -930px;}
+.tx .ffs_icon{background-position:-99px -930px;}
+.wx .ffs_icon{background-position:-129px -930px;}
+.qq .ffs_icon{background-position:-39px -960px;}
+
+.show .ffs_icon{-webkit-transform:scale(1,1);
+    -moz-transform:scale(1,1);
+    -ms-transform:scale(1,1);
+    -o-transform:scale(1,1);
+    transform:scale(1,1);}
+.show .xl .ffs_icon{-webkit-transition:-webkit-transform 0.4s ease-out 0s;
+    -moz-transition:-moz-transform 0.4s ease-out 0s;
+    -ms-transition:-ms-transform 0.4s ease-out 0s;
+    -o-transition:-o-transform 0.4s ease-out 0s;
+    transition:transform 0.4s ease-out 0s}
+.show .tx .ffs_icon{-webkit-transition:-webkit-transform 0.4s ease-out 0.2s;
+    -moz-transition:-moz-transform 0.4s ease-out 0.2s;
+    -ms-transition:-ms-transform 0.4s ease-out 0.2s;
+    -o-transition:-o-transform 0.4s ease-out 0.2s;
+    transition:transform 0.4s ease-out 0.2s;}
+.show .wx .ffs_icon{-webkit-transition:-webkit-transform 0.4s ease-out 0.4s;
+    -moz-transition:-moz-transform 0.4s ease-out 0.4s;
+    -ms-transition:-ms-transform 0.4s ease-out 0.4s;
+    -o-transition:-o-transform 0.4s ease-out 0.4s;
+    transition:transform 0.4s ease-out 0.4s;}
+.show .qq .ffs_icon{-webkit-transition:-webkit-transform 0.4s ease-out 0.6s;
+    -moz-transition:-moz-transform 0.4s ease-out 0.6s;
+    -ms-transition:-ms-transform 0.4s ease-out 0.6s;
+    -o-transition:-o-transform 0.4s ease-out 0.6s;
+    transition:transform 0.4s ease-out 0.6s;
+}
+
+.xl:hover .ffs_icon{background-position:-159px -930px;}
+.tx:hover .ffs_icon{background-position:-219px -930px;}
+.wx:hover .ffs_icon{background-position:-249px -930px;}
+.qq:hover .ffs_icon{background-position:-159px -960px;}
+
+.fs_c{width:1000px;height:100%;margin:0 auto;position:relative;}
+.fs_logo_s{width:22px;height:22px;position:absolute;top:15px;left:5px;background:url(../images/uedbet_img.png) no-repeat -100px -550px;}
+.fs_cpr{width:70px;height:100%;position:absolute;top:0px;left:45px;line-height:50px;font-size:12px;color:#666666;white-space:nowrap;}
+.fs_nvg{width:90px;height:100%;position:absolute;top:0px;line-height:50px;font-size:12px;color:#666666;white-space:nowrap;}
+.fs_nvg a{color:#666666;}
+.fs_nvg a:hover{text-decoration:underline;}
+.fs_c .wb{left:420px;}
+.fs_c .ab{left:520px;}
+.fs_c .bl{left:620px;}
+.fs_c .mp{left:720px;}
+.fs_c .lx{left:820px;}
+.fs_c .lg{left:905px;}
+.fsl_icon{width:20px;height:21px;position:absolute;top:15px;right:5px;display:block;background:url(../images/uedbet_img.png) no-repeat;}
+.cn{background-position:-60px -808px;}
+.cn:hover{background-position:-90px -808px;}
+.en{background-position:-60px -840px;}
+.en:hover{background-position:-90px -840px;}
+/*end new foot*/
+
+.foot_s{ position: relative;width:100%;background: #6e6d71;border-top:0px solid #dde1e3; min-width:1000px;}
+.foot_s .ft-shadow { position: absolute; width: 100%;height:10px; background: url(../images/uedbet_footer_shadow.png) repeat-x; z-index:2; }
+.foot_s .fs_c{ position: relative; overflow: hidden; }
+.foot_s .fs_c a { color:#939297; text-decoration:underline;}
+.foot_s .fs_c a:hover { color:#aaaaaa;}
+.foot_s .ft-rightblock { width:558px; position: absolute;right: 0; top:0;background: #6e6d71; }
+.foot_s .ft-rightblock-1 { overflow:hidden; }
+.foot_s .ft-rightblock-2 { overflow:hidden; padding-top:15px; padding-left:15px; width:530px; }
+.foot_s .ft-rightblock-2 a { margin-right: 5px;text-decoration: underline; color: #afaeb0;}
+.foot_s .ft-rightblock-2 .p2 { margin-top: 4px; }
+.foot_s .ft-vline { width:2px;height: 110px; background:url(../images/uedbet_com_footer.png) no-repeat -160px -120px; }
+.foot_s .ft-vline-2 {margin: 5px 8px; width:2px;height: 26px; background:url(../images/uedbet_com_footer.png) no-repeat -180px -120px;}
+.foot_s .col-1, .foot_s .col-2, .foot_s .col-3,.foot_s .ft-vline { float: left; }
+.foot_s .col-1 { width: 440px; position: relative;cursor: pointer; }
+.foot_s .col-2 { width: 300px; }
+.foot_s .col-3 { width: 250px; position: relative;}
+.foot_s .htf-jt-logo { position: absolute; left:10px; top: 10px; }
+.foot_s .col-1 p { margin-left:100px; }
+.foot_s .col-1 .htf-jt-title { display: block; margin: 10px 0 10px 100px; }
+.foot_s .col-1 .p1 { margin-top:15px; color: #afaeb0;}
+.foot_s .col-2 .uedbet-logo-gray { margin: 15px 0 12px 32px;  }
+.foot_s .col-2 p { margin-left: 32px; }
+.foot_s .col-3 li { float:left; color:#939297; line-height:16px; }
+.foot_s .col-3 li span { display:block; }
+.foot_s .col-3 li a{ display:block; text-decoration: none;}
+.foot_s .col-3 li a:hover{ text-decoration: underline;}
+.foot_s .col-3 h3 { margin-left: 32px; margin-top: 15px; color: #afaeb0;}
+.foot_s .col-3 ul, .foot_s .col-3 p { margin-left: 32px; }
+.foot_s .col-3 ul { margin-top: 2px; margin-bottom: 5px;}
+.foot_s .col-3 p span{display: block; float: left;}
+.foot_s .col-3 .ft-lang-zh {width: 90px; margin-left:10px; cursor: pointer; display: block; float: left; overflow: hidden;}
+.foot_s .col-3 .ft-lang-zh .slt_tg{width: 7px; height: 4px; display: block; float: right; margin-top: 7px; margin-right: 5px;}
+.foot_s .col-3 .ft-lang-zh .nthn_flag{margin-right: 5px; vertical-align: bottom;}
+.foot_s .col-1:hover .htf-jt-logo { background-position: -80px -120px; }
+.foot_s .col-1:hover .htf-jt-title { background-position: 0 -90px; }
+.ft_lang_c {position: relative;width:1000px;margin:0 auto;}
+/*.foot_s .lang{position: absolute; right:5px; top:-33px; width:218px; height:19px; display: block; }*/
+.foot_s .lang{position: absolute; right:-1px; top:83px; width:218px; height:19px; display: block; }
+.foot_s .lang .nthn_flag { margin: -5px 5px;}
+.foot_s .lang .slt_tg{vertical-align:1px;}
+.foot_s .lang_div{width: 100px; position: absolute; right: 68px; bottom:8px; font-size: 12px; line-height: 28px; background: #fff; border: 1px solid #585858; border-radius: 3px; display: none;z-index:11;}
+.foot_s .lang_div span, .foot_s .lang_div a{width: 100px; height: 28px; line-height: 28px; display: block; text-align: center; overflow: hidden;}
+.foot_s .lang_div a:hover{background: #e5e5e5; color: #999999; cursor: pointer;}
+.foot_s .lang_div span{color:#999999; cursor: default;}
+.foot_s .lang_div a{color:#333; text-decoration: none;}
+.foot_s .lang_div .nthn_flag{ width: 18px; height: 18px; display: block; float: left; margin-top: 5px; margin-left: 7px; margin-right: 0px;}
+
+/*load*/
+.load_bg{width:30px;height:30px; margin:50px auto; background:url(../images/loading_css.png) no-repeat;}
+/* end load*/
+
+/* eacasino  CSS */
+.ea_header .mw{width:700px;}
+.ea_login{}
+.ea_login .login_form{position:relative; margin:20px auto 0px; left:0px; height:230px}
+.ea_login .lgf_bottom{ position:relative; margin:0px auto; left:0px; top:0px}
+.ea_login .lg_title{margin: 20px 0px;}
+.ea_login .lg_note{margin: 12px 0px;}
+.ea_login .lg_ctn{height:250px;}
+.ea_login .lgn_txt{left:0px;}
+.ea_l_logo{width: 230px; height: 58px; margin: 0 auto 15px; background:url(../images/uedbet_logo.png) no-repeat;}
+.ea_l_error{margin-left:90px; margin-bottom:15px; color:#F00; line-height:19px;}
+.ea_l_cs{ text-align:right; margin-right:57px; color:#333; display:block;}
+.ea_l_cs:hover{ text-decoration:underline;}
+
+#simple-transfer .ea_p_w{height:50px;}
+.ea_p_w .clearfix{ margin-top:10px;}
+.ea_p .transfer-form{margin: 20px auto 0;}
+.ea_p .transfer-content{ min-height:220px;}
+/* eacasino  CSS  END*/
+
+
+
+/* new header CSS*/
+.nh_csn, .nh_keno, .nh_sport, .nh_game, .nh_coupon{width:100%; min-width:1000px; /*height:200px; */ height:0px; position:absolute; top:90px; left:0px; z-index:99; background:url(../images/uedbet_img.png) repeat-x 0 -1360px; overflow:hidden;}
+/*
+.nh_coupon{height:204px;}
+*/
+.nh_sd{top:200px; border-top:1px solid #c9c9ca;}
+.nh_cnt{width:1000px; height:100%; margin:0 auto; opacity:0; position:relative;}
+/*
+.nh_coupon .nh_cnt{ opacity:1;}
+*/
+.nh_dsc{width:160px; height:100%; position:relative; float:left; }
+.nh_knad, .nh_spad{width:190px; height:100%; position:relative; float:left; }
+.nh_knad:hover{cursor:pointer;}
+.nh_dsc_num{width:80px; height:125px; position:absolute; top:8px; left:40px; background:url(../images/uedbet_img.png) no-repeat -130px -555px;}
+.nh_spad_num{width:90px; height:130px; position:absolute; top:12px; left:25px; background:url(../images/uedbet_img.png) no-repeat -300px -1930px;}
+.nh_spad_num2{width:90px; height:130px; position:absolute; top:22px; left:25px; background:url(../images/uedbet_img.png) no-repeat -11px -1940px;}
+.nh_knad_num{width:150px; height:110px; position:absolute; top:20px; left:20px; background:url(../images/uedbet_img.png) no-repeat -247px -1190px;}
+
+.nh_dsc_unit{width:22px; height:18px; position:absolute; top:105px; left:120px; color:#969696; font-size:18px; line-height:18px;}
+.nh_spad_unit{width:22px; height:18px; position:absolute; top:105px; left:120px; color:#969696; font-size:18px; line-height:18px;}
+.nh_dsc_text{width:100%; height:60px; position:absolute; top:130px; left:0px; font-size:14px; color:#101010; padding-top:10px; text-align:center; line-height:28px; text-shadow:0 1px 0 #ffffff;}
+.nh_knad_text{width:100%; height:30px; position:absolute; top:140px; left:0px; font-size:14px; color:#101010; padding-top:10px; text-align:center; line-height:28px; text-shadow:0 1px 0 #ffffff;}
+.nh_ea, .nh_gd, .nh_kp, .nh_pt{/*width:279px;*/ width:210px; height:100%; position:relative; float:left; cursor:pointer; z-index:2;}
+/*.nh_ea {display: none;}*/
+.nh_app, .nh_bet,.nh_sl, .nh_ptcp, .nh_spcp, .nh_alcp{width:430px; height:100%; position:relative; float:left; cursor:pointer; z-index:2;}
+.nh_app{width:390px;}
+.nh_ptcp{width:331px;}
+/*.nh_spcp{width:332px;}*/
+.nh_spcp{width:500px;}
+.nh_alcp{width:500px;}
+.nh_gm, .nh_2d, .nh_cl{width:380px; height:100%; position:relative; float:left; cursor:pointer; z-index:2;}
+.nh_gm{width:420px;}
+.nh_item{width:100%; height:200px; position:absolute; top:0px; left:0px; background:url(../images/uedbet_img.png) no-repeat -210px -680px; display:none;}
+.nh_game .nh_item{z-index:2;}
+.nh_ptcp .nh_item{z-index:2;}
+.nh_alcp .nh_item{z-index: 2;}
+.nh_pt_countdown{display:;width:180px; height: 20px; position: absolute; left: 136px; top:50px; background:url(../images/uedbet_img.png) no-repeat 0px -3240px; z-index: 2;}
+.nh_pt_countdown div{width:30px; height: 20px; line-height: 20px; *line-height: 22px; font-size: 18px; color:#0088ff; text-align: center; position:absolute; top: 1px;}
+.nh_pt_countdown .day{left: -29px;}
+.nh_pt_countdown .hour{left: 11px;}
+.nh_pt_countdown .min{left: 54px;}
+.nh_pt_countdown .secound{left: 92px;}
+.nh_pt_couponremains{display:none;width:130px; height: 20px; position: absolute; right: 44px; top:70px; background:url(../images/uedbet_img.png) no-repeat 0px -3270px; z-index: 2;}
+.nh_pt_couponremains em {display:block;width:90px;margin-left:25px;line-height:18px;color:#0088ff;font-size: 40px;text-align: center;}
+.nh_pt_couponnone{display:none;width:150px; height: 50px; line-height:50px; position: absolute; left: 140px; top:70px; z-index: 2; color:#999; font-size:16px; text-align:center;}
+.nh_alcp_countdown{display:;width:280px; height: 22px; position: absolute; left: 39px; top:70px; background:url(../images/uedbet_img.png) no-repeat 0px -2675px; z-index: 2;}
+.nh_alcp_countdown div{width:30px; height: 22px; line-height: 22px; *line-height: 24px; font-size: 18px; color:#0088ff; text-align: center; position:absolute; top: 1px;}
+.nh_alcp_countdown .day{left: 0px;}
+.nh_alcp_countdown .hour{left: 52px;}
+.nh_alcp_countdown .min{left: 105px;}
+.nh_alcp_countdown .secound{left: 157px;}
+.nh_alcp_couponremains{display:none;width:160px; height: 22px; position: absolute; right: 190px; top:70px; background:url(../images/uedbet_img.png) no-repeat 0px -2625px; z-index: 2;}
+.nh_alcp_couponremains em {display:block;width:90px;margin-left:45px;line-height:18px;color:#0088ff;font-size: 40px;text-align: center;}
+.nh_alcp_couponnone{display:none;width:150px; height: 22px; line-height:27px; position: absolute; left: 160px; top:70px; z-index: 2; color:#999; font-size:16px; text-align:center;}
+.nh_sport_countdown{display:;width:280px; height: 22px; position: absolute; left: 210px; top:70px; background:url(../images/uedbet_img.png) no-repeat 0px -2675px; z-index: 2;}
+.nh_sport_countdown div{width:30px; height: 22px; line-height: 22px; *line-height: 24px; font-size: 18px; color:#0088ff; text-align: center; position:absolute; top: 1px;}
+.nh_sport_countdown .day{left: 0px;}
+.nh_sport_countdown .hour{left: 52px;}
+.nh_sport_countdown .min{left: 105px;}
+.nh_sport_countdown .secound{left: 157px;}
+.nh_sport_couponremains{display:none;width:160px; height: 22px; position: absolute; right: 44px; top:70px; background:url(../images/uedbet_img.png) no-repeat 0px -2625px; z-index: 2;}
+.nh_sport_couponremains em {display:block;width:90px;margin-left:45px;line-height:18px;color:#0088ff;font-size: 40px;text-align: center;}
+.nh_sport_couponnone{display:none;width:150px; height: 22px; line-height:27px; position: absolute; left: 255px; top:70px; z-index: 2; color:#999; font-size:16px; text-align:center;}
+.nh_agfixed{width:450px; height: 210px; position: fixed; left: 50%; top:50%; margin-left:-225px; margin-top: -105px; z-index: 100; background: #ffffff; display: none; box-shadow: 0 1px 10px 1px rgba(0,0,0,0.5); -moz-box-shadow: 0 1px 10px 1px rgba(0,0,0,0.5); -webkit-box-shadow: 0 1px 10px 1px rgba(0,0,0,0.5); -o-box-shadow: 0 1px 10px 1px rgba(0,0,0,0.5); -ms-box-shadow: 0 1px 10px 1px rgba(0,0,0,0.5);}
+.nh_ag_title{width:100%; height: 55px; line-height: 55px; *line-height: 57px; text-align: center; color:#0088ff; font-size: 20px; position: relative;}
+.nh_ag_close{width:14px; height: 14px; position: absolute; top: 18px; right: 17px; cursor: pointer; background:url(../images/close.png) no-repeat; transition: transform 0.4s ease 0s; -moz-transition: -moz-transform 0.4s ease 0s; -webkit-transition: -webkit-transform 0.4s ease 0s; -o-transition: -o-transform 0.4s ease 0s; -ms-transition: -ms-transform 0.4s ease 0s;}
+.nh_ag_close:hover{background-position: 0 -14px; transform: rotate(180deg); -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg); -ms-transform: rotate(180deg);}
+.nh_ag_area{width:410px; height: 120px; margin: 0 auto; background:#f0f0f0;}
+.nh_ag_item{width:136px; height:100%; border-right: 1px solid #cccccc; float: left;}
+.nh_agbn{border: none;}
+.nh_ag_item:hover{background: #0088ff; cursor:pointer;}
+.nh_agi_name{width:100%; height: 35px; line-height: 35px; *line-height: 37px; color:#333333; font-size: 16px; text-align: center;}
+.nh_agi_txt{width:100%; height: 18px; line-height: 18px; *line-height: 20px; color:#b1b1b1; font-size: 12px; text-align: center;}
+.nh_agi_num{width:100%; height: 18px; line-height: 18px; *line-height: 20px; color:#999999; font-size: 12px; text-align: center; margin-bottom: 5px;}
+.nh_agi_num span{color:#0088ff;  margin-right: 10px;}
+.nh_ag_item:hover .nh_agi_name, .nh_ag_item:hover .nh_agi_txt, .nh_ag_item:hover .nh_agi_num, .nh_ag_item:hover .nh_agi_num span{color: #ffffff;}
+
+.nh_line{width:1px; height:200px; position:absolute; top:0px; right:0px; background:url(../images/uedbet_img.png) no-repeat -210px -1110px; display:none;}
+.nh_ea:hover .nh_item, .nh_gd:hover .nh_item, .nh_kp:hover .nh_item, .nh_pt:hover .nh_item, .nh_app:hover .nh_item, .nh_gm:hover .nh_item, .nh_bet:hover .nh_item, .nh_2d:hover .nh_item, .nh_sl:hover .nh_item, .nh_cl:hover .nh_item, .nh_knad:hover .nh_item, .nh_ptcp:hover .nh_item, .nh_alcp:hover .nh_item, .nh_spcp:hover .nh_item{ display:block;}
+.nh_ea:hover .nh_line, .nh_gd:hover .nh_line, .nh_kp:hover .nh_line, .nh_pt:hover .nh_line, .nh_app:hover .nh_line, .nh_gm:hover .nh_line, .nh_bet:hover .nh_line, .nh_2d:hover .nh_line, .nh_sl:hover .nh_line, .nh_cl:hover .nh_line, .nh_knad:hover .nh_line, .nh_ptcp:hover .nh_line, .nh_alcp:hover .nh_line, .nh_spcp:hover .nh_line{ display:block;}
+.nh_ea_dice{width:100px; height:90px; position:absolute; top:8px; left:55px; background:url(../images/uedbet_img.png) no-repeat -300px -250px;}
+.nh_ea_title{width:90px; height:20px; position:absolute;  left:61px; top:98px; background:url(../images/uedbet_img.png) no-repeat -160px -1050px;}
+.nh_ea:hover .nh_ea_title{ background-position: -280px -1050px;}
+.nh_ea_info{width:100%; height:12px; position:absolute; top:145px; left:0px; color:#969696; font-size:12px; line-height:12px;  *line-height:14px;text-align:center;}
+.nh_ea_start, .nh_gd_start, .nh_kp_start, .nh_pt_start, .nh_app_start, .nh_gm_start, .nh_knad_start{width:100%; height:14px; position:absolute; top:173px; left:0px; color:#101010; font-size:14px; line-height:14px; *line-height:18px; text-align:center;}
+.nh_ea_start a, .nh_gd_start a, .nh_kp_start a, .nh_pt_start a, .nh_app_start a, .nh_gm_start a, .nh_knad_start a{color:#101010;}
+.hover .nh_ea_start .st, .hover .nh_gd_start .st, .hover .nh_kp_start .st, .hover .nh_pt_start .st, .hover .nh_app_start .st, .hover .nh_gm_start .st,.hover .nh_knad_start .st{color:#0088ff;}
+.nh_ea_start .st{}
+.nh_ea_start .dl , .nh_kp_start .dl, .nh_pt_start .dl{ margin-left:10px; font-size:12px; color:#969696; text-decoration:underline;}
+.nh_ea_start .dl{margin-left:5px;}
+.nh_ea_start .dl:hover, .nh_pt_start .dl:hover{color:#0088ff;}
+.nh_ea_rcm, .nh_pt_rcm{width:22px; height:22px; position:absolute; top:174px; left:205px; background:url(../images/uedbet_img.png) no-repeat -90px -760px;}
+.nh_ea_rcm{left:180px;}
+.nh_gd_card{width:100px; height:90px; position:absolute; top:8px; left:50%; margin-left: -50px; background:url(../images/uedbet_img.png) no-repeat -300px -340px;}
+.nh_gd_title{width:95px; height:20px; position:absolute;  left:50%; margin-left: -47px; top:98px; background:url(../images/uedbet_img.png) no-repeat -160px -1020px;}
+.nh_gd:hover .nh_gd_title{ background-position: -280px -1020px;}
+.nh_gd_info{width:100%; height:12px; position:absolute; top:145px; left:0px; color:#969696; font-size:12px; line-height:12px; text-align:center; *line-height:14px;}
+.nh_kp_chips{width:100px; height:90px; position:absolute; top:8px; left:50%; margin-left: -50px; background:url(../images/uedbet_img.png) no-repeat -300px -430px;}
+.nh_kp_title{width:102px; height:20px; position:absolute;  left:50%; margin-left: -51px; top:98px; background:url(../images/uedbet_img.png) no-repeat -160px -990px;}
+.nh_kp:hover .nh_kp_title{ background-position: -280px -990px;}
+.nh_kp_info{width:100%; height:12px; position:absolute; top:145px; left:0px; color:#969696; font-size:12px; line-height:12px; text-align:center; *line-height:14px;}
+
+.nh_pt_bell{width:100px; height:90px; position:absolute; top:8px; left:50%; margin-left: -50px; background:url(../images/uedbet_img.png) no-repeat -300px -520px;}
+.nh_pt_title{width:90px; height:20px; position:absolute;  left:50%; margin-left: -45px; top:98px; background:url(../images/uedbet_img.png) no-repeat -160px -1080px;}
+.nh_pt:hover .nh_pt_title{ background-position: -280px -1080px;}
+.nh_pt_info{width:100%; height:12px; position:absolute; top:145px; left:0px; color:#969696; font-size:12px; line-height:12px; text-align:center; *line-height:14px;}
+
+.nh_app_phone{width:380px; height:110px; position:absolute; top:20px; left:0px; background:url(../images/uedbet_img.png) no-repeat -20px -1594px;}
+.nh_sport_bet{width:400px; height:115px; position:absolute; top:15px; left:15px; background:url(../images/uedbet_img.png) no-repeat 0px -1715px;}
+.nh_sport_phone{width:400px; height:126px; position:absolute; top:4px; left:0px; background:url(../images/uedbet_img.png) no-repeat -30px -2710px;}
+.nh_app_info, .nh_gm_info, .nh_knad_info{width:100%; height:12px; position:absolute; top:145px; left:0px; color:#969696; font-size:12px; line-height:12px;  *line-height:14px;text-align:center;}
+
+.nh_app_android{width:400px; height:130px; position:absolute; top:0px; left:5px; background:url(../images/uedbet_img.png) no-repeat 0px -2220px;}
+
+.nh_game_bet{width:400px; height:130px; position:absolute; top:0px; left:0px; background:url(../images/uedbet_img.png) no-repeat 0px -2070px;}
+.nh_coupon_ptcp{width:329px; height:130px; position:absolute; top:0px; left:0px; background:url(../images/uedbet_img.png) no-repeat -0px -2850px; z-index: 1;}
+.nh_coupon_sport_bg{/*width:328px;*/ width:400px; height:130px; position:absolute; top:0px; left:1px; background:url(../images/uedbet_img.png) no-repeat 0px -2350px; z-index: 1;}
+.nh_alcp_bg{/*width:329px;*/ width:400px; height:130px; position:absolute; top:0px; right:0px; background:url(../images/uedbet_img.png) no-repeat 0px -2480px; z-index: 1;}
+.nh_game_client{width:160px; height:118px; position:absolute; top:12px; left:120px; background:url(../images/uedbet_img.png) no-repeat -120px -1930px;}
+
+.nh_gm_ued{width:280px; height:52px; position:absolute; top:15px; left:55px; background:url(../images/uedbet_img.png) no-repeat 0px -1710px;}
+.nh_gm_num{width:50px; height:70px; position:absolute; top:63px; left:96px; background:url(../images/uedbet_img.png) no-repeat -207px -542px;}
+.nh_gm_unit{width:22px; height:18px; position:absolute; top:105px; left:135px; color:#969696; font-size:18px; line-height:18px;}
+.nh_gm_text{width:100px; height:60px; position:absolute; top:65px; left:175px; font-size:14px; color:#101010; padding-top:10px; text-align:left; line-height:26px; text-shadow:0 1px 0 #ffffff;}
+
+
+
+
+.nh_cnt_sd{width:1000px; height:10px; position:absolute; top:130px; left:-5px;}
+.nh_cnt_sd .p1{width:400px; height:100%; float:left; background:url(../images/uedbet_img.png) no-repeat 0px -1565px;}
+.nh_cnt_sd .p2{width:400px; height:100%; float:left; background:url(../images/uedbet_img.png) no-repeat 0px -1575px;}
+.nh_cnt_sd .p3{width:200px; height:100%; float:left; /*background:url(../images/uedbet_img.png) no-repeat 0px -1585px;*/}
+/* new header CSS END*/
+
+
+.payment-lock { min-height: 417px; border-bottom: 1px solid #d3d3d3; }
+.payment-lock .paylock-hd { margin: 60px 0; text-align: center; }
+.payment-lock .paylockhd-txt { margin-left: 10px; font-size: 20px; color: #333; vertical-align: 8px; }
+.payment-lock .paylock-bd { margin-left: 250px; font-size: 14px; }
+.payment-lock .paylock-bd .pl-p1 { color: #333; }
+.payment-lock .paylock-bd .pl-p3 { margin-top: 30px; }
+.payment-lock .paylock-bd .pl-p3 a { color: #08F; }
+
+.remittance-1 .bank-card-info .v{vertical-align:-10px;}
+
+
+/* 存款附言教程 */
+.course_fixed{width: 100%; height: 1080px; position: absolute; top: 0px; left: 0px; z-index: 1500;}
+.course_bg{width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; background: url(../images/shadow_course.png) no-repeat center 610px; z-index: 0;
+    opacity: 0;
+    transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -moz-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -webkit-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -o-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -ms-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+}
+.course_main{width: 700px; height: 600px; position: absolute; top: 50%; left: 50%; margin-top: -300px; margin-left: -350px;z-index: 10;
+    transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -moz-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -webkit-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -o-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -ms-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    transform: translate(0,-2000px);
+    -moz-transform: translate(0,-2000px);
+    -webkit-transform: translate(0,-2000px);
+    -o-transform: translate(0,-2000px);
+    -ms-transform: translate(0,-2000px);
+}
+/*.wc_line{width: 700px; height: 600px; position: fixed; top: 50%; left: 50%; margin-top: -300px; margin-left: -350px; z-index: 0; }*/
+.wcs_line{width: 5px; height: 1000px; position: absolute; left: 50%; bottom: 580px; margin-left: -3px; background: #0088ff; z-index: 0;}
+.win_course{width: 700px; height: 600px; border-radius: 5px; position: absolute; top:50%; left: 50%; margin-top:-300px; z-index: 100; margin-left: -350px;}
+
+.wcs_top{width: 100%; height: 100px;  line-height: 100px; position: relative; overflow: hidden; background: #eaeaea; border-radius: 5px; margin-bottom: 20px;
+    box-shadow: 0 2px 10px 3px rgba(100,100,100,0.4);
+    -moz-box-shadow: 0 2px 10px 3px rgba(100,100,100,0.4);
+    -webkit-box-shadow: 0 2px 10px 3px rgba(100,100,100,0.4);
+    -o-box-shadow: 0 2px 10px 3px rgba(100,100,100,0.4);
+    -ms-box-shadow:0 2px 10px 3px rgba(100,100,100,0.4);}
+.wcs_title{width: 100%; height: 60px; line-height: 60px; margin-top: 40px; text-align: center; font-size: 30px; color: #0088ff;}
+.wcs_hook{width: 41px; height: 32px; position: absolute; top:10px; left: 50%; margin-left: -35px; background: url(../images/hook.png) no-repeat;}
+.wcs_close{width: 30px; height: 30px; position: absolute; top: 35px; right: 35px; background:url(../images/close_course.png) no-repeat center; cursor: pointer;
+    transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;}
+.wcs_close:hover{
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+.wcs_img_list{width: 700px; height: 400px; margin: 0 auto; cursor: pointer;}
+.wcs_ctrl{width: 700px; height: 400px; position: absolute; top: 100px; left: 50%; margin-left: -350px; z-index: 110; cursor: none;}
+.wcs_c_h{width: 350px; height: 100%; float: left; position: relative;}
+.wcs_c_icon{width: 40px; height: 40px; position: absolute; margin-top: -20px; margin-left: -20px;display: none; background:url(../images/arrow_course.png) no-repeat;}
+#left_ctrl .wcs_c_icon{background-position: 0 0;}
+#right_ctrl .wcs_c_icon{background-position: -40px 0;}
+
+.course_icon{width: 74px; height: 22px; margin-left: -37px; position: absolute; left: 50%; top:90px; z-index: 1500; cursor: pointer;
+    transition: all 0.2s ease-in-out 0.1s;
+    -moz-transition: all 0.2s ease-in-out 0.1s;
+    -webkit-transition: all 0.2s ease-in-out 0.1s;
+    -o-transition: all 0.2s ease-in-out 0.1s;
+    -ms-transition: all 0.2s ease-in-out 0.1s;
+    transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+}
+.ci_small{width:30px; height: 17px; margin-left: -15px; top: 0px; position: absolute; left: 50%; ;  opacity: 0.8; filter:alpha(opacity=80);background:url(../images/icon_s_course.png) no-repeat;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+.ci_big{width:30px; height: 17px; margin-left: -15px; top: 0px; position: absolute; left: 50%; z-index: 5; opacity: 0; filter:alpha(opacity=0); background:url(../images/icon_b_course.png) no-repeat;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+.course_icon:hover{width:74px; margin-left: -37px; height: 22px;}
+.course_icon:hover .ci_small{opacity: 0; filter:alpha(opacity=0);}
+.course_icon:hover .ci_big{opacity: 1; filter:alpha(opacity=100); width:74px; margin-left: -37px; height: 22px;}
+.hide_anim_icon{
+    transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    -ms-transition: all 0.2s ease-in 0s;
+
+    transform: translate(0,-100%);
+    -moz-transform: translate(0,-100%);
+    -webkit-transform: translate(0,-100%);
+    -o-transform: translate(0,-100%);
+    -ms-transform: translate(0,-100%);
+}
+
+
+
+.show_anim_main{
+    transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -moz-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -webkit-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -o-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -ms-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+}
+
+.show_anim_shadow{opacity: 1;
+    transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -moz-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -webkit-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -o-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    -ms-transition: all 1s cubic-bezier(.61,1.59,.61,.85) 0s;
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+}
+
+
+
+.hide_anim_main{
+    transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -moz-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -webkit-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -o-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -ms-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    transform: translate(0,-2000px);
+    -moz-transform: translate(0,-2000px);
+    -webkit-transform: translate(0,-2000px);
+    -o-transform: translate(0,-2000px);
+    -ms-transform: translate(0,-2000px);
+}
+
+.hide_anim_shadow{opacity: 0;
+    transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -moz-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -webkit-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -o-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    -ms-transition: all 0.5s cubic-bezier(.42,-0.25,.96,.53) 0s;
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+}
+/* 存款附言教程 */
+
+/*头部语言切换 start*/
+.flag{display: block;}
+.flag .lzhcn,.flag .lzhtw,.flag .lengb,.flag .lvivn{display: inline-block; width: 21px;height: 15px;background: url(/static/images/flags.png);}
+.flag .lzhcn {background-position: 0 0;}
+.flag .lzhtw {background-position: -30px 0;}
+.flag .lengb {background-position: -60px 0;}
+.flag .lvivn {background-position: -90px 0;}
+
+.header-lang{position: relative;margin-top: 9px;cursor: pointer;}
+
+.hd-login .separate{margin:9px 10px 0 10px;width: 3px;height: 16px;background: url(/static/images/line.png) no-repeat;}
+
+.lang-switch {display:none;position: absolute; padding:7px 0; left: -93px; top: 26px; z-index: 102; background: #fff;width: 124px;border:1px solid #aeacac;border-radius: 6px;}
+.lang-switch li {line-height: 25px;}
+.lang-switch li:hover{background: #eeeeee;}
+.lang-switch li a {display: block;width: 100%;height: 100%;color:#6f7c82; font-size: 13px;}
+.lang-switch .flag {margin-left: 12px; margin-right:5px;display: inline-block;vertical-align:-4px;}
+.lang-switch .triangle {position:absolute;top:-10px; right: 12px; width: 20px;height: 10px;background: url(/static/images/lang-triangle.png)}
+/*头部语言切换 end*/
+
+
+.fleft{
+    float: left;
+}
+.mode-item{
+    display: none;
+}
+.mode-item.active{
+    display: block;
+}

@@ -1,12 +1,11 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>全民坐庄</title>
+    <title>&#20840;&#27665;&#22352;&#24196;</title>
     <script>var translate_page='index';</script>
     #parse('/common/top.vm')
     #set($header='home')
     <link rel="stylesheet" href="/static/css/index.css"/>
-    <link rel="stylesheet" href="/static/plugin/jquery.ui/jquery-ui.css"/>
 </head>
 <body>
     #parse('/common/old.vm')

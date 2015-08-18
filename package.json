@@ -30,6 +30,7 @@
     "express-session": "^1.11.3",
     "express-velocity": "^1.0.0",
     "morgan": "~1.5.3",
-    "serve-favicon": "~2.2.1"
+    "serve-favicon": "~2.2.1",
+    "underscore": "^1.8.3"
   }
 }

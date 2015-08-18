@@ -556,8 +556,6 @@ span.customSelect {
   float: left;
   margin-top: 18px;
   padding-bottom: 10px;
-  opacity: .5;
-  transition: 1s all;
 }
 .logo a {
   display: block;
@@ -741,7 +739,7 @@ span.customSelect {
 }
 .slot-con {
   padding: 4px 8px;
-  background: #fff;
+  background: #f5f5f5;
 }
 .slot-top {
   border-bottom: 8px solid #009b72;
@@ -806,8 +804,8 @@ span.customSelect {
 .slot-page {
   text-align: center;
   padding-left: 20px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 .slot-page span {
   display: inline-block;
@@ -825,7 +823,7 @@ span.customSelect {
   margin-left: 4px;
 }
 .slot-list {
-  width: 590px;
+  width: 598px;
   overflow: hidden;
   float: left;
 }
@@ -833,26 +831,31 @@ span.customSelect {
   width: 700px;
 }
 .slot-item {
-  width: 182px;
+  width: 190px;
   float: left;
-  margin-right: 22px;
+  margin-right: 14px;
+  margin-bottom: 15px;
   position: relative;
+  background: #ffffff url("../images/slot_b.jpg") no-repeat bottom;
 }
 .slot-item-name {
   text-align: center;
   font-size: 14px;
   color: #666666;
-  margin-top: 5px;
-  margin-bottom: 13px;
+  height: 46px;
+  line-height: 46px;
 }
 .slot-item-main img {
   width: 182px;
   height: 136px;
+  display: block;
+  margin: 0 auto;
 }
 .slot-item-btn {
   position: absolute;
   height: 136px;
-  width: 100%;
+  width: 182px;
+  margin-left: 4px;
   background: #000;
   background: rgba(0, 0, 0, 0.7);
   top: 0;
@@ -882,8 +885,8 @@ span.customSelect {
   margin-left: 23px;
 }
 .slot-right {
-  margin-left: 14px;
-  width: 356px;
+  margin-left: 8px;
+  width: 354px;
   float: left;
 }
 .slot-pot {
@@ -903,8 +906,17 @@ span.customSelect {
 .slot-pot-money {
   margin-top: 25px;
   text-align: center;
-  font-size: 30px;
-  font-family: Arial Black;
+  font-size: 36px;
+  font-family: simsun;
+  border-right: 6px solid #009b72;
+  margin-right: 1px;
+}
+.slot-pot-money em {
+  font-size: 20px;
+  font-style: normal;
+}
+.slot-pot-money span {
+  color: #ff3333;
 }
 .slot-top-title {
   background: url("../images/slot/pock2.png");
@@ -941,7 +953,7 @@ span.customSelect {
 }
 .slot-top-item-detail {
   float: left;
-  width: 201px;
+  width: 199px;
   margin-left: 14px;
 }
 .slot-top-item-name {
@@ -960,8 +972,18 @@ span.customSelect {
 }
 .slot-top-item-begin {
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 9px;
+  margin-right: 10px;
   text-align: center;
+  background: #fff;
+  height: 35px;
+  line-height: 35px;
+}
+.slot-top-item-begin .begin {
+  color: #ae0000;
+}
+.slot-top-item-begin .try {
+  color: #178ebc;
 }
 .slot-top-item-begin a {
   color: #666666;

@@ -2,8 +2,9 @@
 <html class="no-js" lang="en">
 <head>
     <title>全民坐庄</title>
-    <script>var translate_page='index';</script>
+    <script>var translate_page='account';</script>
     #parse('/common/top.vm')
+    #set($header='cashier')
     <link rel="stylesheet" href="/static/css/account.css"/>
 </head>
 <body>

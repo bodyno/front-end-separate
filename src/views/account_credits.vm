@@ -2,10 +2,10 @@
 <html class="no-js" lang="en">
 <head>
     <title>全民坐庄</title>
-    <script>var translate_page='index';</script>
+    <script>var translate_page='account';</script>
     #parse('/common/top.vm')
+    #set($header='credits')
     <link rel="stylesheet" href="/static/css/account.css"/>
-    <link rel="stylesheet" href="/static/plugin/jquery.ui/jquery-ui.css"/>
 </head>
 <body>
     #parse('/common/old.vm')

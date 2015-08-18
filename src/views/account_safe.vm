@@ -2,8 +2,9 @@
 <html class="no-js" lang="en">
 <head>
     <title>全民坐庄</title>
-    <script>var translate_page='index';</script>
+    <script>var translate_page='account';</script>
     #parse('/common/top.vm')
+    #set($header='profile')
     <link rel="stylesheet" href="/static/css/account.css"/>
 </head>
 <body>
@@ -22,21 +23,21 @@
                     <h2>更改密码</h2>
                     <div class="account-main-title-text">所有资料都必须填写</div>
                 </div>
-                <div class="account-form account-safe">
+                <form class="account-form account-safe" id="safe-form">
                     <div class="account-group clearfix">
                         <label class="account-group-label"><span>*</span>当前密码：</label>
-                        <input type="password" class="account-input">
+                        <input type="password" name="oldPassword" id="oldPassword" class="account-input">
                     </div>
                     <div class="account-group clearfix">
                         <label class="account-group-label"><span>*</span>新密码：</label>
-                        <input type="password" class="account-input">
+                        <input type="password" name="newPassword" id="newPassword" class="account-input">
                     </div>
                     <div class="account-group clearfix">
                         <label class="account-group-label"><span>*</span>确认密码：</label>
-                        <input type="password" class="account-input">
+                        <input type="password" name="newPassword2" id="newPassword2" class="account-input">
                     </div>
-                    <div class="account-btn">提交</div>
-                </div>
+                    <div class="account-btn" id="btn-passw">提交</div>
+                </form>
                 <div class="account-service">
                     如有任何问题，请联系我们的<a href="#">在线客服</a>
                 </div>
@@ -44,6 +45,6 @@
         </div>
     </div>
     #parse('/common/page_footer.vm')
-
+    <script src="/static/js/safe.js"></script>
 </body>
 </html>

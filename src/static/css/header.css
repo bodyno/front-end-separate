@@ -84,8 +84,6 @@ The `.sprites` mixin generates identical output to the CSS template
   float: left;
   margin-top: 18px;
   padding-bottom: 10px;
-  opacity: .5;
-  transition: 1s all;
 }
 .logo a {
   display: block;

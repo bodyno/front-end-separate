@@ -11,7 +11,7 @@
 <div class="header-top">
         <div class="container clearfix">
             <div class="header-top-left clearfix">
-                <a href="#" class="header-btn header-btn1" data-i18n="base:header.go">全民做庄</a>
+                <a href="/pintai" class="header-btn header-btn1" data-i18n="base:header.go">全民做庄</a>
                 <a href="#" class="header-btn header-btn2" data-i18n="base:header.down">客户端下载</a>
             </div>
             <div class="header-top-right">

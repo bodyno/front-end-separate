@@ -20,7 +20,7 @@
                 <div class="login-inner-con">
                     <div class="form-login">
                         <i class="form-icon-user"></i>
-                        <input type="text" name="operator" placeholder="用户名：">
+                        <input type="text" name="custCode" placeholder="用户名：">
                     </div>
                     <div class="form-login">
                         <i class="form-icon-pass"></i>
@@ -53,8 +53,6 @@
     </div>
 
     #parse('/common/script.vm')
-    <script src="/static/plugin/jquery.validation/jquery.validate.js"></script>
-    <script src="/static/plugin/xss/xss.js"></script>
     <script src="/static/js/login.js"></script>
 
 </body>

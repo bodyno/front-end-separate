@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="page-header-right clearfix">
-            <div class="page-header-name">欢迎, m88test888</div>
+            <div class="page-header-name">欢迎, $username</div>
             <div class="page-header-service"><i></i>7*24客户服务</div>
             <span class="page-header-spa"></span>
             <a href="/signout" class="page-header-logout">退出</a>

@@ -556,8 +556,6 @@ span.customSelect {
   float: left;
   margin-top: 18px;
   padding-bottom: 10px;
-  opacity: .5;
-  transition: 1s all;
 }
 .logo a {
   display: block;
@@ -789,8 +787,8 @@ span.customSelect {
   background: url("../images/error_arrow.png") no-repeat;
   height: 32px;
   line-height: 32px;
-  width: 137px;
-  padding-left: 22px;
+  width: 141px;
+  padding-left: 18px;
 }
 .form-login .error.success,
 .reg-group .error.success {
@@ -1212,6 +1210,19 @@ span.customSelect {
   width: 230px;
   float: left;
 }
+.reg-radio {
+  margin-top: 7px;
+  margin-bottom: 6px;
+  float: left;
+  font-size: 14px;
+  color: #999999;
+  margin-right: 20px;
+}
+.reg-radio input {
+  position: relative;
+  top: 2px;
+  margin-right: 4px;
+}
 .reg-select {
   float: left;
   border: 1px solid #ccc;
@@ -1244,6 +1255,13 @@ span.customSelect {
 }
 .reg-ok:hover {
   background: #00b485;
+}
+.reg-ok.disabled {
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+.reg-ok.disabled:hover {
+  background: #009b72;
 }
 .reg-text {
   color: #cccccc;

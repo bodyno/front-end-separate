@@ -14,8 +14,8 @@ module.exports = function (app) {
         });
     });
 
-    app.get('/checkOperate', function (req, res) {
-        if (req.param("operator") != "1234") {
+    app.get('/checkCustCode', function (req, res) {
+        if (req.param("custCode") != "1234") {
             res.end("true")
         } else {
             res.end("false")
@@ -27,20 +27,21 @@ module.exports = function (app) {
         res.render('register', {
             header: 'login',
             form: [
-                {name: "country", require: true, valid: true},
-                {name: "introduce", require: true, valid: true},
-                {name: "surname", require: true, valid: true},
-                {name: "name", require: true, valid: true},
-                {name: "realname", require: true, valid: true},
-                {name: "enname", require: true, valid: true},
-                {name: "birthday", require: true, valid: true},
-                {name: "card", require: true, valid: true},
-                {name: "cardno", require: true, valid: true},
-                {name: "phone", require: true, valid: true},
-                {name: "moneypassword", require: true, valid: true},
-                {name: "qq", require: true, valid: true},
-                {name: "email", require: true, valid: true},
-                {name: "validateCode", require: true, valid: true}
+                {formCode: "country",isShow:true, isRequire: false, validator: true},
+                {formCode: "affiliateId",isShow:false, isRequire: false, validator: true},
+                {formCode: "firstName",isShow:true, isRequire: true, validator: true},
+                {formCode: "lastName",isShow:true, isRequire: true, validator: true},
+                {formCode: "nickName",isShow:true, isRequire: true, validator: true},
+                {formCode: "enName",isShow:true, isRequire: true, validator: true},
+                {formCode: "birthDate",isShow:true, isRequire: true, validator: true},
+                {formCode: "certificateType",isShow:true, isRequire: true, validator: true},
+                {formCode: "certificate",isShow:true, isRequire: true, validator: true},
+                {formCode: "custGender",isShow:true, isRequire: true, validator: true},
+                {formCode: "mobileNumber",isShow:true, isRequire: true, validator: true},
+                {formCode: "drawPwd",isShow:true, isRequire: true, validator: true},
+                {formCode: "qq",isShow:true, isRequire: true, validator: true},
+                {formCode: "emailAddress",isShow:true, isRequire: true, validator: true},
+                {formCode: "validateCode",isShow:true, isRequire: true, validator: true}
             ],
             country: [{"key": "Australia", "value": "AU"}, {"key": "Brunei", "value": "BN"}, {
                 "key": "Cambodia",
@@ -60,7 +61,25 @@ module.exports = function (app) {
             }, {"key": "Russia", "value": "RU"}, {"key": "Singapore", "value": "SG"}, {
                 "key": "Thailand",
                 "value": "TH"
-            }, {"key": "United States", "value": "US"}, {"key": "Vietnam", "value": "VN"}]
+            }, {"key": "United States", "value": "US"}, {"key": "Vietnam", "value": "VN"}],
+            certificateType: [
+                {
+                    "key": "ID number",
+                    "value": "2BB"
+                },
+                {
+                    "key": "Driver license",
+                    "value": "2BC"
+                },
+                {
+                    "key": "Military officer",
+                    "value": "2BE"
+                },
+                {
+                    "key": "Passport",
+                    "value": "2BF"
+                }
+            ]
         });
     });
 
