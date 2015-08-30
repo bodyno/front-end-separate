@@ -1,0 +1,281 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>个人中心</title>
+    <script>var translate_page='member';</script>
+    #parse('/common/top.vm')
+    #set($header='withdraw')
+    <link rel="stylesheet" href="/static/css/account.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+    <div class="account-con">
+        <div class="account-main" id="funds">
+            #parse('/payment/payment_top.vm')
+            <div id="withdraw">
+                <div class="progress">
+                    <div class="step-1">
+                        <span class="txt-1">提交</span>
+                        <span class="txt-2">审核</span>
+                        <span class="txt-3">出款</span>
+                        <span class="txt-4">到帐</span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <div class="w-c">
+                    <div class="w-row clearfix">
+                        <div class="w-l">
+                            主账户余额：<span>$curAccount</span> RMB
+                        </div>
+                        <div class="w-r">
+                            #if($isBindBank)
+                            您已绑定银行卡，如需添加<a href="/payment/withdraw?more=true">请继续绑定</a>
+                            #else
+                            您尚未绑定银行卡，<a href="/payment/withdraw">请先绑定银行卡</a>
+                            #end
+                        </div>
+                    </div>
+
+                    #if($curAccount<100)
+                    <div class="w-m">
+                        <h2 class="logo-th-2"></h2>
+                        您的中心钱包余额尚未达到提款标准，<br>
+                        提款金额最少为100.00元。
+                    </div>
+                    <a href="/payment/deposit" class="btn-blue m-b">
+                        快速存款
+                    </a>
+                    #end
+                    #if($curAccount>=100&&$isSetPwd==false)
+                    <div>
+                        <div class="pass-cen">
+                            <span>温馨提示</span>：您还未设置提款密码，不能进行提款操作，请设置！
+                        </div>
+                        <div class="pass-set clearfix">
+                            <span>提款密码：</span>
+                            <div class="select-box">
+                                <select>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="select-box">
+                                <select>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="select-box">
+                                <select>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="select-box">
+                                <select>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-blue m-b" id="pass-set">
+                            确定设置
+                        </div>
+                    </div>
+                    #end
+                    <div class="card-con" #if($isBindBank)style="display: none;"#end>
+                        <div class="card-title">已绑定银行</div>
+                        <div>
+                            <table class="card-table">
+                                <tr>
+                                    <td>选择</td>
+                                    <td>开户银行</td>
+                                    <td>真实姓名</td>
+                                    <td>银行卡号</td>
+                                    <td>银行网点</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="card-no">您尚未添加绑定银行</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-title">添加绑定银行</div>
+                        <div>
+                            <form id="card-form" class="card-form">
+                                <div class="field">
+                                    <div class="field-left">
+                                        <span class="label">开户银行：</span>
+                                    </div>
+                                    <div class="field-right">
+                                        <div class="input-box-3">
+                                            <div class="select-box">
+                                                <select name="bankNo" id="bankNo">
+                                                    <option value="">选择您的开户银行</option>
+                                                    <option value="1">农业银行</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="field-left">
+                                        <span class="label">真实姓名：</span>
+                                    </div>
+                                    <div class="field-right">
+                                        <span class="card-name">徐先生</span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="field-left">
+                                        <span class="label">银行卡号：</span>
+                                    </div>
+                                    <div class="field-right">
+                                        <div class="input-box-3">
+                                            <input name="custBankacctNo" id="custBankacctNo" type="text" class="big-text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="field-left">
+                                        <span class="label">银行网点：</span>
+                                    </div>
+                                    <div class="field-right">
+                                        <div class="input-box-3">
+                                            <div class="select-box select-box-province">
+                                                <select name="bankProvince" id="bankProvince">
+                                                    <option value="">省份</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-box select-box-city">
+                                                <select name="bankCity" id="bankCity">
+                                                    <option value="">城市</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="field-left">
+                                        <span class="label">详细地址：</span>
+                                    </div>
+                                    <div class="field-right label-top">
+                                        <div class="input-box-3">
+                                            <textarea rows="5" name="bankAddr" id="bankAddr" class="textarea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field"><button id="bind-card" class="btn-blue"><span>确定添加</span></button></div>
+                            </form>
+                        </div>
+                    </div>
+                    #if($isBindBank)
+                    <div class="withdraw-con" style="display: none;">
+                        <div class="wd-title">
+                            收款银行：（已绑定银行）
+                        </div>
+                        <div>
+                            <table class="card-table">
+                                <tr>
+                                    <td width="70">选择</td>
+                                    <td>开户银行</td>
+                                    <td>真实姓名</td>
+                                    <td>银行卡号</td>
+                                    <td>银行网点</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" checked></td>
+                                    <td>中国工商银行</td>
+                                    <td>abd</td>
+                                    <td>12311231233547</td>
+                                    <td>吉林省  长春</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        备注：
+                                    </td>
+                                    <td colspan="4" class="textarea-con">
+                                        <textarea class="textarea"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <form id="withdraw-form" class="withdraw-form">
+                                <div class="field">
+                                    <div class="field-left">
+                                        <span class="label">提款金额：</span>
+                                    </div>
+                                    <div class="field-right">
+                                        <div class="input-box-3">
+                                            <input type="text" name="ammount" id="ammount">
+                                        </div>
+                                        <span class="limit">单笔最小提款额：100.0/最大提款额：200000.0RMB</span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="field-left">
+                                        <span class="label">提款密码：</span>
+                                    </div>
+                                    <div class="field-right">
+                                        <div class="input-box-3">
+                                            <input type="password" name="payPassword" id="payPassword">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="field-left">
+                                        <span class="label">认 证 码：</span>
+                                    </div>
+                                    <div class="field-right">
+                                        <div class="input-box-3">
+                                            <input type="text" class="small" id="validCode" name="validCode">
+                                        </div>
+                                        <img src="/static/images/temp_code2.jpg" width="80" height="30" class="code">
+                                    </div>
+                                </div>
+                                <div class="field"><button id="withdraw-btn" class="btn-blue"><span>确定出款</span></button></div>
+                            </form>
+                        </div>
+                    </div>
+                    #end
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse('/common/page_footer.vm')
+    <script src="/static/js/withdraw.js"></script>
+</body>
+</html>

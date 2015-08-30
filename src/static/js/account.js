@@ -13,4 +13,16 @@ $(function(){
         var href=$(".page-menu-list .active").prev().find("a").attr("href");
         if(href) location.href=href;
     })
+
+    var lngTime;
+    $(".page-header-language").mouseenter(function(){
+        $(this).find(".page-l-now").addClass("active")
+        clearTimeout(lngTime);
+    }).mouseleave(function(){
+        var _this=$(this)
+        lngTime=setTimeout(function(){
+            _this.find(".page-l-now").removeClass("active")
+        },200)
+    })
+
 })

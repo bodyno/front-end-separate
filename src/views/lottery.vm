@@ -27,7 +27,7 @@
     <div class="lottery-con">
         <div class="container">
             <div class="lottery-one-con clearfix">
-                <div class="lottery-one lottery-one-left">
+                <div class="lottery-one">
                     <img src="/static/images/lottery_img2.jpg">
                     <div class="lottery-text">
                         <div class="lottery-text-title">快乐彩</div>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="lottery-btn">立即游戏</div>
                 </div>
-                <div class="lottery-one">
+                <div class="lottery-one lottery-two">
                     <img src="/static/images/lottery_img1.jpg">
                     <div class="lottery-text">
                         <div class="lottery-text-title">快乐彩</div>

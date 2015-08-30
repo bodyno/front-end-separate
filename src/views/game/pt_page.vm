@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>PT精彩游戏</title>
+    <script src="/static/plugin/jquery/jquery.js"></script>
+    <script src="http://cache.download.banner.greatfortune88.com/integrationjs.php"></script>
+    <script src="/static/js/game/pt_login.js"></script>
+    <script>
+        // $.cookie("visits", 10);
+        // $.cookie('the_cookie', 'the_value', { expires: 7, path: '/test'});
+        // $.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com' });
+        // $.cookie("name", "Aurelio", {expires: new Date(2013, 10, 29, 11, 00, 00), secure: true});
+        // $.cookie("favourite-city", "London", {path: "/", domain: "jspro.com"});
+        // document.cookie = "test=" + escape("123456789");
+        //var isTry=null;
+        var isTry=1;
+        if (isTry == 1)
+            window.location.href="http://cache.download.banner.greatfortune88.com/casinoclient.html?mode=offline&language=zh-cn&affiliates=1&game=xmn";
+        else
+            window.location.href="http://cache.download.banner.greatfortune88.com/casinoclient.html?language=zh-cn&game=xmn";
+        // fSetCookie("fldomain","test","",".cache.download.banner.powerplay88.com");
+        function fSetCookie(name, value, isForever, domain){
+            var sDomain = ";domain=" + (domain || gOption["sCookieDomain"] );alert(sDomain);
+            document.cookie = name + "=" + escape(value) + sDomain + (isForever?";expires="+  (new Date(2099,12,31)).toGMTString():"");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -7,6 +7,7 @@ module.exports = function (app) {
     });
 
     app.post('/login', function (req, res) {
+        req.session.username = 'SH_frank008';
         res.json({
             "result": "登录成功！",
             "code": "200",
@@ -42,43 +43,6 @@ module.exports = function (app) {
                 {formCode: "qq",isShow:true, isRequire: true, validator: true},
                 {formCode: "emailAddress",isShow:true, isRequire: true, validator: true},
                 {formCode: "validateCode",isShow:true, isRequire: true, validator: true}
-            ],
-            country: [{"key": "Australia", "value": "AU"}, {"key": "Brunei", "value": "BN"}, {
-                "key": "Cambodia",
-                "value": "KH"
-            }, {"key": "Canada", "value": "CA"}, {"key": "China", "value": "CN"}, {
-                "key": "EU",
-                "value": "EU"
-            }, {"key": "India", "value": "IN"}, {"key": "Indonesia", "value": "ID"}, {
-                "key": "Japan",
-                "value": "JP"
-            }, {"key": "Korea", "value": "KR"}, {"key": "Laos", "value": "LA"}, {
-                "key": "Malaysia",
-                "value": "MY"
-            }, {"key": "Myanmar", "value": "MM"}, {"key": "New Zealand", "value": "NZ"}, {
-                "key": "Philippines",
-                "value": "PH"
-            }, {"key": "Russia", "value": "RU"}, {"key": "Singapore", "value": "SG"}, {
-                "key": "Thailand",
-                "value": "TH"
-            }, {"key": "United States", "value": "US"}, {"key": "Vietnam", "value": "VN"}],
-            certificateType: [
-                {
-                    "key": "ID number",
-                    "value": "2BB"
-                },
-                {
-                    "key": "Driver license",
-                    "value": "2BC"
-                },
-                {
-                    "key": "Military officer",
-                    "value": "2BE"
-                },
-                {
-                    "key": "Passport",
-                    "value": "2BF"
-                }
             ]
         });
     });

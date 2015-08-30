@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>个人中心</title>
+    <script>var translate_page='member';</script>
+    #parse('/common/top.vm')
+    #set($header='address')
+    <link rel="stylesheet" href="/static/css/member.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+    <div class="account-con">
+        <div class="account-main">
+            #parse('/member/member_top.vm')
+            <div class="account-body clearfix">
+                #parse('/member/member_menu.vm')
+                <div class="account-content">
+                    <div class="a-t-b">
+                        <span class="a-t-t">收货地址</span>
+                        <label>填写真实资料，逢年过节时，我们可能给忠实会员派送小礼物哦！</label>
+                    </div>
+                    <form name="realinfo-form" id="realinfo-form">
+                        <div class="box-2">
+                            <div id="edit-box" >
+                                <div class="fields">
+                                    <div class="field">
+                                        <div class="field-left"><span class="label">省：</span></div>
+                                        <div class="field-right">
+                                            <div class="address-select-box clearfix">
+                                                <ul>
+                                                    <li>
+                                                        <div id="PrivinceDiv" class="select-box">
+                                                            <select name="province" id="province">
+                                                                <option value="">省份</option>
+                                                            </select>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div id="CityDiv" class="select-box">
+                                                            <select name="city" id="city">
+                                                                <option value="">城市</option>
+                                                            </select>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div id="AreaDiv" class="select-box">
+                                                            <select name="county" id="county">
+                                                                <option value="">区/县</option>
+                                                            </select>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-left"><span class="label">街道：</span></div>
+                                        <div class="field-right">
+                                            <div class="input-box-3">
+                                                <input name="address" type="text" id="address" type="text" value="" autocomplete="off" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-left"><span class="label">收货人：</span></div>
+                                        <div class="field-right">
+                                            <div class="input-box-3">
+                                                <input name="receiverBy" type="text" id="receiverBy" autocomplete="off" value=""/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-left"><span class="label">收货手机：</span></div>
+                                        <div class="field-right">
+                                            <div class="input-box-3">
+                                                <input name="receiverPhone" type="text" maxlength="13" id="receiverPhone" autocomplete="off" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <button class="btn-blue ml100" type="button" id="btn-realinfo"><span>保存</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="view-box">
+                                <div class="fields">
+                                    <div class="field">
+                                        <div class="field-left"><span class="label">省：</span></div>
+                                        <div class="field-right"><span class="v">山西省长治市武乡县</span></div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-left"><span class="label">街道：</span></div>
+                                        <div class="field-right"><span class="v">2222222222</span></div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-left"><span class="label">收货人：</span></div>
+                                        <div class="field-right">
+                                            <span class="v">222222222</span>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-left"><span class="label">收货手机：</span></div>
+                                        <div class="field-right">
+                                            <span class="v">13812345678</span>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <span class="bv" id="reedit">重新修改</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse('/common/page_footer.vm')
+    <script src="/static/js/address.js"></script>
+</body>
+</html>

@@ -6,14 +6,16 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,p{
   margin: 0;
   font-weight: normal;
 }
 button,input,textarea,select{
   outline: none;
 }
-
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
 .container{
   width: 980px;
   margin: auto;
@@ -22,8 +24,8 @@ button,input,textarea,select{
 .clearfix(){
   *zoom:1;
   &:before{
-    content: "";
     display: table;
+    content: "";
   }
   &:after{
     display: table;
@@ -36,6 +38,7 @@ button,input,textarea,select{
 }
 a{
   cursor: pointer;
+  outline: none;
 }
 a:link,a:hover {
   text-decoration: none;
@@ -104,4 +107,8 @@ span.customSelect {
   color:#555;
   padding:7px 9px;
   width:100px;
+}
+
+button[disabled]{
+  background: #8CD9C5;
 }

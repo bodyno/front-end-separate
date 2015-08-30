@@ -369,7 +369,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
   font-weight: normal;
 }
@@ -378,6 +379,9 @@ input,
 textarea,
 select {
   outline: none;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 .container {
   width: 980px;
@@ -388,8 +392,8 @@ select {
   *zoom: 1;
 }
 .clearfix:before {
-  content: "";
   display: table;
+  content: "";
 }
 .clearfix:after {
   display: table;
@@ -398,6 +402,7 @@ select {
 }
 a {
   cursor: pointer;
+  outline: none;
 }
 a:link,
 a:hover {
@@ -470,6 +475,9 @@ span.customSelect {
   padding: 7px 9px;
   width: 100px;
 }
+button[disabled] {
+  background: #8CD9C5;
+}
 .header-top {
   background: #009b72;
   position: relative;
@@ -539,6 +547,7 @@ span.customSelect {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 111;
+  background: #fff;
 }
 .header .menu {
   float: right;
@@ -586,7 +595,19 @@ span.customSelect {
   margin-top: 4px;
 }
 .language {
+  float: left;
   position: relative;
+  padding: 0 14px;
+  padding-right: 22px;
+  margin-left: 10px;
+  border-left: 1px solid #00b485;
+  border-right: 1px solid #00b485;
+  cursor: pointer;
+}
+.language a {
+  line-height: 36px;
+  color: #fff;
+  font-size: 12px;
 }
 .language a b {
   background-image: url(/static/images/sprite/sprite.png);
@@ -597,7 +618,10 @@ span.customSelect {
   right: 8px;
   top: 15px;
 }
-.language .language-list {
+.language:hover {
+  background: #00b485;
+}
+.language-list {
   position: absolute;
   display: none;
   z-index: 1111;
@@ -608,7 +632,7 @@ span.customSelect {
   left: -180px;
   top: 37px;
 }
-.language .language-list b {
+.language-list b {
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
@@ -618,16 +642,16 @@ span.customSelect {
   left: 209px;
   top: -10px;
 }
-.language .language-list .language-list-col {
+.language-list .language-list-col {
   float: left;
   width: 131px;
   border-right: 1px solid #00ce98;
   padding: 0 6px;
 }
-.language .language-list .language-col-last {
+.language-list .language-col-last {
   border-right: none;
 }
-.language .language-list .language-item {
+.language-list .language-item {
   text-align: center;
   color: #999999;
   background: #fff;
@@ -635,7 +659,7 @@ span.customSelect {
   cursor: pointer;
   font-size: 14px;
 }
-.language .language-list .language-item:hover {
+.language-list .language-item:hover {
   background: #009b72;
   color: #fff;
 }

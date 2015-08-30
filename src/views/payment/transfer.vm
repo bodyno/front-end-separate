@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>个人中心</title>
+    <script>var translate_page='member';</script>
+    #parse('/common/top.vm')
+    #set($header='transfer')
+    <link rel="stylesheet" href="/static/css/account.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+    <div class="account-con">
+        <div class="account-main" id="funds">
+            #parse('/payment/payment_top.vm')
+            <div id="transferForm" class="transferForm pg-transfer">
+                <div class="member-balances clearfix">
+                    <div class="tsf_sd"></div>
+                    <ul>
+                        <li class="main" data-trans="main">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="main"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="trmainb"><div class="amount">0.00</div></div>
+                            <div class="tsf_type">中心钱包</div>
+                            <div class="tsf_line"></div>
+                            <div class="tsf_rs_s btn-refresh-2" title="点击刷新" data-partner="main"></div>
+                        </li>
+                        <li class="sport" data-trans="sportsbook">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="sportsbook"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="trsportsbookb"><div class="amount">0.00</div></div>
+                            <div class="tsf_type">体育投注</div>
+                            <div class="tsf_line"></div>
+                        </li>
+                        <li class="keno" data-trans="keno">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="keno"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="trkenob"><div class="amount">0.00</div></div>
+                            <div class="tsf_type">快乐彩</div>
+                            <div class="tsf_line"></div>
+                        </li>
+                        <li class="kimbi" data-trans="grandsuite">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="grandsuite"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="trgrandsuiteb"><div class="amount">0.00</div></div>
+                            <div class="tsf_type">金碧娱乐城</div>
+                            <div class="tsf_line"></div>
+                        </li>
+                        <li class="gd" data-trans="gdcasino">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="gdcasino"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="trgdcasino"><div class="amount">0.00</div></div>
+                            <div class="tsf_type">GD娱乐城</div>
+                            <div class="tsf_line"></div>
+                        </li>
+                        <li class="ea" data-trans="eacasino" style="display:none;">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="eacasino"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="treacasino"><div class="amount"><sapn class="loading"></sapn></div></div>
+                            <div class="tsf_type">EA娱乐城</div>
+                            <div class="tsf_line"></div>
+                        </li>
+                        <li class="pt" data-trans="ptcasino">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="ptcasino"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="trptcasino"><div class="amount">0.00</div></div>
+                            <div class="tsf_type">PT娱乐城</div>
+                            <div class="tsf_line"></div>
+                        </li>
+                        <li class="ag" data-trans="aggame">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="aggame"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="traggame"><div class="amount">0.00</div></div>
+                            <div class="tsf_type">AG娱乐城</div>
+                            <div class="tsf_line"></div>
+                        </li>
+                        <li class="lotto" data-trans="lotto">
+                            <div class="btn-refresh-2 tsf_rs_s" title="点击刷新" data-partner="lotto"></div>
+                            <div class="tsf_icon"></div>
+                            <div class="tsf_num" id="trlotto"><div class="amount">0.00</div></div>
+                            <div class="tsf_type">时时彩</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="transfer-content">
+                    <a class="tsf_refresh" href="" style="display:none;">
+                        <div class="tsf_rf_icon"></div>
+                        <div class="tsf_rf_txt">刷新钱包</div>
+                    </a>
+                    <div class="transfer-form">
+                        <div class="s-d-exchange">
+                            <span class="b-tr"></span>
+                            <span class="btn-exchange"></span>
+                            <span class="b-rb"></span>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="promo-empty">
+                            <div class="bg"></div>
+                            <p>您未有可使用的优惠券</p>
+                        </div>
+
+
+                        <form id="transferForm" class="transferForm" action="/zh-cn/payment/transfer.aspx" method="post" novalidate="novalidate">
+                            <input type="hidden" value="" id="pid" name="pid">
+                            <div class="field">
+                                <div class="field-left">
+                                    <span class="label">转出：</span>
+                                </div>
+                                <div class="field-right">
+                                    <div class="select-box">
+                                        <select name="source-transfer" id="source-transfer" data-val="true" data-val-required="必填项">
+                                            <option value="">----请选择钱包----</option>
+                                            <option value="main">中心钱包</option>
+                                            <option value="sportsbook">体育</option>
+                                            <option value="grandsuite">金碧娱乐城</option>
+                                            <option value="keno">快乐彩</option>
+                                            <option value="gdcasino">GD娱乐城</option>
+                                            <option value="ptcasino">PT娱乐城</option>
+                                            <option value="aggame">AG娱乐城</option>
+                                            <option value="lotto">时时彩</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field-left"><span class="label">转入：</span></div>
+                                <div class="field-right">
+                                    <div class="select-box">
+                                        <select name="desc-transfer" id="desc-transfer" data-val="true" data-val-required="必填项">
+                                            <option value="">----请选择钱包----</option>
+                                            <option value="main">中心钱包</option>
+                                            <option value="sportsbook">体育</option>
+                                            <option value="grandsuite">金碧娱乐城</option>
+                                            <option value="keno">快乐彩</option>
+                                            <option value="gdcasino">GD娱乐城</option>
+                                            <option value="ptcasino">PT娱乐城</option>
+                                            <option value="aggame">AG娱乐城</option>
+                                            <option value="lotto">时时彩</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="field-left"><span class="label">金额：</span></div>
+                                <div class="field-right">
+                                    <div class="input-box-4">
+                                        <label for="amount">输入金额</label>
+                                        <input type="text" name="amount" id="amount" value="" autocomplete="off" maxlength="10" data-val="true" data-val-required="请输入正确的金额格式" data-val-regex-pattern="\d+(\.\d{1,2})?" data-val-regex="格式不正确">
+                                    </div>
+                                    <div class="input-tips" data-for="amount">
+                                        <span class="logo-th"></span>
+                                        <span class="f-tips-2" data-valmsg-for="amount">必填项</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field" id="calculate-field" style="display: none; margin-bottom:0;">
+                                <div class="field-left">
+                                    <span class="label">实际到账金额：</span>
+                                </div>
+                                <div class="field-right">
+                                    <div class="calculate-amount">
+                                        <span class="memberamount">100.00</span> + 优惠券<span class="couponamount">1000.00</span> = <span class="sumamount">11100.00</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field"><button class="btn-blue" id="btn-submit"><span>转账</span></button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    #parse('/common/page_footer.vm')
+    <script src="/static/js/deposit.js"></script>
+</body>
+</html>

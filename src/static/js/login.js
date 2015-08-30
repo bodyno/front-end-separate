@@ -41,8 +41,14 @@ $(function(){
     //登录按钮
     $("#login-btn").click(function(){
         $(this).commit($("#login-form"),"/login",function(){
-            location.href="/profile"
+            location.href="/"
         })
+    })
+
+    $("#login-form").keyup(function(e){
+        if(e.keyCode==13){
+            $("#login-btn").trigger("click")
+        }
     })
 
     //验证码刷新

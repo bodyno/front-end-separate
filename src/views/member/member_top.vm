@@ -1,0 +1,25 @@
+<div class="account-head clearfix">
+    <div class="account-head-left">
+        <div class="bd">
+            <h3>个人中心</h3>
+            <p>安全指数</p>
+            <span id="info-complete" data-complete="80">80%</span>
+        </div>
+        <input type="text" value="0" class="dial" style="display: none"/>
+        <div class="comp-tips">绑定手机奖励15元哦~</div>
+    </div>
+    <div class="account-head-right">
+        <div class="top1">
+            <span class="t">晚上好，</span>
+            <span class="account-name">SH_frank008</span>
+            <span class="icon"></span>
+            <span class="t2">忙碌了一整天，晚餐吃顿好的吧。</span>
+        </div>
+        <div class="top2 clearfix">
+            <div class="li">真实姓名：<a href="/member/safe#name">马上填写真实姓名？</a></div>
+            <div class="li">手机号码：<a href="#t-phone" data-dialog="绑定手机|470|300">尚未绑定手机，立即绑定？</a> </div>
+            <div class="li">注册邮箱：<a class="mail-show" href="#t-mail" data-dialog="修改邮箱|470|300">franklee****@gmail.com</a></div>
+            <div class="li">上次登录：5小时前</div>
+        </div>
+    </div>
+</div>

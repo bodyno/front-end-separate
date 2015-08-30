@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+</head>
+
+<script type="text/javascript" src="http://cache.download.banner.powerplay88.com/integrationjs.php"></script>
+<script type="text/javascript">
+
+    iapiSetCallout('Login', calloutLogin);
+
+    iapiSetCallout('Logout', calloutLogout);
+
+    function login(realMode)
+    {
+        iapiLogin(document.getElementById("loginform").username.value.toUpperCase(), document.getElementById("loginform").password.value, realMode, "en");
+    }
+
+    function logout(allSessions, realMode)
+    {
+        iapiLogout(allSessions, realMode);
+    }
+    function calloutLogin(response)
+    {
+        if (response.errorCode)
+        {
+            alert("Login failed, " + response.errorText);
+        }
+        else
+        {
+            window.location = "http://cache.download.banner.powerplay88.com/casinoclient.html?language=zh-CN&game=tclsc";
+        }
+    }
+    function calloutLogout(response) {
+        if (response.errorCode) {
+            alert("Logout failed, " + response.errorCode);
+        }
+        else {
+            alert("Logout OK");
+        }
+    }
+
+    function execute(){
+
+
+
+    }
+</script>
+
+<body onload="iapiLogin('IG99TEST16','123456','1','en')">
+
+
+</body>
+</html>

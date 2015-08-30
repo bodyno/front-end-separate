@@ -1,215 +1,235 @@
-!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var n;"undefined"!=typeof window?n=window:"undefined"!=typeof global?n=global:"undefined"!=typeof self&&(n=self),n.Countdown=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var defaultOptions = {
-  date: "June 7, 2087 15:03:25",
-  refresh: 1000,
-  offset: 0,
-  onEnd: function() {
-    return;
-  },
-  render: function (date) {
-    this.el.innerHTML = date.years + " years, " +
-                        date.days  + " days, " +
-                        this.leadingZeros(date.hours) + " hours, " +
-                        this.leadingZeros(date.min) + " min and " +
-                        this.leadingZeros(date.sec) + " sec";
-  }
-};
-
-/**
- * Countdown constructor
- * @param {HTMLElement} el      DOM node of the countdown
- * @param {Object}      options (optional) Options for the plugin
+/*!
+ * The Final Countdown for jQuery v2.1.0 (http://hilios.github.io/jQuery.countdown/)
+ * Copyright (c) 2015 Edson Hilios
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-var Countdown = function(el, options) {
-
-  /**
-   * Reference to the DOM element
-   * @type {HTMLElement}
-   */
-  this.el = el;
-
-  /**
-   * Options of the countdown plugin
-   * @type {Object}
-   */
-  this.options = {};
-
-  /**
-   * Interval reference or false if counter is stopped
-   * @type {Mixed}
-   */
-  this.interval = false;
-
-  // merge default options and options into this.options
-  for (var i in defaultOptions) {
-    if (defaultOptions.hasOwnProperty(i)) {
-      this.options[i] = typeof options[i] !== 'undefined' ? options[i] : defaultOptions[i];
-
-      if (i === 'date' && typeof this.options.date !== 'object') {
-        this.options.date = new Date(this.options.date);
-      }
-
-      // bind context for functions
-      if (typeof this.options[i] === 'function') {
-        this.options[i] = this.options[i].bind(this);
-      }
+(function(factory) {
+    "use strict";
+    if (typeof define === "function" && define.amd) {
+        define([ "jquery" ], factory);
+    } else {
+        factory(jQuery);
     }
-  }
-
-  /**
-   * Get the difference between now and the end date
-   * @return {Object} Object with the diff information (years, days, hours, min, sec, millisec)
-   */
-  this.getDiffDate = function() {
-    var diff = (this.options.date.getTime() - Date.now() + this.options.offset) / 1000;
-
-    var dateData = {
-      years:    0,
-      days:     0,
-      hours:    0,
-      min:      0,
-      sec:      0,
-      millisec: 0
+})(function($) {
+    "use strict";
+    var instances = [], matchers = [], defaultOptions = {
+        precision: 100,
+        elapse: false
     };
-
-    if (diff <= 0) {
-      if (this.interval) {
-        this.stop();
-        this.options.onEnd();
-      }
-      return dateData;
+    matchers.push(/^[0-9]*$/.source);
+    matchers.push(/([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
+    matchers.push(/[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
+    matchers = new RegExp(matchers.join("|"));
+    function parseDateString(dateString) {
+        if (dateString instanceof Date) {
+            return dateString;
+        }
+        if (String(dateString).match(matchers)) {
+            if (String(dateString).match(/^[0-9]*$/)) {
+                dateString = Number(dateString);
+            }
+            if (String(dateString).match(/\-/)) {
+                dateString = String(dateString).replace(/\-/g, "/");
+            }
+            return new Date(dateString);
+        } else {
+            throw new Error("Couldn't cast `" + dateString + "` to a date object.");
+        }
     }
-
-    if (diff >= (365.25 * 86400)) {
-      dateData.years = Math.floor(diff / (365.25 * 86400));
-      diff -= dateData.years * 365.25 * 86400;
+    var DIRECTIVE_KEY_MAP = {
+        Y: "years",
+        m: "months",
+        n: "daysToMonth",
+        w: "weeks",
+        d: "daysToWeek",
+        D: "totalDays",
+        H: "hours",
+        M: "minutes",
+        S: "seconds"
+    };
+    function escapedRegExp(str) {
+        var sanitize = str.toString().replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
+        return new RegExp(sanitize);
     }
-
-    if (diff >= 86400) {
-      dateData.days = Math.floor(diff / 86400);
-      diff -= dateData.days * 86400;
+    function strftime(offsetObject) {
+        return function(format) {
+            var directives = format.match(/%(-|!)?[A-Z]{1}(:[^;]+;)?/gi);
+            if (directives) {
+                for (var i = 0, len = directives.length; i < len; ++i) {
+                    var directive = directives[i].match(/%(-|!)?([a-zA-Z]{1})(:[^;]+;)?/), regexp = escapedRegExp(directive[0]), modifier = directive[1] || "", plural = directive[3] || "", value = null;
+                    directive = directive[2];
+                    if (DIRECTIVE_KEY_MAP.hasOwnProperty(directive)) {
+                        value = DIRECTIVE_KEY_MAP[directive];
+                        value = Number(offsetObject[value]);
+                    }
+                    if (value !== null) {
+                        if (modifier === "!") {
+                            value = pluralize(plural, value);
+                        }
+                        if (modifier === "") {
+                            if (value < 10) {
+                                value = "0" + value.toString();
+                            }
+                        }
+                        format = format.replace(regexp, value.toString());
+                    }
+                }
+            }
+            format = format.replace(/%%/, "%");
+            return format;
+        };
     }
-
-    if (diff >= 3600) {
-      dateData.hours = Math.floor(diff / 3600);
-      diff -= dateData.hours * 3600;
+    function pluralize(format, count) {
+        var plural = "s", singular = "";
+        if (format) {
+            format = format.replace(/(:|;|\s)/gi, "").split(/\,/);
+            if (format.length === 1) {
+                plural = format[0];
+            } else {
+                singular = format[0];
+                plural = format[1];
+            }
+        }
+        if (Math.abs(count) === 1) {
+            return singular;
+        } else {
+            return plural;
+        }
     }
-
-    if (diff >= 60) {
-      dateData.min = Math.floor(diff / 60);
-      diff -= dateData.min * 60;
-    }
-
-    dateData.sec = Math.round(diff);
-
-    dateData.millisec = diff % 1 * 1000;
-
-    return dateData;
-  }.bind(this);
-
-  /**
-   * Add leading zeros to a number
-   * @param  {Number} num    Input number
-   * @param  {Number} length Length of the desired output
-   * @return {String}        String of the desired length with leading zeros
-   */
-  this.leadingZeros = function(num, length) {
-    length = length || 2;
-    num = String(num);
-    if (num.length > length) {
-      return num;
-    }
-    return (Array(length + 1).join('0') + num).substr(-length);
-  };
-
-  /**
-   * Update the end date of the countdown
-   * @param  {Mixed}     newDate Date object or a String/Number that can be passed to the Date constructor
-   * @return {Countdown}         Countdown instance
-   */
-  this.update = function(newDate) {
-    if (typeof newDate !== 'object') {
-      newDate = new Date(newDate);
-    }
-    this.options.date = newDate;
-    this.render();
-    return this;
-  }.bind(this);
-
-  /**
-   * Stop the countdown refresh / rerender
-   * @return {Countdown} Countdown instance
-   */
-  this.stop = function() {
-    if (this.interval) {
-      clearInterval(this.interval);
-      this.interval = false;
-    }
-    return this;
-  }.bind(this);
-
-  /**
-   * Render the countdown
-   * @return {Countdown} Countdown instance
-   */
-  this.render = function() {
-    this.options.render(this.getDiffDate());
-    return this;
-  }.bind(this);
-
-  /**
-   * Start the countdown
-   * @return {Countdown} Countdown instance
-   */
-  this.start = function() {
-    // don't start if the countdown is already started
-    if (this.interval) { return; }
-
-    this.render();
-
-    if (this.options.refresh) {
-      this.interval = setInterval(this.render, this.options.refresh);
-    }
-
-    return this;
-  }.bind(this);
-
-  /**
-   * Update the offset
-   * @param  {Number}    offset New offset in ms
-   * @return {Countdown}        Countdown instance
-   */
-  this.updateOffset = function(offset) {
-    this.options.offset = offset;
-    return this;
-  }.bind(this);
-
-
-  // initial start of the countdown or initial render
-  this.start();
-};
-
-module.exports = Countdown;
-
-},{}],2:[function(require,module,exports){
-var Countdown = require('./countdown.js');
-var NAME = 'countdown';
-var DATA_ATTR = 'date';
-
-jQuery.fn.countdown = function(options) {
-  return $.each(this, function(i, el) {
-    var $el = $(el);
-    if (!$el.data(NAME)) {
-      // allow setting the date via the data-date attribute
-      if ($el.data(DATA_ATTR)) {
-        options.date = $el.data(DATA_ATTR);
-      }
-      $el.data(NAME, new Countdown(el, options));
-    }
-  });
-};
-
-module.exports = Countdown;
-
-},{"./countdown.js":1}]},{},[2])(2)
+    var Countdown = function(el, finalDate, options) {
+        this.el = el;
+        this.$el = $(el);
+        this.interval = null;
+        this.offset = {};
+        this.options = $.extend({}, defaultOptions);
+        this.instanceNumber = instances.length;
+        instances.push(this);
+        this.$el.data("countdown-instance", this.instanceNumber);
+        if (options) {
+            if (typeof options === "function") {
+                this.$el.on("update.countdown", options);
+                this.$el.on("stoped.countdown", options);
+                this.$el.on("finish.countdown", options);
+            } else {
+                this.options = $.extend({}, defaultOptions, options);
+            }
+        }
+        this.setFinalDate(finalDate);
+        this.start();
+    };
+    $.extend(Countdown.prototype, {
+        start: function() {
+            if (this.interval !== null) {
+                clearInterval(this.interval);
+            }
+            var self = this;
+            this.update();
+            this.interval = setInterval(function() {
+                self.update.call(self);
+            }, this.options.precision);
+        },
+        stop: function() {
+            clearInterval(this.interval);
+            this.interval = null;
+            this.dispatchEvent("stoped");
+        },
+        toggle: function() {
+            if (this.interval) {
+                this.stop();
+            } else {
+                this.start();
+            }
+        },
+        pause: function() {
+            this.stop();
+        },
+        resume: function() {
+            this.start();
+        },
+        remove: function() {
+            this.stop.call(this);
+            instances[this.instanceNumber] = null;
+            delete this.$el.data().countdownInstance;
+        },
+        setFinalDate: function(value) {
+            this.finalDate = parseDateString(value);
+        },
+        update: function() {
+            if (this.$el.closest("html").length === 0) {
+                this.remove();
+                return;
+            }
+            var hasEventsAttached = $._data(this.el, "events") !== undefined, now = new Date(), newTotalSecsLeft;
+            newTotalSecsLeft = this.finalDate.getTime() - now.getTime();
+            newTotalSecsLeft = Math.ceil(newTotalSecsLeft / 1e3);
+            newTotalSecsLeft = !this.options.elapse && newTotalSecsLeft < 0 ? 0 : Math.abs(newTotalSecsLeft);
+            if (this.totalSecsLeft === newTotalSecsLeft || !hasEventsAttached) {
+                return;
+            } else {
+                this.totalSecsLeft = newTotalSecsLeft;
+            }
+            this.elapsed = now >= this.finalDate;
+            this.offset = {
+                seconds: this.totalSecsLeft % 60,
+                minutes: Math.floor(this.totalSecsLeft / 60) % 60,
+                hours: Math.floor(this.totalSecsLeft / 60 / 60) % 24,
+                days: Math.floor(this.totalSecsLeft / 60 / 60 / 24) % 7,
+                daysToWeek: Math.floor(this.totalSecsLeft / 60 / 60 / 24) % 7,
+                daysToMonth: Math.floor(this.totalSecsLeft / 60 / 60 / 24 % 30.4368),
+                totalDays: Math.floor(this.totalSecsLeft / 60 / 60 / 24),
+                weeks: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7),
+                months: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368),
+                years: Math.abs(this.finalDate.getFullYear() - now.getFullYear())
+            };
+            if (!this.options.elapse && this.totalSecsLeft === 0) {
+                this.stop();
+                this.dispatchEvent("finish");
+            } else {
+                this.dispatchEvent("update");
+            }
+        },
+        dispatchEvent: function(eventName) {
+            var event = $.Event(eventName + ".countdown");
+            event.finalDate = this.finalDate;
+            event.elapsed = this.elapsed;
+            event.offset = $.extend({}, this.offset);
+            event.strftime = strftime(this.offset);
+            this.$el.trigger(event);
+        }
+    });
+    $.fn.countdown = function() {
+        var argumentsArray = Array.prototype.slice.call(arguments, 0);
+        return this.each(function() {
+            var instanceNumber = $(this).data("countdown-instance");
+            if (instanceNumber !== undefined) {
+                var instance = instances[instanceNumber], method = argumentsArray[0];
+                if (Countdown.prototype.hasOwnProperty(method)) {
+                    instance[method].apply(instance, argumentsArray.slice(1));
+                } else if (String(method).match(/^[$A-Z_][0-9A-Z_$]*$/i) === null) {
+                    instance.setFinalDate.call(instance, method);
+                    instance.start();
+                } else {
+                    $.error("Method %s does not exist on jQuery.countdown".replace(/\%s/gi, method));
+                }
+            } else {
+                new Countdown(this, argumentsArray[0], argumentsArray[1]);
+            }
+        });
+    };
 });

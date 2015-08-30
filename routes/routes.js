@@ -4,6 +4,8 @@ module.exports = function (app) {
     require('./web/login')(app);
     require('./web/validateCode')(app);
     require('./web/account')(app);
+    require('./web/member')(app);
+    require('./web/payment')(app);
 
 
     // catch 404 and forward to error handler

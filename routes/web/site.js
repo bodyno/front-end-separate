@@ -39,6 +39,14 @@ module.exports = function (app) {
         res.render('promotion', app.locals.middle);
     });
 
+    app.get('/about', function (req, res) {
+        res.render('about', app.locals.middle);
+    });
+
+    app.get('/contact', function (req, res) {
+        res.render('contact', app.locals.middle);
+    });
+
     app.get('/help', function (req, res) {
         res.render('help', app.locals.middle);
     });

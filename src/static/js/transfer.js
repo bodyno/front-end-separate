@@ -31,7 +31,7 @@ $(function(){
 
 
     $("#transfer-btn").click(function(){
-        $(this).commit($("#transfer-form"),"/sidCustInfo/transFunds",function(){
+        $(this).commit($("#transfer-form"),"/cashier/transfer",function(){
             dialog.info("转账成功",function(){
                 location.reload()
             });

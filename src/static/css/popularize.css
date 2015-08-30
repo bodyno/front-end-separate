@@ -398,7 +398,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
   font-weight: normal;
 }
@@ -407,6 +408,9 @@ input,
 textarea,
 select {
   outline: none;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 .container {
   width: 980px;
@@ -417,8 +421,8 @@ select {
   *zoom: 1;
 }
 .clearfix:before {
-  content: "";
   display: table;
+  content: "";
 }
 .clearfix:after {
   display: table;
@@ -427,6 +431,7 @@ select {
 }
 a {
   cursor: pointer;
+  outline: none;
 }
 a:link,
 a:hover {
@@ -498,6 +503,9 @@ span.customSelect {
   color: #555;
   padding: 7px 9px;
   width: 100px;
+}
+button[disabled] {
+  background: #8CD9C5;
 }
 .header {
   border-bottom: 1px solid #d5d5d5;

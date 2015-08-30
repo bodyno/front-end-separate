@@ -12,9 +12,7 @@ i18n.init({
     $('html').i18n();
 
     $(function(){
-        if(window.afterTran){
-            afterTran()
-        }
+        window.afterTran&&afterTran()
     })
 });
 
@@ -28,7 +26,7 @@ function getNowLng(){
 
 $(document).on("click",".language-item",function(){
     var _this=$(this)
-    _this.parents(".language").find(".language-now").text(_this.text())
+    _this.parents(".language,.page-header-language").find(".language-now").text(_this.text())
     _this.parents(".language-list").hide();
     i18n.setLng(_this.data("value"),function(){
         loadLngCss(_this.data('value'))

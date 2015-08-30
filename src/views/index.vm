@@ -21,8 +21,9 @@
              data-cycle-pager-template="<span></span>"
                 >
             <div class="banner-item" style='background: url("/static/images/banner_index.jpg") no-repeat center;'></div>
-            <div class="banner-item" style='background: url("/static/images/banner_index.jpg") no-repeat center;'></div>
-            <div class="banner-item" style='background: url("/static/images/banner_index.jpg") no-repeat center;'></div>
+            <div class="banner-item" style='background: url("/static/images/banner_index2.jpg") no-repeat center;'></div>
+            <div class="banner-item" style='background: url("/static/images/banner_index3.jpg") no-repeat center;'></div>
+            <div class="banner-item" style='background: url("/static/images/banner_index4.jpg") no-repeat center;'></div>
             <div class="banner-op">
                 <div class="banner-op-item banner-op-left"></div>
                 <div class="banner-op-item banner-op-right"></div>
@@ -111,7 +112,7 @@
     </div>
     <div class="fix">
         <div class="fix-text1">PT客户端扫描下载</div>
-        <div class="fix-btn fix-btn1">在线客服</div>
+        <a href="/service" class="fix-btn fix-btn1">在线客服</a>
         <div class="fix-btn fix-btn2">返回首页</div>
     </div>
 

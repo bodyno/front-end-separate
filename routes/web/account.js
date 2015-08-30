@@ -68,6 +68,16 @@ module.exports = function (app) {
 
         }));
     });
+    app.get('/inbox', function (req, res) {
+        res.render('account_inbox', mid({
+
+        }));
+    });
+    app.get('/advice', function (req, res) {
+        res.render('account_advice', mid({
+
+        }));
+    });
     app.get('/cashier', function (req, res) {
         res.render('account_cashier', mid({
 
@@ -75,12 +85,32 @@ module.exports = function (app) {
     });
     app.get('/deposit', function (req, res) {
         res.render('account_deposit', mid({
-
+            paySetting:["02TP","02CD","02PP","02AI","02MP"],
+            item:[
+                {
+                    quotaSetting:{
+                        maxMoney:1000,
+                        minMoney:1000,
+                        maxDialyMoney:1000,
+                        maxPending:1000
+                    },
+                    bankList:["1","2","2","2","2"]
+                },
+                {
+                    quotaSetting:{
+                        maxMoney:1000,
+                        minMoney:1000,
+                        maxDialyMoney:1000,
+                        maxPending:1000
+                    },
+                    bankList:["1","2","2","2","2"]
+                }
+            ]
         }));
     });
     app.get('/withdraw', function (req, res) {
         res.render('account_withdraw', mid({
-
+            banks:["ICBC","CMB","CMBC","SPDB","BCM"]
         }));
     });
     app.get('/transfer', function (req, res) {
@@ -104,6 +134,14 @@ module.exports = function (app) {
 
     //转账
     app.post('/sidCustInfo/transFunds', function (req, res) {
+        res.json({
+            "code":"200",
+            "msg":"sid-success:SID_SUC_04"
+        });
+    });
+
+    //提款
+    app.post('/cashier/withdraw', function (req, res) {
         res.json({
             "code":"200",
             "msg":"sid-success:SID_SUC_04"

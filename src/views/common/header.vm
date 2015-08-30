@@ -13,39 +13,40 @@
             <div class="header-top-left clearfix">
                 <a href="/pintai" class="header-btn header-btn1" data-i18n="base:header.go">全民做庄</a>
                 <a href="#" class="header-btn header-btn2" data-i18n="base:header.down">客户端下载</a>
+                <div class="language">
+                    <a href="#"><span class="language-now">$lng_text</span><b></b></a>
+                    <div class="language-list">
+                        <b></b>
+                        <div class="language-list-col">
+                            <div class="language-item" data-value="zh.cn">简体中文</div>
+                            <div class="language-item" data-value="en">English</div>
+                            <div class="language-item" data-value="zh.cn">Tiếng Việt</div>
+                        </div>
+                        <div class="language-list-col">
+                            <div class="language-item" data-value="zh.cn">한국어</div>
+                            <div class="language-item" data-value="zh.cn">ไทย</div>
+                            <div class="language-item" data-value="zh.cn">日本語</div>
+                        </div>
+                        <div class="language-list-col language-col-last">
+                            <div class="language-item" data-value="zh.cn">Bhs Indonesia</div>
+                            <div class="language-item" data-value="zh.cn">Khmer</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="header-top-right">
                 <ul class="clearfix">
-                    <li class="language">
-                        <a href="#"><span class="language-now">$lng_text</span><b></b></a>
-                        <div class="language-list">
-                            <b></b>
-                            <div class="language-list-col">
-                                <div class="language-item" data-value="zh.cn">简体中文</div>
-                                <div class="language-item" data-value="en">English</div>
-                                <div class="language-item" data-value="zh.cn">Tiếng Việt</div>
-                            </div>
-                            <div class="language-list-col">
-                                <div class="language-item" data-value="zh.cn">한국어</div>
-                                <div class="language-item" data-value="zh.cn">ไทย</div>
-                                <div class="language-item" data-value="zh.cn">日本語</div>
-                            </div>
-                            <div class="language-list-col language-col-last">
-                                <div class="language-item" data-value="zh.cn">Bhs Indonesia</div>
-                                <div class="language-item" data-value="zh.cn">Khmer</div>
-                            </div>
-                        </div>
-                    </li>
                     #if($username)
-                    <li class="avatars_con"><a href="/profile"><img class="avatars" src="/static/images/avatars_s.png" width="29" height="29">$username</a></li>
-                    <li><a href="/profile">用户中心</a></li>
-                    <li><a href="/deposit">存款</a></li>
+                    <li class="avatars_con"><a href="/member/message"><img class="avatars" src="/static/images/avatars_s.png" width="29" height="29">$username</a></li>
+                    <li><a href="/member/safe">个人中心</a></li>
+                    <li><a href="/payment/deposit">资金管理</a></li>
+                    <li><a href="/member/history">投注记录</a></li>
                     <li><a href="/signout">退出</a></li>
                     #else
-                    <li><a href="/register" data-i18n="base:header.reg"></a></li>
                     <li><a href="/login" data-i18n="base:header.login"></a></li>
+                    <li><a href="/register" data-i18n="base:header.reg"></a></li>
                     #end
-                    <li><a href="#" class="top-menu-right" data-i18n="base:header.service"></a></li>
+                    <li><a href="/service" class="top-menu-right" data-i18n="base:header.service"></a></li>
                 </ul>
             </div>
         </div>
@@ -58,9 +59,9 @@
 
             #if($header=="login")
             <ul class="login-menu clearfix">
-                <li #if($header=="home")class="active"#end><a href="/">在线客服</a></li>
+                <li #if($header=="home")class="active"#end><a href="/service">在线客服</a></li>
                 <li><span></span></li>
-                <li #if($header=="home")class="active"#end><a href="/">联系我们</a></li>
+                <li #if($header=="home")class="active"#end><a href="/contact">联系我们</a></li>
             </ul>
             #else
             <ul class="menu clearfix">

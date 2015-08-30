@@ -96,6 +96,7 @@ The `.sprites` mixin generates identical output to the CSS template
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 111;
+  background: #fff;
 }
 .header .menu {
   float: right;
@@ -143,7 +144,19 @@ The `.sprites` mixin generates identical output to the CSS template
   margin-top: 4px;
 }
 .language {
+  float: left;
   position: relative;
+  padding: 0 14px;
+  padding-right: 22px;
+  margin-left: 10px;
+  border-left: 1px solid #00b485;
+  border-right: 1px solid #00b485;
+  cursor: pointer;
+}
+.language a {
+  line-height: 36px;
+  color: #fff;
+  font-size: 12px;
 }
 .language a b {
   background-image: url(/static/images/sprite/sprite.png);
@@ -154,7 +167,10 @@ The `.sprites` mixin generates identical output to the CSS template
   right: 8px;
   top: 15px;
 }
-.language .language-list {
+.language:hover {
+  background: #00b485;
+}
+.language-list {
   position: absolute;
   display: none;
   z-index: 1111;
@@ -165,7 +181,7 @@ The `.sprites` mixin generates identical output to the CSS template
   left: -180px;
   top: 37px;
 }
-.language .language-list b {
+.language-list b {
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
@@ -175,16 +191,16 @@ The `.sprites` mixin generates identical output to the CSS template
   left: 209px;
   top: -10px;
 }
-.language .language-list .language-list-col {
+.language-list .language-list-col {
   float: left;
   width: 131px;
   border-right: 1px solid #00ce98;
   padding: 0 6px;
 }
-.language .language-list .language-col-last {
+.language-list .language-col-last {
   border-right: none;
 }
-.language .language-list .language-item {
+.language-list .language-item {
   text-align: center;
   color: #999999;
   background: #fff;
@@ -192,7 +208,7 @@ The `.sprites` mixin generates identical output to the CSS template
   cursor: pointer;
   font-size: 14px;
 }
-.language .language-list .language-item:hover {
+.language-list .language-item:hover {
   background: #009b72;
   color: #fff;
 }

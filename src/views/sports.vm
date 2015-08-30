@@ -11,9 +11,7 @@
     #parse('/common/old.vm')
     #parse('/common/header.vm')
     <div class="sports">
-        <div class="container">
-            <h1>体育</h1>
-        </div>
+        <iframe frameborder="0" scrolling="auto" width="100%" height="765" src="http://w88sl.testing.agent1818.com/?stoken=W88_24B6477A-AC96-4E32-A520-89DEA7065EF7&langid=240&oddsstyleid=1"></iframe>
     </div>
 
     #parse('/common/footer.vm')

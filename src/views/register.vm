@@ -19,7 +19,7 @@
                         <div class="reg-header-text" data-i18n="[html]reg-header-text"></div>
                     </div>
                     <form id="reg-form" class="reg-form">
-                        <input type="hidden" class="reg-input" name="affiliateId" id="affiliateId-hidden" value="111">
+                        <input type="hidden" class="reg-input" name="affiliateId" id="affiliateId-hidden" value="">
                         <div class="reg-group clearfix">
                             <label class="reg-label"><em data-i18n="custCode.name"></em></label>
                             <input type="text" class="reg-input" name="custCode" id="custCode" maxlength="12">
@@ -44,9 +44,26 @@
                                     <label class="reg-label"><em data-i18n="${item.formCode}.name"></em></label>
                                     <select class="reg-select" name="country" id="country">
                                         <option value="" data-i18n="base:select"></option>
-                                        #foreach($item in $country)
-                                            <option value="$item.value" data-i18n="country_name.${item.key}"></option>
-                                        #end
+                                        <option value="AU" data-i18n="country_name.Australia"></option>
+                                        <option value="BN" data-i18n="country_name.Brunei"></option>
+                                        <option value="KH" data-i18n="country_name.Cambodia"></option>
+                                        <option value="CA" data-i18n="country_name.Canada"></option>
+                                        <option value="CN" data-i18n="country_name.China"></option>
+                                        <option value="EU" data-i18n="country_name.EU"></option>
+                                        <option value="IN" data-i18n="country_name.India"></option>
+                                        <option value="ID" data-i18n="country_name.Indonesia"></option>
+                                        <option value="JP" data-i18n="country_name.Japan"></option>
+                                        <option value="KR" data-i18n="country_name.Korea"></option>
+                                        <option value="LA" data-i18n="country_name.Laos"></option>
+                                        <option value="MY" data-i18n="country_name.Malaysia"></option>
+                                        <option value="MM" data-i18n="country_name.Myanmar"></option>
+                                        <option value="NZ" data-i18n="country_name.New Zealand"></option>
+                                        <option value="PH" data-i18n="country_name.Philippines"></option>
+                                        <option value="RU" data-i18n="country_name.Russia"></option>
+                                        <option value="SG" data-i18n="country_name.Singapore"></option>
+                                        <option value="TH" data-i18n="country_name.Thailand"></option>
+                                        <option value="US" data-i18n="country_name.United States"></option>
+                                        <option value="VN" data-i18n="country_name.Vietnam"></option>
                                     </select>
                                     #if($item.isRequire)<span class="require">*</span>#end
                                 </div>
@@ -62,9 +79,10 @@
                                     <label class="reg-label"><em data-i18n="${item.formCode}.name"></em></label>
                                     <select class="reg-select" name="certificateType" id="certificateType">
                                         <option value="" data-i18n="base:select"></option>
-                                        #foreach($item in $certificateType)
-                                            <option value="$item.value" data-i18n="certificate_type.${item.key}"></option>
-                                        #end
+                                        <option value="2BB" data-i18n="certificate_type.ID number"></option>
+                                        <option value="2BC" data-i18n="certificate_type.Driver license"></option>
+                                        <option value="2BE" data-i18n="certificate_type.Military officer"></option>
+                                        <option value="2BF" data-i18n="certificate_type.Passport"></option>
                                     </select>
                                     #if($item.isRequire)<span class="require">*</span>#end
                                 </div>

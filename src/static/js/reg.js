@@ -230,9 +230,13 @@ $(function(){
     $("#reg-btn").click(function(){
         $(this).commit($("#reg-form"),"/register",function(){
             location.href="/profile"
-        },function(){
-
         })
+    })
+
+    $("#reg-form").keyup(function(e){
+        if(e.keyCode==13){
+            $("#reg-btn").trigger("click")
+        }
     })
 
     //验证码刷新

@@ -36,7 +36,7 @@ The `.sprites` mixin generates identical output to the CSS template
   color: #333;
   font-size: 12px;
   background-image: url(/static/images/sprite/sprite_account.png);
-  background-position: 0px -226px;
+  background-position: 0px -256px;
   width: 159px;
   height: 32px;
   line-height: 32px;
@@ -49,7 +49,7 @@ The `.sprites` mixin generates identical output to the CSS template
 .account-group.red b,
 .account-group.red b {
   background-image: url(/static/images/sprite/sprite_account.png);
-  background-position: -277px -32px;
+  background-position: -222px -201px;
   width: 10px;
   height: 10px;
   position: absolute;
@@ -58,7 +58,7 @@ The `.sprites` mixin generates identical output to the CSS template
 }
 .account-group.ok b {
   background-image: url(/static/images/sprite/sprite_account.png);
-  background-position: -287px -32px;
+  background-position: -249px -201px;
   width: 10px;
   height: 10px;
   position: absolute;
@@ -78,7 +78,7 @@ The `.sprites` mixin generates identical output to the CSS template
 .account-group.red b,
 .account-group.red b {
   background-image: url(/static/images/sprite/sprite_account.png);
-  background-position: -277px -32px;
+  background-position: -222px -201px;
   width: 10px;
   height: 10px;
   position: absolute;

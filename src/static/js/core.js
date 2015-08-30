@@ -2,7 +2,7 @@ $(function(){
 
     var lngTime;
     //语言
-    $(".language").hoverIntent(function(){
+    $(".language,.page-header-language").hoverIntent(function(){
         $(this).find(".language-list").show();
         clearTimeout(lngTime);
     },function(){
@@ -56,7 +56,7 @@ $.validator.addMethod("cardno", function(value, element) {
 $.validator.addMethod("notEqual", function(value, element, param) {
     var target = $( param );
     return value !== target.val();
-}, "原密码与新密码不能相同");
+}, "确认密码新密码不同");
 
 //ajax显示错误信息
 function showError(text){
@@ -72,16 +72,20 @@ $.fn.extend({
         }
         return result;
     },
-    commit:function(form,url,func,func2){
+    commit:function(form,url,func,func2,func3){
         if(form.valid()){
             if(func2){
                 if(!func2()) return false
             }
             var _this=$(this)
             _this.btn("loading")
-            $.post(url,form.form()).success(function(result){
+            var data=form.form();
+            if(func3){
+                data = func3(data);
+            }
+            $.post(url,data).success(function(result){
                 if(result.code=="200"){
-                    func()
+                    func(result)
                 }else{
                     showError(result.msg)
                 }
@@ -243,6 +247,7 @@ var showPopUp = function(html, title, width, height, closefn) {
 }
 
 var validBase={
+    debug:true,
     success: function(label) {
         label.addClass("success");
     },
@@ -268,4 +273,14 @@ function getQueryString(name)
     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
     if(r!=null)return  unescape(r[2]); return null;
+}
+
+function resultHandle(result,func){
+    if(result.code=="200"){
+        if(func){
+            func(result)
+        }
+    }else{
+        showError(result.msg)
+    }
 }

@@ -1,0 +1,580 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>个人中心</title>
+    <script>var translate_page='member';</script>
+    #parse('/common/top.vm')
+    #set($header='deposit')
+    <link rel="stylesheet" href="/static/css/account.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+    <div class="account-con">
+        <div class="account-main" id="funds">
+            #parse('/payment/payment_top.vm')
+            <div id="deposit">
+                <div class="progress">
+                    <div class="step-1">
+                        <span class="txt-1">选择支付模式</span>
+                        <span class="txt-2">填写金额</span>
+                        <span class="txt-3">选择银行</span>
+                        <span class="txt-4">充值到帐</span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <div class="line-950"></div>
+                <div class="deposit-form">
+                    <form id="depost-form">
+                        <input type="hidden" id="action" name="action" value="payment" />
+                        <input type="hidden" id="PaymentMode" name="PaymentMode" value="1" />
+                        <input type="hidden" id="MemberName" name="MemberName" value="az8321550" />
+
+                        <div class="box-2 clearfix">
+
+                            <div class="field-label fleft">选择充值模式：</div>
+
+                            <div class="deposit-tags clearfix">
+                                <ul>
+                                    <li class="safe">
+                                        <span class="on">第三方在线支付<i class="g-logorecommend-1"></i></span>
+                                    </li>
+                                    <li>
+                                        <span>支付宝/极速转账</span></li>
+                                    <li>
+                                        <span>积分支付<i class="logo-lock-3"></i></span>
+                                    </li>
+                                    <li>
+                                        <span>ATM/柜台</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="deposit-item active">
+                                <div class="deposit-content">
+                                    <div class="third-party-3">
+                                        <div class="third-party-use">
+                                            <div class="guide"><img src="/static/images/thirdpay_bank.gif"></div>
+
+
+
+                                            <div class="field">
+                                                <div class="field-label fleft">充值金额：</div>
+                                                <div class="fleft">
+                                                    <div class="input-box-2">
+                                                        <label for="amount" class="lblamont" style="display: block;">输入金额</label>
+                                                        <input type="text" name="amount" id="amount" maxlength="7" value="" data-mode="2">
+                                                    </div>
+                                                    <div class="input-tips" data-for="amount" style="display: none;">
+                                                        <span class="logo-th"></span>
+                                                        <span class="f-tips-2" data-valmsg-for="amount">请输入充值金额</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="field">
+                                                <div class="field-label fleft lb2">银行种类：</div>
+                                                <div class="" fleft="">
+                                                    <div class="third-banks clearfix">
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="ICBC">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-icbc"></i>工商银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="CMBC">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-cmb"></i>招商银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="CCB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-ccb"></i>建设银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="ABC">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-abc"></i>中国农行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="POST">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-post"></i>中国邮政<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="PINGANBANK">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-pingan"></i>平安银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="SDB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-sdb"></i>深发银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="GDB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-gdb"></i>广发银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="SHB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-bosh"></i>上海银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="BCCB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-bob"></i>北京银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="BOCO">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-boco"></i>交通银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="MSBC">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-cmbc"></i>民生银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="CBHB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-cbhb"></i>渤海银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="HKBEA">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-hkbea"></i>东亚银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="NBCB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-nbcb"></i>宁波银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="ECITIC">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-ecitic"></i>中信银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="BJRCB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-bjrcb"></i>北京农村<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="HXB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-hxb"></i>华夏银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="CZ">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-cz"></i>浙商银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="HZBANK">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-hzb"></i>杭州银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="BOC">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-boc"></i>中国银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="CEB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-cebb"></i>光大银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="radio-bank-3">
+                                                            <div>
+                                                                <div class="radio">
+                                                                    <input type="radio" name="bankcode" value="CIB">
+                                                                </div>
+                                                                <div class="radio-label"><i class="ico-cib"></i>兴业银行<span class="logo-checked"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <p class="more">没有找到您需要的银行吗？<a href="#">点击显示全部银行</a><span class="logo-sj4-b"></span></p>
+                                            <p class="collapse"><a href="#">收起部分银行</a><span class="logo-sj4-t"></span></p>
+
+
+                                            <div class="tp-btn-box clearfix">
+                                                <div class="btns">
+                                                    <div class="btn-blue btn-disabled btn-deposit-top">请先填写充值金额</div>
+                                                    <div class="btn-blue" id="ThirdPaymentPay">开始充值</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deposit-item">
+                                <div class="deposit-content">
+                                    <!--极速模式-->
+
+                                    <div class="rapid-mode-1">
+
+                                        <div>
+                                            <div class="guide"><img src="/static/images/auto_bank.gif" /></div>
+
+
+                                            <div class="field">
+                                                <div class="field-label fleft">充值金额：</div>
+                                                <div class="fleft">
+                                                    <div class="input-box-2">
+                                                        <label for="amount" class="lblamont">输入金额</label>
+                                                        <input type="text" name="amount" id="amount" maxlength="7" value="" data-mode="1" />
+                                                    </div>
+                                                    <div class="input-tips" data-for="amount">
+                                                        <span class="logo-th"></span>
+                                                        <span class="f-tips-2" data-valmsg-for="amount">请输入充值金额</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="field">
+                                                <div class="field-label fleft">银行种类：</div>
+                                                <div class="fleft">
+                                                    <div class="bank-list clearfix">
+                                                        <ul>
+
+                                                            <li>
+                                                                <div class="radio-bank">
+                                                                    <div>
+                                                                        <div class="radio">
+                                                                            <input type="radio" name="bankType" id="bankType" value="8" data-bankcode="ALIPAY" data-memberbanktype="8" />
+                                                                        </div>
+                                                                        <div class="radio-label">
+                                                                            <span class="bank-logo logo-ALIPAY-2" title="支付宝"></span>
+                                                                            <span class="logo-checked"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="radio-bank">
+                                                                    <div>
+                                                                        <div class="radio">
+                                                                            <input type="radio" name="bankType" id="bankType" value="6" data-bankcode="CMBC" data-memberbanktype="6" />
+                                                                        </div>
+                                                                        <div class="radio-label">
+                                                                            <span class="bank-logo logo-CMBC-2" title="招商银行"></span>
+                                                                            <span class="logo-checked"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="radio-bank">
+                                                                    <div>
+                                                                        <div class="radio">
+                                                                            <input type="radio" name="bankType" id="bankType" value="4" data-bankcode="ICBC" data-memberbanktype="4" />
+                                                                        </div>
+                                                                        <div class="radio-label">
+                                                                            <span class="bank-logo logo-ICBC-2" title="工商银行"></span>
+                                                                            <span class="logo-checked"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="radio-bank">
+                                                                    <div>
+                                                                        <div class="radio">
+                                                                            <input type="radio" name="bankType" id="Radio1" value="6" data-bankcode="CCB" data-memberbanktype="3"/>
+                                                                        </div>
+                                                                        <div class="radio-label">
+                                                                            <span class="bank-logo logo-CCB-2" title="建设银行"></span>
+                                                                            <span class="logo-checked"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <p class="tips">【存款没到账?】转账时没填附言或填错了，存款会在3到5小时内到账！<br />
+                                                【转错金额了?】转错金额者需在此填多一个与实际转账金额一样的单子，该笔存款将在3-5小时内到账。<a href="/zh-cn/help/index.aspx?a=deposit" target="_blank" class="g-c1">>存款帮助</a>
+                                            </p>
+
+
+                                            <div class="btns">
+                                                <div class="btn-blue btn-disabled btn-deposit-top">请先填写充值金额</div>
+                                                <input type="button" class="btn-blue" value="下一步" id="payment-ali" tabindex="-1" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/x-dot-template" id="deposit-tmpl">
+        <div class="popup-thirdpay-info">
+            <div class="step-1">
+                <div class="ubloading"></div>
+                <h3>正在与第三方通信握手,请尽快充值</h3>
+
+                <div class="time"></div>
+                <p class="p1">{{=it.timeText}}：</p>
+
+                <div class="tips">
+                    <p>1.成功付款后，将会自动到帐，并弹出到帐提示</p>
+                    <p>2.长时间无反应，请<a href="https://uedbet.liaonow.com/" data-btncs="1" class="a">联系客服</a></p>
+                </div>
+            </div>
+
+            <div class="step-2 g-hidden">
+                <div class="logo-th-3"></div>
+                <h3>订单已失效</h3>
+                <p>非常抱歉，由于长时间没有检测到您的存款，<br />附言已经失效，请再次尝试存款</p>
+
+                <div class="b1">
+                    <div class="btn-blue" class="reload">再存一次</div><a href="https://uedbet.liaonow.com/" data-btncs="1" class="a">联系客服</a>
+                </div>
+            </div>
+            <div class="step-3 g-hidden">
+                <div class="logo-right-3"></div>
+                <h3>恭喜您，已有一笔第三方成功充值！</h3>
+                <ul class="ls">
+                    <li>
+                        <span class="v amount">0.00</span><span class="k">充值金额</span>
+                    </li>
+                    <li>
+                        <span class="v fee">0.00</span><span class="k">返还手续费</span>
+                    </li>
+                    <li>
+                        <span class="v netamount">0.00</span><span class="k">实际到帐</span>
+                    </li>
+                </ul>
+
+                <div class="b1">
+                    <div class="btn-blue reload">我知道了</div>
+                    <a href="#" class="btnClose">再存一次</a>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/x-dot-template" id="deposit-tmpl2">
+        <div class="popup-autodeposit-info">
+            <input type="hidden" id="Did" value="4593267" />
+            <div class="step-1">
+                <!--deposit help-->
+
+                <div id="deposit-help-imgs" class="s-imgs">
+                    <h3>充值教程</h3>
+                </div>
+
+                <h3>请充值到下列银行账户中：</h3>
+
+
+                <div class="bank-card-info">
+                    <span class="img logo-CMBC-2" title=""></span>
+                    <ul>
+                        <li><span class="c btn-copy" data-clipboard-text="889761" title="复制附言到剪切板">复制</span>
+                            <span class="t" style="margin-right:0;color:#36ad7f;font-weight:bold;">附言：</span>
+                            <span class="v" style="color:#36ad7f;font-weight:bold;">989735</span>
+                        </li>
+                        <li><span class="c btn-copy" data-clipboard-text="李小惠" title="复制姓名到剪切板">复制</span>
+                            <span class="t">姓名：</span><span class="v">李小惠</span></li>
+                        <li><span class="c btn-copy" data-clipboard-text="6214830290734838"
+                                  title="复制帐号到剪切板">复制</span><span class="t">帐号：</span><span
+                                class="v">6214830290734838</span></li>
+                        <li><span class="c btn-copy" data-clipboard-text="1000.00" title="复制金额到剪切板">复制</span><span
+                                class="t">金额：</span><span class="v">1000.00</span></li>
+                        <li><span class="t">地址：</span><span class="v">陕西西安</span></li>
+                    </ul>
+                </div>
+
+                <div class="tips-bg" id="dtips">
+                    <p class="p3">转账时填写<span class="ps">附言</span>，存款才能自动到账。</p>
+                    <p class="p4">*未填附言者还得联系客服办理，麻烦又费劲。</p>
+                </div>
+
+                <div class="time"></div>
+
+                <div class="s1 g-hidden">
+                    <p class="p2">有效时间：</p>
+                    <div class="tips">
+                        <p>1.成功付款后，将会自动到帐，并弹出到帐提示</p>
+                        <p>2.忘记填写附言，或长时间无反应，请<a href="https://uedbet.liaonow.com/" data-btncs="1" class="a">联系客服</a></p>
+                    </div>
+                </div>
+
+                <div class="s2">
+                    <a href="http://www.cmbchina.com/" target="_blank" class="btn-blue-2" id="gotobank">去银行充值</a>
+                    <!--
+                    <span class="tips-2">*下次存款请获取最新账号，存入旧账号将无法办理。</span>
+                    -->
+                    <a class="course_a" id="open_course" href="javascript:;">如果不懂如何填写附言，请查看此教程。</a>
+                </div>
+            </div>
+
+            <div class="step-2 g-hidden">
+                <div class="logo-th-3"></div>
+                <h3>订单已失效</h3>
+                <p>非常抱歉，由于长时间没有检测到您的存款，<br />附言已经失效，请再次尝试存款</p>
+
+                <div class="b1">
+                    <div class="btn-blue reload">再存一次</div><a href="https://uedbet.liaonow.com/" data-btncs="1" class="a">联系客服</a>
+                </div>
+            </div>
+
+
+            <div class="step-3 g-hidden">
+                <div class="logo-right-3"></div>
+                <h3>恭喜您，已成功充值！</h3>
+                <ul class="ls">
+                    <li>
+                        <span class="v amount">0.00</span><span class="k">充值金额</span>
+                    </li>
+                    <li>
+                        <span class="v fee">0.00</span><span class="k">返还手续费</span>
+                    </li>
+                    <li>
+                        <span class="v netamount">0.00</span><span class="k">实际到帐</span>
+                    </li>
+                </ul>
+
+                <div class="b1">
+                    <div class="btn-blue reload">我知道了</div>
+                    <a href="#" class="reload">再存一次</a>
+                </div>
+            </div>
+
+        </div>
+    </script>
+    #parse('/common/page_footer.vm')
+    <script src="/static/plugin/zeroClipboard/jquery.zclip.min.js"></script>
+    <script src="/static/plugin/doT/doT.js"></script>
+    <script src="/static/plugin/countdown/jquery.countdown.js"></script>
+    <script src="/static/js/deposit.js"></script>
+</body>
+</html>

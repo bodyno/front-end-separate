@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>个人中心</title>
+    <script>var translate_page='member';</script>
+    #parse('/common/top.vm')
+    #set($header='message')
+    <link rel="stylesheet" href="/static/css/member.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+    <div class="account-con">
+        <div class="account-main">
+            #parse('/member/member_top.vm')
+            <div class="account-body clearfix">
+                #parse('/member/member_menu.vm')
+                <div class="account-content pg-promocode">
+                    <div class="a-t-b">
+                        <span class="a-t-t">消息中心</span>
+                    </div>
+                    <div class="mcj_a">
+                        <div class="mcj_b">
+                            <ul class="mcj_c">
+                                <li id="tab0" class="active">
+                                    <div class="logo-msgbox-r"></div>
+                                    <div class="mcj_d">收件箱</div>
+                                    <div id="receive-newcounts">10</div>
+                                </li>
+                                <li id="tab1">
+                                    <div class="logo-msgbox-s"></div>
+                                    <div class="mcj_d">发件箱</div>
+                                    <div id="send-newcounts"></div>
+                                </li>
+                                <li id="tab2">
+                                    <div class="logo-msgbox-n"></div>
+                                    <div class="mcj_d">发送新消息</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mcj_e">
+                            <div class="mcj_f m-item active">
+                                <ul class="mcj_g"></ul>
+                                <div class="mcj_l" style="display: none;">
+                                    <div class="page"><strong><span>1</span></strong><a data-ajax="true" data-ajax-begin="SearchJs.onBegin" data-ajax-complete="SearchJs.onComplete" data-ajax-failure="Utility.ajaxFailed" data-ajax-loading="#LoadingBar" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#SearchResult" href="message.aspx?action=receivelist&amp;pageIndex=2"><span>2</span></a><a data-ajax="true" data-ajax-begin="SearchJs.onBegin" data-ajax-complete="SearchJs.onComplete" data-ajax-failure="Utility.ajaxFailed" data-ajax-loading="#LoadingBar" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#SearchResult" href="message.aspx?action=receivelist&amp;pageIndex=2" class="nxt"><span>&gt;&gt;</span></a></div>
+                                    <div class="mcj_m">
+                                        <input type="checkbox" name="all" id="all" class="all" value="1"><label for="all"><a>全选</a></label><a id="del-receivemsg">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mcj_f m-item" id="inbox">
+                                <ul class="mcj_g"></ul>
+                                <div class="mcj_l" style="display: none;">
+                                    <div class="page"><strong><span>1</span></strong><a data-ajax="true" data-ajax-begin="SearchJs.onBegin" data-ajax-complete="SearchJs.onComplete" data-ajax-failure="Utility.ajaxFailed" data-ajax-loading="#LoadingBar" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#SearchResult" href="message.aspx?action=receivelist&amp;pageIndex=2"><span>2</span></a><a data-ajax="true" data-ajax-begin="SearchJs.onBegin" data-ajax-complete="SearchJs.onComplete" data-ajax-failure="Utility.ajaxFailed" data-ajax-loading="#LoadingBar" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#SearchResult" href="message.aspx?action=receivelist&amp;pageIndex=2" class="nxt"><span>&gt;&gt;</span></a></div>
+                                    <div class="mcj_m">
+                                        <input type="checkbox" name="all" id="all2" class="all" value="1"><label for="all2"><a>全选</a></label><a id="del-receivemsg">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-item">
+                                <form class="mc-content">
+                                    <input type="hidden" name="action" id="action" value="create">
+                                    <div class="mcj_o">
+                                        <div class="mcj_p">
+                                            发送至:</div>
+                                        <div class="mcj_q sl-2">
+                                            <select class="select" id="sendto">
+                                                <option value="1" selected="selected">财务问题</option>
+                                                <option value="2">技术问题</option>
+                                                <option value="3">业务咨询</option>
+                                                <option value="4">意见建议</option>
+                                                <option value="100">其他问题</option>
+                                            </select>
+                                        </div>
+                                        <div class="mc-qtips">存款未到账者请留下转账姓名，转账时间和转账金额，我们会尽快为您办理。</div>
+                                    </div>
+                                    <div class="mcj_title">
+                                        <div class="k">
+                                            标题:</div>
+                                        <div class="v">
+                                            <input type="text" name="title" id="title" autocomplete="off"></div>
+                                    </div>
+                                    <div class="mcj_r">
+                                        <div class="mcj_u">
+                                            内容:</div>
+                                        <div class="mcj_s">
+                                            <textarea class="mcj_t" name="message" id="message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="mcj_v">
+                                        <div class="mcj_w">
+                                        </div>
+                                        <button class="btn-gray-2 mcj_x" id="btn-send">
+                                            <span>发送</span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fix-messagepopup" class="fix-messagepopup" style="overflow-y: hidden; display: none;">
+        <div class="msgpop-main"></div>
+    </div>
+    <script type="text/x-dot-template" id="message-tmpl">
+        {{~it:value}}
+        <li {{? value.status=="08UR"}}class="unread"{{? }}>
+            <div class="clearfix">
+                <div class="mcj_h">
+                    <input type="checkbox" name="Id" value="{{= value.custMessageId }}">
+                </div>
+                <div class="mcj_i">
+                </div>
+                <div class="mcj_j" data-id="{{= value.custMessageId }}">
+                    <a href="#" data-popup="receive" data-subject="{{= value.subject }}" data-content="{{= value.content }}" data-time="{{= value.createdTime }}" data-id="{{= value.custMessageId }}">
+                        {{= value.subject }}
+                    </a>
+                </div>
+                <div class="mcj_k">{{= value.createdTime }}</div>
+                <div class="a">(<a href="#" data-popup="receive">详情</a>)</div>
+            </div>
+        </li>
+        {{~}}
+
+    </script>
+    <script type="text/x-dot-template" id="message-detail">
+        <div id="message-box">
+            <span class="close"><em></em></span>
+
+            <h2 class="title">消息</h2>
+            <h3>{{= it.subject }}</h3>
+
+            <div class="b-1"><span class="a">删除消息</span><span class="k">时间：</span><span
+                    class="v">{{= it.time }}</span></div>
+            <div class="l"></div>
+            <div class="posts">
+                {{= it.content }}
+            </div>
+            <div class="btn-blue-2" id="btn-close">关闭</div>
+        </div>
+    </script>
+    #parse('/common/page_footer.vm')
+    <script src="/static/plugin/doT/doT.js"></script>
+    <script src="/static/js/message.js"></script>
+</body>
+</html>

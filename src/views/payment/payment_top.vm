@@ -1,0 +1,192 @@
+<div id="account-info">
+    <h3>
+        <span class="hello">早上好，</span>
+        <span class="membername">徐&nbsp;先生</span>
+        <span class="tips">点根香烟喝杯茶，让大脑放松一下。</span>
+    </h3>
+    <div class="clearfix">
+        <div class="account-safe fleft">
+            <div class="illustration">
+                <span class="safe-percent" id="info-complete" data-complete="20">20%</span>
+                <input type="text" value="0" class="dial" style="display: none"/>
+            </div>
+            <div class="r">
+                <div class="box-1"><span class="title">帐号安全：</span><span class="safe-level">一般</span></div>
+                <div class="box-2">
+                    <a id="as-trueinfo" data-showtips="true" data-title="绑定真实姓名" data-content="成功绑定真实姓名后才能进行提款操作，如需修改请联系客服。<br/><font color=#41b983>此外，您将获得5元奖励</font>" data-offset="10|0" class="logo-trueinfo-on" title="真实姓名" href="/member/safe#name" target="_self"></a>
+                    <a id="as-bindcard" data-showtips="true" data-title="银行卡绑定" data-content="成功绑定银行卡后才能进行提款操作，成功提款后如需修改请联系客服。" data-offset="10|0" class="logo-bindcard" title="银行卡绑定" href="/payment/withdraw" data-dialog="添加银行卡|556|374"></a>
+                    <a id="as-bindphone" data-showtips="true" data-title="绑定手机号码" data-content="成功绑定手机后您将享受第三方在线存款、极速提款以及找回密码等安全服务。<br/><font color=#41b983>此外，您将获得15元奖励</font>" data-offset="10|0" class="logo-bindphone" title="手机绑定" href="#t-phone" data-dialog="绑定手机|470|300"></a>
+                    <a id="as-bindemail" data-showtips="true" data-title="绑定电子邮箱" data-content="成功绑定邮箱后您将享受找回密码、更换手机验证等安全服务。<br/><font color=#41b983>此外，您将获得10元奖励</font>" data-offset="10|0" class="logo-bindemail mail-show" title="邮箱绑定" href="#t-mail" data-dialog="绑定邮箱|470|350"></a>
+                </div>
+            </div>
+        </div>
+        <div class="line-2 fleft"></div>
+        <div class="wallet fleft">
+            <div class="clearfix">
+                <span class="balance" data-balance="$curAccount">$curAccount</span>
+                <span class="btn-refresh-2" title="刷新所有钱包"></span>
+            </div>
+            <div>
+                <span class="title">中心钱包</span>
+            </div>
+        </div>
+        <div class="line-2 fleft"></div>
+        <div class="funds-proportion fleft">
+            <div>
+                <span class="title">资金分配比例：</span>
+            </div>
+            <div class="funds-drawing">
+                <div class="fd-tips">
+                    <div class="detail" data-for="col-1">
+                        <span class="name">中心钱包</span>
+                        <span class="amount">0</span>
+                        <span class="percent">占0%</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                    <div class="detail" data-for="col-2">
+                        <span class="name">锁定钱包<span class="amount">0</span><span class="percent">占0%</span></span>
+                        <span class="txt">此处一般为绑定个人信息后未进行提款操作的未到账彩金，以及正在处理中的提款金额</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                    <div class="detail" data-for="col-3">
+                        <span class="name">体育钱包</span>
+                        <span class="amount">0</span>
+                        <span class="percent">占0%</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                    <div class="detail" data-for="col-4">
+                        <span class="name">快乐彩</span>
+                        <span class="amount">0</span>
+                        <span class="percent">占0%</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                    <div class="detail" data-for="col-5">
+                        <span class="name">金碧娱乐城</span>
+                        <span class="amount">0</span>
+                        <span class="percent">占0%</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                    <div class="detail" data-for="col-6">
+                        <span class="name">GD娱乐城</span>
+                        <span class="amount">0</span>
+                        <span class="percent">占0%</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                    <div class="detail" data-for="col-7">
+                        <span class="name">PT娱乐城</span>
+                        <span class="amount">0</span>
+                        <span class="percent">占0%</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                    <div class="detail" data-for="col-8">
+                        <span class="name">AG娱乐城</span>
+                        <span class="amount">0</span>
+                        <span class="percent">占0%</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                    <div class="detail" data-for="col-9">
+                        <span class="name">时时彩</span>
+                        <span class="amount">0</span>
+                        <span class="percent">占0%</span>
+                        <span class="logo-sj6-b"></span>
+                    </div>
+                </div>
+                <ul id="balances">
+                    <li class="col-0">
+                        <input type="hidden" value="">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li>
+                    <li class="col-1" data-amount="0">
+                        <input type="hidden" value="main">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li>
+                    <li class="col-2" data-amount="0">
+                        <input type="hidden" value="hold">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li>
+                    <li class="col-3" data-amount="0">
+                        <input type="hidden" value="sportsbook">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li>
+
+                    <li class="col-4" data-amount="0">
+                        <input type="hidden" value="keno">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li>
+                    <li class="col-5" data-amount="0">
+                        <input type="hidden" value="grandsuite">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li>
+                    <li class="col-6" data-amount="0">
+                        <input type="hidden" value="gdcasino">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li> <li class="col-7" data-amount="0">
+                    <input type="hidden" value="ptcasino">
+                    <div class="bar"></div>
+                    <div class="h"></div>
+                    <div class="s"></div>
+                    <div class="f"></div>
+                </li>
+                    <li class="col-8" data-amount="0">
+                        <input type="hidden" value="aggame">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li>
+                    <li class="col-9" data-amount="0">
+                        <input type="hidden" value="lotto">
+                        <div class="bar"></div>
+                        <div class="h"></div>
+                        <div class="s"></div>
+                        <div class="f"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="wallet-logos">
+                <ul>
+                    <li><span class="logo-circle-1"></span><span class="n">空</span></li>
+                    <li><span class="logo-circle-2"></span><span class="n">中心钱包</span></li>
+                    <li><span class="logo-circle-3"></span><span class="n">被锁定</span></li>
+                    <li><span class="logo-circle-9"></span><span class="n">体育投注</span></li>
+                    <li><span class="logo-circle-8"></span><span class="n">快乐彩</span></li>
+                    <li><span class="logo-circle-4"></span><span class="n">金碧</span></li>
+                    <li><span class="logo-circle-5"></span><span class="n">GD</span></li>
+                    <li><span class="logo-circle-6"></span><span class="n">PT</span></li>
+                    <li><span class="logo-circle-7"></span><span class="n">AG</span></li>
+                    <li><span class="logo-circle-8"></span><span class="n">时时彩</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="funds-btns clearfix">
+        <ul>
+            <li #if($header=="deposit")class="active"#end><a href="/payment/deposit" class="btn-gray-2 btn-deposit">充值</a><span class="logo-sj5"></span></li>
+            <li #if($header=="withdraw")class="active"#end><a href="/payment/withdraw" class="btn-gray-2 btn-withdraw">提款</a><span class="logo-sj5"></span></li>
+            <li #if($header=="transfer")class="active"#end><a href="/payment/transfer" class="btn-gray-2 btn-transfer">转账</a><span class="logo-sj5"></span></li>
+            <li #if($header=="statement")class="active"#end><a href="/payment/statement" class="btn-gray-2 btn-transactionlog">交易记录</a><span class="logo-sj5"></span></li>
+        </ul>
+    </div>
+    <div class="trans_sd"></div>
+</div>

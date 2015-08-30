@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/common.css"/>
+</head>
+<body class="help">
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+
+    <div class="help-con">
+        <div class="container">
+            <div class="site-map"><span>About Us /</span> 联系我们</div>
+            <div class="help-main clearfix">
+                <ul class="help-left">
+                    <li><a href="/about">关于IG</a></li>
+                    <li class="active"><a href="/contact">联系我们</a></li>
+                    <li><a href="/help">帮助中心</a></li>
+                </ul>
+                <div class="help-detail">
+
+                    联系我们<br>
+                    联系我们<br>
+                    联系我们<br>
+                    联系我们<br>
+                    联系我们<br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div class="account-menu">
+    <ul>
+        <li #if($header=="message")class="active"#end>
+            <a href="/member/message">
+                <span class="icon1"></span>
+                <div class="t">消息中心</div>
+                <div class="s">您有(7)条新的消息</div>
+            </a>
+        </li>
+        <li #if($header=="promo")class="active"#end>
+            <a href="/member/promo">
+                <span class="icon2"></span>
+                <div class="t">优惠券</div>
+                <div class="s">使用优惠券</div>
+            </a>
+        </li>
+        <li #if($header=="safe")class="active"#end>
+            <a href="/member/safe">
+                <span class="icon3"></span>
+                <div class="t">安全设置</div>
+                <div class="s">完成绑定可获30元</div>
+            </a>
+        </li>
+        <li #if($header=="address")class="active"#end>
+            <a href="/member/address">
+                <span class="icon4"></span>
+                <div class="t">帐号设置</div>
+                <div class="s">填写收货地址有惊喜</div>
+            </a>
+        </li>
+        <li #if($header=="history")class="active"#end>
+            <a href="/member/history">
+                <span class="icon5"></span>
+                <div class="t">投注记录</div>
+                <div class="s">提供近30天内数据</div>
+            </a>
+        </li>
+    </ul>
+</div>

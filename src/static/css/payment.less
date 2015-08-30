@@ -1,0 +1,1125 @@
+@import "base";
+@import "var";
+@import "sprite_account";
+@import "sprite_bank";
+@import "account_base";
+
+#account-info { position: relative; padding: 30px 0 13px 30px; background: #FFF; }
+#account-info h3 { margin-bottom: 15px; }
+#account-info .hello { color: @primary; font-size: 20px; }
+#account-info .membername { color: #666; font-size: 20px; }
+#account-info .tips { margin-left: 15px; color: #ccc; font-size: 14px; }
+#account-info .title { color: #333; font-size: 14px; }
+
+.account-safe { width: 260px; }
+.account-safe .r { margin-left: 60px; }
+.account-safe .logo-trueinfo, .account-safe .logo-bindcard, .account-safe .logo-bindphone, .account-safe .logo-bindemail,
+.account-safe .logo-trueinfo-on, .account-safe .logo-bindcard-on, .account-safe .logo-bindphone-on, .account-safe .logo-bindemail-on { margin-right: 10px; float: left; }
+.account-safe .safe-level { color: @primary; font-size: 14px; }
+.account-safe .box-2 { margin-top: 10px; }
+
+.wallet { margin-left: 25px; width: 175px; }
+.wallet .balance, .wallet .btn-refresh-2 { float: left; }
+.wallet .balance { margin-top: -6px; display: block; height: 42px; color: @primary; font-size: 26px; font-family: "Microsoft Yahei" }
+.wallet .balance .loading { margin-top: 15px; display: inline-block; background: url(../imgs/bank_loading.gif); width: 110px; height: 10px; }
+.wallet .btn-refresh-2 {
+  margin: 2px 0 0 10px;
+  cursor: pointer;
+  &:hover{
+    .sprite(@refresh2);
+  }
+}
+
+.funds-proportion { margin-left: 30px; width: 450px; height: 110px; }
+.funds-proportion .funds-drawing { margin: 10px 0 2px 0; overflow: hidden; }
+
+.illustration { float: left; width: 52px; height: 52px; }
+.illustration .safe-percent { position: absolute; width: 52px; height: 52px; color: #a6ccc2; line-height: 53px; text-align: center; }
+
+
+#account-info .funds-btns { position: absolute; margin-top: -34px; z-index:2; }
+
+
+.line-2 {
+  font-size: 1px;
+  height: 60px;
+  width: 1px;
+  border: none;
+  background: #e2e2e2;
+}
+.fleft {
+  float: left;
+}
+.btn-blue-2, .btn-gray-2 {
+  display: block;
+  width: 85px;
+  height: 28px;
+  line-height: 29px;
+  text-align: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 2px;
+}
+.funds-btns .active .btn-gray-2{
+  background:@primary;
+  color: #FFF;
+}
+.btn-blue-2 {
+  background:@primary;
+  color: #FFF;
+}
+.funds-btns li {
+  margin-right: 10px;
+  float: left;
+}
+.funds-btns .logo-sj5 {
+  position: absolute;
+  margin-left: 33px;
+  bottom: -21px;
+}
+.active .logo-sj5{
+  display: block;
+}
+.logo-sj5 {
+  display: none;
+  .sprite(@a);
+}
+.logo-trueinfo{
+  .sprite(@p1);
+}
+.logo-bindcard{
+  .sprite(@p2);
+}
+.logo-bindphone{
+  .sprite(@p3);
+}
+.logo-bindemail{
+  .sprite(@p4);
+}
+.logo-trueinfo-on{
+  .sprite(@p1_a);
+}
+.logo-bindcard-on{
+  .sprite(@p2_a);
+}
+.logo-bindphone-on{
+  .sprite(@p3_a);
+}
+.logo-bindemail-on{
+  .sprite(@p4_a);
+}
+.btn-refresh-2{
+  .sprite(@refresh);
+}
+
+.funds-drawing { width: 426px; cursor: pointer; }
+.funds-drawing li { position: relative; float: left; height: 30px; }
+.funds-drawing li .detail { display: none; position: absolute; width: 80px; background: #FFF; border: 1px solid #e5e5e5; }
+.funds-drawing .detail span { display: block; }
+
+.funds-drawing .col-1, .funds-drawing .col-2, .funds-drawing .col-3, .funds-drawing .col-4, .funds-drawing .col-5, .funds-drawing .col-6, .funds-drawing .col-7, .funds-drawing .col-8, .funds-drawing .col-9{ overflow: hidden; background: url(../images/ratio_img.png) repeat-x; height: 40px; }
+.funds-drawing .col-1 { background-position: 0 -400px; }
+.funds-drawing .col-2 { background-position: 0 -440px; }
+.funds-drawing .col-3 { background-position: 0 -480px; }
+.funds-drawing .col-4 { background-position: 0 -520px; }
+.funds-drawing .col-5 { background-position: 0 -560px; }
+.funds-drawing .col-6 { background-position: 0 -600px; }
+.funds-drawing .col-7 { background-position: 0 -640px; }
+.funds-drawing .col-8 { background-position: 0 -680px; }
+.funds-drawing .col-9 { background-position: 0 -480px; }
+
+.funds-drawing .col-1 { width: 2%; }
+.funds-drawing .col-2 { width: 48%; }
+.funds-drawing .col-3 { width: 31%; }
+.funds-drawing .col-4 { width: 14%; }
+.funds-drawing .col-5 { width: 5%; }
+
+.funds-drawing .h, .funds-drawing .f, .funds-drawing .s {
+  position: absolute; background: url(../images/ratio_img.png) no-repeat; width: 10px; height: 40px; z-index: 3;
+}
+.funds-drawing .h { left: 0; display: none; }
+.funds-drawing .f { right: 0; display: none; }
+.funds-drawing .s { right: 0; background-position: 0 -1080px; }
+.funds-drawing .bar { top: 0; position: absolute; width: 100%; height: 20px; z-index: 4; }
+
+.funds-drawing .col-1 .h { background-position: 0 -40px; }
+.funds-drawing .col-2 .h { background-position: 0 -80px; }
+.funds-drawing .col-3 .h { background-position: 0 -120px; }
+.funds-drawing .col-4 .h { background-position: 0 -160px; }
+.funds-drawing .col-5 .h { background-position: 0 -200px; }
+.funds-drawing .col-6 .h { background-position: 0 -240px; }
+.funds-drawing .col-7 .h { background-position: 0 -280px; }
+.funds-drawing .col-8 .h { background-position: 0 -320px; }
+.funds-drawing .col-9 .h { background-position: 0 -360px; }
+.funds-drawing .col-1 .f { background-position: 0 -760px; }
+.funds-drawing .col-2 .f { background-position: 0 -800px; }
+.funds-drawing .col-3 .f { background-position: 0 -840px; }
+.funds-drawing .col-4 .f { background-position: 0 -880px; }
+.funds-drawing .col-5 .f { background-position: 0 -920px; }
+.funds-drawing .col-6 .f { background-position: 0 -960px; }
+.funds-drawing .col-7 .f { background-position: 0 -1000px; }
+.funds-drawing .col-8 .f { background-position: 0 -1040px; }
+.funds-drawing .col-9 .f { background-position: 0 -840px; }
+
+.funds-drawing .first .h { display: block; }
+.funds-drawing .end .f { display: block; }
+.funds-drawing .end .s { display: none; }
+
+.funds-drawing .col-0 { overflow: hidden; width: 0; background: url(../images/ratio_img.png) repeat-x 0 -360px; }
+.funds-drawing .col-0 .h { display: block; background-position: 0 0; }
+.funds-drawing .col-0 .f { display: block; background-position: 0 -720px; }
+
+.funds-drawing .detail { display: none; position: absolute; max-width: 228px; left: 0; top: 0; padding: 10px; background: #FFF; border: 1px solid #ddd;
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.25);
+}
+.funds-drawing .detail span { display: block; }
+.funds-drawing .detail .name, .funds-drawing .detail .amount { color: #333; }
+.funds-drawing .detail .amount, .funds-drawing .detail .percent { float: left; }
+.funds-drawing .detail .amount { margin-right: 10px; }
+.funds-drawing .detail .logo-sj6-b { position: absolute; margin-left: -9px; left: 50%; bottom: -10px; }
+.funds-drawing .detail .name span { display: inline; float: none; }
+.funds-drawing .detail .name .amount { margin: 0 5px; }
+
+
+.wallet-logos li { float: left; width: 80px; margin-bottom: 5px; margin-right: 5px; }
+.wallet-logos span { float: left; }
+.wallet-logos .n { margin: -3px 0 0 5px; }
+
+.logo-circle-1, .logo-circle-2, .logo-circle-3, .logo-circle-4, .logo-circle-5, .logo-circle-6, .logo-circle-7, .logo-circle-8, .logo-circle-9 {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+.trans_sd {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 4px;
+  bottom: -4px;
+  background: url(../images/header_shadow.png) repeat-x;
+  z-index: 0;
+}
+
+
+.progress { position: relative; width: 717px; height: 100px; }
+.progress span { position: absolute; }
+.progress .bar { top: 58px; display: block; width: 717px; height: 16px; background: url(../images/progress_img.png) no-repeat; }
+.progress .txt-1 { left: 0; top: 25px; }
+.progress .txt-2 { left: 228px; top: 25px; }
+.progress .txt-3 { left: 462px; top: 25px; }
+.progress .txt-4 { right: 0px; top: 25px; }
+.progress .step-1 .bar { background-position: 0 0; }
+.progress .step-2 .bar { background-position: 0 -30px; }
+.progress .step-3 .bar { background-position: 0 -60px; }
+.progress .step-4 .bar { background-position: 0 -90px; }
+.progress .step-1 .txt-1, .progress .step-2 .txt-1, .progress .step-2 .txt-2, .progress .step-3 .txt-1, .progress .step-3 .txt-2, .progress .step-3 .txt-3, .progress .step-4 .txt-1,.progress .step-4 .txt-2, .progress .step-4 .txt-3, .progress .step-4 .txt-4 { color: #a6ccc2; }
+#funds{
+  width: 990px;
+  min-height: 620px;
+  border: 1px solid #d3d3d3;
+  border-top: none;
+  background: #F9FAFD;
+  margin: 0px auto 20px;
+}
+#funds .progress {
+  margin: 0 auto;
+}
+.field{
+  .clearfix();
+}
+
+.deposit-form { width: 990px; margin: 0px auto;}
+.deposit-form .field-label { margin: 8px 10px 0 25px; font-size: 14px; color: #000; }
+.deposit-form .box-1 { margin: 30px 0 ; }
+.deposit-form .box-1 .input-tips { position: absolute; }
+.deposit-form #amount { width: 169px; background: #a6ccc2; color: @primary; font-size: 22px; font-family: tahoma; height: 22px; line-height: 22px; padding:5px 0 5px 5px;}
+.deposit-form .lblamont { line-height: 35px; color: #fff; }
+.deposit-form .field { margin-bottom: 25px; }
+.deposit-form .input-box-2 { float: left; border: 2px solid @primary; }
+.deposit-form .input-box-2 input { margin: 2px; border: none; }
+.deposit-form .input-tips { margin-top: 9px; }
+.deposit-form .focus .input-box-2 { border: 2px solid #009CFF; }
+
+.course_a{margin-left: 30px; color:#0088ff; text-decoration: none;}
+.course_a:hover{text-decoration: underline !important;}
+
+.deposit-tags { margin-left: 150px; width: 520px; }
+.deposit-tags li { float: left; cursor: pointer; }
+.deposit-tags span{ position: relative; z-index: 1; display: block; margin-right: 10px; margin-bottom: -2px; width: 115px; height: 36px; line-height: 34px; border: 2px solid #B8E2D6; text-align: center; color: #333; background: #FFF; border-bottom: none; font-size: 14px; font-weight: bold; }
+.deposit-tags .on { z-index: 3; border-color: #a6ccc2; background: #F9FAFD; }
+
+.deposit-content { position: relative; margin-bottom: 0px; padding: 10px 20px 0px ; width: auto; height: 414px; border: 2px solid #a6ccc2; z-index: 2; }
+.deposit-content .guide { margin: 0 0 25px 75px; width: 360px; height: 80px; }
+.deposit-content .tips { margin: 58px 0 25px 105px; }
+.deposit-content .bank-list { width: 100%; }
+.deposit-content .bank-list li { margin: 0 20px 28px 0; float: left; }
+.deposit-content .btns { /*margin-left: 105px;*/ overflow: hidden; height: 36px; position: absolute; left: 125px; top: 365px; margin-left:0px;}
+.deposit-content .third-party-3 .btns{position: absolute; left: 125px; top: 365px; margin-left:0px;}
+
+.deposit-content .bl { position: relative; }
+.deposit-content .bl-mask { position: absolute; z-index: 1; left: 0px; top: 0px; width: 100%; height: 200px; line-height: 185px; background: #FFF; opacity: .5; filter:alpha(opacity=85); font-size: 80px; color: #999; text-align: center; }
+.deposit-content .bl .third-banks { height: auto; }
+
+.deposit-content .forbidden { margin: 30px 0 0 152px; }
+
+.deposit-content .remittance-1 .bank-list { width: 500px; }
+.deposit-content .remittance-1 .tips { margin-top: -35px; }
+
+.input-box-2 label {
+  padding-left: 5px;
+  position: absolute;
+  height: 28px;
+  line-height: 28px;
+  color: #ccc;
+}
+.field .input-box-3, .field .input-tips {
+  float: left;
+}
+.input-tips {
+  display: none;
+  height: 23px;
+  line-height: 23px;
+  color: #999;
+}
+.deposit-form .input-tips {
+  margin-top: 9px;
+}
+.field .input-tips {
+  margin-top: 4px;
+  margin-left: 10px;
+}
+
+
+
+.radio-bank { cursor: pointer; background: #FFF; }
+.radio-bank > div { border: 1px solid #D3D3D3; width: 180px; *width: 201px; height: 39px;  }
+.radio-bank .radio { float: left; }
+.radio-bank .radio-label{ float:right;}
+.radio-bank .radio-label { position: relative; width: 155px; height: 39px; /*border: 1px solid #d3d3d3;*/ background: #FFF; }
+.radio-bank .radio { padding: 14px 7px 0 5px; *padding: 12px 7px 0 5px; }
+.radio-bank .radio-label .logo-checked { position: absolute; display: none; right: 0; bottom: 0; }
+.radio-bank:hover > div { width: 178px; *width: 199px; height: 37px; border: 2px solid #CBDFF6; }
+.radio-bank:hover .radio { padding: 13px 7px 0 4px; *padding: 11px 7px 0 4px; }
+.radio-bank:hover .radio-label { width: 154px; height: 37px; }
+.radio-bank > div.checked { width: 178px; *width: 201px; height: 37px; border: 2px solid @primary; }
+.radio-bank > div.checked .radio { padding: 13px 7px 0 4px; *padding: 11px 7px 0 4px; }
+.radio-bank > div.checked .radio-label { width: 154px; height: 37px; }
+.radio-bank > div.checked .radio-label .bank-logo { margin: 8px 0 0 10px; }
+.radio-bank > div.checked .radio-label .logo-checked { display: block; }
+.radio-label .bank-type { position: absolute; right: 0; top: 0; display: block; width: 28px; height: 15px; background: url(../imgs/uedbet_bank_img.png) no-repeat; }
+.radio-label .bank-type-1 { background-position: -80px -440px; }
+.radio-label .bank-type-2 { background-position: -120px -440px; }
+.radio-label .bank-type-3 { background-position: -80px -460px; }
+
+
+.bank-list-2 { padding: 1px 1px 0; background: #90c1dd; }
+.radio-bank-2 { margin-bottom: 1px; width: 328px; height: 46px; background: #ecf3f9; }
+.radio-bank-2 .radio, .radio-bank-2 .radio-label{ margin-top: 9px; float: left; cursor: pointer; color: #333; }
+.radio-bank-2 .name { margin-left: 10px; }
+.radio-bank-2 .tail { margin-left: 20px; }
+.radio-bank-2 .admin { position: relative; margin: 9px 5px 0 0; float: right; width: 50px; line-height: 30px; color: #0098cf; cursor: pointer; text-align: center; }
+.radio-bank-2 .admin:hover .s-admin-popupmenu { display: block; }
+.radio-bank-2 .radio { padding: 7px 12px 0 12px; }
+.radio-bank-2 .radio-label span { float: left; line-height: 30px; }
+.radio-bank-2 .radio-label .blogo { margin-top: 5px; }
+#withdraw-form .radio-bank-2 .radio{padding: 10px 12px 0 12px;}
+
+.bankinfo-ls { position: absolute; top: 145px; right: 0; width: 285px; height: 280px; }
+.bankinfo-ls .bank-card-info { float: left; margin: 0 10px 10px 0; display: none; }
+.bankinfo-ls .bank-card-info li { line-height: 30px; }
+.bankinfo-ls .bank-card-info .c { margin-top: 5px; line-height: 20px; display: none; }
+
+.radio-bank-3 > div { width: 115px; height: 30px; line-height: 30px; border: 1px solid #d3d3d3; cursor: pointer; }
+.radio-bank-3 .radio{ float: left; }
+.radio-bank-3 .radio-label { float:right;}
+.radio-bank-3 .radio-label { position: relative; width: 92px; line-height: 31px; }
+.radio-bank-3 .radio { padding: 9px 5px 0 5px; }
+.radio-bank-3 .radio-label i { margin: 0 6px 0 8px; _margin-top: 4px; vertical-align: -4px; display: inline-block; }
+.radio-bank-3 .radio-label .logo-checked { position: absolute; display: none; right: 0; bottom: 0; }
+
+.radio-bank-3:hover > div { border: 1px solid #CBDFF6; }
+
+.radio-bank-3 > div.checked { border: 1px solid @primary; }
+.radio-bank-3 > div.checked .radio-label {  }
+.radio-bank-3 > div.checked .radio-label i { }
+.radio-bank-3 > div.checked .radio-label .logo-checked { display: block; }
+
+p {
+  color: #999;
+}
+
+.deposit-content .btns {
+  overflow: hidden;
+  height: 36px;
+  position: absolute;
+  left: 125px;
+  top: 365px;
+  margin-left: 0px;
+}
+.btn-blue, .btn-white {
+  display: block;
+  width: 152px;
+  height: 36px;
+  line-height: 35px;
+  text-align: center;
+  background: @primary;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+}
+.btn-blue {
+  background-position: 0 -990px;
+  color: #FFF;
+}
+.btn-disabled, .btn-disabled:hover {
+  background: #f3f3f3;
+  color: #bababa;
+  border: none;
+}
+.g-c1{
+  color: @primary;
+}
+.logo-checked{
+  .sprite(@ck);
+}
+.bank-logo{
+  display: block;
+  margin: 9px 0 0 10px;;
+}
+.radio-bank:hover .radio-label .bank-logo {
+  margin: 8px 0 0 10px;;
+}
+.logo-ICBC-2 { .sprite(@gong); }
+.logo-ABC-2 { .sprite(@nong); }
+.logo-CCB-2 { .sprite(@jian); }
+.logo-CMBC-2 { .sprite(@zhao); }
+.logo-ALIPAY-2{.sprite(@zhi);}
+.logo-CMSB-2{.sprite(@zhao);}
+
+.ico-icbc,.ico-cmb,.ico-ccb,.ico-abc,.ico-boc,.ico-spdb,.ico-sdb,.ico-cib,.ico-bob,.ico-cebb,.ico-boco,.ico-cmbc,.ico-ecitic,.ico-gdb,.ico-pingan,.ico-post,.ico-union,.ico-jsb,.ico-srcb,.ico-hkb,.ico-nbcb,.ico-njcb,.ico-bosh,.ico-hxb,.ico-hzb,.ico-hkbea,.ico-ordos,.ico-cbhb,.ico-jzb,.ico-gdrcu,.ico-nccb,.ico-glccb,.ico-bsb,.ico-ynrcc,.ico-gzcb,.ico-cqrcb,.ico-zjcb { margin: 0 6px 0 8px; background: url(../images/bank_ico.png) no-repeat; display: inline-block; width: 18px; height: 18px; margin-right: 3px; _margin-top: 4px; vertical-align: -4px; }
+
+/*工商银行*/
+.ico-icbc {	background-position:0 0; }
+/*招商银行*/
+.ico-cmb { background-position:-18px 0; }
+/*中国农业银行*/
+.ico-abc { background-position:-54px 0; }
+/*建设银行*/
+.ico-ccb { background-position:-36px 0; }
+/*北京银行*/
+.ico-bob { background-position:-126px -18px; }
+/*交通银行*/
+.ico-boco {	background-position:-36px -18px; }
+/*兴业银行*/
+.ico-cib { background-position:0 -18px;}
+
+/*南京银行*/
+.ico-njcb {	background-position:-108px -36px; }
+/*中国民生银行*/
+.ico-cmbc {	background-position:-90px -18px; }
+/*光大银行*/
+.ico-cebb {	background-position:-90px 0; }
+/*中国银行*/
+.ico-boc { background-position:-72px 0; }
+
+/*平安银行*/
+.ico-pingan { background-position:0 -36px; }
+
+/*渤海银行*/
+.ico-cbhb{background-position:-108px -54px;}
+/*东亚银行*/
+.ico-hkbea{	background-position:-54px -54px;}
+/*宁波银行*/
+.ico-nbcb{	background-position:-90px -36px;}
+/*中信银行*/
+.ico-ecitic{background-position:-126px 0;}
+/*深圳发展银行*/
+.ico-sdb{background-position:-108px -18px;}
+/*广发银行*/
+.ico-gdb{background-position:-72px -18px;}
+/*上海银行*/
+.ico-bosh{background-position:0 -54px;}
+
+/*上海浦东发展银行*/
+.ico-spdb{	background-position:-54px -18px;}
+/*中国邮政*/
+.ico-post{	background-position:-18px -18px;}
+/*华夏银行*/
+.ico-hxb{background-position:-18px -54px;}
+/*杭州银行*/
+.ico-hzb{background-position:-36px -54px;}
+/*上海农商银行*/
+.ico-srcb{background-position:-72px -37px;}
+
+.ico-bjrcb, .ico-cz, .ico-ncb, .ico-sccb, .ico-zjtlcb { margin: 0 6px 0 8px; background: url(../images/bank_ico2.png) no-repeat; display: inline-block; width: 16px; height: 17px; margin-right: 3px; _margin-top: 4px; vertical-align: -4px; }
+
+/*北京农村商业银行*/
+.ico-bjrcb { background-position: -32px 0; }
+/*浙商银行*/
+.ico-cz { background-position: 0 0; }
+/*南洋商业银行*/
+.ico-ncb { background-position: -16px 0; }
+/*河北银行*/
+.ico-sccb { background-position: -48px 0; }
+/*泰隆银行*/
+.ico-zjtlcb { background-position: -64px 0; }
+
+
+.deposit-item{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+.third-banks {
+  overflow: hidden;
+  height: 83px;
+  padding-top: 3px;
+}
+.third-banks .radio-bank-3 {
+  float: left;
+  margin: 0 10px 10px 0;
+  background: #FFF;
+}
+.third-banks .radio{
+  line-height: normal;
+}
+.third-party-use .more {
+  position: absolute;
+  left: 125px;
+  top: 326px;
+  a{
+    color:@primary;
+  }
+}
+.collapse a{
+  color:@primary;
+}
+.third-party-use .collapse {
+  position: absolute;
+  top: 369px;
+  right: 112px;
+  display: none;
+}
+.g-logorecommend-1{
+  position: absolute;
+  right: -7px;
+  top: -11px;
+  .sprite(@com);
+}
+.w-c{
+  border-top:1px solid #cccccc;
+}
+.w-row{
+  border-bottom: 1px solid #e5e5e5;
+  width: 803px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  color:#333333;
+  font-size: 14px;
+}
+.w-l{
+  float: left;
+  span{
+    color:#ff6600;
+    font-size: 18px;
+  }
+}
+.w-r{
+  float: right;
+  color:#666666;
+  font-size: 12px;
+  a{
+    color:#ff6600;
+    text-decoration: underline;
+  }
+}
+.w-m{
+  color:#666666;
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.m-b{
+  margin: auto;
+}
+#withdraw{
+  min-height: 600px;
+}
+.logo-th-2{
+  .sprite(@warn);
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.transfer {
+  position: relative;
+  min-height: 564px;
+}
+.member-balances {
+  height: 90px;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+.tsf_sd {
+  width: 100%;
+  height: 10px;
+  background: url(../imgs/uedbet_bank_img.png) repeat-x 0px -150px;
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+}
+.member-balances li {
+  float: left;
+  height: 88px;
+  width: 123px;
+  position: relative;
+}
+.member-balances .btn-refresh-2 {
+  position: absolute;
+  left: auto;
+  right: 10px;
+  top: 10px;
+  display: none;
+  .sprite(@refresh);
+  cursor: pointer;
+  &:hover{
+    .sprite(@refresh2);
+  }
+}
+.tsf_icon {
+  width: 23px;
+  height: 23px;
+  margin: 7px auto;
+  background: url(../imgs/uedbet_bank_img.png) no-repeat 0px 100px;
+}
+.tsf_num {
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  font-size: 20px;
+  color: @primary;
+  text-align: center;
+  margin-bottom: 7px;
+}
+.member-balances .amount {
+  font-family: "Microsoft YaHei";
+}
+.tsf_type {
+  width: 100%;
+  height: 12px;
+  line-height: 12px;
+  font-size: 12px;
+  color: #999999;
+  text-align: center;
+}
+.tsf_line {
+  .sprite(@line);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.member-balances .btn-refresh-2 {
+  position: absolute;
+  left: auto;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+#transfer .tbl-2 { margin:16px 0 0 59px; }
+
+.transfer-content { margin-left: -1px; width: 988px; min-height: 469px; border: 2px solid #93BDEE; }
+.transfer-form .s-d-exchange { position: absolute; left: 200px; top: 9px; }
+.transfer-form .field .field-left { width: auto; }
+.transfer-form .label { font-size: 14px; color: #333;}
+.transfer-form .btn-blue { margin: 93px 0 0 42px; }
+.transfer-form .field .input-tips { float: none; position: absolute; margin-left: 0; margin-top: 30px; }
+.ea_p .transfer-form .field .input-tips{ margin-top:0px; left:205px; top:88px;}
+.ea_p .field-validation-error .f-tips-2{ width:140px; margin-top:4px; margin-left:20px;}
+.transfer-form #source-transfer, .transfer-form #desc-transfer { width: 152px; height: 28px; color: #999; }
+.transfer-form #source-transfer{ padding-left:2px;}
+.transfer-form #amount { width: 172px;}
+
+.transfer-form{
+  width: auto;
+  position: relative;
+  margin: 65px auto 0;
+  margin-left: 80px;
+}
+.s-d-exchange { }
+.s-d-exchange .b-tr, .s-d-exchange .b-rb { display: block; width: 20px; height: 10px; border: solid #ccc; }
+.s-d-exchange .b-tr { border-width: 1px 1px 0 0; }
+.s-d-exchange .b-rb { border-width: 0 1px 1px 0; }
+.s-d-exchange .btn-exchange { margin: 5px 10px; }
+.btn-exchange{
+  .sprite(@exchange2);
+  display: block;
+  cursor: pointer;
+  &:hover{
+    .sprite(@exchange);
+  }
+}
+
+.pg-transfer .promo-empty {
+  float: right;
+  margin-right: 70px;
+  margin-top: 50px;
+  width: 352px;
+}
+.pg-transfer .promo-empty .bg {
+  margin: 0 auto;
+  .sprite(@promo_no);
+}
+.pg-transfer .promo-empty p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+.pg-transfer .field .field-left {
+  width: 100px;
+  text-align: left;
+}
+.transfer-form .label {
+  line-height: 31px;
+  font-size: 14px;
+  color: #333;
+}
+.transfer-form #source-transfer, .transfer-form #desc-transfer {
+  width: 185px;
+}
+.transfer-form #source-transfer, .transfer-form #desc-transfer {
+  height: 35px;
+  font-size: 16px;
+}
+.transfer-form #source-transfer {
+  padding-left: 2px;
+}
+.field .field-left, .field .field-right {
+  float: left;
+}
+.transfer-form .field {
+  overflow: hidden;
+}
+.field {
+  clear: both;
+  margin-bottom: 15px;
+}
+.input-box-4 {
+  border: 2px solid #009b72;
+}
+.input-box-4 label {
+  padding-left: 5px;
+  position: absolute;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+}
+.transfer-form #amount {
+  width: 172px;
+}
+.input-box-4 input {
+  margin: 2px;
+  padding: 5px 0 5px 5px;
+  border: none;
+  height: 22px;
+  line-height: 22px;
+  background: #a6ccc2;
+  color: @primary;
+  font-family: tahoma;
+  font-size: 22px;
+}
+.transfer-form .s-d-exchange {
+  position: absolute;
+  left: 200px;
+  top: 9px;
+}
+.transfer-form .s-d-exchange {
+  left: 297px;
+  top: 17px;
+}
+.pg-transfer .transferForm {
+  overflow: hidden;
+  margin-right: 30px;
+  width: 415px;
+  border-right: 1px solid #d5d5d5;
+}
+.transfer-form .btn-blue {
+  margin-top: 25px;
+  margin-left: 100px;
+}
+.member-balances li:hover .btn-refresh-2 {
+  display: block;
+}
+.filter-more {
+  position: relative;
+  padding: 10px 0;
+  height: 62px;
+  background: none;
+  border: solid #d6d6d6;
+  border-width: 0 0 0px;
+  border-bottom: 1px solid #d6d6d6;
+}
+.transaction-filter {
+  margin-left: 30px;
+}
+.transaction-filter .trans-type {
+  margin: 5px 0;
+}
+.transaction-filter .tt-label {
+  margin-right: 6px;
+}
+.transaction-filter .trans-type a:hover, .transaction-filter .trans-type a.on {
+  color: #FFF;
+  background: @primary;
+}
+.transaction-filter .trans-type a {
+  margin-right: 10px;
+  padding: 3px 10px;
+  color: #666;
+}
+.transaction-filter .trans-date {
+  margin: 10px 0;
+  line-height: 28px;
+}
+.transaction-filter .trans-date .ts-label {
+  margin-right: 5px;
+}
+.transaction-filter .trans-date a {
+  margin-right: 10px;
+  padding: 3px 10px;
+  color: #666;
+}
+.transaction-filter .trans-date a:hover, .transaction-filter .trans-date a.on {
+  color: #FFF;
+  background: @primary;
+}
+.logo-th-3{
+  .sprite(@warn_big);
+  margin: auto;
+}
+#transactionlog .no-data h3 {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin: auto;
+  margin-top: 20px;
+}
+#transactionlog .no-data {
+  margin-top: 10px;
+  padding-top: 50px;
+}
+#transactionlog {
+  margin-bottom: 3px;
+  position: relative;
+  min-height: 563px;
+}
+
+.popup-thirdpay-info .step-1 h3 {
+  color: @primary;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 64px;
+}
+.popup-thirdpay-info .time {
+  position: absolute;
+  right: 252px;
+  top: 119px;
+  font-size: 38px;
+}
+.popup-thirdpay-info .step-1 .p1 {
+  margin: 40px 0 30px -75px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+.popup-thirdpay-info .step-1 .tips {
+  margin: 50px 0 0 215px;
+}
+.g-hidden{
+  display: none;
+}
+.popup-thirdpay-info .step-2 h3 {
+  margin: 10px 0;
+  font-size: 25px;
+  color: #a6ccc2;
+  text-align: center;
+}
+.popup-thirdpay-info .step-2 p {
+  color: #333;
+  text-align: center;
+  font-size: 12px;
+}
+.popup-thirdpay-info .step-2 .btn-blue, .popup-autodeposit-popup .step-2 .a {
+  display: inline-block;
+}
+.popup-thirdpay-info .step-2 .b1 {
+  margin-top: 100px;
+  margin-left: 76px;
+  text-align: center;
+}
+.popup-thirdpay-info a {
+  color: #999;
+  text-decoration: underline;
+}
+.popup-thirdpay-info .step-2 .logo-th-3 {
+  margin: 30px auto 0;
+}
+.popup-thirdpay-info .step-2 .btn-blue {
+  margin-right: 20px;
+}
+.popup-thirdpay-info .step-3 .logo-right-3 {
+  margin: 30px auto 0;
+  .sprite(@ok_big);
+}
+.popup-thirdpay-info .step-3 h3 {
+  margin: 10px 0;
+  font-size: 25px;
+  color: #7caa19;
+  text-align: center;
+}
+.popup-thirdpay-info .step-3 .ls {
+  overflow: hidden;
+  margin: 10px 0 0 150px;
+}
+.popup-thirdpay-info .step-3 li {
+  float: left;
+  margin-right: 0px;
+  min-width: 130px;
+  min-height: 100px;
+  background: #f5f5f5;
+  text-align: center;
+}
+.popup-thirdpay-info .step-3 li .v {
+  margin: 21px 0 10px;
+  color: #000;
+  font-size: 18px;
+  display: block;
+  font-weight: bold;
+}
+.popup-thirdpay-info .step-3 li .k {
+  color: #666;
+  display: block;
+}
+.popup-thirdpay-info .step-3 .b1 {
+  text-align: center;
+  margin-top: 70px;
+}
+.popup-thirdpay-info .step-3 .btn-blue {
+  display: inline-block;
+  margin-left: 90px;
+  margin-right: 20px;
+}
+.popup-thirdpay-info .step-3 .b1 a {
+  color: #666;
+  text-decoration: underline;
+}
+
+
+#deposit-help-imgs { position: absolute; top: 15px; right: 25px; width: 330px; height: 345px; overflow: hidden; }
+#deposit-help-imgs h3 { margin: 0; margin-left: 10px; color: #7caa19; font-size: 16px; }
+#deposit-help-imgs ul { width: 990px; }
+#deposit-help-imgs li { width: 330px; height: 280px; float: left; }
+#deposit-help-imgs img { width: 310px; }
+#deposit-help-imgs .nav { position: absolute; left: 145px; bottom: 0px; }
+#deposit-help-imgs .nav span { display: inline-block; margin-right: 10px; width: 13px; height: 13px; background: url(../imgs/uedbet_bank_img.png) -80px -355px; cursor: pointer; color: #FFF; font-size: 11px; text-align: center; line-height: 13px; }
+#deposit-help-imgs .nav .on { background-position: -60px -355px; }
+/*#region deposit popup*/
+.popup-autodeposit-info { margin-left: 30px; background: #FFF; }
+.popup-autodeposit-info .a { color: #999; text-decoration: underline; }
+.popup-autodeposit-info .time { position: absolute; font-size: 38px; }
+.popup-autodeposit-info .step-1 h3 { margin: 15px 0; font-size: 16px; color: #333; }
+.popup-autodeposit-info .step-1 .bank-card-info {}
+.popup-autodeposit-info .step-1 .bank-card-info li { height: 20px; overflow: hidden; }
+.popup-autodeposit-info .step-1 .bank-card-info .tt { margin-left: 10px; }
+.popup-autodeposit-info .step-1 .p1 { margin: 15px 0; color: #333; }
+.popup-autodeposit-info .step-1 .p2 { margin: 67px 0 45px; color: #333; }
+.popup-autodeposit-info .step-1 .time { left: 100px; top: 254px; }
+.popup-autodeposit-info .step-1 .s2 { margin-top: 30px; }
+.popup-autodeposit-info .step-1 .tips-bg {margin-top:20px;padding-top:1px;width: 260px;height: 80px;background: url(../imgs/bank_tips.jpg) no-repeat;}
+.popup-autodeposit-info .step-1 .p3{padding:0;margin:24px 0 5px 10px;font-size: 14px; font-style: italic;color:#666;}
+.popup-autodeposit-info .step-1 .p4{padding:0;margin:0 0 0 10px;color:#999;}
+.popup-autodeposit-info .step-1 .ps{color:#08F;}
+.popup-autodeposit-info .step-1 .tips-2{margin-left:20px;color:#666;}
+.popup-autodeposit-info .step-1 .btn-blue-2{display: inline-block;}
+
+.popup-autodeposit-info .step-2 .logo-th-3 { margin: 30px auto 0; }
+.popup-autodeposit-info .step-2 h3 { margin: 10px 0; font-size: 25px; color: #79A8D6; text-align: center; }
+.popup-autodeposit-info .step-2 p { color: #333; text-align: center; }
+.popup-autodeposit-info .step-2 .b1 { margin-top: 100px; margin-left: 76px; text-align: center; }
+.popup-autodeposit-info .step-2 .btn-blue, .popup-autodeposit-popup .step-2 .a { display: inline-block; }
+.popup-autodeposit-info .step-2 .btn-blue { margin-right: 20px; }
+
+.popup-autodeposit-info .step-3 .logo-right-3 { margin: 30px auto 0; }
+.popup-autodeposit-info .step-3 h3 { margin: 10px 0; font-size: 25px; color: #7caa19; text-align: center; }
+.popup-autodeposit-info .step-3 .ls { overflow: hidden; margin: 10px 0 0 150px; }
+.popup-autodeposit-info .step-3 li { float: left; margin-right: 0px; min-width: 130px; min-height: 100px; background: #f5f5f5; text-align: center; }
+.popup-autodeposit-info .step-3 li .k { color: #666; display: block; }
+.popup-autodeposit-info .step-3 li .v { margin: 21px 0 10px; color: #000; font-size: 18px; display: block; font-weight: bold; }
+.popup-autodeposit-info .step-3 .b1 { text-align: center; margin-top: 70px; }
+.popup-autodeposit-info .step-3 .btn-blue { display: inline-block; margin-left: 90px; margin-right: 20px; }
+.popup-autodeposit-info .step-3 .b1 a { color: #666; text-decoration: underline; }
+
+.bank-card-info {
+  line-height: 20px;
+  overflow: hidden;
+  .sprite(@bank_bg);
+  font-size: 12px;
+}
+.bank-card-info .img { margin:  6px 0 12px 18px; }
+.bank-card-info .t { margin: 0 5px 0 15px; text-align: right; color: #666; }
+.bank-card-info .v { color: #333; overflow: hidden; display: inline-block; width:155px; vertical-align: -5px; white-space: nowrap;}
+
+.bank-card-info .c {
+  margin-right: 5px;
+  float: right;
+  display: block;
+  .sprite(@copy);
+  text-align: center;
+  cursor: pointer;
+}
+.bank-card-info .msg2 { color: #36ad7f; font-weight: bold; font-size:12px;}
+
+.logo-ALIPAY-2 {
+  .sprite(@zhi);
+  display: block;
+}
+.logo-CMBC-2{
+  .sprite(@gong);
+  display: block;
+  margin-top: 11px !important;
+}
+
+.pass-cen{
+  text-align: center;
+  color:#666666;
+  margin-top: 50px;
+  span{
+    color:#999999;
+  }
+}
+.pass-set{
+  margin: 10px auto;
+  width: 316px;
+  span{
+    float: left;
+    margin-top: 8px;
+    color:#333333;
+  }
+  .select-box{
+    float: left;
+    margin-left: 9px;
+  }
+}
+.card-title{
+  color:#666666;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.card-con{
+  width: 803px;
+  margin: 0 auto;
+}
+.card-table{
+  width: 100%;
+  td{
+    border:1px solid #cccccc;
+    text-align: center;
+    color:#666666;
+    padding: 6px 0;
+  }
+  .card-no{
+    color:#ff6600;
+    text-decoration: underline;
+  }
+}
+.card-form{
+  .field{
+    margin-left: 100px;
+  }
+  .card-name{
+    color:#999999;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 26px;
+  }
+  .big-text{
+    width: 250px;
+  }
+  .select-box-province{
+    select{
+      width: 150px;
+    }
+  }
+  .select-box-city{
+    select{
+      width: 78px;
+    }
+  }
+  .select-box{
+    float: left;
+    margin-right: 10px;
+  }
+  .textarea{
+    width: 310px;
+    resize: none;
+    border:1px solid #cccccc;
+    border-radius: 2px;
+    padding: 5px;
+  }
+  .label-top{
+    vertical-align: top;
+  }
+}
+.withdraw-con{
+  width: 803px;
+  margin: 0 auto;
+  .wd-title{
+    color:#666666;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
+td.textarea-con{
+  padding: 0;
+}
+.card-table .textarea{
+  display: block;
+  width: 700px;
+  resize: none;
+  border:1px solid #cccccc;
+  border-radius: 2px;
+  margin: 10px;
+  padding: 5px;
+}
+.withdraw-form{
+  margin-top: 25px;
+  input{
+    width: 300px;
+  }
+  .small{
+    width: 150px;
+  }
+  .code{
+    float: left;
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .limit{
+    color:#666666;
+    font-size: 12px;
+    margin-left: 10px;
+    float: left;
+    margin-top: 4px;
+  }
+}
