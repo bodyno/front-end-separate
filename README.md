@@ -8,8 +8,10 @@ grunt md5 打包合并
 
 漂亮
 
-使用:npm install
+使用:
 
-npm start
+首先 npm install 等待包安装完毕
 
-打包 grunt
+然后 grunt 启动服务器
+
+打包 grunt build
