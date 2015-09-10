@@ -6,7 +6,7 @@ module.exports = {
             watch: ['routes','app.js'],
             delay: 300,
             env: {
-                PORT: 3000
+                PORT: 80
             }
         }
     }

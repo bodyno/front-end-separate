@@ -2,23 +2,18 @@
         <div class="footer-top">
             <div class="container">
                 <div class="clearfix">
-                    <div class="footer-copy">
-                        Copyright &copy; 2015 www.com
-                    </div>
+                    <div class="footer-copy" data-i18n="[html]base:footer.copy"></div>
                     <ul class="footer-menu clearfix">
-                        <li><a href="/help">关于我们　|</a></li>
-                        <li><a href="#">常见问题　|</a></li>
-                        <li><a href="#">服务条款　|</a></li>
-                        <li><a href="#">隐私保护　|</a></li>
-                        <li><a href="#">理性博彩　|</a></li>
-                        <li><a href="#">合营联盟</a></li>
+                        <li><a href="/help" data-i18n="base:footer.name1"></a></li>
+                        <li><a href="#" data-i18n="base:footer.name2"></a></li>
+                        <li><a href="#" data-i18n="base:footer.name3"></a></li>
+                        <li><a href="#" data-i18n="base:footer.name4"></a></li>
+                        <li><a href="#" data-i18n="base:footer.name5"></a></li>
+                        <li><a href="#" data-i18n="base:footer.name6"></a></li>
                     </ul>
                 </div>
                 <div class="footer-img"></div>
-                <div class="footer-text">
-                    www隶属于Venus Global Service LTD，由First Cagayan颁发牌照并监管，所有版权归99UU.COM所有，违者必究<br>
-                    Copyright©2015  www.com
-                </div>
+                <div class="footer-text" data-i18n="[html]base:footer.more"></div>
             </div>
         </div>
     </div>

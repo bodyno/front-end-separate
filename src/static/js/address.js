@@ -1,12 +1,11 @@
-$(function(){
-
+function afterTran(){
     $.validator.addMethod("receiver", function(value, element) {
-        return this.optional(element) || /^[a-zA-Z0-9_\u4e00-\u9fa5]+$/.test(value);
-    }, "请输入正确的收货人");
+        return this.optional(element) || /^[a-zA-Z0-9_\u4e00-\u9fa5]{2,8}$/.test(value);
+    }, $.t("valid.addr.1"));
 
     $.validator.addMethod("phone", function(value, element) {
         return this.optional(element) || /^0{0,1}(13\d|14\d|15\d|17\d|18\d)\d{8}$/.test(value);
-    }, "请输入正确的手机");
+    }, $.t("valid.addr.2"));
 
     $("#realinfo-form").validate($.extend({},validBase,{
         rules: {
@@ -20,7 +19,9 @@ $(function(){
                 required: true
             },
             address: {
-                required: true
+                required: true,
+                rangelength:[2,20],
+                chinese:true
             },
             receiverBy:{
                 required: true,
@@ -35,8 +36,8 @@ $(function(){
 
 
     $("#btn-realinfo").click(function(){
-        $(this).commit($("#realinfo-form"),"/message/saveCrmMessage",function(){
-            dialog.info("修改成功",function(){
+        $(this).commit($("#realinfo-form"),"/sidCustInfo/saveCustReceive",function(){
+            dialog.info($.t("base:edit_ok"),function(){
                 location.reload()
             })
         },null,function(data){
@@ -45,4 +46,75 @@ $(function(){
             })
         })
     })
-})
+
+
+
+    $.get("/cashier/listProvince",function(result){
+        resultHandle(result,function(){
+            var html=[];
+            result=result.obj;
+            for(var i=0;i<result.length;i++){
+                html.push('<option data-id="'+result[i].provinceid+'" value="'+result[i].provincename+'">'+result[i].provincename+'</option>')
+            }
+            $("#province option:eq(0)").after(html);
+        })
+    })
+
+    $("#province").change(function(){
+        $.get("/cashier/listCity",{
+            provinceid:$("#province option:selected").data("id")
+        },function(result){
+            resultHandle(result,function(){
+                var html=[];
+                result=result.obj;
+                for(var i=0;i<result.length;i++){
+                    html.push('<option data-id="'+result[i].cityid+'" value="'+result[i].cityname+'">'+result[i].cityname+'</option>')
+                }
+                $("#city option:not(:eq(0))").remove();
+                $("#city option:eq(0)").after(html);
+                $("#city").trigger("change_ok")
+            })
+        })
+    })
+
+    $("#city").change(function(){
+        var _this=$(this);
+        $.get("/cashier/listDistrict",{
+            cityid:$("#city option:selected").data("id")
+        },function(result){
+            resultHandle(result,function(){
+                var html=[];
+                result=result.obj;
+                for(var i=0;i<result.length;i++){
+                    html.push('<option value="'+result[i].districtname+'">'+result[i].districtname+'</option>')
+                }
+                $("#county option:not(:eq(0))").remove();
+                $("#county option:eq(0)").after(html);
+                $("#county").trigger("change_ok")
+            })
+        })
+    })
+
+    $("#reedit").click(function(){
+        $("#view-box").hide();
+        $("#edit-box").show();
+
+        $("#province").val(function(){
+            return $(this).data('val')
+        }).trigger("change");
+
+        $("#city").one("change_ok",function(){
+            console.log($(this))
+            $(this).val(function(){
+                return $(this).data('val')
+            }).trigger("change");
+        })
+
+        $("#county").one("change_ok",function(){
+            $(this).val(function(){
+                return $(this).data('val')
+            })
+        })
+
+    })
+}

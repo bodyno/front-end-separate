@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>个人中心</title>
-    <script>var translate_page='member';</script>
+    <title data-i18n="base:title.center"></title>
+    <script>var translate_page='member';var page_inner=['center'];</script>
     #parse('/common/top.vm')
     #set($header='history')
     <link rel="stylesheet" href="/static/css/member.css"/>
@@ -17,10 +17,10 @@
                 #parse('/member/member_menu.vm')
                 <div class="account-content">
                     <div class="a-t">
-                        <span class="a-t-t">投注记录</span>
+                        <span class="a-t-t" data-i18n="history.1"></span>
                         <div class="bethistory-form">
                             <form id="history-form" class="clearfix">
-                                <label class="label-1 fleft">起止时间：</label>
+                                <label class="label-1 fleft" data-i18n="history.2"></label>
 
                                 <div class="input-datepicker">
                                     <span class="btn-datepicker"></span>
@@ -54,7 +54,7 @@
                                     </select>
                                 </div>
 
-                                <button class="btn-blue-2 fleft" type="button" id="btn-history">搜索</button>
+                                <button class="btn-blue-2 fleft" type="button" id="btn-history" data-i18n="history.3"></button>
                             </form>
                         </div>
                         <div id="SearchResult" class="search-result history-result"></div>

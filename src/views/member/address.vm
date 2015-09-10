@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>个人中心</title>
-    <script>var translate_page='member';</script>
+    <title data-i18n="base:title.center"></title>
+    <script>var translate_page='member';var page_inner=['center'];</script>
     #parse('/common/top.vm')
     #set($header='address')
     <link rel="stylesheet" href="/static/css/member.css"/>
@@ -17,36 +17,36 @@
                 #parse('/member/member_menu.vm')
                 <div class="account-content">
                     <div class="a-t-b">
-                        <span class="a-t-t">收货地址</span>
-                        <label>填写真实资料，逢年过节时，我们可能给忠实会员派送小礼物哦！</label>
+                        <span class="a-t-t" data-i18n="address.1"></span>
+                        <label data-i18n="address.2"></label>
                     </div>
                     <form name="realinfo-form" id="realinfo-form">
                         <div class="box-2">
-                            <div id="edit-box" >
+                            <div id="edit-box" #if($sidCustReceive)style="display:none;"#end>
                                 <div class="fields">
                                     <div class="field">
-                                        <div class="field-left"><span class="label">省：</span></div>
+                                        <div class="field-left"><span class="label" data-i18n="address.3"></span></div>
                                         <div class="field-right">
                                             <div class="address-select-box clearfix">
                                                 <ul>
                                                     <li>
                                                         <div id="PrivinceDiv" class="select-box">
-                                                            <select name="province" id="province">
-                                                                <option value="">省份</option>
+                                                            <select name="province" id="province" #if($sidCustReceive.province)data-val="$sidCustReceive.province"#end>
+                                                                <option value="" data-i18n="base:province"></option>
                                                             </select>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div id="CityDiv" class="select-box">
-                                                            <select name="city" id="city">
-                                                                <option value="">城市</option>
+                                                            <select name="city" id="city" #if($sidCustReceive.city)data-val="$sidCustReceive.city"#end>
+                                                                <option value="" data-i18n="base:city"></option>
                                                             </select>
                                                         </div>
                                                     </li>
                                                     <li>
                                                         <div id="AreaDiv" class="select-box">
-                                                            <select name="county" id="county">
-                                                                <option value="">区/县</option>
+                                                            <select name="county" id="county" #if($sidCustReceive.county)data-val="$sidCustReceive.county"#end>
+                                                                <option value="" data-i18n="base:county"></option>
                                                             </select>
                                                         </div>
                                                     </li>
@@ -55,61 +55,63 @@
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <div class="field-left"><span class="label">街道：</span></div>
+                                        <div class="field-left"><span class="label" data-i18n="address.4"></span></div>
                                         <div class="field-right">
                                             <div class="input-box-3">
-                                                <input name="address" type="text" id="address" type="text" value="" autocomplete="off" />
+                                                <input name="address" type="text" id="address" type="text" value="#if($sidCustReceive.address)$sidCustReceive.address#end" autocomplete="off" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <div class="field-left"><span class="label">收货人：</span></div>
+                                        <div class="field-left"><span class="label" data-i18n="address.5"></span></div>
                                         <div class="field-right">
                                             <div class="input-box-3">
-                                                <input name="receiverBy" type="text" id="receiverBy" autocomplete="off" value=""/>
+                                                <input name="receiverBy" type="text" id="receiverBy" autocomplete="off" value="#if($sidCustReceive.custId)$sidCustReceive.custId#end"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <div class="field-left"><span class="label">收货手机：</span></div>
+                                        <div class="field-left"><span class="label" data-i18n="address.6"></span></div>
                                         <div class="field-right">
                                             <div class="input-box-3">
-                                                <input name="receiverPhone" type="text" maxlength="13" id="receiverPhone" autocomplete="off" value="" />
+                                                <input name="receiverPhone" type="text" maxlength="13" id="receiverPhone" autocomplete="off" value="#if($sidCustReceive.receiverPhone)$sidCustReceive.receiverPhone#end" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <button class="btn-blue ml100" type="button" id="btn-realinfo"><span>保存</span></button>
+                                        <button class="btn-blue ml100" type="button" id="btn-realinfo"><span data-i18n="address.7"></span></button>
                                     </div>
                                 </div>
                             </div>
+                            #if($sidCustReceive)
                             <div id="view-box">
                                 <div class="fields">
                                     <div class="field">
-                                        <div class="field-left"><span class="label">省：</span></div>
-                                        <div class="field-right"><span class="v">山西省长治市武乡县</span></div>
+                                        <div class="field-left"><span class="label" data-i18n="address.3"></span></div>
+                                        <div class="field-right"><span class="v">${sidCustReceive.province}${sidCustReceive.city}${sidCustReceive.county}</span></div>
                                     </div>
                                     <div class="field">
-                                        <div class="field-left"><span class="label">街道：</span></div>
-                                        <div class="field-right"><span class="v">2222222222</span></div>
+                                        <div class="field-left"><span class="label" data-i18n="address.4"></span></div>
+                                        <div class="field-right"><span class="v">$sidCustReceive.address</span></div>
                                     </div>
                                     <div class="field">
-                                        <div class="field-left"><span class="label">收货人：</span></div>
+                                        <div class="field-left"><span class="label" data-i18n="address.5"></span></div>
                                         <div class="field-right">
-                                            <span class="v">222222222</span>
+                                            <span class="v">$sidCustReceive.custId</span>
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <div class="field-left"><span class="label">收货手机：</span></div>
+                                        <div class="field-left"><span class="label" data-i18n="address.6"></span></div>
                                         <div class="field-right">
-                                            <span class="v">13812345678</span>
+                                            <span class="v">$sidCustReceive.receiverPhone</span>
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <span class="bv" id="reedit">重新修改</span>
+                                        <span class="bv" id="reedit" data-i18n="address.8"></span>
                                     </div>
                                 </div>
                             </div>
+                            #end
                         </div>
                     </form>
                 </div>

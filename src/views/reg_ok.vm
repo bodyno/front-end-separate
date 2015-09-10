@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>全民坐庄</title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    <link rel="stylesheet" href="/static/css/common.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+
+    <div class="regi-ok">
+        <div class="container">
+            <div class="reg-ok-con">
+                <div class="reg-ok-title">注册成功</div>
+                <div class="reg-ok-detail">
+                    <div class="reg-ok-detail-t">亲爱的<a href="/member/safe">$username</a>，您的账户创建成功啦！</div>
+                    <div class="reg-ok-detail-d">
+                        在IG每位用户只允许拥有一个真实账号，我们会利用全世界最先进的检测软件随时监控，<br>
+                        一旦发现拥有多账户者，我们会冻结相关账户。
+                    </div>
+                </div>
+                <div class="clearfix reg-ok-item-con">
+                    <div class="reg-ok-item">
+                        <img src="/static/images/reg_ico1.png">
+                        <div class="reg-ok-i-t">
+                            绑定真实姓名.手机、
+                            邮箱及银行卡
+                        </div>
+                        <div class="reg-ok-i-d">
+                            完善个人信息让你享受更多账户安全及提款无需等待服务！
+                            享受极速提款，可找回密码等服务。
+                        </div>
+                        <a href="/member/safe" class="reg-ok-i-b">
+                            完善个人信息
+                        </a>
+                    </div>
+                    <div class="reg-ok-item">
+                        <img src="/static/images/reg_ico2.png">
+                        <div class="reg-ok-i-t">
+                            开户后首存可享受
+                            赠送20%礼金
+                        </div>
+                        <div class="reg-ok-i-d">
+                            首次注册并存款不低于100元，首次存款用户可选择开户首存优惠，最高送1888元
+                        </div>
+                        <a href="/payment/deposit" class="reg-ok-i-b">
+                            立即存款
+                        </a>
+                    </div>
+                    <div class="reg-ok-item" style="border-right:0;">
+                        <img src="/static/images/reg_ico3.png">
+                        <div class="reg-ok-i-t">
+                            绑定真实姓名.手机、
+                            邮箱及银行卡
+                        </div>
+                        <div class="reg-ok-i-d">
+                            完善个人信息让你享受更多账户安全及提款无需等待服务！
+                            享受极速提款，可找回密码等服务。
+                        </div>
+                        <a href="/member/safe" class="reg-ok-i-b">
+                            升级VIP
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script src="/static/js/slot.js"></script>
+
+</body>
+</html>

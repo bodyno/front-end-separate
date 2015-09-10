@@ -2,8 +2,10 @@ $(document).ready(function () {
     iapiSetCallout('Login', calloutLogin);
     iapiSetCallout('Logout', calloutLogout);
 
-    if(isLogin == "1")
-        $.ajax({
+    if(isLogin == "1"){
+        //login(result.loginame, result.oldpw, 1);
+        login("IG99TEST40", "123456", 1, "en");
+        /*$.ajax({
             type: "GET",
             datatype:'json',
             url: "/html/socketJs.html",
@@ -11,7 +13,8 @@ $(document).ready(function () {
             success:function (result) {
                 login(result.loginame, result.oldpw, 1);
             }
-        });
+        });*/
+    }
 
     $(".leftMenu ul li").click(function () {
         $(".leftMenu ul li").removeClass("currentTab");

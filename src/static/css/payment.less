@@ -233,7 +233,7 @@
 .deposit-form .field-label { margin: 8px 10px 0 25px; font-size: 14px; color: #000; }
 .deposit-form .box-1 { margin: 30px 0 ; }
 .deposit-form .box-1 .input-tips { position: absolute; }
-.deposit-form #amount { width: 169px; background: #a6ccc2; color: @primary; font-size: 22px; font-family: tahoma; height: 22px; line-height: 22px; padding:5px 0 5px 5px;}
+.deposit-form .amount { width: 169px; background: #a6ccc2; color: @primary; font-size: 22px; font-family: tahoma; height: 22px; line-height: 22px; padding:5px 0 5px 5px;}
 .deposit-form .lblamont { line-height: 35px; color: #fff; }
 .deposit-form .field { margin-bottom: 25px; }
 .deposit-form .input-box-2 { float: left; border: 2px solid @primary; }
@@ -244,17 +244,24 @@
 .course_a{margin-left: 30px; color:#0088ff; text-decoration: none;}
 .course_a:hover{text-decoration: underline !important;}
 
-.deposit-tags { margin-left: 150px; width: 520px; }
+.deposit-tags { margin-left: 150px; width: 740px; }
 .deposit-tags li { float: left; cursor: pointer; }
 .deposit-tags span{ position: relative; z-index: 1; display: block; margin-right: 10px; margin-bottom: -2px; width: 115px; height: 36px; line-height: 34px; border: 2px solid #B8E2D6; text-align: center; color: #333; background: #FFF; border-bottom: none; font-size: 14px; font-weight: bold; }
 .deposit-tags .on { z-index: 3; border-color: #a6ccc2; background: #F9FAFD; }
 
-.deposit-content { position: relative; margin-bottom: 0px; padding: 10px 20px 0px ; width: auto; height: 414px; border: 2px solid #a6ccc2; z-index: 2; }
+.deposit-content {
+  position: relative;
+  margin-bottom: 0px;
+  padding: 10px 20px 0px;
+  width: auto;
+  min-height: 414px;
+  border: 2px solid #a6ccc2;
+  z-index: 2;
+}
 .deposit-content .guide { margin: 0 0 25px 75px; width: 360px; height: 80px; }
-.deposit-content .tips { margin: 58px 0 25px 105px; }
+.deposit-content .tips { margin: 38px 0 25px 105px; }
 .deposit-content .bank-list { width: 100%; }
 .deposit-content .bank-list li { margin: 0 20px 28px 0; float: left; }
-.deposit-content .btns { /*margin-left: 105px;*/ overflow: hidden; height: 36px; position: absolute; left: 125px; top: 365px; margin-left:0px;}
 .deposit-content .third-party-3 .btns{position: absolute; left: 125px; top: 365px; margin-left:0px;}
 
 .deposit-content .bl { position: relative; }
@@ -264,7 +271,7 @@
 .deposit-content .forbidden { margin: 30px 0 0 152px; }
 
 .deposit-content .remittance-1 .bank-list { width: 500px; }
-.deposit-content .remittance-1 .tips { margin-top: -35px; }
+/*.deposit-content .remittance-1 .tips { margin-top: -35px; }*/
 
 .input-box-2 label {
   padding-left: 5px;
@@ -323,7 +330,7 @@
 .radio-bank-2 .radio { padding: 7px 12px 0 12px; }
 .radio-bank-2 .radio-label span { float: left; line-height: 30px; }
 .radio-bank-2 .radio-label .blogo { margin-top: 5px; }
-#withdraw-form .radio-bank-2 .radio{padding: 10px 12px 0 12px;}
+.withdraw-form .radio-bank-2 .radio{padding: 10px 12px 0 12px;}
 
 .bankinfo-ls { position: absolute; top: 145px; right: 0; width: 285px; height: 280px; }
 .bankinfo-ls .bank-card-info { float: left; margin: 0 10px 10px 0; display: none; }
@@ -396,7 +403,11 @@ p {
 .logo-CCB-2 { .sprite(@jian); }
 .logo-CMBC-2 { .sprite(@zhao); }
 .logo-ALIPAY-2{.sprite(@zhi);}
-.logo-CMSB-2{.sprite(@zhao);}
+.bank-card-info span.img{
+  display: block;
+  margin-top: 11px !important;
+  height: 22px;
+}
 
 .ico-icbc,.ico-cmb,.ico-ccb,.ico-abc,.ico-boc,.ico-spdb,.ico-sdb,.ico-cib,.ico-bob,.ico-cebb,.ico-boco,.ico-cmbc,.ico-ecitic,.ico-gdb,.ico-pingan,.ico-post,.ico-union,.ico-jsb,.ico-srcb,.ico-hkb,.ico-nbcb,.ico-njcb,.ico-bosh,.ico-hxb,.ico-hzb,.ico-hkbea,.ico-ordos,.ico-cbhb,.ico-jzb,.ico-gdrcu,.ico-nccb,.ico-glccb,.ico-bsb,.ico-ynrcc,.ico-gzcb,.ico-cqrcb,.ico-zjcb { margin: 0 6px 0 8px; background: url(../images/bank_ico.png) no-repeat; display: inline-block; width: 18px; height: 18px; margin-right: 3px; _margin-top: 4px; vertical-align: -4px; }
 
@@ -570,13 +581,15 @@ p {
 .tsf_sd {
   width: 100%;
   height: 10px;
-  background: url(../imgs/uedbet_bank_img.png) repeat-x 0px -150px;
   position: absolute;
   left: 0px;
   bottom: -1px;
 }
+.member-balances{
+  text-align: center;
+}
 .member-balances li {
-  float: left;
+  display: inline-block;
   height: 88px;
   width: 123px;
   position: relative;
@@ -597,7 +610,6 @@ p {
   width: 23px;
   height: 23px;
   margin: 7px auto;
-  background: url(../imgs/uedbet_bank_img.png) no-repeat 0px 100px;
 }
 .tsf_num {
   width: 100%;
@@ -644,7 +656,7 @@ p {
 .ea_p .field-validation-error .f-tips-2{ width:140px; margin-top:4px; margin-left:20px;}
 .transfer-form #source-transfer, .transfer-form #desc-transfer { width: 152px; height: 28px; color: #999; }
 .transfer-form #source-transfer{ padding-left:2px;}
-.transfer-form #amount { width: 172px;}
+.transfer-form .amount { width: 172px;}
 
 .transfer-form{
   width: auto;
@@ -974,10 +986,10 @@ p {
 }
 .bank-card-info .img { margin:  6px 0 12px 18px; }
 .bank-card-info .t { margin: 0 5px 0 15px; text-align: right; color: #666; }
-.bank-card-info .v { color: #333; overflow: hidden; display: inline-block; width:155px; vertical-align: -5px; white-space: nowrap;}
+.bank-card-info .v { color: #333; overflow: hidden; display: inline-block; width:115px; vertical-align: -5px; white-space: nowrap;}
 
 .bank-card-info .c {
-  margin-right: 5px;
+  margin-right: 25px;
   float: right;
   display: block;
   .sprite(@copy);
@@ -987,13 +999,7 @@ p {
 .bank-card-info .msg2 { color: #36ad7f; font-weight: bold; font-size:12px;}
 
 .logo-ALIPAY-2 {
-  .sprite(@zhi);
   display: block;
-}
-.logo-CMBC-2{
-  .sprite(@gong);
-  display: block;
-  margin-top: 11px !important;
 }
 
 .pass-cen{
@@ -1043,7 +1049,10 @@ p {
 }
 .card-form{
   .field{
-    margin-left: 100px;
+    margin-left: 0px;
+  }
+  .field .field-left{
+    width: 200px;
   }
   .card-name{
     color:#999999;
@@ -1105,6 +1114,11 @@ td.textarea-con{
   margin-top: 25px;
   input{
     width: 300px;
+    height: 18px;
+    line-height: 18px;
+  }
+  .field .label{
+    line-height: 34px;
   }
   .small{
     width: 150px;
@@ -1120,6 +1134,265 @@ td.textarea-con{
     font-size: 12px;
     margin-left: 10px;
     float: left;
-    margin-top: 4px;
+    margin-top: 9px;
   }
+}
+
+#source-transfer-error{
+  position: relative;
+  left: 50px;
+}
+#desc-transfer-error{
+  position: relative;
+  left: 50px;
+}
+.tbl-statement .hd span {
+  font-weight: bold;
+  font-size: 14px;
+}
+.tbl-statement .align-c {
+  text-align: center;
+}
+.tbl-statement span {
+  width: 167px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #222;
+  line-height: 45px;
+  vertical-align: top;
+}
+.tbl-deposit .col-1, .tbl-deposit .col-7 {
+  width: 60px;
+}
+.tbl-deposit .col-6 {
+  width: 305px;
+}
+#transactionlog .bd {
+  position: relative;
+}
+.tbl-statement .e {
+  background: #f3f5fa;
+}
+.tbl-statement .gray { color:gray;}
+.tbl-statement .green { color:green;}
+.tbl-statement .green { color:green;}
+.tbl-statement .red { color:red;}
+.tbl-statement .blue { color:blue;}
+.tbl-statement a{color: black;}
+.tbl-statement .detail {
+  color: @primary;
+  cursor: pointer;
+}
+#remarks-error{
+  color: #F4ABA1;
+  font-size: 12px;
+  padding-left: 16px;
+  background: url("../images/tip.png") no-repeat 2px;
+}
+
+#transactionlog .s-loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/loading.gif) no-repeat center 200px rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  margin-top: 3px;
+}
+.field-label-feng{
+  color:#666;
+  span{
+    color:#ff9805;
+  }
+  em{
+    font-weight: normal;
+    color:#009966;
+  }
+}
+.feng-top{
+  margin-top: 60px;
+}
+.ico-weixin{
+  background: url("../images/weixin_icon.jpg");
+  width: 26px;
+  height: 25px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+.money-tip{
+  float: left;
+  margin-left: 15px;
+  margin-top: 12px;
+}
+.search-page{
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.banks-list{
+  min-height: 83px;
+  height: auto;
+  overflow: auto;
+}
+.c-item{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+.c-con{
+  margin-left: 80px;
+}
+.c-text1{
+
+}
+.c-title{
+  color:#009966;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.c-bank{
+  float: left;
+}
+.c-t{
+  margin-top: 14px;
+}
+.c-r{
+  color:#ff0000;
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
+  margin-top: 7px;
+  margin-left: 45px;
+}
+.c-r2{
+  color:#ff0000;
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
+  margin-top: 46px;
+  margin-left: 10px;
+}
+.c-title2{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.bank-card-info{
+  float: left;
+}
+.c-btns{
+  margin-top: 20px;
+  margin-bottom: 35px;
+  #c-btn-prev1{
+    margin-left: 80px;
+    margin-right: 44px;
+  }
+  .btn-blue{
+    float: left;
+  }
+}
+.field-left em{
+  color:#dd0000;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  top: 5px;
+  left: 2px;
+}
+.c-item .field .field-left{
+  width: 100px;
+}
+.c-t-3{
+  font-size: 16px;
+  color:#009966;
+  font-weight: bold;
+  margin-left: 64px;
+  margin-bottom: 20px;
+  strong{
+    position: relative;
+    top: 5px;
+  }
+  i{
+    margin-left: 10px;
+    color:#666666;
+    font-size: 12px;
+  }
+  em{
+    color:#666666;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}
+.deposit-form .c-item-main .field{
+  margin-bottom: 6px;
+  margin-left: 65px;
+}
+.c-item-main .input-box-3 input{
+  width: 300px;
+  height: 18px;
+  line-height: 18px;
+}
+.c-item-main .field .label{
+  line-height: 34px;
+}
+.field-amount{
+  font-size: 14px;
+  color: #333;
+  line-height: 34px;
+}
+.c-item-main .select-box{
+  float: left;
+}
+.c-item-main .select-box select{
+  height: 35px;
+}
+.c-item-main .select-box.big select{
+  width: 154px;
+  margin-right: 10px;
+}
+.c-item-main .textarea{
+  resize: none;
+  padding: 6px;
+  width: 298px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.c-item-main .field-type{
+  color:#666666;
+  margin-top: 12px;
+  label{
+    margin-right: 20px;
+  }
+  input{
+    position: relative;
+    top: 2px;
+    margin-right: 2px;
+  }
+}
+#btn-company{
+  margin-left: 164px;
+}
+.code-img{
+  float: left;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.tsf_line-left{
+  left: 0;
+}
+#statement-detail { margin-left: 30px;
+  color:#666;
+  font-size: 12px;
+}
+#statement-detail .ls { margin-left: 2px; line-height: 23px; }
+#statement-detail .ls .v { color: #333; }
+#statement-detail .bank-card-info { margin-top: 10px; }
+#statement-detail .blue { color: #08F; }
+#statement-detail .green { color: #9FE2AE; }
+#statement-detail .red { color: #A00; }
+#statement-detail .gray { color: #999; }
+#bind-card{
+  margin-left: 200px;
 }

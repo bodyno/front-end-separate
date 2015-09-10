@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>全民坐庄</title>
+    <title data-i18n="base:title.casino"></title>
     <script>var translate_page='index';</script>
     #parse('/common/top.vm')
     #set($header='casino')
@@ -14,22 +14,22 @@
         <div class="container">
             <div class="feature-con">
                 <div class="feature feature-left">
-                    <div class="feature-text">GPI 娱乐城 》</div>
+                    <div class="feature-text" data-i18n="casino.1"></div>
                     <a href="#"><img src="/static/images/casino_img2.jpg"></a>
                 </div>
                 <div class="feature feature-center active">
-                    <div class="feature-text">PT 娱乐城 》</div>
+                    <div class="feature-text" data-i18n="casino.2"></div>
                     <a href="#"><img src="/static/images/casino_img1.jpg"></a>
                 </div>
                 <div class="feature feature-right">
-                    <div class="feature-text">AG 娱乐城 》</div>
+                    <div class="feature-text" data-i18n="casino.3"></div>
                     <a href="#"><img src="/static/images/casino_img3.jpg"></a>
                 </div>
             </div>
             <div class="casino-btn-con">
                 <div class="clearfix"></div>
-                <div class="casino-btn casino-btn1">立即游戏</div>
-                <div class="casino-btn">客户端下载</div>
+                <div class="casino-btn casino-btn1" data-i18n="casino.4"></div>
+                <div class="casino-btn" data-i18n="casino.5"></div>
             </div>
         </div>
     </div>

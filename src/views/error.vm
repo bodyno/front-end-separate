@@ -1,0 +1,12 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>错误</title>
+    <link rel="stylesheet" href="/static/css/core.css"/>
+</head>
+<body>
+    <div class="container" style="margin-top: 40px;font-size: 50px;">
+        <h1>您遇到了一个错误</h1>
+    </div>
+</body>
+</html>

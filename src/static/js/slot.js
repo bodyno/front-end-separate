@@ -5,14 +5,26 @@ $(function(){
         $(this).find(".slot-item-btn").stop().fadeOut(300)
     })
 
-    function where(arr, num) {
-        // Find my place in this sorted array.
-        for(var i=0;i<arr.length;i++){
-            if(arr[i]>num){
-                return i+1;
-            }
-        }
+
+    iapiSetCallout('Login', calloutLogin);
+    iapiSetCallout('Logout', calloutLogout);
+
+    //iapiLogin("DWTEST100", "123123", 1, "zh-cn");
+    iapiLogin("IG99TEST60", "123123", 1, "zh-cn");
+
+    $(document).on("click",".slot-item-btn-begin",function(){
+
+        window.open('/pt', 'onlinept',1280,650,'',0);
+
+        return false;
+
+    })
+
+    function calloutLogin(allSessions){
+        console.log(allSessions)
+    }
+    function calloutLogout(response){
+        console.log(response)
     }
 
-    console.log(where([40, 60], 50))
 })

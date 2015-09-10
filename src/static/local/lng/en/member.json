@@ -1,0 +1,109 @@
+{
+  "safe":{
+    "1":"personal data",
+    "2":"Binding real name to 5 yuan",
+    "3":"Name：",
+    "4":"Gender：",
+    "5":"Birthday：",
+    "6":"Last name：",
+    "7":"First name：",
+    "8":"Withdrawals can only operate with a real name can not be changed after binding~",
+    "9":"Gender：",
+    "10":"Birthday：",
+    "male":"male",
+    "female":"female",
+    "save":"save",
+    "11":"security settings",
+    "12":"Binding multiple accounts, and enhance security.",
+    "13":"Have binding email：",
+    "14":"Binding email",
+    "15":"After successfully binding email you will enjoy retrieve your password, replace the phone verification and other security services.<br/><font color=#41b983>In addition, you will get 10 yuan quest</font>",
+    "16":"Binding email",
+    "17":"Binding email|470|300",
+    "18":"Have binding mobile phone：",
+    "19":"binding mobile phone：",
+    "20":"After successfully bound phone you will enjoy the third party online deposits, withdrawals and speed retrieve passwords and other security services.<br/><font color=#41b983>In addition, you will get 15 yuan quest</font>",
+    "21":"binding mobile phone",
+    "22":"binding mobile phone|450|300",
+    "23":"Change Password",
+    "24":"Change Password|450|250",
+    "25":"withdrawals",
+    "26":"Bind bank card",
+    "pass1":"Old：",
+    "pass2":"New：",
+    "pass3":"Confirm：",
+    "passbtn":"OK"
+  },
+  "address":{
+    "1":"Address",
+    "2":"Fill out your information, you may get some surprise in holidays",
+    "3":"Province：",
+    "4":"Street：",
+    "5":"Receiver：",
+    "6":"Phone：",
+    "7":"save",
+    "8":"remodification"
+  },
+  "history":{
+    "1":"Betting record",
+    "2":"time：",
+    "3":"search"
+  },
+  "promo":{
+    "1":"Coupon ",
+    "2":"You can use coupons when the wallet transfers, in order to obtain additional benefits.",
+    "3":"unused coupons",
+    "4":"You don't have a valid coupons"
+  },
+  "msg":{
+    "1":"message center",
+    "2":"inbox",
+    "3":"outbox",
+    "4":"Send a new message",
+    "5":"select all",
+    "6":"delete",
+    "7":"Send To",
+    "8":"",
+    "9":"title：",
+    "10":"details：",
+    "11":"send",
+    "no":"Oh ~ you haven't any information",
+    "detail":"Detail",
+    "12":"Message",
+    "13":"Deletion Message",
+    "14":"Time：",
+    "15":"close"
+  },
+  "valid":{
+    "safe":{
+      "1":"Please enter the real name",
+      "2":"Please choose gender",
+      "3":"Please select a date of birth",
+      "4":"Please select a date of birth"
+    },
+    "pass":{
+      "1":"Required",
+      "2":"2-15 characters",
+      "3":"Required",
+      "4":"2-15 characters",
+      "5":"Required",
+      "6":"2-15 characters"
+    },
+    "addr":{
+      "1":"Please enter the correct consignee",
+      "2":"Please enter a correct mobile phone",
+      "3":"Required",
+      "4":"2-15 characters",
+      "5":"Required",
+      "6":"2-15 characters"
+    },
+    "msg":{
+      "1":"You do not have to delete messages",
+      "2":"Title or the message content cannot be empty",
+      "3":"Please enter at least two titles and the content of the five characters of the characters",
+      "4":"confirm",
+      "5":"Your message has been received, we will reply as soon as possible. THX!",
+      "6":"message"
+    }
+  }
+}

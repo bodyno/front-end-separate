@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>全民坐庄</title>
+    <title data-i18n="base:title.reg"></title>
     <script>var translate_page='register';</script>
     #parse('/common/top.vm')
     <link rel="stylesheet" href="/static/css/common.css"/>
@@ -107,12 +107,7 @@
 
                         <div class="reg-group clearfix mt10">
                             <label class="reg-ck" data-i18n="[append]ck1">
-                                <input type="checkbox" checked>
-                            </label>
-                        </div>
-                        <div class="reg-group clearfix">
-                            <label class="reg-ck" data-i18n="[append]ck2">
-                                <input type="checkbox" checked>
+                                <input name="agree" type="checkbox" checked>
                             </label>
                         </div>
                         <div class="reg-ok mt10" id="reg-btn" data-i18n="reg-btn"></div>
@@ -128,9 +123,7 @@
     </div>
 
     <div class="login-footer">
-        <div class="login-footer-text">
-            2013 ~ 2015 © iG99.com All Rights Reserved.
-        </div>
+        <div class="login-footer-text" data-i18n="base:footer"></div>
     </div>
 
     #parse('/common/script.vm')

@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>全民坐庄</title>
+    <title data-i18n="base:title.lottery"></title>
     <script>var translate_page='index';</script>
     #parse('/common/top.vm')
     #set($header='lottery')
@@ -18,9 +18,8 @@
              data-cycle-pager=">.cycle-pager"
              data-cycle-pager-template="<span></span>"
                 >
-            <div class="lottery-item" style='background: url("/static/images/lottery_banner.jpg") no-repeat center;'></div>
-            <div class="lottery-item" style='background: url("/static/images/lottery_banner.jpg") no-repeat center;'></div>
-            <div class="lottery-item" style='background: url("/static/images/lottery_banner.jpg") no-repeat center;'></div>
+            <div class="lottery-item" style='background: url("/static/images/lottery_banner1.jpg") no-repeat center;'></div>
+            <div class="lottery-item" style='background: url("/static/images/lottery_banner2.jpg") no-repeat center;'></div>
             <div class="cycle-pager"></div>
         </div>
     </div>
@@ -30,22 +29,22 @@
                 <div class="lottery-one">
                     <img src="/static/images/lottery_img2.jpg">
                     <div class="lottery-text">
-                        <div class="lottery-text-title">快乐彩</div>
-                        <div class="lottery-text-detail">
-                            高频，快速开奖，多地区。快乐彩以中国（北京）、加拿大、加拿大西部、澳洲、马耳他及斯洛伐克地区的官方结果为准
+                        <div class="lottery-text-title" data-i18n="lottery.1"></div>
+                        <div class="lottery-text-detail" data-i18n="lottery.2">
+
                         </div>
                     </div>
-                    <div class="lottery-btn">立即游戏</div>
+                    <div class="lottery-btn" data-i18n="lottery.3"></div>
                 </div>
                 <div class="lottery-one lottery-two">
                     <img src="/static/images/lottery_img1.jpg">
                     <div class="lottery-text">
-                        <div class="lottery-text-title">快乐彩</div>
-                        <div class="lottery-text-detail">
-                            高频，快速开奖，多地区。快乐彩以中国（北京）、加拿大、加拿大西部、澳洲、马耳他及斯洛伐克地区的官方结果为准
+                        <div class="lottery-text-title" data-i18n="lottery.4"></div>
+                        <div class="lottery-text-detail" data-i18n="lottery.5">
+
                         </div>
                     </div>
-                    <div class="lottery-btn">立即游戏</div>
+                    <div class="lottery-btn" data-i18n="lottery.3"></div>
                 </div>
             </div>
         </div>

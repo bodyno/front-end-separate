@@ -1,5 +1,4 @@
-$(function(){
-
+function afterTran(){
     $("#realinfo-form").validate($.extend({},validBase,{
         rules: {
             firstName: {
@@ -24,19 +23,19 @@ $(function(){
         },
         messages:{
             firstName: {
-                required: "请输入真实姓名"
+                required: $.t("valid.safe.1")
             },
             lastName:{
-                required: "请输入真实姓名"
+                required: $.t("valid.safe.1")
             },
             custGender:{
-                required: "请选择性别"
+                required: $.t("valid.safe.2")
             },
             BirthMonth:{
-                required: "请选择出生年月"
+                required: $.t("valid.safe.3")
             },
             BirthDay:{
-                required: "请选择出生年月"
+                required: $.t("valid.safe.4")
             }
         }
     }));
@@ -44,7 +43,7 @@ $(function(){
 
     $("#btn-realinfo").click(function(){
         $(this).commit($("#realinfo-form"),"/sidCustInfo/savePersonInfo",function(){
-            dialog.info("修改成功",function(){
+            dialog.info($.t("base:edit_ok"),function(){
                 location.reload()
             })
         },null,function(data){
@@ -56,7 +55,7 @@ $(function(){
 
     $(document).on("click", "#btn-passw", function () {
         $(this).commit($("#pass-form"), "/sidCustInfo/savePassword", function () {
-            dialog.info("修改成功", function () {
+            dialog.info($.t("base:edit_ok"), function () {
                 location.reload()
             })
         })
@@ -69,12 +68,14 @@ $(function(){
             rules: {
                 oldPassword: {
                     required: true,
-                    rangelength: [2, 15]
+                    rangelength: [6, 12],
+                    string:true
                 },
                 newPassword:{
                     required: true,
-                    rangelength: [2, 15],
-                    notEqual:"#oldPassword"
+                    rangelength: [6, 12],
+                    notEqual:"#oldPassword",
+                    string:true
                 },
                 newPassword2:{
                     required: true,
@@ -83,18 +84,20 @@ $(function(){
             },
             messages:{
                 oldPassword: {
-                    required: "密码不能为空",
-                    rangelength: "密码为2-15位"
+                    required: $.t("valid.pass.1"),
+                    rangelength: $.t("valid.pass.2"),
+                    string: $.t("valid.pass.7")
                 },
                 newPassword:{
-                    required: "新密码不能为空",
-                    rangelength: "新密码为2-15位"
+                    required: $.t("valid.pass.3"),
+                    rangelength: $.t("valid.pass.4"),
+                    string: $.t("valid.pass.7")
                 },
                 newPassword2:{
-                    required: "确认密码不能为空",
-                    rangelength: "确认密码为2-15位"
+                    required: $.t("valid.pass.5"),
+                    rangelength: $.t("valid.pass.6")
                 }
             }
         }));
     })
-})
+}

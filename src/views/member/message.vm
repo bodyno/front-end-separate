@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>个人中心</title>
-    <script>var translate_page='member';</script>
+    <title data-i18n="base:title.center"></title>
+    <script>var translate_page='member';var page_inner=['center'];</script>
     #parse('/common/top.vm')
     #set($header='message')
     <link rel="stylesheet" href="/static/css/member.css"/>
@@ -17,43 +17,43 @@
                 #parse('/member/member_menu.vm')
                 <div class="account-content pg-promocode">
                     <div class="a-t-b">
-                        <span class="a-t-t">消息中心</span>
+                        <span class="a-t-t" data-i18n="msg.1"></span>
                     </div>
                     <div class="mcj_a">
                         <div class="mcj_b">
                             <ul class="mcj_c">
                                 <li id="tab0" class="active">
                                     <div class="logo-msgbox-r"></div>
-                                    <div class="mcj_d">收件箱</div>
-                                    <div id="receive-newcounts">10</div>
+                                    <div class="mcj_d" data-i18n="msg.2"></div>
+                                    <div id="receive-newcounts"></div>
                                 </li>
                                 <li id="tab1">
                                     <div class="logo-msgbox-s"></div>
-                                    <div class="mcj_d">发件箱</div>
+                                    <div class="mcj_d" data-i18n="msg.3"></div>
                                     <div id="send-newcounts"></div>
                                 </li>
                                 <li id="tab2">
                                     <div class="logo-msgbox-n"></div>
-                                    <div class="mcj_d">发送新消息</div>
+                                    <div class="mcj_d" data-i18n="msg.4"></div>
                                 </li>
                             </ul>
                         </div>
                         <div class="mcj_e">
                             <div class="mcj_f m-item active">
                                 <ul class="mcj_g"></ul>
-                                <div class="mcj_l" style="display: none;">
-                                    <div class="page"><strong><span>1</span></strong><a data-ajax="true" data-ajax-begin="SearchJs.onBegin" data-ajax-complete="SearchJs.onComplete" data-ajax-failure="Utility.ajaxFailed" data-ajax-loading="#LoadingBar" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#SearchResult" href="message.aspx?action=receivelist&amp;pageIndex=2"><span>2</span></a><a data-ajax="true" data-ajax-begin="SearchJs.onBegin" data-ajax-complete="SearchJs.onComplete" data-ajax-failure="Utility.ajaxFailed" data-ajax-loading="#LoadingBar" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#SearchResult" href="message.aspx?action=receivelist&amp;pageIndex=2" class="nxt"><span>&gt;&gt;</span></a></div>
+                                <div class="mcj_l">
+                                    <div class="page page-inbox" style="display: none"></div>
                                     <div class="mcj_m">
-                                        <input type="checkbox" name="all" id="all" class="all" value="1"><label for="all"><a>全选</a></label><a id="del-receivemsg">删除</a>
+                                        <input type="checkbox" name="all" id="all" class="all" value="1"><label for="all"><a data-i18n="msg.5"></a></label><a id="del-receivemsg" data-i18n="msg.6"></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="mcj_f m-item" id="inbox">
                                 <ul class="mcj_g"></ul>
-                                <div class="mcj_l" style="display: none;">
-                                    <div class="page"><strong><span>1</span></strong><a data-ajax="true" data-ajax-begin="SearchJs.onBegin" data-ajax-complete="SearchJs.onComplete" data-ajax-failure="Utility.ajaxFailed" data-ajax-loading="#LoadingBar" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#SearchResult" href="message.aspx?action=receivelist&amp;pageIndex=2"><span>2</span></a><a data-ajax="true" data-ajax-begin="SearchJs.onBegin" data-ajax-complete="SearchJs.onComplete" data-ajax-failure="Utility.ajaxFailed" data-ajax-loading="#LoadingBar" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#SearchResult" href="message.aspx?action=receivelist&amp;pageIndex=2" class="nxt"><span>&gt;&gt;</span></a></div>
-                                    <div class="mcj_m">
-                                        <input type="checkbox" name="all" id="all2" class="all" value="1"><label for="all2"><a>全选</a></label><a id="del-receivemsg">删除</a>
+                                <div class="mcj_l">
+                                    <div class="page page-outbox" style="display: none"></div>
+                                    <div class="mcj_m page-send">
+                                        <input type="checkbox" name="all" id="all2" class="all" value="1"><label for="all2"><a data-i18n="msg.5"></a></label><a id="del-receivemsg" data-i18n="msg.6"></a>
                                     </div>
                                 </div>
                             </div>
@@ -61,28 +61,25 @@
                                 <form class="mc-content">
                                     <input type="hidden" name="action" id="action" value="create">
                                     <div class="mcj_o">
-                                        <div class="mcj_p">
-                                            发送至:</div>
+                                        <div class="mcj_p" data-i18n="msg.7"></div>
                                         <div class="mcj_q sl-2">
                                             <select class="select" id="sendto">
-                                                <option value="1" selected="selected">财务问题</option>
-                                                <option value="2">技术问题</option>
-                                                <option value="3">业务咨询</option>
-                                                <option value="4">意见建议</option>
-                                                <option value="100">其他问题</option>
+                                                <option value="财务问题" selected="selected">财务问题</option>
+                                                <option value="技术问题">技术问题</option>
+                                                <option value="业务咨询">业务咨询</option>
+                                                <option value="意见建议">意见建议</option>
+                                                <option value="其他问题">其他问题</option>
                                             </select>
                                         </div>
-                                        <div class="mc-qtips">存款未到账者请留下转账姓名，转账时间和转账金额，我们会尽快为您办理。</div>
+                                        <div class="mc-qtips" data-i18n="msg.8"></div>
                                     </div>
                                     <div class="mcj_title">
-                                        <div class="k">
-                                            标题:</div>
+                                        <div class="k" data-i18n="msg.9"></div>
                                         <div class="v">
                                             <input type="text" name="title" id="title" autocomplete="off"></div>
                                     </div>
                                     <div class="mcj_r">
-                                        <div class="mcj_u">
-                                            内容:</div>
+                                        <div class="mcj_u" data-i18n="msg.10"></div>
                                         <div class="mcj_s">
                                             <textarea class="mcj_t" name="message" id="message"></textarea>
                                         </div>
@@ -91,7 +88,8 @@
                                         <div class="mcj_w">
                                         </div>
                                         <button class="btn-gray-2 mcj_x" id="btn-send">
-                                            <span>发送</span></button>
+                                            <span data-i18n="msg.11"></span>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -120,7 +118,7 @@
                     </a>
                 </div>
                 <div class="mcj_k">{{= value.createdTime }}</div>
-                <div class="a">(<a href="#" data-popup="receive">详情</a>)</div>
+                <div class="a">(<a href="#" class="m-detail" data-i18n="msg.detail"></a>)</div>
             </div>
         </li>
         {{~}}
@@ -130,19 +128,20 @@
         <div id="message-box">
             <span class="close"><em></em></span>
 
-            <h2 class="title">消息</h2>
+            <h2 class="title" data-i18n="msg.12"></h2>
             <h3>{{= it.subject }}</h3>
 
-            <div class="b-1"><span class="a">删除消息</span><span class="k">时间：</span><span
+            <div class="b-1"><span class="a delete-inner" data-i18n="msg.13"></span><span class="k" data-i18n="msg.14"></span><span
                     class="v">{{= it.time }}</span></div>
             <div class="l"></div>
             <div class="posts">
                 {{= it.content }}
             </div>
-            <div class="btn-blue-2" id="btn-close">关闭</div>
+            <div class="btn-blue-2" id="btn-close" data-i18n="msg.15"></div>
         </div>
     </script>
     #parse('/common/page_footer.vm')
+    <script src="/static/plugin/pagination/jquery.simplePagination.js"></script>
     <script src="/static/plugin/doT/doT.js"></script>
     <script src="/static/js/message.js"></script>
 </body>

@@ -1,5 +1,4 @@
-$(function(){
-
+function afterTran(){
     //登录验证
     $("#login-form").validate($.extend({},validBase,{
         rules: {
@@ -21,19 +20,19 @@ $(function(){
         },
         messages:{
             custCode:{
-                "required":"用户名必须填写",
-                "rangelength":"用户名长度为2-15位"
+                "required": $.t("login.valid.1"),
+                "rangelength":$.t("login.valid.2")
             },
             passwd:{
-                "required":"密码必须填写",
-                "minlength":"密码长度6-20个字符",
-                "maxlength":"密码长度6-20个字符"
+                "required":$.t("login.valid.3"),
+                "minlength":$.t("login.valid.4"),
+                "maxlength":$.t("login.valid.4")
             },
             validateCode: {
-                "remote": "验证码错误",
-                "required":"验证码不能为空",
-                "maxlength":"请输入4位验证码",
-                "minlength":"请输入4位验证码"
+                "remote": $.t("login.valid.5"),
+                "required":$.t("login.valid.6"),
+                "maxlength":$.t("login.valid.7"),
+                "minlength":$.t("login.valid.7")
             }
         }
     }));
@@ -58,6 +57,4 @@ $(function(){
     function changeCode(){
         $(".reg-code-img").attr("src","/validateCode?"+new Date().getTime())
     }
-
-
-})
+}

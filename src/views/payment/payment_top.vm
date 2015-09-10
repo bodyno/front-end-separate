@@ -1,39 +1,39 @@
 <div id="account-info">
     <h3>
-        <span class="hello">早上好，</span>
-        <span class="membername">徐&nbsp;先生</span>
-        <span class="tips">点根香烟喝杯茶，让大脑放松一下。</span>
+        <span class="hello">$disSidCust.hello，</span>
+        <span class="membername">$disSidCust.username</span>
+        <span class="tips">$disSidCust.tips</span>
     </h3>
     <div class="clearfix">
         <div class="account-safe fleft">
             <div class="illustration">
-                <span class="safe-percent" id="info-complete" data-complete="20">20%</span>
+                <span class="safe-percent" id="info-complete" data-complete="$disSidCust.percentage">$disSidCust.percentage%</span>
                 <input type="text" value="0" class="dial" style="display: none"/>
             </div>
             <div class="r">
-                <div class="box-1"><span class="title">帐号安全：</span><span class="safe-level">一般</span></div>
+                <div class="box-1"><span class="title" data-i18n="center:top.1"></span><span class="safe-level">$disSidCust.securityState</span></div>
                 <div class="box-2">
-                    <a id="as-trueinfo" data-showtips="true" data-title="绑定真实姓名" data-content="成功绑定真实姓名后才能进行提款操作，如需修改请联系客服。<br/><font color=#41b983>此外，您将获得5元奖励</font>" data-offset="10|0" class="logo-trueinfo-on" title="真实姓名" href="/member/safe#name" target="_self"></a>
-                    <a id="as-bindcard" data-showtips="true" data-title="银行卡绑定" data-content="成功绑定银行卡后才能进行提款操作，成功提款后如需修改请联系客服。" data-offset="10|0" class="logo-bindcard" title="银行卡绑定" href="/payment/withdraw" data-dialog="添加银行卡|556|374"></a>
-                    <a id="as-bindphone" data-showtips="true" data-title="绑定手机号码" data-content="成功绑定手机后您将享受第三方在线存款、极速提款以及找回密码等安全服务。<br/><font color=#41b983>此外，您将获得15元奖励</font>" data-offset="10|0" class="logo-bindphone" title="手机绑定" href="#t-phone" data-dialog="绑定手机|470|300"></a>
-                    <a id="as-bindemail" data-showtips="true" data-title="绑定电子邮箱" data-content="成功绑定邮箱后您将享受找回密码、更换手机验证等安全服务。<br/><font color=#41b983>此外，您将获得10元奖励</font>" data-offset="10|0" class="logo-bindemail mail-show" title="邮箱绑定" href="#t-mail" data-dialog="绑定邮箱|470|350"></a>
+                    <a data-i18n="[data-title]center:top.2;[data-content]center:top.3;[title]center:top.4" class="#if($disSidCust.isBindName)logo-trueinfo-on #else logo-trueinfo#end" id="as-trueinfo" data-showtips="true" data-offset="10|0" href="/member/safe#name" target="_self"></a>
+                    <a data-i18n="[data-title]center:top.5;[data-content]center:top.6;[title]center:top.7;[data-dialog]center:top.77" class="#if($disSidCust.isBindBank)logo-bindcard-on #else logo-bindcard#end" id="as-bindcard" data-showtips="true" data-offset="10|0" href="/payment/withdraw"></a>
+                    <a data-i18n="[data-title]center:top.8;[data-content]center:top.9;[title]center:top.10;[data-dialog]center:top.101" class="#if($disSidCust.isBindPhone)logo-bindphone-on #else logo-bindphone#end" id="as-bindphone" data-showtips="true" data-offset="10|0" href="#t-phone"></a>
+                    <a data-i18n="[data-title]center:top.11;[data-content]center:top.12;[title]center:top.13;[data-dialog]center:top.14" class="#if($disSidCust.isBindEmail)logo-bindemail-on #else logo-bindemail#end mail-show" id="as-bindemail" data-showtips="true" data-offset="10|0" href="#t-mail"></a>
                 </div>
             </div>
         </div>
         <div class="line-2 fleft"></div>
         <div class="wallet fleft">
             <div class="clearfix">
-                <span class="balance" data-balance="$curAccount">$curAccount</span>
-                <span class="btn-refresh-2" title="刷新所有钱包"></span>
+                <span class="balance" id="balance">$disSidCust.curAccount</span>
+                <span class="btn-refresh-2" data-type="curAccount" data-ele="#balance" data-i18n="[title]center:btn.1"></span>
             </div>
             <div>
-                <span class="title">中心钱包</span>
+                <span class="title" data-i18n="center:btn.2"></span>
             </div>
         </div>
         <div class="line-2 fleft"></div>
         <div class="funds-proportion fleft">
             <div>
-                <span class="title">资金分配比例：</span>
+                <span class="title" data-i18n="center:btn.3"></span>
             </div>
             <div class="funds-drawing">
                 <div class="fd-tips">
@@ -164,28 +164,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="wallet-logos">
-                <ul>
-                    <li><span class="logo-circle-1"></span><span class="n">空</span></li>
-                    <li><span class="logo-circle-2"></span><span class="n">中心钱包</span></li>
-                    <li><span class="logo-circle-3"></span><span class="n">被锁定</span></li>
-                    <li><span class="logo-circle-9"></span><span class="n">体育投注</span></li>
-                    <li><span class="logo-circle-8"></span><span class="n">快乐彩</span></li>
-                    <li><span class="logo-circle-4"></span><span class="n">金碧</span></li>
-                    <li><span class="logo-circle-5"></span><span class="n">GD</span></li>
-                    <li><span class="logo-circle-6"></span><span class="n">PT</span></li>
-                    <li><span class="logo-circle-7"></span><span class="n">AG</span></li>
-                    <li><span class="logo-circle-8"></span><span class="n">时时彩</span></li>
-                </ul>
-            </div>
         </div>
     </div>
     <div class="funds-btns clearfix">
         <ul>
-            <li #if($header=="deposit")class="active"#end><a href="/payment/deposit" class="btn-gray-2 btn-deposit">充值</a><span class="logo-sj5"></span></li>
-            <li #if($header=="withdraw")class="active"#end><a href="/payment/withdraw" class="btn-gray-2 btn-withdraw">提款</a><span class="logo-sj5"></span></li>
-            <li #if($header=="transfer")class="active"#end><a href="/payment/transfer" class="btn-gray-2 btn-transfer">转账</a><span class="logo-sj5"></span></li>
-            <li #if($header=="statement")class="active"#end><a href="/payment/statement" class="btn-gray-2 btn-transactionlog">交易记录</a><span class="logo-sj5"></span></li>
+            <li #if($header=="deposit")class="active"#end><a data-i18n="center:btn.4" href="/payment/deposit" class="btn-gray-2 btn-deposit"></a><span class="logo-sj5"></span></li>
+            <li #if($header=="withdraw")class="active"#end><a data-i18n="center:btn.5" href="/payment/withdraw" class="btn-gray-2 btn-withdraw"></a><span class="logo-sj5"></span></li>
+            <li #if($header=="transfer")class="active"#end><a data-i18n="center:btn.6" href="/payment/transfer" class="btn-gray-2 btn-transfer"></a><span class="logo-sj5"></span></li>
+            <li #if($header=="statement")class="active"#end><a data-i18n="center:btn.7" href="/payment/statement" class="btn-gray-2 btn-transactionlog"></a><span class="logo-sj5"></span></li>
         </ul>
     </div>
     <div class="trans_sd"></div>

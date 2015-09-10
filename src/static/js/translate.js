@@ -1,9 +1,19 @@
+var tempArr=[
+    translate_page,
+    'base'
+];
+if(window.page_inner){
+    for(var i=0;i<page_inner.length;i++){
+        tempArr.push(page_inner[i])
+    }
+}
+
 i18n.init({
     lng:getNowLng(),
     resGetPath: '/static/local/lng/__lng__/__ns__.json',
     fallbackLng:[],
     ns:{
-        namespaces: [translate_page,'base'],
+        namespaces: tempArr,
         defaultNs: translate_page
     },
     cookieName:'lng',
@@ -12,6 +22,7 @@ i18n.init({
     $('html').i18n();
 
     $(function(){
+        window.afterTranCore&&afterTranCore()
         window.afterTran&&afterTran()
     })
 });
@@ -26,12 +37,16 @@ function getNowLng(){
 
 $(document).on("click",".language-item",function(){
     var _this=$(this)
-    _this.parents(".language,.page-header-language").find(".language-now").text(_this.text())
-    _this.parents(".language-list").hide();
-    i18n.setLng(_this.data("value"),function(){
-        loadLngCss(_this.data('value'))
-        $('html').i18n();
-    })
+    if(_this.data("value")){
+        _this.parents(".language,.page-header-language").find(".language-now").text(_this.text())
+        _this.parents(".language-list").hide();
+        i18n.setLng(_this.data("value"),function(){
+            loadLngCss(_this.data('value'))
+            location.reload();
+        })
+    }else{
+        dialog.info($.t("base:no_lang"))
+    }
 })
 
 //动态加载国际化样式

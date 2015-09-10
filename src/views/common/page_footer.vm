@@ -1,6 +1,4 @@
-<div class="page-footer">
-    ©2015 IG TECH. 版权所有 | 18+
-</div>
+<div class="page-footer" data-i18n="base:footer_center"></div>
 <script type="text/x-dot-template" id="t-phone">
     <div id="bindphone-content">
         <div id="bind-phone">
@@ -92,9 +90,9 @@
     <div id="bind-email">
         <div class="s-progress">
             <div class="step-1">
-                <span class="txt-1">输入邮箱地址</span>
-                <span class="txt-2">填入邮箱验证码</span>
-                <span class="txt-3">完成</span>
+                <span class="txt-1" data-i18n="center:email.1"></span>
+                <span class="txt-2" data-i18n="center:email.2"></span>
+                <span class="txt-3" data-i18n="center:email.3"></span>
                 <span class="bar"></span>
             </div>
         </div>
@@ -103,17 +101,17 @@
             <div class="b-email">
                 <form id="bindForm">
                     <div class="field">
-                        <div class="field-left"><span class="label">邮箱地址：</span></div>
+                        <div class="field-left"><span class="label" data-i18n="center:email.4"></span></div>
                         <div class="field-right">
                             <div class="input-box-3">
-                                <input type="text" id="email" name="email" value="" maxlength="50" autocomplete="off" data-val="true" data-val-required="邮箱不能为空" data-val-email="邮箱格式有误"></div>
+                                <input type="text" id="email" name="email" autocomplete="off"></div>
                                 <span class="logo-th"></span>
                             </div>
                         </div>
 
-                    <p class="t">UEDBet不会泄漏任何用户信息，以及发送骚扰邮件。</p>
+                    <p class="t" data-i18n="center:email.5"></p>
 
-                    <div class="field"><button class="btn-blue" id="mail-btn-1">下一步</button></div>
+                    <div class="field"><button class="btn-blue" id="mail-btn-1" data-i18n="center:email.6"></button></div>
                     </div>
                 </form>
             </div>
@@ -123,34 +121,34 @@
 <script type="text/x-dot-template" id="t-mail2">
     <div class="s-progress">
         <div class="step-2">
-            <span class="txt-1">输入邮箱地址</span>
-            <span class="txt-2">填入邮箱验证码</span>
-            <span class="txt-3">完成</span>
+            <span class="txt-1" data-i18n="center:email.1"></span>
+            <span class="txt-2" data-i18n="center:email.2"></span>
+            <span class="txt-3" data-i18n="center:email.3"></span>
             <span class="bar"></span>
         </div>
     </div>
     <div>
-        <p class="p-1">您的邮箱地址：<span id="current-email">{{=it.mail}}</span></p>
-        <p class="p-2">验证码已发至您邮箱中，若找不到请在垃圾邮箱翻翻哦~</p>
+        <p class="p-1" data-i18n="[prepend]center:email.7"><span id="current-email">{{=it.mail}}</span></p>
+        <p class="p-2" data-i18n="center:email.8"></p>
         <div class="b-captcha">
             <form id="bindForm">
                 <input type="hidden" id="action" name="action" value="CheckCode">
                 <div class="field">
                     <div class="field-left">
-                        <span class="label">验证码：</span>
+                        <span class="label" data-i18n="center:email.9"></span>
                     </div>
                     <div class="field-right">
                         <div class="input-box-3">
                             <input name="captcha" id="captcha" type="text" class="s" autocomplete="off">
                         </div>
-                        <div class="btn-captcha" data-disabled=true>(60)重新获取校验码</div>
+                        <div class="btn-captcha" data-disabled=true data-i18n="center:email.10"></div>
                         <div class="input-tips" data-for="captcha" style="display: none;">
                             <span class="logo-th"></span>
-                            <span class="f-tips-2" data-valmsg-for="captcha">输入验证码</span>
+                            <span class="f-tips-2" data-valmsg-for="captcha" data-i18n="center:email.11"></span>
                         </div>
                     </div>
                 </div>
-                <div class="field"><button class="btn-blue" id="mail-btn-2">下一步</button></div>
+                <div class="field"><button class="btn-blue" id="mail-btn-2" data-i18n="center:email.12"></button></div>
             </form>
         </div>
     </div>
@@ -158,17 +156,18 @@
 <script type="text/x-dot-template" id="t-mail3">
     <div id="bind-email" class="dialog-bind">
         <div class="g-title-1">
-            <div class="logo-right"></div><h3>恭喜您，邮箱地址绑定成功</h3>
+            <div class="logo-right"></div><h3 data-i18n="center:email.13"></h3>
         </div>
         <div class="box-1">
-            <p>您已成功绑定电子邮箱。本次绑定邮箱所获得的10元彩金将在您第一次成功提款后自动派发到您的中心钱包，1倍流水可提款。如果您尚未进行过提款，彩金将在锁定钱包中等待您首次成功提款后即可自动转入中心钱包。</p>
-            <div class="btn-blue" onclick="closeForm()">关闭</div>
+            <p data-i18n="center:email.14"></p>
+            <div class="btn-blue" onclick="closeForm()" data-i18n="center:email.15"></div>
         </div>
     </div>
 </script>
 
 <script src="/static/plugin/jquery.knob/jquery.knob.js"></script>
+<!--[if lt IE 9]><script src="/static/js/excanvas.compiled.js"></script><![endif]-->
 <script src="/static/plugin/doT/doT.js"></script>
 <script src="/static/plugin/countdown/jquery.countdown.js"></script>
-<script src="/static/js/member.js"></script>
+<script src="/static/js/account.js"></script>
 #parse('/common/script.vm')

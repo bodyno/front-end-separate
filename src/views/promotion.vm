@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>全民坐庄</title>
+    <title data-i18n="base:title.promotion"></title>
     <script>var translate_page='index';</script>
     #parse('/common/top.vm')
     #set($header='promotion')
@@ -14,9 +14,9 @@
     <div class="promotion">
         <div class="container">
             <ul class="promotion-top clearfix">
-                <li class="active"><a href="#">最新优惠</a></li>
-                <li><a href="#">返水优惠</a></li>
-                <li><a href="#">特别优惠</a></li>
+                <li class="active"><a href="#" data-i18n="promotion.1"></a></li>
+                <li><a href="#" data-i18n="promotion.2"></a></li>
+                <li><a href="#" data-i18n="promotion.3"></a></li>
             </ul>
             <img src="/static/images/pro_up.png" style="display: none;">
             <div class="promotion-list">
@@ -27,8 +27,8 @@
                     </div>
                     <div class="promotion-item-op">
                         <div class="promotion-btn-op clearfix">
-                            <div class="promotion-btn-more">更多信息</div>
-                            <div class="promotion-btn-join">立即加入</div>
+                            <div class="promotion-btn-more" data-i18n="promotion.more"></div>
+                            <div class="promotion-btn-join" data-i18n="promotion.btn"></div>
                         </div>
                     </div>
                     <div class="promotion-detail">
@@ -50,8 +50,8 @@
                     </div>
                     <div class="promotion-item-op">
                         <div class="promotion-btn-op clearfix">
-                            <div class="promotion-btn-more">更多信息</div>
-                            <div class="promotion-btn-join">立即加入</div>
+                            <div class="promotion-btn-more" data-i18n="promotion.more"></div>
+                            <div class="promotion-btn-join" data-i18n="promotion.btn"></div>
                         </div>
                     </div>
                     <div class="promotion-detail">

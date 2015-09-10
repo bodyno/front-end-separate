@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>&#20840;&#27665;&#22352;&#24196;</title>
+    <title data-i18n="base:title.index"></title>
     <script>var translate_page='index';</script>
     #parse('/common/top.vm')
     #set($header='home')
@@ -34,17 +34,17 @@
     <div class="prod">
         <div class="container">
             <div class="prod-con clearfix">
-                <a href="#" class="prod-item">
-                    <div class="prod-item-title">老虎机</div>
-                    <div class="prod-item-text">最全老虎机</div>
+                <a href="/slot" class="prod-item">
+                    <div class="prod-item-title" data-i18n="index.1"></div>
+                    <div class="prod-item-text" data-i18n="index.2"></div>
                 </a>
-                <a href="#" class="prod-item">
-                    <div class="prod-item-title">娱乐城</div>
-                    <div class="prod-item-text">亚洲现场厅实地赌场发牌</div>
+                <a href="/casino" class="prod-item">
+                    <div class="prod-item-title" data-i18n="index.3"></div>
+                    <div class="prod-item-text" data-i18n="index.4"></div>
                 </a>
-                <a href="#" class="prod-item prod-item-last">
-                    <div class="prod-item-title">体育</div>
-                    <div class="prod-item-text">亚洲版自主体育平台 </div>
+                <a href="/sports" class="prod-item prod-item-last">
+                    <div class="prod-item-title" data-i18n="index.5"></div>
+                    <div class="prod-item-text" data-i18n="index.6"></div>
                 </a>
             </div>
         </div>
@@ -53,29 +53,26 @@
         <div class="container">
             <div class="notice-con clearfix">
                 <div class="notice-item">
-                    <a href="#" class="notice-item-title">最新公告<i></i></a>
+                    <a href="#" class="notice-item-title" data-i18n="[prepend]index.7"><i></i></a>
                     <div class="notice-item-text">
-                        <a href="#">最大博彩平台隆重开业</a>
-                        <a href="#">波音厅隆重上线</a>
-                        <a href="#">GD盘龙殿平台维护通知：</a>
-                        <a href="#">银行维护通知</a>
+                        <a href="#" data-i18n="index.8"></a>
+                        <a href="#" data-i18n="index.9"></a>
+                        <a href="#" data-i18n="index.10"></a>
+                        <a href="#" data-i18n="index.11"></a>
                     </div>
                 </div>
                 <div class="notice-item">
-                    <a href="#" class="notice-item-title">用户帮助<i></i></a>
+                    <a href="#" class="notice-item-title" data-i18n="[prepend]index.12"><i></i></a>
                     <div class="notice-item-text">
-                        <a href="#">如何创建用户？</a>
-                        <a href="#">忘记密码怎么办？</a>
-                        <a href="#">在存款中有什么疑惑，</a>
-                        <a href="#">来这里，我们帮你解答</a>
+                        <a href="#" data-i18n="index.13"></a>
+                        <a href="#" data-i18n="index.14"></a>
+                        <a href="#" data-i18n="index.15"></a>
+                        <a href="#" data-i18n="index.16"></a>
                     </div>
                 </div>
                 <div class="notice-item notice-item-last">
-                    <a href="#" class="notice-item-title">品牌介绍<i></i></a>
-                    <div class="notice-item-text">
-                        最大博彩平台<br>
-                        亚洲起步最早、用户基数最大、交易量最高，用户首选的博彩交易平台
-                    </div>
+                    <a href="#" class="notice-item-title" data-i18n="[prepend]index.17"><i></i></a>
+                    <div class="notice-item-text" data-i18n="[html]index.18"></div>
                 </div>
             </div>
         </div>
@@ -88,32 +85,32 @@
         <div class="container">
             <div class="list-con clearfix">
                 <div class="list-item">
-                    <div class="list-item-title">超快速</div>
-                    <div class="list-item-text">支付宝 财付通 银联特约商家</div>
+                    <div class="list-item-title" data-i18n="index.19"></div>
+                    <div class="list-item-text" data-i18n="index.20"></div>
                 </div>
                 <div class="list-item">
-                    <div class="list-item-title">24小时</div>
-                    <div class="list-item-text">全天候在线服务 </div>
+                    <div class="list-item-title" data-i18n="index.21"></div>
+                    <div class="list-item-text" data-i18n="index.22"></div>
                 </div>
                 <div class="list-item">
-                    <div class="list-item-title">安全保障 </div>
-                    <div class="list-item-text">权威机构认证</div>
+                    <div class="list-item-title" data-i18n="index.23"></div>
+                    <div class="list-item-text" data-i18n="index.24"></div>
                 </div>
                 <div class="list-item">
-                    <div class="list-item-title">超给力</div>
-                    <div class="list-item-text"> 8千万用户的选择</div>
+                    <div class="list-item-title" data-i18n="index.25"></div>
+                    <div class="list-item-text" data-i18n="index.26"></div>
                 </div>
                 <div class="list-item">
-                    <div class="list-item-title">超快速</div>
-                    <div class="list-item-text">支付宝 财付通 银联特约商家</div>
+                    <div class="list-item-title" data-i18n="index.27"></div>
+                    <div class="list-item-text" data-i18n="index.28"></div>
                 </div>
             </div>
         </div>
     </div>
     <div class="fix">
-        <div class="fix-text1">PT客户端扫描下载</div>
-        <a href="/service" class="fix-btn fix-btn1">在线客服</a>
-        <div class="fix-btn fix-btn2">返回首页</div>
+        <div class="fix-text1" data-i18n="index.29"></div>
+        <a href="/service" class="fix-btn fix-btn1" data-i18n="index.30"></a>
+        <div class="fix-btn fix-btn2" id="go-top" data-i18n="index.31"></div>
     </div>
 
     #parse('/common/footer.vm')

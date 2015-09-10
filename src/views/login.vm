@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>全民坐庄</title>
+    <title data-i18n="base:title.login"></title>
     <script>var translate_page='index';</script>
     #parse('/common/top.vm')
     <link rel="stylesheet" href="/static/css/common.css"/>
@@ -14,42 +14,40 @@
         <div class="container">
             <form class="login" id="login-form">
                 <div class="login-top clearfix">
-                    <div class="login-top-title">登录</div>
-                    <a href="#" class="login-top-reg">注册 →</a>
+                    <div class="login-top-title" data-i18n="login.1"></div>
+                    <a href="/register" class="login-top-reg" data-i18n="login.2"></a>
                 </div>
                 <div class="login-inner-con">
                     <div class="form-login">
                         <i class="form-icon-user"></i>
-                        <input type="text" name="custCode" placeholder="用户名：">
+                        <input type="text" name="custCode" data-i18n="[placeholder]login.3">
                     </div>
                     <div class="form-login">
                         <i class="form-icon-pass"></i>
-                        <input type="password" name="passwd" placeholder="密码：">
+                        <input type="password" name="passwd" data-i18n="[placeholder]login.4">
                     </div>
                     <div class="form-login code-con clearfix">
-                        <label class="code-label">验证码</label>
+                        <label class="code-label" data-i18n="login.5"></label>
                         <input type="text" name="validateCode" class="code" maxlength="4">
-                        <img src="/validateCode" class="reg-code-img" width="107" height="45">
-                        <div class="code-text">
-                            看不清<br>
-                            <span>换一张</span>
+                        <img src="/validateCode" class="reg-code-img login-code-img" width="107" height="45">
+                        <div class="code-text" data-i18n="[prepend]login.6">
+                            <br>
+                            <span data-i18n="login.7"></span>
                         </div>
                     </div>
                     <div class="form-login login-forget">
-                        <a href="#">忘记密码</a>
+                        <a href="#" data-i18n="login.8"></a>
                     </div>
                     <div>
-                        <div class="login-btn" id="login-btn">登录</div>
-                        <div class="login-btn reg-btn">立即注册</div>
+                        <div class="login-btn" id="login-btn" data-i18n="login.9"></div>
+                        <a href="/register" class="login-btn reg-btn" data-i18n="login.10"></a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
     <div class="login-footer">
-        <div class="login-footer-text">
-            2013 ~ 2015 © iG99.com All Rights Reserved.
-        </div>
+        <div class="login-footer-text" data-i18n="base:footer"></div>
     </div>
 
     #parse('/common/script.vm')

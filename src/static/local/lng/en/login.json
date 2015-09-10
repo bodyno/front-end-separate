@@ -1,12 +1,11 @@
 {
-  "page":"Login Page",
-  "reg-text-title":"vip reward",
+  "page":"Login",
+  "reg-text-title":"welfare of member",
   "reg-item":{
-    "0":"Permission is hereby granted, free of charge, to any person obtaining a copy",
-    "1":"Permission is hereby granted, free of charge, to any person obtaining a copy",
-    "2":"Permission is hereby granted, free of charge, to any person obtaining a copy",
-    "3":"Permission is hereby granted, free of charge, to any person obtaining a copy",
-    "4":"Permission is hereby granted, free of charge, to any person obtaining a copy"
+    "0":"For account security, verify that your personal information is available after withdrawal 100 yuan bonus**",
+    "1":"Quick payment immediately to the account, a variety of deposit way choice, speed withdrawals！",
+    "2":"First deposit bonus of up to 2888 yuan, five big slot machine platform, immediately available！",
+    "3":"Join the VIP Club Lounge, enjoy part of your privileges and reward points！",
+    "4":"Multiple game platforms, provide better and more comprehensive Handicap, smart phones and mobile phone network client, joy in his hand!"
   }
-
 }

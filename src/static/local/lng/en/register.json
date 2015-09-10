@@ -1,0 +1,151 @@
+{
+  "js":{
+    "1":"I'm sorry, the username is already in use",
+    "2":"User name must fill out",
+    "3":"User name length is 2-15",
+    "4":"Password must fill in",
+    "5":"Password at least 5 bit",
+    "6":"Please enter the confirmation code",
+    "7":"Two password must be the same",
+    "8":"Please select Country ",
+    "9":"Please enter the email",
+    "10":"Please enter the correct email",
+    "12":"Referrals least 2 characters",
+    "13":"Referrals up to 50 characters",
+    "14":"Verification code cannot be empty",
+    "15":"Verification code error",
+    "16":"Please enter the four verification code",
+    "17":"Please enter the four verification code",
+    "18":"Last name cannot be empty",
+    "19":"minimum 2",
+    "20":"maximum 30",
+    "21":"first name cannot be empty",
+    "22":"inimum 2",
+    "23":"maximum 30",
+    "24":"nickname cannot be empty",
+    "25":"minimum 2",
+    "26":"maximum 30",
+    "27":"english name cannot be empty",
+    "28":"minimum 2",
+    "29":"maximum 30",
+    "30":"Birthday can not be empty",
+    "31":"QQ can't be empty",
+    "32":"Withdrawals password cannot be empty",
+    "33":"maximum 16",
+    "34":"Mobile phone can not be empty",
+    "35":"Certificate type cannot be empty",
+    "36":"Certificates cannot be empty"
+  },
+  "country_name":{
+    "Australia":"Australian",
+    "Brunei":"Brunei",
+    "Cambodia":"Cambodia",
+    "Canada":"Canada",
+    "China":"China",
+    "EU":"European Union",
+    "India":"India",
+    "Indonesia":"Indonesia",
+    "Japan":"Japanese",
+    "Korea":"Korea",
+    "Laos":"Laos",
+    "Malaysia":"Malaysia",
+    "Myanmar":"Myanmar",
+    "New Zealand":"New Zealand",
+    "Philippines":"Philippines ",
+    "Russia":"Russia",
+    "Singapore":"Singapore",
+    "Thailand":"Thailand",
+    "United States":"United States",
+    "Vietnam":"Vietnam"
+  },
+  "certificate_type":{
+    "ID number":"ID number",
+    "Driver license":"Driver license",
+    "Military officer":"Military officer",
+    "Passport":"Passport"
+  },
+  "sex":{
+    "male":"male",
+    "female":"female"
+  },
+  "custCode":{
+    "filed":"custCode",
+    "name":"username：",
+    "help":"Username of from 6 to 12 lowercase a ~ z or digits"
+  },
+  "passwd":{
+    "filed":"passwd",
+    "name":"password：",
+    "help":"Password length of 6 ~ 20 a-z 0-9, allowing only the following special characters @ * _ -.,. &"
+  },
+  "repasswd":{
+    "filed":"repasswd",
+    "name":"confirm：",
+    "help":"Enter the password again"
+  },
+  "country":{
+    "filed":"country",
+    "name":"country："
+  },
+  "affiliateId":{
+    "filed":"affiliateId",
+    "name":"affiliateId："
+  },
+  "firstName":{
+    "filed":"firstName",
+    "name":"firstName："
+  },
+  "lastName":{
+    "filed":"lastName",
+    "name":"lastName："
+  },
+  "nickName":{
+    "filed":"nickName",
+    "name":"nickName："
+  },
+  "enName":{
+    "filed":"enName",
+    "name":"english name："
+  },
+  "birthDate":{
+    "filed":"birthDate",
+    "name":"Birthday："
+  },
+  "certificateType":{
+    "filed":"certificateType",
+    "name":"certificate Type："
+  },
+  "certificate":{
+    "filed":"certificate",
+    "name":"certificate："
+  },
+  "custGender":{
+    "filed":"custGender",
+    "name":"Gender："
+  },
+  "mobileNumber":{
+    "filed":"mobileNumber",
+    "name":"Mobile phone："
+  },
+  "drawPwd":{
+    "filed":"drawPwd",
+    "name":"Withdrawals password："
+  },
+  "qq":{
+    "filed":"qq",
+    "name":"QQ："
+  },
+  "validateCode":{
+    "filed":"validateCode",
+    "name":"validate Code："
+  },
+  "emailAddress":{
+    "filed":"emailAddress",
+    "name":"Email address："
+  },
+  "reg-header-title":"New User Registration",
+  "reg-header-text":"If your existing account, in this immediately  <a href='/login'>login</a>",
+  "reg-text":"If you have any questions, please contact us 24 hours to help solve<a href='#'>online customer service</a><br>This site uses Global Trust's most advanced server 128/256 bit SSL encryption",
+  "ck1":"I confirm having at least 18 years old, and accept the website policy, privacy statement, terms and conditions.",
+  "reg-btn":"Register Now "
+}

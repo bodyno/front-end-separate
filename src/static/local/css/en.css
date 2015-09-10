@@ -2,3 +2,6 @@ body .logo a {
   background: url("../../images/en/logo_en.png");
   width: 234px;
 }
+body .slot-menu b {
+  top: 35px;
+}

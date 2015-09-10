@@ -1,6 +1,11 @@
+var _=require("underscore");
 module.exports = function (app) {
+
+    function mid(obj){
+        return _.extend({},app.locals.middle,obj)
+    }
+
     app.get('/login', function (req, res) {
-        req.session.username = 'SH_frank008';
         res.render('login', {
             header: 'login'
         });
@@ -25,7 +30,8 @@ module.exports = function (app) {
 
     //注册
     app.get('/register', function (req, res) {
-        res.render('register', {
+        req.session.username = 'SH_frank008';
+        res.render('register', mid({
             header: 'login',
             form: [
                 {formCode: "country",isShow:true, isRequire: false, validator: true},
@@ -44,7 +50,7 @@ module.exports = function (app) {
                 {formCode: "emailAddress",isShow:true, isRequire: true, validator: true},
                 {formCode: "validateCode",isShow:true, isRequire: true, validator: true}
             ]
-        });
+        }));
     });
 
     app.post('/register', function (req, res) {

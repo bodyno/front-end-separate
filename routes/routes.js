@@ -3,7 +3,6 @@ module.exports = function (app) {
     require('./web/site')(app);
     require('./web/login')(app);
     require('./web/validateCode')(app);
-    require('./web/account')(app);
     require('./web/member')(app);
     require('./web/payment')(app);
 

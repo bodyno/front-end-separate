@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 
         sprite: require('./config/grunt/sprite'),
 
-        rev: require('./config/grunt/rev'),
+        filerev: require('./config/grunt/filerev'),
 
         nodemon: require('./config/grunt/nodemon')
 
@@ -58,10 +58,11 @@ module.exports = function (grunt) {
         'concat',
         'uglify',
         'cssmin',
-        'rev:dist',
+        'filerev',
         'copy:vm',
         'usemin',
-        'clean:tmp'
+        'clean:tmp',
+        'clean:svn'
     ]);
 
     // 注册Grunt默认任务

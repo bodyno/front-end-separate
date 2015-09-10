@@ -30,7 +30,7 @@ The `.sprites` mixin generates identical output to the CSS template
 .header-top {
   background: #009b72;
   position: relative;
-  z-index: 112;
+  z-index: 1112;
 }
 .header-top-left {
   float: left;
@@ -95,7 +95,7 @@ The `.sprites` mixin generates identical output to the CSS template
   border-bottom: 1px solid #a5a5a5;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
   position: relative;
-  z-index: 111;
+  z-index: 1111;
   background: #fff;
 }
 .header .menu {
@@ -105,13 +105,14 @@ The `.sprites` mixin generates identical output to the CSS template
 .header .menu li {
   float: left;
   margin-left: 46px;
+  padding-bottom: 18px;
 }
-.header .menu li.active a,
-.header .menu li:hover a {
+.header .menu li.active .link,
+.header .menu li:hover .link {
   color: #009b72;
   border-bottom: 2px solid #009b72;
 }
-.header .menu li a {
+.header .menu li .link {
   color: #7b7b7b;
   font-size: 16px;
   font-weight: bold;
@@ -160,7 +161,7 @@ The `.sprites` mixin generates identical output to the CSS template
 }
 .language a b {
   background-image: url(/static/images/sprite/sprite.png);
-  background-position: -72px -18px;
+  background-position: -81px -18px;
   width: 9px;
   height: 5px;
   position: absolute;
@@ -225,4 +226,128 @@ The `.sprites` mixin generates identical output to the CSS template
   position: absolute;
   left: 15px;
   top: 2px;
+}
+.header-text::-webkit-input-placeholder {
+  color: #b1c3c0;
+}
+.header-text:-moz-placeholder {
+  color: #b1c3c0;
+}
+.header-text::-moz-placeholder {
+  color: #b1c3c0;
+}
+.header-text:-ms-input-placeholder {
+  color: #b1c3c0;
+}
+.header-text {
+  width: 104px;
+  height: 24px;
+  background: #47b488;
+  border: none;
+  color: #fff;
+  float: left;
+  margin-right: 4px;
+  margin-top: 6px;
+  padding: 0 8px;
+}
+.header-text.s {
+  width: 51px;
+}
+.header-code {
+  float: left;
+  margin-right: 4px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.header-login {
+  float: left;
+  background: #eeb827;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 2px;
+  border: none;
+  margin-right: 4px;
+  margin-top: 6px;
+  *height: 29px;
+  *line-height: 20px;
+}
+.header-block {
+  display: none;
+}
+.header-more {
+  background: url("../images/header_bg.png");
+  height: 203px;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 0;
+}
+.header-more-block {
+  background: url("../images/header_bg.png");
+  position: absolute;
+  width: 100%;
+  height: 203px;
+  top: 100px;
+}
+.header-img {
+  height: 120px;
+  width: 990px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+.header-img-sport {
+  background: url("../images/sport_more.jpg");
+}
+.header-img-slot {
+  background: url("../images/slot_more.jpg");
+}
+.header-img-casino {
+  background: url("../images/casino_more.jpg");
+}
+.header-img-lottery {
+  background: url("../images/lottery_more.jpg");
+}
+.header-more-text {
+  text-align: center;
+}
+.header-more-text .h-m-t {
+  float: left;
+  line-height: 24px;
+  padding-top: 126px;
+  cursor: pointer;
+  display: block;
+  color: #333333;
+  position: relative;
+  z-index: 111;
+  font-size: 12px;
+}
+.header-more-text .h-m-t div {
+  padding-top: 13px;
+  padding-bottom: 10px;
+}
+.header-more-text .h-m-t:hover div {
+  background: #60c275;
+  color: #fff;
+}
+.browser-updatetips .speed {
+  display: block;
+  background-image: url(/static/images/sprite/sprite.png);
+  background-position: -72px -18px;
+  width: 9px;
+  height: 14px;
+  position: absolute;
+  top: 12px;
+  left: 875px;
+}
+.browser-updatetips span {
+  background-image: url(/static/images/sprite/sprite.png);
+  background-position: -72px -32px;
+  width: 11px;
+  height: 11px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  left: 965px;
 }

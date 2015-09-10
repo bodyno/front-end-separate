@@ -1,5 +1,4 @@
-$(function(){
-
+function afterTran(){
     if(getQueryString("more")){
         $(".card-con").show()
         $(".withdraw-con").hide()
@@ -17,7 +16,7 @@ $(function(){
             payPassWord:pass.join("")
         },function(result){
             resultHandle(result,function(){
-                dialog.info("提款密码设置成功",function(){
+                dialog.info($.t("valid.with.1"),function(){
                     location.reload()
                 });
             })
@@ -27,7 +26,7 @@ $(function(){
     if($("#card-form").length){
         $("#card-form").validate($.extend({},validBase,{
             rules: {
-                bankNo: {
+                bankId: {
                     required: true
                 },
                 custBankacctNo:{
@@ -46,16 +45,43 @@ $(function(){
             },
             messages:{
                 custBankacctNo:{
-                    number:"请输入正确的银行账号"
+                    number:$.t("valid.with.2")
                 }
             }
         }));
+
+        $.get("/cashier/listProvince",function(result){
+            resultHandle(result,function(){
+                var html=[];
+                result=result.obj;
+                for(var i=0;i<result.length;i++){
+                    html.push('<option data-id="'+result[i].provinceid+'" value="'+result[i].provincename+'">'+result[i].provincename+'</option>')
+                }
+                $("#bankProvince option:eq(0)").after(html);
+            })
+        })
+
+        $("#bankProvince").change(function(){
+            $.get("/cashier/listCity",{
+                provinceid:$("#bankProvince option:selected").data("id")
+            },function(result){
+                resultHandle(result,function(){
+                    var html=[];
+                    result=result.obj;
+                    for(var i=0;i<result.length;i++){
+                        html.push('<option data-id="'+result[i].cityid+'" value="'+result[i].cityname+'">'+result[i].cityname+'</option>')
+                    }
+                    $("#bankCity option:not(:eq(0))").remove();
+                    $("#bankCity option:eq(0)").after(html);
+                })
+            })
+        })
     }
 
     $(document).on("click","#bind-card",function(){
         $(this).commit($("#card-form"),"/sidCustInfo/bindBank",function(){
-            dialog.info("绑定银行卡成功",function(){
-                location.reload()
+            dialog.info($.t("valid.with.3"),function(){
+                location.href="/payment/withdraw"
             })
         })
     })
@@ -63,17 +89,13 @@ $(function(){
 
     //验证码刷新
     $(document).on("click",".code",function(){
-        $(this).attr("src","/static/images/temp_code2.jpg?"+new Date().getTime())
+        $(this).attr("src","/payCode?"+new Date().getTime())
     })
 
     $(document).on("click","#withdraw-btn",function(){
         $(this).commit($("#withdraw-form"),"/cashier/withdraw",function(){
-            dialog.info("提款成功",function(){
+            dialog.info($.t("valid.with.4"),function(){
                 location.reload()
-            })
-        },null,function(result){
-            return $.extend({},result,{
-                custBankacctId:"1231231"
             })
         })
     })
@@ -91,22 +113,34 @@ $(function(){
                 },
                 validCode:{
                     required: true,
-                    number:true
+                    remote:"/checkPayCode"
+                },
+                remarks:{
+                    required: true
                 }
             },
             messages:{
                 ammount:{
-                    number:"请输入正确的提款金额"
+                    number:$.t("valid.with.5")
                 },
                 payPassword:{
-                    number:"请输入正确的提款密码"
+                    number:$.t("valid.with.6")
                 },
                 validCode:{
-                    number:"请输入正确的认证码"
-                },
+                    remote:$.t("valid.with.7")
+                }
             }
         }));
     }
 
 
-})
+    $(document).on("click",".card-table tr",function(){
+        if($(this).find(":radio").length){
+            if(!$(this).find(":checked").length){
+                $(".card-table").find(":checked").removeAttr("checked")
+                $(this).find(":radio").prop("checked","checked")
+            }
+        }
+        return false;
+    })
+}

@@ -11,8 +11,8 @@
 <div class="header-top">
         <div class="container clearfix">
             <div class="header-top-left clearfix">
-                <a href="/pintai" class="header-btn header-btn1" data-i18n="base:header.go">全民做庄</a>
-                <a href="#" class="header-btn header-btn2" data-i18n="base:header.down">客户端下载</a>
+                <a href="/pintai" class="header-btn header-btn1" data-i18n="base:header.go"></a>
+                <a href="#" class="header-btn header-btn2" data-i18n="base:header.down"></a>
                 <div class="language">
                     <a href="#"><span class="language-now">$lng_text</span><b></b></a>
                     <div class="language-list">
@@ -20,16 +20,16 @@
                         <div class="language-list-col">
                             <div class="language-item" data-value="zh.cn">简体中文</div>
                             <div class="language-item" data-value="en">English</div>
-                            <div class="language-item" data-value="zh.cn">Tiếng Việt</div>
+                            <div class="language-item" data-value="">Tiếng Việt</div>
                         </div>
                         <div class="language-list-col">
-                            <div class="language-item" data-value="zh.cn">한국어</div>
-                            <div class="language-item" data-value="zh.cn">ไทย</div>
-                            <div class="language-item" data-value="zh.cn">日本語</div>
+                            <div class="language-item" data-value="">한국어</div>
+                            <div class="language-item" data-value="">ไทย</div>
+                            <div class="language-item" data-value="">日本語</div>
                         </div>
                         <div class="language-list-col language-col-last">
-                            <div class="language-item" data-value="zh.cn">Bhs Indonesia</div>
-                            <div class="language-item" data-value="zh.cn">Khmer</div>
+                            <div class="language-item" data-value="">Bhs Indonesia</div>
+                            <div class="language-item" data-value="">Khmer</div>
                         </div>
                     </div>
                 </div>
@@ -38,12 +38,20 @@
                 <ul class="clearfix">
                     #if($username)
                     <li class="avatars_con"><a href="/member/message"><img class="avatars" src="/static/images/avatars_s.png" width="29" height="29">$username</a></li>
-                    <li><a href="/member/safe">个人中心</a></li>
-                    <li><a href="/payment/deposit">资金管理</a></li>
-                    <li><a href="/member/history">投注记录</a></li>
-                    <li><a href="/signout">退出</a></li>
+                    <li><a href="/member/safe" data-i18n="base:header.safe"></a></li>
+                    <li><a href="/payment/deposit" data-i18n="base:header.deposit"></a></li>
+                    <li><a href="/member/history" data-i18n="base:header.history"></a></li>
+                    <li><a href="/signout" data-i18n="base:header.signout"></a></li>
                     #else
-                    <li><a href="/login" data-i18n="base:header.login"></a></li>
+                    <li class="header-login-con">
+                        <form class="header-form">
+                            <input type="text" name="custCode" class="header-text" data-i18n="[placeholder]base:login.name1">
+                            <input type="password" name="passwd" class="header-text" data-i18n="[placeholder]base:login.name2">
+                            <input type="text" name="validateCode" class="header-text s" data-i18n="[placeholder]base:login.name3">
+                            <img class="header-code" src="/validateCode" width="60" height="21">
+                            <button type="button" class="header-login" data-i18n="base:header.login"></button>
+                        </form>
+                    </li>
                     <li><a href="/register" data-i18n="base:header.reg"></a></li>
                     #end
                     <li><a href="/service" class="top-menu-right" data-i18n="base:header.service"></a></li>
@@ -57,21 +65,106 @@
                 <a href="/"></a>
             </div>
 
-            #if($header=="login")
-            <ul class="login-menu clearfix">
-                <li #if($header=="home")class="active"#end><a href="/service">在线客服</a></li>
-                <li><span></span></li>
-                <li #if($header=="home")class="active"#end><a href="/contact">联系我们</a></li>
-            </ul>
-            #else
             <ul class="menu clearfix">
-                <li #if($header=="home")class="active"#end><a href="/" data-i18n="base:header.home"></a></li>
-                <li #if($header=="sports")class="active"#end><a href="/sports" data-i18n="base:header.sports"></a></li>
-                <li #if($header=="casino")class="active"#end><a href="/casino" data-i18n="base:header.casino"></a></li>
-                <li #if($header=="slot")class="active"#end><a href="/slot" data-i18n="base:header.slot"></a></li>
-                <li #if($header=="lottery")class="active"#end><a href="/lottery" data-i18n="base:header.lottery"></a></li>
-                <li #if($header=="promotion")class="active"#end><a href="/promotion" data-i18n="base:header.promotion"></a></li>
+                <li #if($header=="home")class="active"#end><a class="link" href="/" data-i18n="base:header.home"></a></li>
+                <li id="menu-sports" #if($header=="sports")class="active"#end><a class="link" href="/sports" data-i18n="base:header.sports"></a>
+                    <div class="header-block">
+                        <div class="header-more-block header-more-left"></div>
+                        <div class="header-more-block header-more-right"></div>
+                        <div class="header-more">
+                            <div class="container">
+                                <div class="header-img header-img-sport"></div>
+                                <div class="header-more-text clearfix">
+                                    <a class="h-m-t" href="#" style="width: 206px;">
+                                        <div data-i18n="[html]base:top.1"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 384px;">
+                                        <div data-i18n="[html]base:top.2"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 390px;">
+                                        <div data-i18n="[html]base:top.3"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="menu-casino" #if($header=="casino")class="active"#end><a class="link" href="/casino" data-i18n="base:header.casino"></a>
+                    <div class="header-block">
+                        <div class="header-more-block header-more-left"></div>
+                        <div class="header-more-block header-more-right"></div>
+                        <div class="header-more">
+                            <div class="container">
+                                <div class="header-img header-img-casino"></div>
+                                <div class="header-more-text clearfix">
+                                    <a class="h-m-t" href="#" style="width: 181px;">
+                                        <div data-i18n="[html]base:top.4">
+
+                                        </div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 181px;">
+                                        <div data-i18n="[html]base:top.5"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 221px;">
+                                        <div data-i18n="[html]base:top.6"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 201px;">
+                                        <div data-i18n="[html]base:top.7"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 191px;">
+                                        <div data-i18n="[html]base:top.8"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="menu-slot" #if($header=="slot")class="active"#end><a class="link" href="/slot" data-i18n="base:header.slot"></a>
+                    <div class="header-block">
+                        <div class="header-more-block header-more-left"></div>
+                        <div class="header-more-block header-more-right"></div>
+                        <div class="header-more">
+                            <div class="container">
+                                <div class="header-img header-img-slot"></div>
+                                <div class="header-more-text clearfix">
+                                    <a class="h-m-t" href="#" style="width: 206px;">
+                                        <div data-i18n="[html]base:top.9"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 384px;">
+                                        <div data-i18n="[html]base:top.10"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 390px;">
+                                        <div data-i18n="[html]base:top.11"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="menu-lottery" #if($header=="lottery")class="active"#end><a class="link" href="/lottery" data-i18n="base:header.lottery"></a>
+                    <div class="header-block">
+                        <div class="header-more-block header-more-left"></div>
+                        <div class="header-more-block header-more-right"></div>
+                        <div class="header-more">
+                            <div class="container">
+                                <div class="header-img header-img-lottery"></div>
+                                <div class="header-more-text clearfix">
+                                    <a class="h-m-t" href="#" style="width: 206px;">
+                                        <div data-i18n="[html]base:top.12"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 384px;">
+                                        <div data-i18n="[html]base:top.13"></div>
+                                    </a>
+                                    <a class="h-m-t" href="#" style="width: 390px;">
+                                        <div data-i18n="[html]base:top.14"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li #if($header=="promotion")class="active"#end><a class="link" href="/promotion" data-i18n="base:header.promotion"></a></li>
             </ul>
-            #end
         </div>
+
     </div>

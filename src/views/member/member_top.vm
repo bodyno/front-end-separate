@@ -1,25 +1,49 @@
 <div class="account-head clearfix">
     <div class="account-head-left">
         <div class="bd">
-            <h3>个人中心</h3>
-            <p>安全指数</p>
-            <span id="info-complete" data-complete="80">80%</span>
+            <h3 data-i18n="center:mtop.1"></h3>
+            <p data-i18n="center:mtop.2"></p>
+            <span id="info-complete" data-complete="$disSidCust.percentage">$disSidCust.percentage%</span>
         </div>
         <input type="text" value="0" class="dial" style="display: none"/>
-        <div class="comp-tips">绑定手机奖励15元哦~</div>
+        <div class="comp-tips" data-i18n="center:mtop.3">~</div>
     </div>
     <div class="account-head-right">
         <div class="top1">
-            <span class="t">晚上好，</span>
-            <span class="account-name">SH_frank008</span>
+            <span class="t">$disSidCust.hello，</span>
+            <span class="account-name">$disSidCust.username</span>
             <span class="icon"></span>
-            <span class="t2">忙碌了一整天，晚餐吃顿好的吧。</span>
+            <span class="t2">$disSidCust.tips</span>
         </div>
         <div class="top2 clearfix">
-            <div class="li">真实姓名：<a href="/member/safe#name">马上填写真实姓名？</a></div>
-            <div class="li">手机号码：<a href="#t-phone" data-dialog="绑定手机|470|300">尚未绑定手机，立即绑定？</a> </div>
-            <div class="li">注册邮箱：<a class="mail-show" href="#t-mail" data-dialog="修改邮箱|470|300">franklee****@gmail.com</a></div>
-            <div class="li">上次登录：5小时前</div>
+            <div class="li">
+                <em data-i18n="[prepend]center:mtop.4"></em>
+                #if($disSidCust.isBindEmail)
+                <span>$disSidCust.firstName**</span>
+                #else
+                <a href="/member/safe#name" data-i18n="center:mtop.5"></a>
+                #end
+            </div>
+            <div class="li">
+                <em data-i18n="[prepend]center:mtop.6"></em>
+                #if($disSidCust.isBindPhone)
+                <span>$disSidCust.mobileNumber</span>
+                #else
+                <a href="#t-phone" data-i18n="center:mtop.7;[data-dialog]center:mtop.77"></a>
+                #end
+            </div>
+            <div class="li">
+                <em data-i18n="[prepend]center:mtop.8"></em>
+                #if($disSidCust.isBindEmail)
+                <span>$disSidCust.emailAddress</span>
+                #else
+                <a class="mail-show" href="#t-mail" data-i18n="center:mtop.9;[data-dialog]center:mtop.99"></a>
+                #end
+            </div>
+            <div class="li">
+                <em data-i18n="[prepend]center:mtop.10"></em>
+                <span data-i18n="[append]center:mtop.11">$disSidCust.diffDate</span>
+            </div>
         </div>
     </div>
 </div>

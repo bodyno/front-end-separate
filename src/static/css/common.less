@@ -3,7 +3,7 @@
 
 .login-body{
   background: #eef2f0;
-  .header-top{
+  .header-login-con{
     display: none;
   }
 }
@@ -166,6 +166,7 @@
 .login-btn{
   color: #fff;
   background: @primary;
+  display: block;
   height: 48px;
   line-height: 48px;
   text-align: center;
@@ -471,7 +472,6 @@
 }
 .reg-group{
   margin-bottom: 8px;
-  padding-left: 70px;
   position: relative;
   .require{
     float: left;
@@ -482,7 +482,7 @@
   }
 }
 .reg-label{
-  width: 90px;
+  width: 160px;
   float: left;
   text-align: right;
   font-size: 14px;
@@ -599,5 +599,82 @@
 .emailist li { padding-left: 10px; line-height: 23px; color: #999; }
 .emailist .on, .emailist li:hover { background: #e0f6fd; }
 
-.sports{
+.regi-ok{
+  background: #efefef;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.reg-ok-con{
+  background: #ffffff;
+  border:1px solid #d7d7d7;
+  padding-bottom: 80px;
+}
+.reg-ok-title{
+  font-size: 18px;
+  color:#008a65;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-left: 45px;
+}
+.reg-ok-detail{
+  margin-left: 230px;
+  background: url("../images/reg_ok.png") no-repeat 1px 6px;
+  padding-left: 80px;
+}
+.reg-ok-detail-t{
+  font-size: 24px;
+  color:#333333;
+  a{
+    color:#0099ff;
+    text-decoration: underline;
+  }
+}
+.reg-ok-detail-d{
+  font-size: 12px;
+  margin-top: 7px;
+}
+.reg-ok-item-con{
+  margin-left: 192px;
+  background: #a5f5e0;
+  margin-top: 20px;
+  width: 617px;
+}
+.reg-ok-item{
+  width: 205px;
+  float: left;
+  margin: 14px 0;
+  border-right:1px solid #009b72;
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+  .reg-ok-i-t{
+    font-size: 14px;
+    color:#333333;
+    padding: 0 36px;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .reg-ok-i-d{
+    font-size: 12px;
+    color:#666666;
+    padding: 0 36px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .reg-ok-i-b{
+    color:#fff;
+    background: @primary;
+    width: 134px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+.login-code-img{
+  margin-top: 7px;
 }

@@ -1,4 +1,13 @@
-$(function(){
+function afterTran(){
+    $(document).on("focus","#amount",function(){
+        $(this).prev().hide()
+    })
+
+    $(document).on("blur","#amount",function(){
+        if(!$(this).val()){
+            $(this).prev().show()
+        }
+    })
 
     $("#transfer-form").validate($.extend({},validBase,{
         rules: {
@@ -7,7 +16,7 @@ $(function(){
             },
             toType: {
                 required:true,
-                notEqual:"#fromType"
+                notEqual:"#source-transfer"
             },
             ammount: {
                 required:true,
@@ -17,25 +26,30 @@ $(function(){
             }
         },
         messages:{
-            fromType: {
-                toType:"转入转出不能相同"
+            toType: {
+                notEqual: $.t("valid.tran.1")
             },
             ammount: {
-                required:"请输入转账金额",
-                number:"请输入正确的转账金额",
-                digits:"请输入正确的转账金额",
-                min:"最小转账金额为1"
+                required:$.t("valid.tran.2"),
+                number:$.t("valid.tran.3"),
+                digits:$.t("valid.tran.4"),
+                min:$.t("valid.tran.5")
             }
         }
     }))
 
-
     $("#transfer-btn").click(function(){
         $(this).commit($("#transfer-form"),"/cashier/transfer",function(){
-            dialog.info("转账成功",function(){
+            dialog.info($.t("valid.tran.ok"),function(){
                 location.reload()
             });
         })
     })
 
-})
+    $(".s-d-exchange").click(function(){
+        var temp=$("#source-transfer").html();
+        var tempVal=$("#source-transfer").val()
+        $("#source-transfer").html($("#desc-transfer").html()).val($("#desc-transfer").val())
+        $("#desc-transfer").html(temp).val(tempVal);
+    })
+}

@@ -1,0 +1,1 @@
+$(function(){$(".promotion-btn-more").click(function(){$(this).hasClass("active")?($(this).removeClass("active"),$(this).parents(".promotion-item").find(".promotion-detail").slideUp(200)):($(this).addClass("active"),$(this).parents(".promotion-item").find(".promotion-detail").slideDown(200))})});

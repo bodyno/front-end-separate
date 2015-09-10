@@ -424,3 +424,39 @@ p {
   width: 15px;
   height: 14px;
 }
+.page {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.center.simple-pagination ul {
+  text-align: center;
+}
+.simple-pagination ul {
+  text-align: right;
+}
+.simple-pagination li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.light-theme a,
+.light-theme span {
+  float: left;
+  color: #009b72;
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 14px;
+  margin-right: 3px;
+  text-align: center;
+}
+.light-theme .current {
+  color: #000;
+  cursor: default;
+}
+.disabled .prev,
+.disabled .next {
+  display: none;
+}

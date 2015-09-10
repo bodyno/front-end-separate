@@ -17,7 +17,7 @@ html {
  */
 body {
   margin: 0;
-  font-family: Arial, 'Microsoft Yahei', sans-serif;
+  font-family: Tahoma, 'Microsoft Yahei', sans-serif;
   font-size: 12px;
 }
 /* HTML5 display definitions
@@ -510,7 +510,7 @@ button[disabled] {
 .header-top {
   background: #009b72;
   position: relative;
-  z-index: 112;
+  z-index: 1112;
 }
 .header-top-left {
   float: left;
@@ -575,7 +575,7 @@ button[disabled] {
   border-bottom: 1px solid #a5a5a5;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
   position: relative;
-  z-index: 111;
+  z-index: 1111;
   background: #fff;
 }
 .header .menu {
@@ -585,13 +585,14 @@ button[disabled] {
 .header .menu li {
   float: left;
   margin-left: 46px;
+  padding-bottom: 18px;
 }
-.header .menu li.active a,
-.header .menu li:hover a {
+.header .menu li.active .link,
+.header .menu li:hover .link {
   color: #009b72;
   border-bottom: 2px solid #009b72;
 }
-.header .menu li a {
+.header .menu li .link {
   color: #7b7b7b;
   font-size: 16px;
   font-weight: bold;
@@ -640,7 +641,7 @@ button[disabled] {
 }
 .language a b {
   background-image: url(/static/images/sprite/sprite.png);
-  background-position: -72px -18px;
+  background-position: -81px -18px;
   width: 9px;
   height: 5px;
   position: absolute;
@@ -705,6 +706,130 @@ button[disabled] {
   position: absolute;
   left: 15px;
   top: 2px;
+}
+.header-text::-webkit-input-placeholder {
+  color: #b1c3c0;
+}
+.header-text:-moz-placeholder {
+  color: #b1c3c0;
+}
+.header-text::-moz-placeholder {
+  color: #b1c3c0;
+}
+.header-text:-ms-input-placeholder {
+  color: #b1c3c0;
+}
+.header-text {
+  width: 104px;
+  height: 24px;
+  background: #47b488;
+  border: none;
+  color: #fff;
+  float: left;
+  margin-right: 4px;
+  margin-top: 6px;
+  padding: 0 8px;
+}
+.header-text.s {
+  width: 51px;
+}
+.header-code {
+  float: left;
+  margin-right: 4px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.header-login {
+  float: left;
+  background: #eeb827;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 2px;
+  border: none;
+  margin-right: 4px;
+  margin-top: 6px;
+  *height: 29px;
+  *line-height: 20px;
+}
+.header-block {
+  display: none;
+}
+.header-more {
+  background: url("../images/header_bg.png");
+  height: 203px;
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 0;
+}
+.header-more-block {
+  background: url("../images/header_bg.png");
+  position: absolute;
+  width: 100%;
+  height: 203px;
+  top: 100px;
+}
+.header-img {
+  height: 120px;
+  width: 990px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+.header-img-sport {
+  background: url("../images/sport_more.jpg");
+}
+.header-img-slot {
+  background: url("../images/slot_more.jpg");
+}
+.header-img-casino {
+  background: url("../images/casino_more.jpg");
+}
+.header-img-lottery {
+  background: url("../images/lottery_more.jpg");
+}
+.header-more-text {
+  text-align: center;
+}
+.header-more-text .h-m-t {
+  float: left;
+  line-height: 24px;
+  padding-top: 126px;
+  cursor: pointer;
+  display: block;
+  color: #333333;
+  position: relative;
+  z-index: 111;
+  font-size: 12px;
+}
+.header-more-text .h-m-t div {
+  padding-top: 13px;
+  padding-bottom: 10px;
+}
+.header-more-text .h-m-t:hover div {
+  background: #60c275;
+  color: #fff;
+}
+.browser-updatetips .speed {
+  display: block;
+  background-image: url(/static/images/sprite/sprite.png);
+  background-position: -72px -18px;
+  width: 9px;
+  height: 14px;
+  position: absolute;
+  top: 12px;
+  left: 875px;
+}
+.browser-updatetips span {
+  background-image: url(/static/images/sprite/sprite.png);
+  background-position: -72px -32px;
+  width: 11px;
+  height: 11px;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  left: 965px;
 }
 .footer {
   border-top: 4px solid #009b72;
@@ -1175,6 +1300,42 @@ p {
   width: 15px;
   height: 14px;
 }
+.page {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.center.simple-pagination ul {
+  text-align: center;
+}
+.simple-pagination ul {
+  text-align: right;
+}
+.simple-pagination li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.light-theme a,
+.light-theme span {
+  float: left;
+  color: #009b72;
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 14px;
+  margin-right: 3px;
+  text-align: center;
+}
+.light-theme .current {
+  color: #000;
+  cursor: default;
+}
+.disabled .prev,
+.disabled .next {
+  display: none;
+}
 .field label.error {
   color: #F4ABA1;
   font-size: 12px;
@@ -1201,6 +1362,8 @@ p {
   width: 110px;
   height: 110px;
   text-align: center;
+  left: 0;
+  top: 0;
 }
 .account-head-left .bd h3 {
   margin-top: 5px;
@@ -1219,6 +1382,7 @@ p {
 .account-head-left .comp-tips {
   position: absolute;
   top: 120px;
+  left: 0;
   color: #ccc;
   width: 210px;
   text-align: center;
@@ -1254,13 +1418,16 @@ p {
 }
 .account-head-right .top2 .li {
   float: left;
-  color: #999999;
+  color: #666;
   font-size: 14px;
-  width: 260px;
   margin-bottom: 14px;
+  margin-right: 20px;
 }
-.account-head-right .top2 .li a {
+.account-head-right .top2 .li a,
+.account-head-right .top2 .li span {
   color: #009b72;
+  display: inline-block;
+  width: 200px;
 }
 .account-body {
   position: relative;
@@ -1290,6 +1457,9 @@ p {
   color: #666666;
   font-size: 12px;
   padding-left: 62px;
+}
+.account-menu li .s em {
+  color: #FF9143;
 }
 .account-menu li span {
   position: absolute;
@@ -1440,6 +1610,9 @@ p {
 #realinfo-form {
   margin-top: 30px;
 }
+.a-t-r {
+  margin-bottom: 15px;
+}
 .a-t-con {
   margin-top: 35px;
   padding-left: 10px;
@@ -1447,7 +1620,7 @@ p {
 .a-t-con .a-t-n {
   float: left;
   margin-right: 55px;
-  width: 94px;
+  width: 114px;
   padding-left: 57px;
   height: 32px;
   line-height: 32px;
@@ -1455,7 +1628,6 @@ p {
   border-radius: 2px;
   color: #666666;
   font-size: 14px;
-  margin-bottom: 15px;
   position: relative;
   cursor: pointer;
 }
@@ -1585,7 +1757,7 @@ p {
   line-height: 26px;
 }
 .bethistory-form .sinput {
-  width: 30px;
+  width: 33px;
   margin-left: 5px;
 }
 .bethistory-form .separator {
@@ -1734,10 +1906,11 @@ p {
   margin-left: 230px;
 }
 .promo-text {
-  margin-left: 250px;
   font-size: 12px;
   color: #cccccc;
   margin-top: 10px;
+  text-align: center;
+  margin-right: 130px;
 }
 .mcj_a {
   width: 700px;
@@ -1791,7 +1964,6 @@ p {
   color: #FFF;
   margin-left: 11px;
   background: #009b72;
-  -webkit-border-radius: 12px;
   border-radius: 12px;
   line-height: 17px;
   padding: 0 5px;
@@ -1846,7 +2018,7 @@ p {
   margin-left: 5px;
 }
 .mcj_j {
-  width: 415px;
+  width: 405px;
   height: 60px;
   line-height: 60px;
   line-height: 63px\9;
@@ -2095,6 +2267,13 @@ p {
   width: 25px;
   height: 17px;
 }
+.logo-phone-2 {
+  float: left;
+  background-image: url(/static/images/sprite/sprite_account.png);
+  background-position: -195px -167px;
+  width: 25px;
+  height: 17px;
+}
 .tbl-bets {
   color: #000;
   border-top: 1px solid #d3d3d3;
@@ -2278,4 +2457,10 @@ p {
   line-height: 260px;
   font-size: 20px;
   color: #ccc;
+}
+.msg-plan {
+  background: url("../images/plane.jpg") no-repeat;
+  width: 165px;
+  height: 76px;
+  margin: 0 auto;
 }

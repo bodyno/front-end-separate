@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>个人中心</title>
-    <script>var translate_page='member';</script>
+    <title data-i18n="base:title.pay"></title>
+    <script>var translate_page='pay';var page_inner=['center'];</script>
     #parse('/common/top.vm')
     #set($header='withdraw')
     <link rel="stylesheet" href="/static/css/account.css"/>
@@ -16,44 +16,37 @@
             <div id="withdraw">
                 <div class="progress">
                     <div class="step-1">
-                        <span class="txt-1">提交</span>
-                        <span class="txt-2">审核</span>
-                        <span class="txt-3">出款</span>
-                        <span class="txt-4">到帐</span>
+                        <span class="txt-1" data-i18n="with.1"></span>
+                        <span class="txt-2" data-i18n="with.2"></span>
+                        <span class="txt-3" data-i18n="with.3"></span>
+                        <span class="txt-4" data-i18n="with.4"></span>
                         <span class="bar"></span>
                     </div>
                 </div>
                 <div class="w-c">
                     <div class="w-row clearfix">
-                        <div class="w-l">
-                            主账户余额：<span>$curAccount</span> RMB
+                        <div class="w-l" data-i18n="[prepend]with.5">
+                            <span>$disSidCust.curAccount</span> RMB
                         </div>
                         <div class="w-r">
-                            #if($isBindBank)
-                            您已绑定银行卡，如需添加<a href="/payment/withdraw?more=true">请继续绑定</a>
+                            #if($disSidCust.isBindBank)
+                            <span data-i18n="[html]with.6"></span>
                             #else
-                            您尚未绑定银行卡，<a href="/payment/withdraw">请先绑定银行卡</a>
+                            <span data-i18n="[html]with.7"></span>
                             #end
                         </div>
                     </div>
 
-                    #if($curAccount<100)
-                    <div class="w-m">
+                    #if($disSidCust.curAccount<100)
+                    <div class="w-m" data-i18n="[append]with.8">
                         <h2 class="logo-th-2"></h2>
-                        您的中心钱包余额尚未达到提款标准，<br>
-                        提款金额最少为100.00元。
                     </div>
-                    <a href="/payment/deposit" class="btn-blue m-b">
-                        快速存款
-                    </a>
-                    #end
-                    #if($curAccount>=100&&$isSetPwd==false)
+                    <a href="/payment/deposit" class="btn-blue m-b" data-i18n="with.9"></a>
+                    #elseif($disSidCust.curAccount>=100&&$disSidCust.isBindPayPwd==false)
                     <div>
-                        <div class="pass-cen">
-                            <span>温馨提示</span>：您还未设置提款密码，不能进行提款操作，请设置！
-                        </div>
+                        <div class="pass-cen" data-i18n="[html]with.10"></div>
                         <div class="pass-set clearfix">
-                            <span>提款密码：</span>
+                            <span data-i18n="with.11"></span>
                             <div class="select-box">
                                 <select>
                                     <option value="0">0</option>
@@ -111,40 +104,50 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="btn-blue m-b" id="pass-set">
-                            确定设置
-                        </div>
+                        <div class="btn-blue m-b" id="pass-set" data-i18n="with.111"></div>
                     </div>
-                    #end
-                    <div class="card-con" #if($isBindBank)style="display: none;"#end>
-                        <div class="card-title">已绑定银行</div>
+                    #elseif($disSidCust.curAccount>=100&&$disSidCust.isBindPayPwd==true)
+                    <div class="card-con" #if($disSidCust.isBindBank)style="display: none;"#end>
+                        <div class="card-title" data-i18n="with.12"></div>
                         <div>
                             <table class="card-table">
                                 <tr>
-                                    <td>选择</td>
-                                    <td>开户银行</td>
-                                    <td>真实姓名</td>
-                                    <td>银行卡号</td>
-                                    <td>银行网点</td>
+                                    <td data-i18n="with.14"></td>
+                                    <td data-i18n="with.15"></td>
+                                    <td data-i18n="with.16"></td>
+                                    <td data-i18n="with.17"></td>
                                 </tr>
+                                #if($sidCustBankacct)
+                                #foreach($item in $sidCustBankacct)
                                 <tr>
-                                    <td colspan="5" class="card-no">您尚未添加绑定银行</td>
+                                    <td>$item.bankName</td>
+                                    <td>$item.realName</td>
+                                    <td>$item.custBankacctNo</td>
+                                    <td>$item.bankProvince  $item.bankCity</td>
                                 </tr>
+                                #end
+                                #else
+                                <tr>
+                                    <td colspan="5" class="card-no" data-i18n="with.18"></td>
+                                </tr>
+                                #end
                             </table>
                         </div>
-                        <div class="card-title">添加绑定银行</div>
+                        <div class="card-title" data-i18n="with.19"></div>
                         <div>
                             <form id="card-form" class="card-form">
                                 <div class="field">
                                     <div class="field-left">
-                                        <span class="label">开户银行：</span>
+                                        <span class="label" data-i18n="with.20"></span>
                                     </div>
                                     <div class="field-right">
                                         <div class="input-box-3">
                                             <div class="select-box">
-                                                <select name="bankNo" id="bankNo">
-                                                    <option value="">选择您的开户银行</option>
-                                                    <option value="1">农业银行</option>
+                                                <select name="bankId" id="bankId">
+                                                    <option value="" data-i18n="with.21"></option>
+                                                    #foreach($item in $listBanks)
+                                                    <option value="$item.bankId">$item.bankName</option>
+                                                    #end
                                                 </select>
                                             </div>
                                         </div>
@@ -152,15 +155,15 @@
                                 </div>
                                 <div class="field">
                                     <div class="field-left">
-                                        <span class="label">真实姓名：</span>
+                                        <span class="label" data-i18n="with.22"></span>
                                     </div>
                                     <div class="field-right">
-                                        <span class="card-name">徐先生</span>
+                                        <span class="card-name">${disSidCust.firstName}${disSidCust.lastName}</span>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <div class="field-left">
-                                        <span class="label">银行卡号：</span>
+                                        <span class="label" data-i18n="with.23"></span>
                                     </div>
                                     <div class="field-right">
                                         <div class="input-box-3">
@@ -170,18 +173,18 @@
                                 </div>
                                 <div class="field">
                                     <div class="field-left">
-                                        <span class="label">银行网点：</span>
+                                        <span class="label" data-i18n="with.24"></span>
                                     </div>
                                     <div class="field-right">
                                         <div class="input-box-3">
                                             <div class="select-box select-box-province">
                                                 <select name="bankProvince" id="bankProvince">
-                                                    <option value="">省份</option>
+                                                    <option value="" data-i18n="base:province"></option>
                                                 </select>
                                             </div>
                                             <div class="select-box select-box-city">
                                                 <select name="bankCity" id="bankCity">
-                                                    <option value="">城市</option>
+                                                    <option value="" data-i18n="base:city"></option>
                                                 </select>
                                             </div>
                                         </div>
@@ -189,7 +192,7 @@
                                 </div>
                                 <div class="field">
                                     <div class="field-left">
-                                        <span class="label">详细地址：</span>
+                                        <span class="label" data-i18n="with.25"></span>
                                     </div>
                                     <div class="field-right label-top">
                                         <div class="input-box-3">
@@ -197,79 +200,80 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="field"><button id="bind-card" class="btn-blue"><span>确定添加</span></button></div>
+                                <div class="field"><button id="bind-card" class="btn-blue"><span data-i18n="with.26"></span></button></div>
                             </form>
                         </div>
                     </div>
-                    #if($isBindBank)
+                    #if($disSidCust.isBindBank)
                     <div class="withdraw-con" style="display: none;">
-                        <div class="wd-title">
-                            收款银行：（已绑定银行）
-                        </div>
-                        <div>
-                            <table class="card-table">
-                                <tr>
-                                    <td width="70">选择</td>
-                                    <td>开户银行</td>
-                                    <td>真实姓名</td>
-                                    <td>银行卡号</td>
-                                    <td>银行网点</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" checked></td>
-                                    <td>中国工商银行</td>
-                                    <td>abd</td>
-                                    <td>12311231233547</td>
-                                    <td>吉林省  长春</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        备注：
-                                    </td>
-                                    <td colspan="4" class="textarea-con">
-                                        <textarea class="textarea"></textarea>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div>
-                            <form id="withdraw-form" class="withdraw-form">
-                                <div class="field">
-                                    <div class="field-left">
-                                        <span class="label">提款金额：</span>
-                                    </div>
-                                    <div class="field-right">
-                                        <div class="input-box-3">
-                                            <input type="text" name="ammount" id="ammount">
+                        <div class="wd-title" data-i18n="with.27"></div>
+                        <form id="withdraw-form">
+                            <div>
+                                <table class="card-table">
+                                    <tr>
+                                        <td data-i18n="with.13" width="70"></td>
+                                        <td data-i18n="with.14"></td>
+                                        <td data-i18n="with.15"></td>
+                                        <td data-i18n="with.16"></td>
+                                        <td data-i18n="with.17"></td>
+                                    </tr>
+                                    #foreach($item in $sidCustBankacct)
+                                    <tr>
+                                        <td><input name="custBankacctId" type="radio" value="$item.custBankacctId" #if($velocityCount=="1") checked #end></td>
+                                        <td>$item.bankName</td>
+                                        <td>$item.realName</td>
+                                        <td>$item.custBankacctNo</td>
+                                        <td>$item.bankProvince  $item.bankCity</td>
+                                    </tr>
+                                    #end
+                                    <tr>
+                                        <td data-i18n="with.28"></td>
+                                        <td colspan="4" class="textarea-con">
+                                            <textarea name="remarks" id="remarks" class="textarea"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <div class="withdraw-form">
+                                    <div class="field">
+                                        <div class="field-left">
+                                            <span class="label" data-i18n="with.29"></span>
                                         </div>
-                                        <span class="limit">单笔最小提款额：100.0/最大提款额：200000.0RMB</span>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <div class="field-left">
-                                        <span class="label">提款密码：</span>
-                                    </div>
-                                    <div class="field-right">
-                                        <div class="input-box-3">
-                                            <input type="password" name="payPassword" id="payPassword">
+                                        <div class="field-right">
+                                            <div class="input-box-3">
+                                                <input type="text" name="ammount" id="ammount" autocomplete="off">
+                                            </div>
+                                            <span class="limit">单笔最小提款额：100.0/最大提款额：200000.0RMB</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="field">
-                                    <div class="field-left">
-                                        <span class="label">认 证 码：</span>
-                                    </div>
-                                    <div class="field-right">
-                                        <div class="input-box-3">
-                                            <input type="text" class="small" id="validCode" name="validCode">
+                                    <div class="field">
+                                        <div class="field-left">
+                                            <span class="label" data-i18n="with.11"></span>
                                         </div>
-                                        <img src="/static/images/temp_code2.jpg" width="80" height="30" class="code">
+                                        <div class="field-right">
+                                            <div class="input-box-3">
+                                                <input type="password" name="payPassword" id="payPassword" autocomplete="off">
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="field">
+                                        <div class="field-left">
+                                            <span class="label" data-i18n="with.30"></span>
+                                        </div>
+                                        <div class="field-right">
+                                            <div class="input-box-3">
+                                                <input type="text" class="small" id="validCode" name="validCode">
+                                            </div>
+                                            <img src="/payCode" width="80" height="30" class="code">
+                                        </div>
+                                    </div>
+                                    <div class="field"><button id="withdraw-btn" class="btn-blue"><span data-i18n="with.31"></span></button></div>
                                 </div>
-                                <div class="field"><button id="withdraw-btn" class="btn-blue"><span>确定出款</span></button></div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
+                    #end
                     #end
                 </div>
             </div>

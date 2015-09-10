@@ -1,0 +1,37 @@
+{
+  "certificate_type":{
+    "ID number":"ID number",
+    "Driver license":"Driver license",
+    "Military officer":"Military officer",
+    "Passport":"Passport"
+  },
+  "bank":{
+    "ICBC":"Industrial and Commercial Bank of China",
+    "CMB":"China Merchants Bank",
+    "CMBC":"China Minsheng Banking",
+    "SPDB":"Shanghai Pudong Development Bank",
+    "BCM":"Bank of Communications",
+    "CCB":"China Construction Bank",
+    "ABC":"Agricultural Bank of China",
+    "BOS":"Bank of Shanghai",
+    "HSBC":"Banking Corporation",
+    "BOC":"Bank of China",
+    "PSBC":"Postal Savings Bank of China",
+    "CEB":"China Everbright Bank",
+    "PAB":"Ping An Bank",
+    "CCB":"China Citic Bank",
+    "CIB":"Industrial Bank",
+    "HXB":"Hua Xia Bank",
+    "GDB":"Guangdong Development Bank",
+    "BOB":"bank of beijing",
+    "HKB":"Hankou Bank",
+    "HSB":"Hang Seng Bank",
+    "SCB":"Standard Chartered Bank",
+    "CTB":"National city Bank of New York",
+    "BEA":"Bank of East Asia",
+    "BOC":"Bank of Chengdu",
+    "BON":"Bank Of Nanjing",
+    "BT":"Bank of Tianjin",
+    "DGB":"Bank of Dongguan"
+  }
+}

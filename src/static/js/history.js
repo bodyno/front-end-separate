@@ -1,7 +1,4 @@
-$(function(){
-    $("#test").datepicker()
-})
-$(function(){
+function afterTran(){
     //设置时间控件
     $("#starttime").datepicker({
         minDate: "-7d", maxDate: new Date(), onClose: function (selectedDate) {
@@ -27,11 +24,13 @@ $(function(){
 
 
     $("#btn-history").click(function(){
-        $(this).commit($("#history-form"),"/member/history",function(result){
-            var tmpl = doT.template($("#template").html())({})
 
+        $.get("/transaction/listRecords",{
+            startDate:$("#starttime").val()+$("#hmstarttime").val(),
+            endDate:$("#endtime").val()+$("#hmendtime").val()
+        },function(){
+            var tmpl = doT.template($("#template").html())({})
             $("#SearchResult").html(tmpl)
         })
     })
-
-});
+}

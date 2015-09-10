@@ -1,41 +1,113 @@
-$(function(){
+function afterTran(){
+    getInbox()
+
+    function inboxPage(page){
+        if(page>10&&$(".page-inbox").is(":hidden")){
+            $(".page-inbox").show().pagination({
+                items: page,
+                itemsOnPage: 10,
+                cssStyle: 'light-theme',
+                onPageClick:function(number){
+                    getInbox(number)
+                }
+            });
+        }
+        if(page<=10){
+            $(".page-inbox").hide()
+        }
+    }
+
+    function getInbox(page){
+        $.get("/message/listInbox",{
+            per_page:10,
+            page:page?page:1
+        },function(result){
+            resultHandle(result,function(){
+                if(result.obj.content&&result.obj.content.length){
+                    var tmpl = doT.template($("#message-tmpl").html())(result.obj.content)
+                    $(".m-item.active .mcj_g").html(tmpl).i18n();
+                    $(".m-item.active .mcj_l").show();
+                }else{
+                    $(".m-item.active .mcj_g").html('<h3 class="message-no" data-i18n="msg.no"></h3>').i18n();
+                    $(".m-item.active .mcj_l").hide();
+                }
+                inboxPage(result.obj.total)
+                setUnreadCount(result.obj.unRead)
+            })
+        })
+    }
+
+    function setUnreadCount(number){
+        if(number!=undefined){
+            if(number==0){
+                $("#receive-newcounts,#r-read").text("")
+            }else{
+                $("#receive-newcounts,#r-read").text(number)
+            }
+        }else{
+            $("#receive-newcounts,#r-read").text(function(){
+                return Number($(this).text())-1
+            })
+        }
+    }
+
+    function getOutbox(page){
+        $.get("/message/listOutbox",{
+            per_page:10,
+            page:page?page:1
+        },function(result){
+            resultHandle(result,function(){
+                if(result.obj.content&&result.obj.content.length){
+                    var tempData=result.obj.content;
+                    for(var i=0;i<tempData.length;i++){
+                        tempData[i].status=""
+                    }
+                    var tmpl = doT.template($("#message-tmpl").html())(tempData)
+                    $(".m-item.active .mcj_g").html(tmpl).i18n();
+                    $(".m-item.active .mcj_l").show();
+                }else{
+                    $(".m-item.active .mcj_g").html('<h3 class="message-no" data-i18n="msg.no"></h3>').i18n();
+                    $(".m-item.active .mcj_l").hide();
+                }
+                outboxPage(result.obj.total)
+            })
+        })
+    }
+
+    function outboxPage(page){
+        if(page>10&&$(".page-outbox").is(":hidden")){
+            $(".page-outbox").show().pagination({
+                items: page,
+                itemsOnPage: 10,
+                cssStyle: 'light-theme',
+                onPageClick:function(number){
+                    getInbox(number)
+                }
+            });
+        }
+        if(page<=10){
+            $(".page-outbox").hide()
+        }
+    }
+
+
     $(".mcj_c li").click(function(){
         $(this).addClass("active").siblings().removeClass("active");
         $(".m-item").eq($(this).index()).addClass("active").siblings().removeClass("active");
     })
 
-
-    $.get("/message/listInbox",function(result){
-        resultHandle(result,function(){
-            if(result.data.length){
-                var tmpl = doT.template($("#message-tmpl").html())(result.data)
-                $(".m-item.active .mcj_g").html(tmpl);
-                $(".m-item.active .mcj_l").show();
-            }else{
-                $(".m-item.active .mcj_g").html('<h3 class="message-no">您还未有任何信息哦~</h3>');
-            }
-        })
-    })
-
     //发件箱
     $(document).on("click","#tab1",function(){
-        if(!$(".m-item.active li").length){
-            $.get("/message/listOutbox",function(result){
-                resultHandle(result,function(){
-                    if(result.data.length){
-                        var tmpl = doT.template($("#message-tmpl").html())(result.data)
-                        $(".m-item.active .mcj_g").html(tmpl);
-                        $(".m-item.active .mcj_l").show();
-                    }else{
-                        $(".m-item.active .mcj_g").html('<h3 class="message-no">您还未有任何信息哦~</h3>');
-                    }
-                })
-            })
+        if(!$(".m-item.active .mcj_g li").length){
+            getOutbox()
         }
     })
 
+    var nowDetail;
+
     $(document).on("click",".mcj_j",function(){
 
+        nowDetail=$(this).parents("li");
 
         if($(this).parents("li").hasClass("unread")){
             $(this).parents("li").removeClass("unread")
@@ -43,6 +115,7 @@ $(function(){
                 custMessageId:$(this).data("id")
             },function(result){
                 resultHandle(result)
+                setUnreadCount()
             })
         }
 
@@ -54,10 +127,15 @@ $(function(){
             time:_this.data("time"),
             content:_this.data("content")
         })
-        $(".msgpop-main").html(tmpl);
+        $(".msgpop-main").html(tmpl).i18n();
 
         $("body").css("overflow-y","hidden");
         $("#fix-messagepopup").css("overflow-y","scroll").fadeIn()
+        return false;
+    })
+
+    $(document).on("click",".m-detail",function(){
+        $(this).parents("li").find('.mcj_j').trigger("click")
         return false;
     })
 
@@ -85,7 +163,7 @@ $(function(){
     $(document).on("click","#del-receivemsg",function(){
         var tempCk=$(".m-item.active .mcj_g").find(":checkbox:checked");
         if(!tempCk.length){
-            dialog.info("沒有要刪除的消息")
+            dialog.info($.t("valid.msg.1"))
             return false;
         }
 
@@ -105,16 +183,29 @@ $(function(){
         })
     })
 
+    $(document).on("click",".delete-inner",function(){
+        $(this).parents("#fix-messagepopup").find(".close").trigger("click");
+        $.post("/message/deleteCrms",{
+            custMessageId:nowDetail.find(".mcj_j").data("id")
+        },function(result){
+            resultHandle(result,function(){
+                nowDetail.slideUp(function(){
+                    $(this).remove();
+                })
+            })
+        })
+    })
+
     //发件
     $(document).on("click","#btn-send",function(){
         var title=$("#title").val()
         var message=$("#message").val()
         if(!title.length||!message.length){
-            dialog.info("标题或消息内容不能为空");
+            dialog.info($.t("valid.msg.2"));
             return false;
         }
         if(title.length<2||message.length<5){
-            dialog.info("请输入至少2个字符的标题和5个字符的内容");
+            dialog.info($.t("valid.msg.3"));
             return false;
         }
         $.post("/message/saveCrmMessage",{
@@ -122,18 +213,18 @@ $(function(){
             subject:title,
             content:message
         },function(result){
-            var msgarr = ['<p><img src="/static/images/plane.jpg"></p><p><br/>已收到您的消息，我们将尽快回复。谢谢！</p>'];
-            var button={
-                "确定":function(){
-                    dialog.close()
-                }
+            var msgarr = ['<p><div class="msg-plan"></div></p><p data-i18n="[append]valid.msg.5"><br/></p>'];
+            var button={}
+            button[$.t("valid.msg.4")]=function(){
+                dialog.close()
             }
             resultHandle(result,function(){
-                dialog.custom("消息", msgarr.join(""),button);
+                dialog.custom($.t("valid.msg.6"), msgarr.join(""),button);
+                $(".ui-dialog").i18n();
             })
             $("#inbox .mcj_g").html("")
+            $(".mc-content")[0].reset();
         })
         return false;
     })
-
-})
+}

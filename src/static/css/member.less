@@ -17,6 +17,8 @@
     width: 110px;
     height: 110px;
     text-align: center;
+    left: 0;
+    top: 0;
     h3{
       margin-top: 5px;
       font-size: 18px;
@@ -35,6 +37,7 @@
   .comp-tips{
     position: absolute;
     top: 120px;
+    left: 0;
     color: #ccc;
     width: 210px;
     text-align: center;
@@ -68,12 +71,14 @@
     margin-top: 35px;
     .li{
       float: left;
-      color:#999999;
+      color:#666;
       font-size: 14px;
-      width: 260px;
       margin-bottom: 14px;
-      a{
+      margin-right: 20px;
+      a,span{
         color:@primary;
+        display: inline-block;
+        width: 200px;
       }
     }
   }
@@ -106,6 +111,9 @@
       color:#666666;
       font-size: 12px;
       padding-left: 62px;
+      em{
+        color:#FF9143;
+      }
     }
     span{
       position: absolute;
@@ -222,13 +230,16 @@
 #realinfo-form{
   margin-top: 30px;
 }
+.a-t-r{
+  margin-bottom: 15px;
+}
 .a-t-con{
   margin-top: 35px;
   padding-left: 10px;
   .a-t-n{
     float: left;
     margin-right: 55px;
-    width: 94px;
+    width: 114px;
     padding-left: 57px;
     height: 32px;
     line-height: 32px;
@@ -236,7 +247,6 @@
     border-radius: 2px;
     color:#666666;
     font-size: 14px;
-    margin-bottom: 15px;
     position: relative;
     cursor: pointer;
     a{
@@ -340,7 +350,7 @@
     line-height: 26px;
   }
   .sinput {
-    width: 30px;
+    width: 33px;
     margin-left: 5px;
   }
   .separator {
@@ -465,10 +475,11 @@
   margin-left: 230px;
 }
 .promo-text{
-  margin-left: 250px;
   font-size: 12px;
   color:#cccccc;
   margin-top: 10px;
+  text-align: center;
+  margin-right: 130px;
 }
 .mcj_a {
   width: 700px;
@@ -521,7 +532,6 @@
   color: #FFF;
   margin-left: 11px;
   background: @primary;
-  -webkit-border-radius: 12px;
   border-radius: 12px;
   line-height: 17px;
   padding: 0 5px;
@@ -562,7 +572,7 @@
   margin-left: 5px;
 }
 .mcj_j {
-  width: 415px;
+  width: 405px;
   height: 60px;
   line-height: 60px;
   line-height: 63px\9;
@@ -808,6 +818,10 @@
   float: left;
   .sprite(@s1);
 }
+.logo-phone-2{
+  float: left;
+  .sprite(@s2);
+}
 .tbl-bets {
   color: #000;
   border-top: 1px solid #d3d3d3;
@@ -988,4 +1002,10 @@
   line-height: 260px;
   font-size: 20px;
   color: #ccc;
+}
+.msg-plan{
+  background: url("../images/plane.jpg") no-repeat;
+  width: 165px;
+  height: 76px;
+  margin: 0 auto;
 }

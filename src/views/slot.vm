@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>全民坐庄</title>
+    <title data-i18n="base:title.slot"></title>
     <script>var translate_page='index';</script>
     #parse('/common/top.vm')
     #set($header='slot')
@@ -21,22 +21,23 @@
                  data-cycle-pager-template="<span></span>"
                     >
                 <div class="banner-item" style='background: url("/static/images/slot_banner1.jpg") no-repeat center;'></div>
-                <div class="banner-item" style='background: url("/static/images/slot_banner1.jpg") no-repeat center;'></div>
+                <div class="banner-item" style='background: url("/static/images/slot_banner2.jpg") no-repeat center;'></div>
+                <div class="banner-item" style='background: url("/static/images/slot_banner3.jpg") no-repeat center;'></div>
                 <div class="cycle-pager"></div>
             </div>
             <div class="slot-main-con">
                 <div class="slot-con">
                     <div class="slot-top clearfix">
                         <ul class="slot-menu clearfix">
-                            <li class="active"><a href="#">本站推荐</a><b></b></li>
-                            <li><a href="#">老虎机</a><b></b></li>
-                            <li><a href="#">桌面游戏</a><b></b></li>
-                            <li><a href="#">刮刮卡</a><b></b></li>
-                            <li><a href="#">游戏厅</a><b></b></li>
-                            <li><a href="#">视频扑克</a><b></b></li>
+                            <li class="active"><a href="#" data-i18n="slot.1"></a><b></b></li>
+                            <li><a href="#" data-i18n="slot.2"></a><b></b></li>
+                            <li><a href="#" data-i18n="slot.3"></a><b></b></li>
+                            <li><a href="#" data-i18n="slot.4"></a><b></b></li>
+                            <li><a href="#" data-i18n="slot.5"></a><b></b></li>
+                            <li><a href="#" data-i18n="slot.6"></a><b></b></li>
                         </ul>
                         <div class="slot-search">
-                            <input type="text" placeholder="游戏搜索">
+                            <input type="text" data-i18n="[placeholder]slot.7">
                             <i></i>
                         </div>
                     </div>
@@ -48,8 +49,8 @@
                                     <a href="#" class="slot-item-main">
                                         <img src="/static/images/slot_tmp.jpg">
                                         <div class="slot-item-btn">
-                                            <a class="slot-item-btn-begin" href="#">立即游戏</a>
-                                            <a class="slot-item-btn-try" href="#">试玩游戏</a>
+                                            <a class="slot-item-btn-begin" href="#" data-i18n="slot.8"></a>
+                                            <a class="slot-item-btn-try" href="#" data-i18n="slot.9"></a>
                                         </div>
                                     </a>
                                     <div class="slot-item-name">玛雅幸运轮</div>
@@ -81,9 +82,9 @@
                                             <b>老虎机</b>
                                         </div>
                                         <div class="slot-top-item-begin">
-                                            <a href="#" class="begin">进入游戏</a>
+                                            <a href="#" class="begin" data-i18n="slot.10"></a>
                                             <span>|</span>
-                                            <a href="#" class="try">免费试玩</a>
+                                            <a href="#" class="try" data-i18n="slot.11"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -101,6 +102,7 @@
 
     #parse('/common/footer.vm')
     #parse('/common/script.vm')
+    <script src="http://cache.download.banner.powerplay88.com/integrationjs.php"></script>
     <script src="/static/js/slot.js"></script>
 
 </body>

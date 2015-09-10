@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>个人中心</title>
-    <script>var translate_page='member';</script>
+    <title data-i18n="base:title.pay"></title>
+    <script>var translate_page='pay';var page_inner=['center'];</script>
     #parse('/common/top.vm')
     #set($header='statement')
     <link rel="stylesheet" href="/static/css/account.css"/>
@@ -15,8 +15,7 @@
             #parse('/payment/payment_top.vm')
             <div id="transactionlog">
                 <!-- loading start -->
-                <div class="s-loading" id="statement-loading" style="display: none;"></div>
-                <div class="ss-loading" id="statement-loading-2"></div>
+                <div class="s-loading" id="statement-loading" style="display: block;"></div>
                 <!-- loading end -->
 
                 <!-- 筛选表单 start-->
@@ -25,23 +24,23 @@
                         <form class="form">
                             <div class="transaction-filter">
                                 <div class="trans-type clearfix">
-                                    <div class="fleft tt-label">资金种类：</div>
+                                    <div class="fleft tt-label" data-i18n="sta.1"></div>
                                     <div class="fleft">
-                                        <a href="javascript:void(0);" data-type="deposit" class="on">充值</a>
-                                        <a href="javascript:void(0);" data-type="withdrawal">提款</a>
-                                        <a href="javascript:void(0);" data-type="transfer">转账</a>
-                                        <a href="javascript:void(0);" data-type="adjustment">红利</a>
+                                        <a href="javascript:void(0);" data-i18n="sta.2" data-value="03FR" class="on"></a>
+                                        <a href="javascript:void(0);" data-i18n="sta.3" data-value="03FW"></a>
+                                        <a href="javascript:void(0);" data-i18n="sta.4" data-value="03FT"></a>
+                                        <a href="javascript:void(0);" data-i18n="sta.5" data-value="03FF"></a>
                                     </div>
                                 </div>
 
                                 <div class="trans-date clearfix">
-                                    <div class="fleft ts-label">选择日期：</div>
+                                    <div class="fleft ts-label" data-i18n="sta.6"></div>
                                     <div class="fleft" id="time-range">
-                                        <a href="javascript:void(0);" data-starttime="2015/8/25" data-endtime="2015/8/25 23:59:59">昨天</a>
-                                        <a href="javascript:void(0);" data-starttime="2015/8/26" data-endtime="2015/8/26 23:59:59" class="on">今天</a>
-                                        <a href="javascript:void(0);" data-starttime="2015/8/19" data-endtime="2015/8/26 23:59:59">一周内</a>
-                                        <a href="javascript:void(0);" data-starttime="2015/8/12" data-endtime="2015/8/26 23:59:59">2周内</a>
-                                        <a href="javascript:void(0);" data-starttime="2015/7/27" data-endtime="2015/8/26 23:59:59">1个月内</a>
+                                        <a href="javascript:void(0);" data-i18n="sta.7" data-value="0"></a>
+                                        <a href="javascript:void(0);" data-i18n="sta.8" data-value="1" class="on"></a>
+                                        <a href="javascript:void(0);" data-i18n="sta.9" data-value="2"></a>
+                                        <a href="javascript:void(0);" data-i18n="sta.10" data-value="3"></a>
+                                        <a href="javascript:void(0);" data-i18n="sta.11" data-value="4"></a>
                                     </div>
                                 </div>
                             </div>
@@ -53,31 +52,72 @@
                 <!-- 单据结果 start -->
                 <div class="bd">
                     <div id="search-result">
-                        <div class="no-data">
-                            <div class="logo-th-3"></div>
-                            <h3>您此时间段内，无任何交易记录</h3>
-                        </div>
                     </div>
-
+                    <div class="search-page" style="display: none;"></div>
                 </div>
                 <!-- 单据结果 end -->
-
-                <!-- 查看更多 -->
-                <div class="viewmore" style="display:none;">
-                    查看更多
-                </div>
-
-                <div id="block-no-data" style="display:none;">
-                    <div class="no-data">
-                        <div class="logo-th-3"></div>
-                        <h3>您此时间段内，无任何交易记录</h3>
-                    </div>
-                </div>
 
             </div>
         </div>
     </div>
+    <a style="display: none;" id="show-tmpl" href="#detail-con" data-i18n="[data-dialog]sta.20"></a>
+    <div id="detail-con" style="display: none;"></div>
+    <script type="text/x-dot-template" id="statement-tmpl">
+        <div class="tbl-statement tbl-deposit">
+            <div class="hd">
+                <span class="col-1 align-c" data-i18n="sta.12"></span>
+                <span class="col-2 align-c" data-i18n="sta.13"></span>
+                <span class="col-3 align-c" data-i18n="sta.14"></span>
+                <span class="col-4 align-c" data-i18n="sta.15"></span>
+                <span class="col-5 align-c" data-i18n="sta.16"></span>
+                <span class="col-5 align-c" data-i18n="sta.17"></span>
+                <span class="col-7 align-c" data-i18n="sta.18"></span>
+            </div>
+            <div class="bd">
+                <ul>
+                    {{~it:value:index}}
+                    <li {{? index%2==0}}class="e"{{? }}>
+                        <span class="col-1 align-c">{{= value.balanceLogId}}</span>
+                        <span class="col-2 align-c">{{= value.effTime}}</span>
+                        <span class="col-3 align-c">{{= value.fundsType}}</span>
+                        <span class="col-4 align-c">{{= value.amount}}</span>
+                        <span class="col-5 align-c"><span class="red">{{= value.status}}</span></span>
+                        <span class="col-5 align-c">{{= value.balanceType}}</span>
+                        <span class="col-7 align-c">
+                            <a class="detail" href="#detail-tmpl" data-id="{{= value.balanceLogId}}" data-i18n="sta.19;"></a>
+                        </span>
+                    </li>
+                    </li>
+                    {{~}}
+
+                </ul>
+            </div>
+        </div>
+    </script>
+    <script type="text/x-dot-template" id="statement-no">
+        <div class="no-data">
+            <div class="logo-th-3"></div>
+            <h3 data-i18n="sta.21"></h3>
+        </div>
+    </script>
+    <script type="text/x-dot-template" id="detail-tmpl">
+        <div id="statement-detail">
+            <div class="ls">
+                <ul>
+                    <li><span>订单编号：</span><span class="v">{{= it.billNo}}</span></li>
+                    <li><span>发起时间：</span><span class="v">{{= it.effTime}}</span></li>
+                    <li><span>账户类型：</span><span class="v">{{= it.acctType}}</span></li>
+                    <li><span>资金种类：</span><span class="v">{{= it.fundsType}}</span></li>
+                    <li><span>余额类型：</span><span class="v">{{= it.balanceType}}</span></li>
+                    <li><span>交易货币：</span><span class="v">{{= it.currency}}</span></li>
+                    <li><span>单据状态：</span><span class="v">{{= it.status}}</span></li>
+                </ul>
+            </div>
+        </div>
+    </script>
+    <script src="/static/plugin/doT/doT.js"></script>
+    <script src="/static/plugin/pagination/jquery.simplePagination.js"></script>
     #parse('/common/page_footer.vm')
-    <script src="/static/js/deposit.js"></script>
+    <script src="/static/js/statement.js"></script>
 </body>
 </html>

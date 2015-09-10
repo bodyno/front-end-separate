@@ -11,5 +11,6 @@ module.exports = {
             ]
         }]
     },
-    tmp: '.tmp'
+    tmp: '.tmp',
+    svn: '<%=yo.dist%>/static/plugin/.svn'
 };
