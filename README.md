@@ -1,6 +1,6 @@
 # express-velocity-front-end
 
-##基于express和grunt的前后端分离框架
+##基于express和grunt的前后端分离框架:+1::+1::+1:
 
 模版基于java-velocity模板引擎
 
@@ -28,9 +28,9 @@ express为路由提供服务
 
 打包命令 grunt build  会生成dist文件夹，里面可以看到js、css都加了md5缀
 
-###有人关注了，心里很激动啊啊啊
+###如果大家喜欢的话，请点一下star并且follow一下本人，这是对本人最大的支持
 
-###我会继续完善这个项目的，会一直维护的
+###我会继续完善这个项目的，并一直维护下去，如果有任何问题，欢迎在issues里面提出:wink:
 
 ###感谢大家支持!
 
