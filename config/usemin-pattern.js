@@ -71,9 +71,10 @@ module.exports = {
                     filterIn,
                     filterOut
                 ]
-            ],
+            ]
+            /*,
             'css': [
-                /*jshint regexp:false */
+                /!*jshint regexp:false *!/
                 [/(?:src=|url\(\s*)['"]?([^'"\)]+)['"]?\s*\)?/gm,
                     'Update the CSS to reference our revved images',
                     filterIn,
@@ -90,7 +91,7 @@ module.exports = {
                         return m.replace('.js', '');
                     }
                 ]
-            ]
+            ]*/
         };
 
     }
