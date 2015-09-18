@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   // 指定检查或者排除检查的文件/目录列表
   all: [

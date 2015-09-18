@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     build1:{
         src: [

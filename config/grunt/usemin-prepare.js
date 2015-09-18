@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   options: {
     root: '<%=yo.app%>',

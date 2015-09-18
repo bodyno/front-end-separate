@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function () {
     var cdnRoot = require('../app').cdnDomain[process.env.DEPLOY_TYPE] || '';
     return {
