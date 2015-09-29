@@ -1,0 +1,34 @@
+{
+  "name": "coffee_sass",
+  "version": "0.0.1",
+  "authors": [
+    "nobody <az8321550@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "install": {
+    "path": "src/static/plugin"
+  },
+  "dependencies": {
+    "jquery-cookie": "v1.4.1",
+    "jquery-cycle2": "~2.1.6",
+    "jquery": "v1.11.3",
+    "jquery.countdown": "v2.1.0",
+    "i18next": "v1.10.2",
+    "jquery-hoverIntent": "~1.8.1",
+    "jquery.lazyload": "~1.9.7",
+    "jquery.localScroll": "~1.4.0",
+    "jquery.scrollTo": "~2.1.2",
+    "jquery.validate": "~1.13.0",
+    "moment": "~2.10.6",
+    "normalize.css": "~3.0.3",
+    "xss": "~0.2.7",
+    "zeroclipboard": "2.0.0"
+  }
+}

@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     css: {
         expand: true,
@@ -15,6 +17,13 @@ module.exports = {
         cwd: '<%=yo.app%>/static/js',
         dest: '<%=yo.dist%>/static/js',
         src: '**/*.js'
+    },
+    vendor:{
+        expand: true,
+        dot: true,
+        cwd: '<%=yo.app%>/static/vendor',
+        dest: '<%=yo.app%>/static/plugin',
+        src: '**/*'
     },
     plugin: {
         expand: true,

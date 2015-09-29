@@ -105,7 +105,7 @@
                         #end
 
 
-                        <div class="reg-group clearfix mt10">
+                        <div class="reg-group clearfix mt10 reg-group-spec">
                             <label class="reg-ck" data-i18n="[append]ck1">
                                 <input name="agree" type="checkbox" checked>
                             </label>
@@ -123,7 +123,7 @@
     </div>
 
     <div class="login-footer">
-        <div class="login-footer-text" data-i18n="base:footer"></div>
+        <div class="login-footer-text" data-i18n="[html]base:footer.more"></div>
     </div>
 
     #parse('/common/script.vm')

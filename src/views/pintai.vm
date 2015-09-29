@@ -245,7 +245,7 @@
         <div class="fixed-item active">我要坐庄</div>
     </div>
 
-    <script src="/static/plugin/jquery.cycle2/jquery.cycle2.js"></script>
+    <script src="/static/plugin/jquery-cycle2/build/jquery.cycle2.js"></script>
     <script src="/static/plugin/jquery.scrollTo/jquery.scrollTo.js"></script>
     <script src="/static/plugin/jquery.localScroll/jquery.localScroll.js"></script>
     <script src="/static/js/platform.js"></script>

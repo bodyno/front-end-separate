@@ -10,26 +10,196 @@
 <body>
     #parse('/common/old.vm')
     #parse('/common/header.vm')
+
+    <input type="hidden" id="token" value="$token">
+    <div class="casino-banner"></div>
     <div class="casino">
-        <div class="container">
-            <div class="feature-con">
-                <div class="feature feature-left">
-                    <div class="feature-text" data-i18n="casino.1"></div>
-                    <a href="#"><img src="/static/images/casino_img2.jpg"></a>
+        <div class="casino-c clearfix">
+            <div class="c-p">
+                <div class="c-p-o">
+                    <img src="/static/images/casino/casino_prod1.jpg">
+                    <div class="c-p-over">
+                        <img src="/static/images/casino/pt_bg.png">
+                        <a href="#" class="c-btn start">进入游戏</a>
+                        <a href="#" class="download">下载客户端</a>
+                    </div>
                 </div>
-                <div class="feature feature-center active">
-                    <div class="feature-text" data-i18n="casino.2"></div>
-                    <a href="#"><img src="/static/images/casino_img1.jpg"></a>
+                <div class="c-p-t1">GPI 娱乐城</div>
+                <div class="c-p-t2 start">开始游戏</div>
+            </div>
+            <div class="c-p">
+                <div class="c-p-o">
+                    <img src="/static/images/casino/casino_prod2.jpg">
+                    <div class="c-p-over">
+                        <img src="/static/images/casino/pt_bg.png">
+                        <a href="#" class="c-btn start">进入游戏</a>
+                        <a href="#" class="download">下载客户端</a>
+                    </div>
                 </div>
-                <div class="feature feature-right">
-                    <div class="feature-text" data-i18n="casino.3"></div>
-                    <a href="#"><img src="/static/images/casino_img3.jpg"></a>
+                <div class="c-p-t1">GPI 娱乐城</div>
+                <div class="c-p-t2 start">开始游戏</div>
+            </div>
+            <div class="c-p" style="margin-right:0;">
+                <div class="c-p-o">
+                    <img src="/static/images/casino/casino_prod3.jpg">
+                    <div class="c-p-over">
+                        <img src="/static/images/casino/pt_bg.png">
+                        <a href="#" class="c-btn start">进入游戏</a>
+                        <a href="#" class="download">下载客户端</a>
+                    </div>
+                </div>
+                <div class="c-p-t1">GPI 娱乐城</div>
+                <div class="c-p-t2 start">开始游戏</div>
+            </div>
+        </div>
+        <div class="casino-c">
+            <div class="casino-t active clearfix">
+                <div class="casino-t-i">PT 娱乐城</div>
+                <div class="casino-t-i">GPI 娱乐城</div>
+            </div>
+            <div class="casino-item-con">
+                <div class="casino-item active clearfix">
+                    <div class="casino-img"></div>
+                    <div class="casino-text">
+                        作为世界上最大的上市在线博彩软件供应商之一，Playtech一直致力于不断的创新与提高，提供最前端最优质的服务，为在线博彩业的顶尖运行商提供先进以及最具价值的解决方案。<br><br>
+
+                        Playtech提供的产品十分广泛，其中包括知名真人赌场，ipoker（世界上最大的独立扑克网络），宾果，手机博彩，实况博彩，服务器支持的接线端子，固定赛事赔率和亚洲游戏。<br><br>
+
+                        Playtech平台的真人娱乐场提供了多种赌场游戏，除了百家乐、21点、轮盘、骰宝等还有老虎机、基诺、猜大小等多种真人赌场游戏。<br><br>
+                        <div class="casino-clear">
+                            <div class="casino-item-btn1 start">开始游戏</div>
+                            <a href="#" class="casino-item-btn2">客户端下载</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="casino-item clearfix">
+                    <div class="casino-img casino-gpi"></div>
+                    <div class="casino-text">
+                        作为世界上最大的上市在线博彩软件供应商之一，GPI一直致力于不断的创新与提高，提供最前端最优质的服务，为在线博彩业的顶尖运行商提供先进以及最具价值的解决方案。<br><br>
+
+                        GPI提供的产品十分广泛，其中包括知名真人赌场，ipoker（世界上最大的独立扑克网络），宾果，手机博彩，实况博彩，服务器支持的接线端子，固定赛事赔率和亚洲游戏。<br><br>
+
+                        GPI平台的真人娱乐场提供了多种赌场游戏，除了百家乐、21点、轮盘、骰宝等还有老虎机、基诺、猜大小等多种真人赌场游戏。<br><br>
+                        <div class="casino-clear">
+                            <div class="casino-item-btn1 start">开始游戏</div>
+                            <a href="#" class="casino-item-btn2">客户端下载</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="casino-btn-con">
-                <div class="clearfix"></div>
-                <div class="casino-btn casino-btn1" data-i18n="casino.4"></div>
-                <div class="casino-btn" data-i18n="casino.5"></div>
+            <div class="casino-game clearfix">
+                <div class="cg-col">
+                    <div class="photo">
+                        <img src="/static/images/casino/game1.jpg">
+                        <div class="desc">
+                            <span class="fl">vip百家乐</span>
+                            <a href="/html/help/baccarate.html" class="fr rule" target="_blank">游戏规则</a>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="javascript:void(0)" class="start login_game" open_type="pt_casino">开始游戏</a>
+                        <span>vip百家乐</span>
+                        <a href="#" class="rule" target="_blank">游戏规则</a>
+                    </div>
+                </div>
+                <div class="cg-col">
+                    <div class="photo">
+                        <img src="/static/images/casino/game2.jpg">
+                        <div class="desc">
+                            <span class="fl">vip百家乐</span>
+                            <a href="/html/help/baccarate.html" class="fr rule" target="_blank">游戏规则</a>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="javascript:void(0)" class="start login_game" open_type="pt_casino">开始游戏</a>
+                        <span>vip百家乐</span>
+                        <a href="#" class="rule" target="_blank">游戏规则</a>
+                    </div>
+                </div>
+                <div class="cg-col">
+                    <div class="photo">
+                        <img src="/static/images/casino/game3.jpg">
+                        <div class="desc">
+                            <span class="fl">vip百家乐</span>
+                            <a href="/html/help/baccarate.html" class="fr rule" target="_blank">游戏规则</a>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="javascript:void(0)" class="start login_game" open_type="pt_casino">开始游戏</a>
+                        <span>vip百家乐</span>
+                        <a href="#" class="rule" target="_blank">游戏规则</a>
+                    </div>
+                </div>
+                <div class="cg-col" style="margin-right:0;">
+                    <div class="photo">
+                        <img src="/static/images/casino/game4.jpg">
+                        <div class="desc">
+                            <span class="fl">vip百家乐</span>
+                            <a href="/html/help/baccarate.html" class="fr rule" target="_blank">游戏规则</a>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="javascript:void(0)" class="start login_game" open_type="pt_casino">开始游戏</a>
+                        <span>vip百家乐</span>
+                        <a href="#" class="rule" target="_blank">游戏规则</a>
+                    </div>
+                </div>
+                <div class="cg-col">
+                    <div class="photo">
+                        <img src="/static/images/casino/game5.jpg">
+                        <div class="desc">
+                            <span class="fl">vip百家乐</span>
+                            <a href="/html/help/baccarate.html" class="fr rule" target="_blank">游戏规则</a>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="javascript:void(0)" class="start login_game" open_type="pt_casino">开始游戏</a>
+                        <span>vip百家乐</span>
+                        <a href="#" class="rule" target="_blank">游戏规则</a>
+                    </div>
+                </div>
+                <div class="cg-col">
+                    <div class="photo">
+                        <img src="/static/images/casino/game6.jpg">
+                        <div class="desc">
+                            <span class="fl">vip百家乐</span>
+                            <a href="/html/help/baccarate.html" class="fr rule" target="_blank">游戏规则</a>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="javascript:void(0)" class="start login_game" open_type="pt_casino">开始游戏</a>
+                        <span>vip百家乐</span>
+                        <a href="#" class="rule" target="_blank">游戏规则</a>
+                    </div>
+                </div>
+                <div class="cg-col">
+                    <div class="photo">
+                        <img src="/static/images/casino/game7.jpg">
+                        <div class="desc">
+                            <span class="fl">vip百家乐</span>
+                            <a href="/html/help/baccarate.html" class="fr rule" target="_blank">游戏规则</a>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="javascript:void(0)" class="start login_game" open_type="pt_casino">开始游戏</a>
+                        <span>vip百家乐</span>
+                        <a href="#" class="rule" target="_blank">游戏规则</a>
+                    </div>
+                </div>
+                <div class="cg-col" style="margin-right:0;">
+                    <div class="photo">
+                        <img src="/static/images/casino/game8.jpg">
+                        <div class="desc">
+                            <span class="fl">vip百家乐</span>
+                            <a href="/html/help/baccarate.html" class="fr rule" target="_blank">游戏规则</a>
+                        </div>
+                    </div>
+                    <div class="overlay">
+                        <a href="javascript:void(0)" class="start login_game" open_type="pt_casino">开始游戏</a>
+                        <span>vip百家乐</span>
+                        <a href="#" class="rule" target="_blank">游戏规则</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

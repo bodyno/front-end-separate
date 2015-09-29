@@ -1,0 +1,258 @@
+@import "base";
+@import "var";
+.casino-banner{
+  background: url("../images/casino/casino_banner.jpg") no-repeat center;
+  height: 366px;
+}
+.casino-c{
+  width: 1000px;
+  margin: 0 auto;
+}
+.casino{
+  background: #ededed;
+}
+.c-p{
+  float: left;
+  margin-right: 50px;
+  margin-top: 45px;
+}
+.c-p-o{
+  position: relative;
+  width: 292px;
+  height: 469px;
+}
+.c-p-over{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.c-p-t1{
+  font-size: 30px;
+  color:$primary;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.c-p-t2{
+  width: 205px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  background: $primary;
+  font-size: 22px;
+  border-radius: 5px;
+  color:#fff;
+  cursor: pointer;
+  &:hover{
+    background: #f79d0f;
+  }
+}
+.casino-t{
+  background: url("../images/casino/title1.jpg") no-repeat;
+  width: 737px;
+  height: 36px;
+  margin-top: 50px;
+  &.active{
+    background: url("../images/casino/title2.jpg") no-repeat;
+  }
+}
+.casino-t-i{
+  width: 106px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  color:#fff;
+  font-size: 18px;
+  float: left;
+  cursor: pointer;
+}
+.casino-item{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: .3s;
+  visibility: hidden;
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.casino-item-con{
+  margin-top: 40px;
+  padding-bottom: 54px;
+  position: relative;
+  height: 175px;
+}
+.casino-img{
+  background: url("../images/casino/casino_pt.jpg") no-repeat;
+  width: 354px;
+  height: 175px;
+  margin-left: 18px;
+  float: left;
+  display: block;
+}
+.casino-gpi{
+  background: url("../images/casino/casino_gpi.jpg") no-repeat;
+}
+.casino-text{
+  color:#999999;
+  font-size: 12px;
+  margin-left: 24px;
+  float: left;
+  width: 594px;
+}
+.casino-item-btn1{
+  width: 160px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  color:#fff;
+  background: $primary;
+  border-radius: 4px;
+  float: left;
+  cursor: pointer;
+  margin-left: 170px;
+  font-size: 14px;
+  &:hover{
+    background: lighten($primary,5%);
+  }
+}
+.casino-item-btn2{
+  float: left;
+  margin-left: 20px;
+  line-height: 36px;
+  color:#666666;
+  font-size: 14px;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.cg-col {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  width: 242px;
+  position: relative;
+  overflow: hidden;
+}
+.cg-col .photo {
+  height: 182px;
+  position: relative;
+  width: 242px;
+  z-index: 1;
+}
+.cg-col .photo img {
+  display: block;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+.cg-col .photo .desc {
+  background: url(../images/casino/c-game-transparent-w.png) repeat;
+  bottom: 0;
+  height: 48px;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  transition: all 0.35s ease;
+}
+.cg-col .photo .desc span {
+  margin-left: 15px;
+}
+.cg-col .photo .desc span, .cg-col .photo .desc a.rule {
+  color: #333;
+  font-size: 16px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.cg-col .photo .desc a.rule {
+  margin-right: 12px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.cg-col .overlay {
+  background: url(../images/casino/c-game-transparent.png) repeat;
+  height: 182px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 242px;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 0.35s ease;
+}
+.cg-col.active .overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+.cg-col.active .photo .desc {
+  opacity: 0;
+  bottom: -48px;
+}
+.cg-col .overlay a.start {
+  background: $primary;
+  border-radius: 3px;
+  margin: 55px auto 0;
+  text-align: center;
+  width: 147px;
+  text-shadow: 0 0 1px #2597cd;
+  &:hover{
+    background: lighten($primary,5%);
+  }
+}
+.cg-col .overlay a, .cg-col .overlay span {
+  color: #fff;
+  display: block;
+  font-size: 17px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+.casino-game{
+  padding-bottom: 30px;
+}
+.c-p:hover{
+  .c-p-over{
+    opacity: 1;
+  }
+  .c-p-t2{
+    background: #f79d0f;
+  }
+}
+.c-p-over{
+  text-align: center;
+  background: rgba(0,0,0,.5);
+  opacity: 0;
+  transition: .3s;
+}
+.c-p-o .c-btn{
+  background: $primary;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  line-height: 51px;
+  margin: 0 auto;
+  text-align: center;
+  width: 204px;
+}
+.c-p-o .download{
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 6px;
+}
+.c-p-over img{
+  display: block;
+  margin: 150px auto 23px;
+}

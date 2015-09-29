@@ -26,7 +26,7 @@
                 <div class="w-c">
                     <div class="w-row clearfix">
                         <div class="w-l" data-i18n="[prepend]with.5">
-                            <span>$disSidCust.curAccount</span> RMB
+                            <span>$disSidCust.accountStr</span> RMB
                         </div>
                         <div class="w-r">
                             #if($disSidCust.isBindBank)
@@ -207,7 +207,7 @@
                     #if($disSidCust.isBindBank)
                     <div class="withdraw-con" style="display: none;">
                         <div class="wd-title" data-i18n="with.27"></div>
-                        <form id="withdraw-form">
+                        <form id="withdraw-form" autocomplete="off">
                             <div>
                                 <table class="card-table">
                                     <tr>
@@ -242,9 +242,9 @@
                                         </div>
                                         <div class="field-right">
                                             <div class="input-box-3">
-                                                <input type="text" name="ammount" id="ammount" autocomplete="off">
+                                                <input type="text" name="ammount" id="ammount" autocomplete="off" data-min="${SidQuotaSetting.minMoney}" data-max="${SidQuotaSetting.maxMoney}">
                                             </div>
-                                            <span class="limit">单笔最小提款额：100.0/最大提款额：200000.0RMB</span>
+                                            <span class="limit"><em data-i18n="with.32"></em>：${SidQuotaSetting.minMoney}RMB / <em data-i18n="with.33"></em>：${SidQuotaSetting.maxMoney}RMB</span>
                                         </div>
                                     </div>
                                     <div class="field">
@@ -253,6 +253,7 @@
                                         </div>
                                         <div class="field-right">
                                             <div class="input-box-3">
+                                                <input type="password" autocomplete="off" style="display: none;">
                                                 <input type="password" name="payPassword" id="payPassword" autocomplete="off">
                                             </div>
                                         </div>

@@ -1,53 +1,22 @@
-$(function(){
-    $(document).on("mouseenter",".feature",function(){
-        if(!$(".feature-center:animated").length){
-            if($(this).hasClass("feature-left")){
-                moveBig($(this))
-                moveRight($(".feature-center"),10)
-                moveLeft($(".feature-right"),9)
-            }
-            if($(this).hasClass("feature-right")){
-                moveBig($(this))
-                moveLeft($(".feature-center"),10)
-                moveRight($(".feature-left"),9)
-            }
-        }
-    })
+var afterTran;
 
-    function moveBig(ele){
-        ele.css({
-            "zIndex":12
-        }).animate({
-            "width": 649,
-            "height": 408,
-            "left":143,
-            "top":48
-        },500,function(){
-            ele.attr("class","feature feature-center")
-        })
+afterTran = function() {
+  $(document).on("click", ".start", function() {
+    var tempUrl;
+    if (isLogin()) {
+      tempUrl = "http://casino.w88uat.com/?op=IG99&m=2d&token=" + $("#token").val() + "&lang=zh-cn";
+      openWindow(tempUrl, "onlinecasino", 1280, 650, "", "");
     }
-    function moveLeft(ele,index){
-        ele.css({
-            "zIndex":index
-        }).animate({
-            "width": 335,
-            "height": 239,
-            "left":-45,
-            "top":117
-        },500,function(){
-            ele.attr("class","feature feature-left")
-        })
-    }
-    function moveRight(ele,index){
-        ele.css({
-            "zIndex":index
-        }).animate({
-            "width": 335,
-            "height": 239,
-            "left":662,
-            "top":117
-        },500,function(){
-            ele.attr("class","feature feature-right")
-        })
-    }
-})
+    return false;
+  });
+  $(document).on("click", ".casino-t-i", function() {
+    $(".casino-t").toggleClass("active");
+    $(".casino-item").eq($(this).index()).addClass("active").siblings().removeClass("active");
+    return false;
+  });
+  return $(document).on("mouseenter", ".cg-col", function() {
+    return $(this).addClass("active");
+  }).on("mouseleave", ".cg-col", function() {
+    return $(this).removeClass("active");
+  });
+};

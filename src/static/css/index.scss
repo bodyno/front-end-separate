@@ -1,0 +1,140 @@
+@import "base";
+@import "sprite";
+.banner{
+  position: relative;
+  height: 438px;
+}
+.banner-item{
+  height: 438px;
+  width: 100%;
+}
+.prod-con{
+  margin-top: 20px;
+  background: url("../images/index_prod.jpg") no-repeat center;
+  height: 229px;
+  padding-left: 18px;
+}
+.prod-item{
+  width: 298px;
+  float: left;
+  text-align: center;
+  margin-right: 30px;
+  display: block;
+}
+.prod-item-last{
+  margin-right: 0;
+}
+.prod-item-title{
+  color:#fff;
+  font-size:48px;
+  padding-top: 130px;
+}
+.prod-item-text{
+  color:#fff;
+  font-size:18px;
+}
+
+.notice-con{
+  margin-top: 55px;
+  padding-left: 18px;
+}
+.notice-item{
+  border-left:1px dashed #9d9d9d;
+  padding-left: 19px;
+  width: 327px;
+  height: 135px;
+  float: left;
+}
+.notice-item-last{
+  width: 240px;
+}
+.notice-item-title{
+  font-size: 22px;
+  color:#333333;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+  & i{
+    position: absolute;
+    top: 7px;
+    right: 60px;
+    @include sprite($arrow_icon);
+  }
+}
+.notice-item-text{
+  line-height: 24px;
+  color:#999999;
+  a{
+    display: block;
+    color:#999999;
+    font-size: 14px;
+    &:hover{
+      color:$primary;
+    }
+  }
+}
+.index-bg{
+  margin-top: 37px;
+  background: url("../images/index_bg.jpg") repeat-x;
+  height: 55px;
+}
+.list-img{
+  background: url("../images/index_icon.jpg");
+  width: 860px;
+  height: 110px;
+  margin: 32px auto 0;
+}
+.list{
+  margin-bottom: 73px;
+}
+.list-con{
+  padding-left: 14px;
+}
+.list-item{
+  float: left;
+  text-align: center;
+  width: 190px;
+}
+.list-item-title{
+  font-size: 18px;
+  color:#000000;
+  margin-top: 24px;
+}
+.list-item-text{
+  font-size: 13px;
+  color:#999999;
+  margin-top: 10px;
+}
+.fix{
+  background: url("../images/fix.png") no-repeat;
+  width: 150px;
+  height: 312px;
+  position: fixed;
+  left: 50%;
+  margin-left: 530px;
+  bottom:8%;
+  z-index: 111;
+}
+.fix-text1{
+  color: $primary;
+  text-align: center;
+  padding-top: 14px;
+}
+.fix-btn{
+  color:#ffffff;
+  font-size: 14px;
+  margin-left: 16px;
+  width: 76px;
+  height: 34px;
+  line-height: 34px;
+  cursor: pointer;
+  display: block;
+  padding-left: 43px;
+}
+.fix-btn1{
+  margin-top: 197px;
+}
+.fix-btn2{
+  margin-top: 18px;
+  color:#c4c4c4;
+}

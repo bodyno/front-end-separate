@@ -115,7 +115,6 @@
             </div>
         </div>
     </script>
-    <script src="/static/plugin/doT/doT.js"></script>
     <script src="/static/plugin/pagination/jquery.simplePagination.js"></script>
     #parse('/common/page_footer.vm')
     <script src="/static/js/statement.js"></script>

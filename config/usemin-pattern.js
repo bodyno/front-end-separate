@@ -15,6 +15,10 @@ module.exports = {
             if (/^(?!http:\/\/|https:\/\/|data:|\/\/).+?\.(js|css|png|jpg|gif|svg|swf|ico)/i.test(m)) {
                 m = cdnRoot + m;
             }
+            //老虎机特殊处理
+            if(m.indexOf("/static/images/game/$item.img")!=-1&&m.indexOf("http://")==-1){
+                m = cdnRoot + m;
+            }
             return m;
         };
 
@@ -71,16 +75,22 @@ module.exports = {
                     filterIn,
                     filterOut
                 ]
-            ]
-            /*,
-            'css': [
+                ,
+                [
+                    /<input[^\>]+src=['"]([^"']+)["']/gm,
+                    'Update the HTML with reference in input',
+                    filterIn,
+                    filterOut
+                ]
+            ],
+            /*'css': [
                 /!*jshint regexp:false *!/
                 [/(?:src=|url\(\s*)['"]?([^'"\)]+)['"]?\s*\)?/gm,
                     'Update the CSS to reference our revved images',
                     filterIn,
                     filterOut
                 ]
-            ],
+            ],*/
             'js': [
                 [
                     'Update the RequireJS modules with require tags',
@@ -91,7 +101,7 @@ module.exports = {
                         return m.replace('.js', '');
                     }
                 ]
-            ]*/
+            ]
         };
 
     }

@@ -5,6 +5,7 @@
  * @author 老雷<leizongmin@gmail.com>
  */
 
+var FilterCSS = require('cssfilter').FilterCSS;
 var _ = require('./util');
 
 // 默认白名单
@@ -74,6 +75,9 @@ var whiteList = {
   video:  ['autoplay', 'controls', 'loop', 'preload', 'src', 'height', 'width']
 };
 
+// 默认CSS Filter
+var defaultCSSFilter = new FilterCSS();
+
 /**
  * 匹配到标签时的处理方法
  *
@@ -141,6 +145,7 @@ function escapeHtml (html) {
  * @return {String}
  */
 function safeAttrValue (tag, name, value, cssFilter) {
+  cssFilter = cssFilter || defaultCSSFilter;
   // 转换为友好的属性值，再做判断
   value = friendlyAttrValue(value);
 
@@ -398,8 +403,10 @@ exports.onIgnoreTagStripAll = onIgnoreTagStripAll;
 exports.StripTagBody = StripTagBody;
 exports.stripCommentTag = stripCommentTag;
 exports.stripBlankChar = stripBlankChar;
+exports.cssFilter = defaultCSSFilter;
 
-},{"./util":4}],2:[function(require,module,exports){
+
+},{"./util":4,"cssfilter":8}],2:[function(require,module,exports){
 /**
  * 模块入口
  *
@@ -467,8 +474,8 @@ function getTagName (html) {
     var tagName = html.slice(1, i + 1);
   }
   tagName = _.trim(tagName).toLowerCase();
-  if (tagName[0] === '/') tagName = tagName.slice(1);
-  if (tagName[tagName.length - 1] === '/') tagName = tagName.slice(0, -1);
+  if (tagName.slice(0, 1) === '/') tagName = tagName.slice(1);
+  if (tagName.slice(-1) === '/') tagName = tagName.slice(0, -1);
   return tagName;
 }
 
@@ -488,7 +495,7 @@ function isClosing (html) {
  * @param {String} html
  * @param {Function} onTag 处理标签的函数
  *   参数格式： function (sourcePosition, position, tag, html, isClosing)
- * @param {Function} escapeHtml 对HTML进行转义的韩松
+ * @param {Function} escapeHtml 对HTML进行转义的函数
  * @return {String}
  */
 function parseTag (html, onTag, escapeHtml) {
@@ -532,7 +539,8 @@ function parseTag (html, onTag, escapeHtml) {
           tagStart = false;
           continue;
         }
-        if (c === '"' || c === "'") {
+        // HTML标签内的引号仅当前一个字符是等于号时才有效
+        if ((c === '"' || c === "'") && html.charAt(currentPos - 1) === '=') {
           quoteStart = c;
           continue;
         }
@@ -574,20 +582,23 @@ function parseAttr (html, onAttr) {
     name = _.trim(name);
     name = name.replace(REGEXP_ATTR_NAME, '').toLowerCase();
     if (name.length < 1) return;
-    retAttrs.push(onAttr(name, value || ''));
+    var ret = onAttr(name, value || '');
+    if (ret) retAttrs.push(ret);
   };
 
   // 逐个分析字符
   for (var i = 0; i < len; i++) {
-    var c = html.charAt(i),v;
+    var c = html.charAt(i);
+    var v, j;
     if (tmpName === false && c === '=') {
       tmpName = html.slice(lastPos, i);
       lastPos = i + 1;
       continue;
     }
     if (tmpName !== false) {
-      if (i === lastPos && (c === '"' || c === "'")) {
-        var j = html.indexOf(c, i + 1);
+      // HTML标签内的引号仅当前一个字符是等于号时才有效
+      if (i === lastPos && (c === '"' || c === "'") && html.charAt(i - 1) === '=') {
+        j = html.indexOf(c, i + 1);
         if (j === -1) {
           break;
         } else {
@@ -601,15 +612,31 @@ function parseAttr (html, onAttr) {
       }
     }
     if (c === ' ') {
-      v = _.trim(html.slice(lastPos, i));
       if (tmpName === false) {
-        addAttr(v);
+        j = findNextEqual(html, i);
+        if (j === -1) {
+          v = _.trim(html.slice(lastPos, i));
+          addAttr(v);
+          tmpName = false;
+          lastPos = i + 1;
+          continue;
+        } else {
+          i = j - 1;
+          continue;
+        }
       } else {
-        addAttr(tmpName, v);
+        j = findBeforeEqual(html, i - 1);
+        if (j === -1) {
+          v = _.trim(html.slice(lastPos, i));
+          v = stripQuoteWrap(v);
+          addAttr(tmpName, v);
+          tmpName = false;
+          lastPos = i + 1;
+          continue;
+        } else {
+          continue;
+        }
       }
-      tmpName = false;
-      lastPos = i + 1;
-      continue;
     }
   }
 
@@ -617,12 +644,48 @@ function parseAttr (html, onAttr) {
     if (tmpName === false) {
       addAttr(html.slice(lastPos));
     } else {
-      addAttr(tmpName, html.slice(lastPos));
+      addAttr(tmpName, stripQuoteWrap(_.trim(html.slice(lastPos))));
     }
   }
 
   return _.trim(retAttrs.join(' '));
 }
+
+function findNextEqual (str, i) {
+  for (; i < str.length; i++) {
+    var c = str[i];
+    if (c === ' ') continue;
+    if (c === '=') return i;
+    return -1;
+  }
+}
+
+function findBeforeEqual (str, i) {
+  for (; i > 0; i--) {
+    var c = str[i];
+    if (c === ' ') continue;
+    if (c === '=') return i;
+    return -1;
+  }
+}
+
+function isQuoteWrapString (text) {
+  if ((text[0] === '"' && text[text.length - 1] === '"') ||
+      (text[0] === '\'' && text[text.length - 1] === '\'')) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+function stripQuoteWrap (text) {
+  if (isQuoteWrapString(text)) {
+    return text.substr(1, text.length - 2);
+  } else {
+    return text;
+  }
+};
+
 
 exports.parseTag = parseTag;
 exports.parseAttr = parseAttr;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -12,14 +13,16 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
+
 /**
  * Remove default margin.
  */
 body {
   margin: 0;
-  font-family: Tahoma, 'Microsoft Yahei', sans-serif;
+  font-family: Tahoma, 'Microsoft Yahei',sans-serif;
   font-size: 12px;
 }
+
 /* HTML5 display definitions
    ========================================================================== */
 /**
@@ -43,6 +46,7 @@ section,
 summary {
   display: block;
 }
+
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
@@ -56,6 +60,7 @@ video {
   vertical-align: baseline;
   /* 2 */
 }
+
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
@@ -64,6 +69,7 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
+
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
@@ -72,6 +78,7 @@ audio:not([controls]) {
 template {
   display: none;
 }
+
 /* Links
    ========================================================================== */
 /**
@@ -80,6 +87,7 @@ template {
 a {
   background-color: transparent;
 }
+
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -87,6 +95,7 @@ a:active,
 a:hover {
   outline: 0;
 }
+
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -95,6 +104,7 @@ a:hover {
 abbr[title] {
   border-bottom: 1px dotted;
 }
+
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
@@ -102,12 +112,14 @@ b,
 strong {
   font-weight: bold;
 }
+
 /**
  * Address styling not present in Safari and Chrome.
  */
 dfn {
   font-style: italic;
 }
+
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
@@ -116,6 +128,7 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+
 /**
  * Address styling not present in IE 8/9.
  */
@@ -123,12 +136,14 @@ mark {
   background: #ff0;
   color: #000;
 }
+
 /**
  * Address inconsistent and variable font size in all browsers.
  */
 small {
   font-size: 80%;
 }
+
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
@@ -139,12 +154,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sup {
   top: -0.5em;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 /* Embedded content
    ========================================================================== */
 /**
@@ -153,12 +171,14 @@ sub {
 img {
   border: 0;
 }
+
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
 svg:not(:root) {
   overflow: hidden;
 }
+
 /* Grouping content
    ========================================================================== */
 /**
@@ -167,6 +187,7 @@ svg:not(:root) {
 figure {
   margin: 1em 40px;
 }
+
 /**
  * Address differences between Firefox and other browsers.
  */
@@ -175,12 +196,14 @@ hr {
   box-sizing: content-box;
   height: 0;
 }
+
 /**
  * Contain overflow in all browsers.
  */
 pre {
   overflow: auto;
 }
+
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
@@ -191,6 +214,7 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
+
 /* Forms
    ========================================================================== */
 /**
@@ -215,12 +239,14 @@ textarea {
   margin: 0;
   /* 3 */
 }
+
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 button {
   overflow: visible;
 }
+
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
@@ -231,6 +257,7 @@ button,
 select {
   text-transform: none;
 }
+
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
@@ -239,14 +266,14 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
   /* 3 */
 }
+
 /**
  * Re-set default cursor for disabled elements.
  */
@@ -254,6 +281,7 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
+
 /**
  * Remove inner padding and border in Firefox 4+.
  */
@@ -262,6 +290,7 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
@@ -269,6 +298,7 @@ input::-moz-focus-inner {
 input {
   line-height: normal;
 }
+
 /**
  * It's recommended that you don't attempt to style these elements.
  * Firefox's implementation doesn't respect box-sizing, padding, or width.
@@ -283,6 +313,7 @@ input[type="radio"] {
   padding: 0;
   /* 2 */
 }
+
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
  * `font-size` values of the `input`, it causes the cursor style of the
@@ -292,6 +323,7 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
+
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
@@ -305,6 +337,7 @@ input[type="search"] {
   /* 2 */
   box-sizing: content-box;
 }
+
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
@@ -314,6 +347,7 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 /**
  * Define consistent border, margin, and padding.
  */
@@ -322,6 +356,7 @@ fieldset {
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
+
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
@@ -332,12 +367,14 @@ legend {
   padding: 0;
   /* 2 */
 }
+
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 textarea {
   overflow: auto;
 }
+
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
@@ -345,6 +382,7 @@ textarea {
 optgroup {
   font-weight: bold;
 }
+
 /* Tables
    ========================================================================== */
 /**
@@ -354,64 +392,93 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 td,
 th {
   padding: 0;
 }
-ul,
-ol {
+
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+  */
+/*
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
+
+  @include sprites($spritesheet-sprites)
+  */
+ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   font-weight: normal;
 }
-button,
-input,
-textarea,
-select {
+
+button, input, textarea, select {
   outline: none;
 }
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
+
 .container {
   width: 980px;
   margin: auto;
   position: relative;
 }
+
 .clearfix {
   *zoom: 1;
 }
+
 .clearfix:before {
   display: table;
   content: "";
 }
+
 .clearfix:after {
   display: table;
   clear: both;
   content: "";
 }
+
 a {
   cursor: pointer;
   outline: none;
 }
-a:link,
-a:hover {
+
+a:link, a:hover {
   text-decoration: none;
 }
+
 .nomr {
   margin-right: 0;
 }
-/*轮播*/
+
+/*轮播 */
 .cycle-pager {
   width: 100%;
   margin: auto;
@@ -420,18 +487,21 @@ a:hover {
   text-align: center;
   z-index: 111;
 }
+
 .cycle-pager span {
   width: 62px;
   height: 8px;
   margin-right: 12px;
-  background: #fff;
+  background: white;
   display: inline-block;
   overflow: hidden;
   cursor: pointer;
 }
+
 .cycle-pager span.cycle-pager-active {
   background: #009b72;
 }
+
 .banner-op-item {
   background-image: url(/static/images/sprite/sprite.png);
   background-position: 0px 0px;
@@ -442,9 +512,11 @@ a:hover {
   cursor: pointer;
   z-index: 111;
 }
+
 .banner-op-left {
   left: 5%;
 }
+
 .banner-op-right {
   background-image: url(/static/images/sprite/sprite.png);
   background-position: -36px 0px;
@@ -452,46 +524,131 @@ a:hover {
   height: 68px;
   right: 5%;
 }
+
 .mt10 {
   margin-top: 10px;
 }
-/*低版本浏览器*/
+
+/*低版本浏览器 */
 .browser-updatetips {
   text-align: center;
   background: #00ce98;
-  color: #ffffff;
+  color: white;
   height: 38px;
   line-height: 38px;
   border-top: 1px solid #33a2ff;
   border-bottom: 1px solid #006fcc;
 }
+
 .browser-updatetips a {
   color: #009b72;
 }
+
 span.customSelect {
   font: 12px sans-serif;
-  border: 1px solid #ddd;
-  color: #555;
+  border: 1px solid #dddddd;
+  color: #555555;
   padding: 7px 9px;
   width: 100px;
 }
+
 button[disabled] {
-  background: #8CD9C5;
+  background: #8cd9c5;
 }
+
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+  */
+/*
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
+
+  @include sprites($spritesheet-sprites)
+  */
+.language-list {
+  position: absolute;
+  display: none;
+  z-index: 1111;
+  border: 4px solid #999999;
+  padding: 8px 0;
+  width: 431px;
+  background: #fff;
+  left: -180px;
+  top: 37px;
+}
+
+.language-list b {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #999999;
+  position: absolute;
+  left: 209px;
+  top: -10px;
+}
+
+.language-list .language-list-col {
+  float: left;
+  width: 131px;
+  border-right: 1px solid #00ce98;
+  padding: 0 6px;
+}
+
+.language-list .language-col-last {
+  border-right: none;
+}
+
+.language-list .language-item {
+  text-align: center;
+  color: #999999;
+  background: #fff;
+  padding: 7px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.language-list .language-item:hover {
+  background: #009b72;
+  color: #fff;
+}
+
 .header-top {
   background: #009b72;
   position: relative;
   z-index: 1112;
 }
+
 .header-top-left {
   float: left;
 }
+
 .header-top-right {
   float: right;
 }
+
 .header-top-right ul li {
   float: left;
 }
+
 .header-top-right ul li a {
   color: #fff;
   font-size: 12px;
@@ -500,12 +657,15 @@ button[disabled] {
   line-height: 36px;
   border-left: 1px solid #00b485;
 }
+
 .header-top-right ul li a:hover {
   background: #00b485;
 }
+
 .top-menu-right {
   border-right: 1px solid #00b485;
 }
+
 .header-btn {
   color: #fff;
   padding: 0px 9px;
@@ -519,29 +679,36 @@ button[disabled] {
   height: 25px;
   line-height: 25px;
 }
+
 .header-btn1 {
   background: #00b485;
 }
+
 .header-btn1:hover {
   background: #00ba89;
 }
+
 .header-btn2 {
   background: #ebaa57;
 }
+
 .header-btn2:hover {
   background: #eeb872;
 }
+
 .logo {
   float: left;
   margin-top: 18px;
   padding-bottom: 10px;
 }
+
 .logo a {
   display: block;
   background: url("../images/logo.png");
   width: 230px;
   height: 71px;
 }
+
 .header {
   border-bottom: 1px solid #a5a5a5;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
@@ -549,20 +716,23 @@ button[disabled] {
   z-index: 1111;
   background: #fff;
 }
+
 .header .menu {
   float: right;
   margin-top: 48px;
 }
+
 .header .menu li {
   float: left;
   margin-left: 46px;
   padding-bottom: 18px;
 }
-.header .menu li.active .link,
-.header .menu li:hover .link {
+
+.header .menu li.active .link, .header .menu li:hover .link {
   color: #009b72;
   border-bottom: 2px solid #009b72;
 }
+
 .header .menu li .link {
   color: #7b7b7b;
   font-size: 16px;
@@ -570,24 +740,28 @@ button[disabled] {
   padding-bottom: 6px;
   display: block;
 }
+
 .header .login-menu {
   float: right;
   margin-top: 48px;
 }
+
 .header .login-menu li {
   float: left;
 }
-.header .login-menu li.active a,
-.header .login-menu li:hover a {
+
+.header .login-menu li.active a, .header .login-menu li:hover a {
   color: #009b72;
   border-bottom: 2px solid #009b72;
 }
+
 .header .login-menu li a {
   color: #7b7b7b;
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 6px;
 }
+
 .header .login-menu li span {
   border-right: 1px solid #666666;
   display: block;
@@ -595,6 +769,7 @@ button[disabled] {
   margin: 0 10px;
   margin-top: 4px;
 }
+
 .language {
   float: left;
   position: relative;
@@ -605,12 +780,15 @@ button[disabled] {
   border-right: 1px solid #00b485;
   cursor: pointer;
 }
-.language a {
+
+.language em {
   line-height: 36px;
   color: #fff;
   font-size: 12px;
+  font-style: normal;
 }
-.language a b {
+
+.language em b {
   background-image: url(/static/images/sprite/sprite.png);
   background-position: -81px -18px;
   width: 9px;
@@ -619,77 +797,45 @@ button[disabled] {
   right: 8px;
   top: 15px;
 }
+
 .language:hover {
   background: #00b485;
 }
-.language-list {
-  position: absolute;
-  display: none;
-  z-index: 1111;
-  border: 4px solid #999999;
-  padding: 8px 0;
-  width: 431px;
-  background: #fff;
-  left: -180px;
-  top: 37px;
-}
-.language-list b {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid #999999;
-  position: absolute;
-  left: 209px;
-  top: -10px;
-}
-.language-list .language-list-col {
-  float: left;
-  width: 131px;
-  border-right: 1px solid #00ce98;
-  padding: 0 6px;
-}
-.language-list .language-col-last {
-  border-right: none;
-}
-.language-list .language-item {
-  text-align: center;
-  color: #999999;
-  background: #fff;
-  padding: 7px 0;
-  cursor: pointer;
-  font-size: 14px;
-}
-.language-list .language-item:hover {
-  background: #009b72;
-  color: #fff;
-}
+
 .header-top-right ul li.language a {
   padding: 0 24px 0 14px;
 }
+
 .header-top-right ul li.avatars_con a {
   padding: 0 14px 0 50px;
 }
+
 .avatars_con {
   position: relative;
 }
+
 .avatars_con .avatars {
   position: absolute;
   left: 15px;
   top: 2px;
 }
+
 .header-text::-webkit-input-placeholder {
   color: #b1c3c0;
 }
+
 .header-text:-moz-placeholder {
   color: #b1c3c0;
 }
+
 .header-text::-moz-placeholder {
   color: #b1c3c0;
 }
+
 .header-text:-ms-input-placeholder {
   color: #b1c3c0;
 }
+
 .header-text {
   width: 104px;
   height: 24px;
@@ -701,15 +847,18 @@ button[disabled] {
   margin-top: 6px;
   padding: 0 8px;
 }
+
 .header-text.s {
   width: 51px;
 }
+
 .header-code {
   float: left;
   margin-right: 4px;
   margin-top: 8px;
   cursor: pointer;
 }
+
 .header-login {
   float: left;
   background: #eeb827;
@@ -722,9 +871,11 @@ button[disabled] {
   *height: 29px;
   *line-height: 20px;
 }
+
 .header-block {
   display: none;
 }
+
 .header-more {
   background: url("../images/header_bg.png");
   height: 203px;
@@ -733,6 +884,7 @@ button[disabled] {
   top: 100px;
   left: 0;
 }
+
 .header-more-block {
   background: url("../images/header_bg.png");
   position: absolute;
@@ -740,6 +892,7 @@ button[disabled] {
   height: 203px;
   top: 100px;
 }
+
 .header-img {
   height: 120px;
   width: 990px;
@@ -747,21 +900,27 @@ button[disabled] {
   top: 4px;
   left: 0;
 }
+
 .header-img-sport {
   background: url("../images/sport_more.jpg");
 }
+
 .header-img-slot {
-  background: url("../images/slot_more.jpg");
+  background: url("../images/slot/slot_more.jpg");
 }
+
 .header-img-casino {
   background: url("../images/casino_more.jpg");
 }
+
 .header-img-lottery {
   background: url("../images/lottery_more.jpg");
 }
+
 .header-more-text {
   text-align: center;
 }
+
 .header-more-text .h-m-t {
   float: left;
   line-height: 24px;
@@ -773,14 +932,17 @@ button[disabled] {
   z-index: 111;
   font-size: 12px;
 }
+
 .header-more-text .h-m-t div {
   padding-top: 13px;
   padding-bottom: 10px;
 }
+
 .header-more-text .h-m-t:hover div {
   background: #60c275;
   color: #fff;
 }
+
 .browser-updatetips .speed {
   display: block;
   background-image: url(/static/images/sprite/sprite.png);
@@ -791,6 +953,7 @@ button[disabled] {
   top: 12px;
   left: 875px;
 }
+
 .browser-updatetips span {
   background-image: url(/static/images/sprite/sprite.png);
   background-position: -72px -32px;
@@ -802,40 +965,49 @@ button[disabled] {
   top: 13px;
   left: 965px;
 }
+
 .footer {
   border-top: 4px solid #009b72;
 }
+
 .footer-top {
   border-top: 1px solid #bababa;
   padding-top: 20px;
   padding-bottom: 17px;
   background: #fff;
 }
+
 .footer-copy {
   float: left;
   color: #999999;
   font-size: 12px;
   padding-bottom: 17px;
 }
+
 .footer-menu {
   float: right;
 }
+
 .footer-menu li {
   float: left;
 }
+
 .footer-menu li a {
   color: #999999;
   margin-left: 12px;
 }
+
 .footer-menu li a:hover {
   color: #009b72;
 }
+
 .footer-img {
   background: url("../images/footer.jpg") no-repeat center;
   height: 79px;
   margin: 0 auto;
   border-top: 1px solid #e0e0e0;
 }
+
 .footer-text {
   border-top: 1px solid #e0e0e0;
   padding-top: 10px;
@@ -845,49 +1017,51 @@ button[disabled] {
   color: #999999;
   margin-bottom: 20px;
 }
+
 /*
-LESS variables are information about icon's compiled state, stored under its original file name
+  SASS variables are information about icon's compiled state, stored under its original file name
 
-.icon-home {
-  width: @icon-home-width;
-}
+  .icon-home
+    width: $icon-home-width
 
-The large array-like variables contain all information about a single icon
-@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
 
-At the bottom of this section, we provide information about the spritesheet itself
-@spritesheet: width height image @spritesheet-sprites;
-*/
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
 /*
-The provided classes are intended to be used with the array-like variables
+  The provided mixins are intended to be used with the array-like variables
 
-.icon-home {
-  .sprite-width(@icon-home);
-}
-.icon-email {
-  .sprite(@icon-email);
-}
-*/
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+  */
 /*
-The `.sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of LESS
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
 
-.sprites(@spritesheet-sprites);
-*/
+  @include sprites($spritesheet-sprites)
+  */
 .banner {
   position: relative;
   height: 438px;
 }
+
 .banner-item {
   height: 438px;
   width: 100%;
 }
+
 .prod-con {
   margin-top: 20px;
   background: url("../images/index_prod.jpg") no-repeat center;
   height: 229px;
   padding-left: 18px;
 }
+
 .prod-item {
   width: 298px;
   float: left;
@@ -895,22 +1069,27 @@ The `.sprites` mixin generates identical output to the CSS template
   margin-right: 30px;
   display: block;
 }
+
 .prod-item-last {
   margin-right: 0;
 }
+
 .prod-item-title {
   color: #fff;
   font-size: 48px;
   padding-top: 130px;
 }
+
 .prod-item-text {
   color: #fff;
   font-size: 18px;
 }
+
 .notice-con {
   margin-top: 55px;
   padding-left: 18px;
 }
+
 .notice-item {
   border-left: 1px dashed #9d9d9d;
   padding-left: 19px;
@@ -918,9 +1097,11 @@ The `.sprites` mixin generates identical output to the CSS template
   height: 135px;
   float: left;
 }
+
 .notice-item-last {
   width: 240px;
 }
+
 .notice-item-title {
   font-size: 22px;
   color: #333333;
@@ -928,6 +1109,7 @@ The `.sprites` mixin generates identical output to the CSS template
   display: block;
   position: relative;
 }
+
 .notice-item-title i {
   position: absolute;
   top: 7px;
@@ -937,53 +1119,61 @@ The `.sprites` mixin generates identical output to the CSS template
   width: 18px;
   height: 18px;
 }
+
 .notice-item-text {
   line-height: 24px;
   color: #999999;
 }
+
 .notice-item-text a {
   display: block;
   color: #999999;
   font-size: 14px;
 }
+
 .notice-item-text a:hover {
   color: #009b72;
 }
+
 .index-bg {
   margin-top: 37px;
   background: url("../images/index_bg.jpg") repeat-x;
   height: 55px;
 }
+
 .list-img {
   background: url("../images/index_icon.jpg");
   width: 860px;
   height: 110px;
   margin: 32px auto 0;
 }
+
 .list {
   margin-bottom: 73px;
 }
+
 .list-con {
   padding-left: 14px;
 }
+
 .list-item {
   float: left;
   text-align: center;
   width: 190px;
-  /*&:hover .list-item-title{
-    color:@primary;
-  }*/
 }
+
 .list-item-title {
   font-size: 18px;
   color: #000000;
   margin-top: 24px;
 }
+
 .list-item-text {
   font-size: 13px;
   color: #999999;
   margin-top: 10px;
 }
+
 .fix {
   background: url("../images/fix.png") no-repeat;
   width: 150px;
@@ -994,11 +1184,13 @@ The `.sprites` mixin generates identical output to the CSS template
   bottom: 8%;
   z-index: 111;
 }
+
 .fix-text1 {
   color: #009b72;
   text-align: center;
   padding-top: 14px;
 }
+
 .fix-btn {
   color: #ffffff;
   font-size: 14px;
@@ -1010,9 +1202,11 @@ The `.sprites` mixin generates identical output to the CSS template
   display: block;
   padding-left: 43px;
 }
+
 .fix-btn1 {
   margin-top: 197px;
 }
+
 .fix-btn2 {
   margin-top: 18px;
   color: #c4c4c4;

@@ -18,7 +18,7 @@ app.set("views", __dirname + "/src/views")
 
 app.use(logger('dev'));
 //是否使用favicon图标--不需要 页面已写
-app.use(favicon(__dirname + '/src/static/images/favicon.ico'));
+//app.use(favicon(__dirname + '/src/static/images/favicon.ico'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());

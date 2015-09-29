@@ -18,7 +18,7 @@
         <div class="top2 clearfix">
             <div class="li">
                 <em data-i18n="[prepend]center:mtop.4"></em>
-                #if($disSidCust.isBindEmail)
+                #if($disSidCust.isBindName)
                 <span>$disSidCust.firstName**</span>
                 #else
                 <a href="/member/safe#name" data-i18n="center:mtop.5"></a>

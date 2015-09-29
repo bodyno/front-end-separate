@@ -1,0 +1,125 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$gong-name: 'gong';
+$gong-x: 0px;
+$gong-y: 0px;
+$gong-offset-x: 0px;
+$gong-offset-y: 0px;
+$gong-width: 114px;
+$gong-height: 22px;
+$gong-total-width: 234px;
+$gong-total-height: 66px;
+$gong-image: '/static/images/sprite/bank.png';
+$gong: 0px 0px 0px 0px 114px 22px 234px 66px '/static/images/sprite/bank.png' 'gong';
+$jian-name: 'jian';
+$jian-x: 114px;
+$jian-y: 0px;
+$jian-offset-x: -114px;
+$jian-offset-y: 0px;
+$jian-width: 120px;
+$jian-height: 22px;
+$jian-total-width: 234px;
+$jian-total-height: 66px;
+$jian-image: '/static/images/sprite/bank.png';
+$jian: 114px 0px -114px 0px 120px 22px 234px 66px '/static/images/sprite/bank.png' 'jian';
+$nong-name: 'nong';
+$nong-x: 0px;
+$nong-y: 22px;
+$nong-offset-x: 0px;
+$nong-offset-y: -22px;
+$nong-width: 114px;
+$nong-height: 22px;
+$nong-total-width: 234px;
+$nong-total-height: 66px;
+$nong-image: '/static/images/sprite/bank.png';
+$nong: 0px 22px 0px -22px 114px 22px 234px 66px '/static/images/sprite/bank.png' 'nong';
+$zhao-name: 'zhao';
+$zhao-x: 114px;
+$zhao-y: 22px;
+$zhao-offset-x: -114px;
+$zhao-offset-y: -22px;
+$zhao-width: 94px;
+$zhao-height: 22px;
+$zhao-total-width: 234px;
+$zhao-total-height: 66px;
+$zhao-image: '/static/images/sprite/bank.png';
+$zhao: 114px 22px -114px -22px 94px 22px 234px 66px '/static/images/sprite/bank.png' 'zhao';
+$zhi-name: 'zhi';
+$zhi-x: 0px;
+$zhi-y: 44px;
+$zhi-offset-x: 0px;
+$zhi-offset-y: -44px;
+$zhi-width: 84px;
+$zhi-height: 22px;
+$zhi-total-width: 234px;
+$zhi-total-height: 66px;
+$zhi-image: '/static/images/sprite/bank.png';
+$zhi: 0px 44px 0px -44px 84px 22px 234px 66px '/static/images/sprite/bank.png' 'zhi';
+$spritesheet-width: 234px;
+$spritesheet-height: 66px;
+$spritesheet-image: '/static/images/sprite/bank.png';
+$spritesheet-sprites: $gong $jian $nong $zhao $zhi;
+$spritesheet: 234px 66px '/static/images/sprite/bank.png' $spritesheet-sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

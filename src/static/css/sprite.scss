@@ -1,0 +1,136 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$arrow_down-name: 'arrow_down';
+$arrow_down-x: 81px;
+$arrow_down-y: 18px;
+$arrow_down-offset-x: -81px;
+$arrow_down-offset-y: -18px;
+$arrow_down-width: 9px;
+$arrow_down-height: 5px;
+$arrow_down-total-width: 90px;
+$arrow_down-total-height: 68px;
+$arrow_down-image: '/static/images/sprite/sprite.png';
+$arrow_down: 81px 18px -81px -18px 9px 5px 90px 68px '/static/images/sprite/sprite.png' 'arrow_down';
+$arrow_icon-name: 'arrow_icon';
+$arrow_icon-x: 72px;
+$arrow_icon-y: 0px;
+$arrow_icon-offset-x: -72px;
+$arrow_icon-offset-y: 0px;
+$arrow_icon-width: 18px;
+$arrow_icon-height: 18px;
+$arrow_icon-total-width: 90px;
+$arrow_icon-total-height: 68px;
+$arrow_icon-image: '/static/images/sprite/sprite.png';
+$arrow_icon: 72px 0px -72px 0px 18px 18px 90px 68px '/static/images/sprite/sprite.png' 'arrow_icon';
+$arrow_left-name: 'arrow_left';
+$arrow_left-x: 0px;
+$arrow_left-y: 0px;
+$arrow_left-offset-x: 0px;
+$arrow_left-offset-y: 0px;
+$arrow_left-width: 36px;
+$arrow_left-height: 68px;
+$arrow_left-total-width: 90px;
+$arrow_left-total-height: 68px;
+$arrow_left-image: '/static/images/sprite/sprite.png';
+$arrow_left: 0px 0px 0px 0px 36px 68px 90px 68px '/static/images/sprite/sprite.png' 'arrow_left';
+$arrow_right-name: 'arrow_right';
+$arrow_right-x: 36px;
+$arrow_right-y: 0px;
+$arrow_right-offset-x: -36px;
+$arrow_right-offset-y: 0px;
+$arrow_right-width: 36px;
+$arrow_right-height: 68px;
+$arrow_right-total-width: 90px;
+$arrow_right-total-height: 68px;
+$arrow_right-image: '/static/images/sprite/sprite.png';
+$arrow_right: 36px 0px -36px 0px 36px 68px 90px 68px '/static/images/sprite/sprite.png' 'arrow_right';
+$old-name: 'old';
+$old-x: 72px;
+$old-y: 18px;
+$old-offset-x: -72px;
+$old-offset-y: -18px;
+$old-width: 9px;
+$old-height: 14px;
+$old-total-width: 90px;
+$old-total-height: 68px;
+$old-image: '/static/images/sprite/sprite.png';
+$old: 72px 18px -72px -18px 9px 14px 90px 68px '/static/images/sprite/sprite.png' 'old';
+$old_close-name: 'old_close';
+$old_close-x: 72px;
+$old_close-y: 32px;
+$old_close-offset-x: -72px;
+$old_close-offset-y: -32px;
+$old_close-width: 11px;
+$old_close-height: 11px;
+$old_close-total-width: 90px;
+$old_close-total-height: 68px;
+$old_close-image: '/static/images/sprite/sprite.png';
+$old_close: 72px 32px -72px -32px 11px 11px 90px 68px '/static/images/sprite/sprite.png' 'old_close';
+$spritesheet-width: 90px;
+$spritesheet-height: 68px;
+$spritesheet-image: '/static/images/sprite/sprite.png';
+$spritesheet-sprites: $arrow_down $arrow_icon $arrow_left $arrow_right $old $old_close;
+$spritesheet: 90px 68px '/static/images/sprite/sprite.png' $spritesheet-sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

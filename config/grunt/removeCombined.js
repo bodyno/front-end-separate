@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   baseURL: '<%=yo.dist%>/static/js',
   //logFile: 'build.txt',

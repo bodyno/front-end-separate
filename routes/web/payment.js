@@ -107,6 +107,9 @@ module.exports = function (app) {
         res.render('payment/withdraw', mid({
             isSetPwd:true,
             isBindBank:true,
+            SidQuotaSetting:{
+                minMoney: "100", maxMoney: "10000", maxPending: "", maxDialyMoney: ""
+            },
             listBanks:[
                 {
                     "bankId": 2,
@@ -432,6 +435,7 @@ module.exports = function (app) {
             "msg": "",
             "obj": {
                 "orderNo":"620124",
+                "createdTime":"1999",
                 "fundInAccount":{
                     accountName:"李小惠",
                     accountNo:"6214830290734838",
@@ -448,6 +452,10 @@ module.exports = function (app) {
             "msg": "",
             "obj": "88.88"
         });
+    });
+
+    app.get('/cashier/billStatus', function (req, res) {
+        res.send("true")
     });
 
     app.get('/cashier/recordsDetail', function (req, res) {
