@@ -16,6 +16,8 @@ express为路由提供服务
 
 基于grunt md5 打包合并
 
+新增html已经压缩成一行
+
 ###怎么使用:
 
 首先 clone 代码
