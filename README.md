@@ -22,37 +22,20 @@ express为路由提供服务
 
 首先 clone 代码
 
-然后启动命令行
+然后启动命令行工具
 
-再输入
+依次输入下列指命
 
 ```bash
 npm install
-```
-
-等待包安装完毕
-
-然后
-
-```bash
 bower-installer
-```
-
-([bower-installer介绍](https://github.com/blittle/bower-installer))安装需要的js插件
-
-再
-
-```bash
 grunt copy:vendor
+grunt
 ```
 
-最后
+推荐一个这个bower工具[bower-installer](https://github.com/blittle/bower-installer)非常好用，只下载依赖的文件，其余的都不会存在项目中
 
-```bash
-grunt
-``` 
-
-启动服务器，浏览器输入localhost,你就可以看到漂亮的页面了
+浏览器输入localhost,你就可以看到漂亮的页面了
 
 打包命令 grunt build  会生成dist文件夹，里面可以看到js、css都加了md5缀
 
