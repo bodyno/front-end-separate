@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -12,14 +13,16 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
+
 /**
  * Remove default margin.
  */
 body {
   margin: 0;
-  font-family: Tahoma, 'Microsoft Yahei', sans-serif;
+  font-family: Tahoma, 'Microsoft Yahei',sans-serif;
   font-size: 12px;
 }
+
 /* HTML5 display definitions
    ========================================================================== */
 /**
@@ -43,6 +46,7 @@ section,
 summary {
   display: block;
 }
+
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
@@ -56,6 +60,7 @@ video {
   vertical-align: baseline;
   /* 2 */
 }
+
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
@@ -64,6 +69,7 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
+
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
@@ -72,6 +78,7 @@ audio:not([controls]) {
 template {
   display: none;
 }
+
 /* Links
    ========================================================================== */
 /**
@@ -80,6 +87,7 @@ template {
 a {
   background-color: transparent;
 }
+
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -87,6 +95,7 @@ a:active,
 a:hover {
   outline: 0;
 }
+
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -95,6 +104,7 @@ a:hover {
 abbr[title] {
   border-bottom: 1px dotted;
 }
+
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
@@ -102,12 +112,14 @@ b,
 strong {
   font-weight: bold;
 }
+
 /**
  * Address styling not present in Safari and Chrome.
  */
 dfn {
   font-style: italic;
 }
+
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
@@ -116,6 +128,7 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+
 /**
  * Address styling not present in IE 8/9.
  */
@@ -123,12 +136,14 @@ mark {
   background: #ff0;
   color: #000;
 }
+
 /**
  * Address inconsistent and variable font size in all browsers.
  */
 small {
   font-size: 80%;
 }
+
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
@@ -139,12 +154,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sup {
   top: -0.5em;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 /* Embedded content
    ========================================================================== */
 /**
@@ -153,12 +171,14 @@ sub {
 img {
   border: 0;
 }
+
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
 svg:not(:root) {
   overflow: hidden;
 }
+
 /* Grouping content
    ========================================================================== */
 /**
@@ -167,6 +187,7 @@ svg:not(:root) {
 figure {
   margin: 1em 40px;
 }
+
 /**
  * Address differences between Firefox and other browsers.
  */
@@ -175,12 +196,14 @@ hr {
   box-sizing: content-box;
   height: 0;
 }
+
 /**
  * Contain overflow in all browsers.
  */
 pre {
   overflow: auto;
 }
+
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
@@ -191,6 +214,7 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
+
 /* Forms
    ========================================================================== */
 /**
@@ -215,12 +239,14 @@ textarea {
   margin: 0;
   /* 3 */
 }
+
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 button {
   overflow: visible;
 }
+
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
@@ -231,6 +257,7 @@ button,
 select {
   text-transform: none;
 }
+
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
@@ -239,14 +266,14 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
   /* 3 */
 }
+
 /**
  * Re-set default cursor for disabled elements.
  */
@@ -254,6 +281,7 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
+
 /**
  * Remove inner padding and border in Firefox 4+.
  */
@@ -262,6 +290,7 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
@@ -269,6 +298,7 @@ input::-moz-focus-inner {
 input {
   line-height: normal;
 }
+
 /**
  * It's recommended that you don't attempt to style these elements.
  * Firefox's implementation doesn't respect box-sizing, padding, or width.
@@ -283,6 +313,7 @@ input[type="radio"] {
   padding: 0;
   /* 2 */
 }
+
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
  * `font-size` values of the `input`, it causes the cursor style of the
@@ -292,6 +323,7 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
+
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
@@ -305,6 +337,7 @@ input[type="search"] {
   /* 2 */
   box-sizing: content-box;
 }
+
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
@@ -314,6 +347,7 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 /**
  * Define consistent border, margin, and padding.
  */
@@ -322,6 +356,7 @@ fieldset {
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
+
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
@@ -332,12 +367,14 @@ legend {
   padding: 0;
   /* 2 */
 }
+
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 textarea {
   overflow: auto;
 }
+
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
@@ -345,6 +382,7 @@ textarea {
 optgroup {
   font-weight: bold;
 }
+
 /* Tables
    ========================================================================== */
 /**
@@ -354,93 +392,93 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 td,
 th {
   padding: 0;
 }
+
 /*
-LESS variables are information about icon's compiled state, stored under its original file name
+  SASS variables are information about icon's compiled state, stored under its original file name
 
-.icon-home {
-  width: @icon-home-width;
-}
+  .icon-home
+    width: $icon-home-width
 
-The large array-like variables contain all information about a single icon
-@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
 
-At the bottom of this section, we provide information about the spritesheet itself
-@spritesheet: width height image @spritesheet-sprites;
-*/
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
 /*
-The provided classes are intended to be used with the array-like variables
+  The provided mixins are intended to be used with the array-like variables
 
-.icon-home {
-  .sprite-width(@icon-home);
-}
-.icon-email {
-  .sprite(@icon-email);
-}
-*/
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+  */
 /*
-The `.sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of LESS
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
 
-.sprites(@spritesheet-sprites);
-*/
-ul,
-ol {
+  @include sprites($spritesheet-sprites)
+  */
+ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   font-weight: normal;
 }
-button,
-input,
-textarea,
-select {
+
+button, input, textarea, select {
   outline: none;
 }
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
+
 .container {
   width: 980px;
   margin: auto;
   position: relative;
 }
+
 .clearfix {
   *zoom: 1;
 }
+
 .clearfix:before {
   display: table;
   content: "";
 }
+
 .clearfix:after {
   display: table;
   clear: both;
   content: "";
 }
+
 a {
   cursor: pointer;
   outline: none;
 }
-a:link,
-a:hover {
+
+a:link, a:hover {
   text-decoration: none;
 }
+
 .nomr {
   margin-right: 0;
 }
-/*轮播*/
+
+/*轮播 */
 .cycle-pager {
   width: 100%;
   margin: auto;
@@ -449,18 +487,21 @@ a:hover {
   text-align: center;
   z-index: 111;
 }
+
 .cycle-pager span {
   width: 62px;
   height: 8px;
   margin-right: 12px;
-  background: #fff;
+  background: white;
   display: inline-block;
   overflow: hidden;
   cursor: pointer;
 }
+
 .cycle-pager span.cycle-pager-active {
   background: #009b72;
 }
+
 .banner-op-item {
   background-image: url(/static/images/sprite/sprite.png);
   background-position: 0px 0px;
@@ -471,9 +512,11 @@ a:hover {
   cursor: pointer;
   z-index: 111;
 }
+
 .banner-op-left {
   left: 5%;
 }
+
 .banner-op-right {
   background-image: url(/static/images/sprite/sprite.png);
   background-position: -36px 0px;
@@ -481,50 +524,60 @@ a:hover {
   height: 68px;
   right: 5%;
 }
+
 .mt10 {
   margin-top: 10px;
 }
-/*低版本浏览器*/
+
+/*低版本浏览器 */
 .browser-updatetips {
   text-align: center;
   background: #00ce98;
-  color: #ffffff;
+  color: white;
   height: 38px;
   line-height: 38px;
   border-top: 1px solid #33a2ff;
   border-bottom: 1px solid #006fcc;
 }
+
 .browser-updatetips a {
   color: #009b72;
 }
+
 span.customSelect {
   font: 12px sans-serif;
-  border: 1px solid #ddd;
-  color: #555;
+  border: 1px solid #dddddd;
+  color: #555555;
   padding: 7px 9px;
   width: 100px;
 }
+
 button[disabled] {
-  background: #8CD9C5;
+  background: #8cd9c5;
 }
+
 .header {
   border-bottom: 1px solid #d5d5d5;
 }
+
 .logo {
   margin-top: 39px;
   float: left;
 }
+
 .menu {
   float: right;
 }
+
 .menu li {
   float: left;
   height: 98px;
 }
-.menu li.active,
-.menu li:hover {
+
+.menu li.active, .menu li:hover {
   background: #e0e0e0;
 }
+
 .menu a {
   color: #666666;
   display: block;
@@ -533,6 +586,7 @@ button[disabled] {
   line-height: 118px;
   padding: 0 23px;
 }
+
 .header-go {
   height: 37px;
   color: #fff;
@@ -547,41 +601,50 @@ button[disabled] {
   cursor: pointer;
   display: block;
 }
+
 .banner-item {
   height: 274px;
   width: 100%;
 }
+
 .cycle-pager span.cycle-pager-active {
   background: #0086b2;
 }
+
 .part1 {
   background: url("../images/popularize/part1.jpg") no-repeat center;
   height: 665px;
 }
+
 .part2 {
   background: url("../images/popularize/part2.jpg") no-repeat center;
   height: 671px;
 }
+
 .part3 {
   background: url("../images/popularize/part3.jpg") no-repeat center;
   height: 673px;
 }
+
 .part4 {
   background: #f8f8f8;
   height: 868px;
 }
+
 .part-text1 {
   color: #666666;
   font-size: 60px;
   padding-top: 238px;
   padding-left: 34px;
 }
+
 .part-text2 {
   font-size: 30px;
   color: #17adea;
   padding-top: 19px;
   padding-left: 35px;
 }
+
 .part-text3 {
   font-size: 16px;
   color: #999999;
@@ -590,25 +653,30 @@ button[disabled] {
   width: 420px;
   line-height: 24px;
 }
+
 .part2-text1 {
   padding-top: 234px;
   padding-left: 634px;
 }
+
 .part2-text2 {
   padding-left: 639px;
   padding-top: 10px;
 }
+
 .part2-text3 {
   padding-top: 30px;
   padding-left: 545px;
   width: 320px;
 }
+
 .part-title {
   font-size: 36px;
   color: #666666;
   text-align: center;
   margin-bottom: 46px;
 }
+
 .version-item {
   font-size: 14px;
   width: 252px;
@@ -621,29 +689,36 @@ button[disabled] {
   float: left;
   margin-right: 20px;
 }
+
 .version-item2 {
   background: #cc9933;
 }
+
 .version-item3 {
   background: #84bb44;
   margin-right: 0;
 }
+
 .version-item-title {
   font-size: 24px;
   margin-top: 30px;
 }
+
 .version-item-text {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
 .version-item-img {
   margin-bottom: 30px;
 }
+
 .version-list li {
   position: relative;
   padding-left: 28px;
   margin-bottom: 18px;
 }
+
 .version-list li i {
   position: absolute;
   left: 0;
@@ -652,6 +727,7 @@ button[disabled] {
   width: 18px;
   height: 19px;
 }
+
 .version-item-btn {
   color: #fff;
   background: #efc70f;
@@ -662,55 +738,66 @@ button[disabled] {
   font-size: 24px;
   margin-top: 48px;
 }
+
 .part-bg {
   background: url("../images/popularize/bg.jpg") no-repeat center;
   height: 69px;
 }
+
 .part5 {
   background: #f8f8f8;
   padding-bottom: 58px;
 }
+
 .part5-title {
   font-size: 36px;
   color: #666666;
   text-align: center;
   padding-bottom: 86px;
 }
+
 .part5-product {
   height: 287px;
   width: 820px;
   margin: 0 auto;
   position: relative;
 }
+
 .prod-item {
   width: 316px;
   height: 224px;
   margin-right: 19px;
   position: absolute;
 }
+
 .prod-item img {
   width: 100%;
 }
-.prod-left,
-.prod-right {
+
+.prod-left, .prod-right {
   width: 233px;
   height: 165px;
 }
+
 .prod-center {
   left: 250px;
   top: 40px;
 }
+
 .prod-left {
   left: 0;
   top: 70px;
 }
+
 .prod-right {
   left: 587px;
   top: 70px;
 }
+
 .prod-page {
   text-align: center;
 }
+
 .prod-page span {
   width: 17px;
   height: 17px;
@@ -720,56 +807,68 @@ button[disabled] {
   margin-right: 7px;
   cursor: pointer;
 }
+
 .prod-page span.active {
   background: #17adea;
 }
+
 .part6 {
   background: #f8f8f8;
   padding-bottom: 58px;
 }
+
 .part6-title {
   font-size: 24px;
   color: #666666;
   text-align: center;
   padding-bottom: 10px;
 }
+
 .part6-text {
   font-size: 36px;
   color: #666666;
   text-align: center;
 }
+
 .part-form {
   height: 500px;
 }
+
 .part7 {
   background: #f8f8f8;
   padding-bottom: 55px;
 }
+
 .part7-title {
   font-size: 48px;
   text-align: center;
   padding-bottom: 35px;
 }
+
 .part7-img {
   background: url("../images/popularize/part7.jpg") no-repeat;
   height: 352px;
   margin-bottom: 40px;
 }
+
 .part7-text1 {
   font-size: 24px;
   margin-bottom: 30px;
 }
+
 .part7-text2 {
   font-size: 14px;
   color: #999999;
   margin-bottom: 25px;
   line-height: 24px;
 }
+
 .footer {
   background: #17adea;
   padding-top: 40px;
   padding-bottom: 116px;
 }
+
 .footer-code {
   background: url("../images/popularize/code.png");
   width: 110px;
@@ -777,6 +876,7 @@ button[disabled] {
   float: left;
   margin-left: 20px;
 }
+
 .footer-text {
   float: left;
   color: #fff;
@@ -785,6 +885,7 @@ button[disabled] {
   line-height: 31px;
   margin-top: -7px;
 }
+
 .footer-about {
   float: right;
   color: #fff;
@@ -794,6 +895,7 @@ button[disabled] {
   text-align: center;
   margin-right: 200px;
 }
+
 .fixed {
   background: url("../images/popularize/fix.png");
   width: 119px;
@@ -803,6 +905,7 @@ button[disabled] {
   top: 40%;
   margin-left: -720px;
 }
+
 .fixed-item {
   height: 48px;
   line-height: 48px;
@@ -812,14 +915,17 @@ button[disabled] {
   cursor: pointer;
   display: block;
 }
+
 .fixed-item.active {
   color: #fff;
   line-height: 44px;
 }
+
 .part-form-title {
   border-bottom: 3px solid #17adea;
   margin-bottom: 37px;
 }
+
 .part-form-text {
   color: #ffffff;
   font-size: 16px;
@@ -829,10 +935,12 @@ button[disabled] {
   background: #17adea;
   text-align: center;
 }
+
 .form-group {
   float: left;
   width: 466px;
 }
+
 .form-group label {
   color: #333333;
   width: 80px;
@@ -841,6 +949,7 @@ button[disabled] {
   margin-right: 8px;
   margin-top: 5px;
 }
+
 .form-group input {
   border: 1px solid #cccccc;
   height: 12px;
@@ -848,15 +957,18 @@ button[disabled] {
   width: 186px;
   float: left;
 }
+
 .form-group textarea {
   width: 800px;
   border: 1px solid #cccccc;
   float: left;
   resize: none;
 }
+
 .form-group .code-text {
   width: 102px;
 }
+
 .form-group .code-btn {
   background: #c6c6c6;
   color: #666666;
@@ -869,12 +981,15 @@ button[disabled] {
   cursor: pointer;
   margin-left: 13px;
 }
+
 .form-group-row {
   margin-bottom: 17px;
 }
+
 .form-group-big {
   width: 900px;
 }
+
 .form-btn {
   color: #ffffff;
   font-size: 16px;
@@ -886,6 +1001,7 @@ button[disabled] {
   margin: 0 auto;
   cursor: pointer;
 }
+
 .form-btn:hover {
   background: #46beee;
 }

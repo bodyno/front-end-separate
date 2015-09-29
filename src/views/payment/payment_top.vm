@@ -13,17 +13,39 @@
             <div class="r">
                 <div class="box-1"><span class="title" data-i18n="center:top.1"></span><span class="safe-level">$disSidCust.securityState</span></div>
                 <div class="box-2">
+                    #if($disSidCust.isBindName)
+                    <div data-i18n="[data-title]center:top.2;[data-content]center:top.3;[title]center:top.4" class="#if($disSidCust.isBindName)logo-trueinfo-on #else logo-trueinfo#end" id="as-trueinfo" data-showtips="true" data-offset="10|0" href="/member/safe#name" target="_self"></div>
+                    #else
                     <a data-i18n="[data-title]center:top.2;[data-content]center:top.3;[title]center:top.4" class="#if($disSidCust.isBindName)logo-trueinfo-on #else logo-trueinfo#end" id="as-trueinfo" data-showtips="true" data-offset="10|0" href="/member/safe#name" target="_self"></a>
+                    #end
+
+
+                    #if($disSidCust.isBindBank)
+                    <div data-i18n="[data-title]center:top.5;[data-content]center:top.6;[title]center:top.7;[data-dialog]center:top.77" class="#if($disSidCust.isBindBank)logo-bindcard-on #else logo-bindcard#end" data-showtips="true" data-offset="10|0" href="/payment/withdraw"></div>
+                    #else
                     <a data-i18n="[data-title]center:top.5;[data-content]center:top.6;[title]center:top.7;[data-dialog]center:top.77" class="#if($disSidCust.isBindBank)logo-bindcard-on #else logo-bindcard#end" id="as-bindcard" data-showtips="true" data-offset="10|0" href="/payment/withdraw"></a>
+                    #end
+
+
+                    #if($disSidCust.isBindPhone)
+                    <div data-i18n="[data-title]center:top.8;[data-content]center:top.9;[title]center:top.10;[data-dialog]center:top.101" class="#if($disSidCust.isBindPhone)logo-bindphone-on #else logo-bindphone#end" id="as-bindphone" data-showtips="true" data-offset="10|0" href="#t-phone"></div>
+                    #else
                     <a data-i18n="[data-title]center:top.8;[data-content]center:top.9;[title]center:top.10;[data-dialog]center:top.101" class="#if($disSidCust.isBindPhone)logo-bindphone-on #else logo-bindphone#end" id="as-bindphone" data-showtips="true" data-offset="10|0" href="#t-phone"></a>
+                    #end
+
+
+                    #if($disSidCust.isBindEmail)
+                    <div data-i18n="[data-title]center:top.11;[data-content]center:top.12;[title]center:top.13;[data-dialog]center:top.14" class="#if($disSidCust.isBindEmail)logo-bindemail-on #else logo-bindemail#end mail-show" id="as-bindemail" data-showtips="true" data-offset="10|0" href="#t-mail"></div>
+                    #else
                     <a data-i18n="[data-title]center:top.11;[data-content]center:top.12;[title]center:top.13;[data-dialog]center:top.14" class="#if($disSidCust.isBindEmail)logo-bindemail-on #else logo-bindemail#end mail-show" id="as-bindemail" data-showtips="true" data-offset="10|0" href="#t-mail"></a>
+                    #end
                 </div>
             </div>
         </div>
         <div class="line-2 fleft"></div>
         <div class="wallet fleft">
             <div class="clearfix">
-                <span class="balance" id="balance">$disSidCust.curAccount</span>
+                <span class="balance" id="balance">$disSidCust.accountStr</span>
                 <span class="btn-refresh-2" data-type="curAccount" data-ele="#balance" data-i18n="[title]center:btn.1"></span>
             </div>
             <div>

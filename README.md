@@ -12,7 +12,7 @@ express为路由提供服务
 
 项目启动时，修改任何服务器代码，可以实现自动重启--基于nodemon
 
-支持less，sass精灵小图片
+支持sass(已从less迁移到sass)，sass精灵小图片
 
 基于grunt md5 打包合并
 
@@ -22,9 +22,35 @@ express为路由提供服务
 
 然后启动命令行
 
-再输入 npm i 等待包安装完毕
+再输入
 
-最后 grunt 启动服务器，浏览器输入localhost:3000,你就可以看到漂亮的页面了
+```bash
+npm install
+```
+
+等待包安装完毕
+
+然后
+
+```bash
+bower-installer
+```
+
+([bower-installer介绍](https://github.com/blittle/bower-installer))安装需要的js插件
+
+再
+
+```bash
+grunt copy:vendor
+```
+
+最后
+
+```bash
+grunt
+``` 
+
+启动服务器，浏览器输入localhost,你就可以看到漂亮的页面了
 
 打包命令 grunt build  会生成dist文件夹，里面可以看到js、css都加了md5缀
 

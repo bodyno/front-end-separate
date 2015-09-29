@@ -9,6 +9,7 @@
   left: -180px;
   top: 37px;
 }
+
 .language-list b {
   width: 0;
   height: 0;
@@ -19,15 +20,18 @@
   left: 209px;
   top: -10px;
 }
+
 .language-list .language-list-col {
   float: left;
   width: 131px;
   border-right: 1px solid #00ce98;
   padding: 0 6px;
 }
+
 .language-list .language-col-last {
   border-right: none;
 }
+
 .language-list .language-item {
   text-align: center;
   color: #999999;
@@ -36,6 +40,7 @@
   cursor: pointer;
   font-size: 14px;
 }
+
 .language-list .language-item:hover {
   background: #009b72;
   color: #fff;

@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 
         copy: require('./config/grunt/copy'),
 
-        less: require('./config/grunt/less'),
+        sass: require('./config/grunt/sass'),
 
         postcss: require('./config/grunt/postcss'),
 
@@ -36,7 +36,15 @@ module.exports = function (grunt) {
 
         filerev: require('./config/grunt/filerev'),
 
-        nodemon: require('./config/grunt/nodemon')
+        nodemon: require('./config/grunt/nodemon')(),
+
+        coffee: require('./config/grunt/coffee'),
+
+        concurrent: require('./config/grunt/concurrent'),
+
+        compress: require('./config/grunt/compress'),
+
+        htmlclean: require('./config/grunt/htmlclean')
 
     };
 
@@ -46,14 +54,9 @@ module.exports = function (grunt) {
     // 注册代码编译任务
     grunt.registerTask('build', [
         'clean:dist',
-        'copy:css',
-        'copy:js',
-        'copy:plugin',
-        'copy:others',
-        'copy:local',
-        'copy:image',
+        'concurrent:copy',
         'useminPrepare',
-        'less',
+        'sass:build',
         'postcss',
         'concat',
         'uglify',
@@ -61,8 +64,9 @@ module.exports = function (grunt) {
         'filerev',
         'copy:vm',
         'usemin',
-        'clean:tmp',
-        'clean:svn'
+        'htmlclean',
+        'concurrent:clean',
+        'compress'
     ]);
 
     // 注册Grunt默认任务

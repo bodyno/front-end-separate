@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>禁止访问</title>
+    <link rel="stylesheet" href="/static/css/core.css"/>
+    <style>
+        body{
+            background: url("/static/images/error_bg.jpg");
+        }
+        .error-text a{
+            color:#009b73;
+        }
+        .error-img{
+            display: block;
+            margin: 0 auto;
+            float: left;
+            margin-right: 15px;
+            margin-left: 10px;
+        }
+        .logo{
+            display: block;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+        .forbidden-title1{
+            color:#000000;
+            font-size: 48px;
+        }
+        .forbidden-title2{
+            color:#000000;
+            font-size: 36px;
+        }
+        .forbidden-title3{
+            font-size: 14px;
+            color:#333333;
+        }
+        .green{
+            color:#009b72;
+        }
+        .forbidden-left{
+            float: left;
+        }
+        .forbidden-con{
+            padding-left: 230px;
+        }
+        .forbidden-text1{
+            font-size: 14px;
+            color:#666666;
+            border-top: 1px solid #e4e4e4;
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-left: 20px;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="/static/images/logo.png" class="logo">
+        </div>
+        <div class="forbidden-con">
+            <div class="clearfix">
+                <img src="/static/images/forbidden.png" class="error-img">
+                <div class="forbidden-left">
+                    <div class="forbidden-title1">访问限制。</div>
+                    <div class="forbidden-title2">FORBIDDEN!</div>
+                    <div class="forbidden-title3">您的IP来自：<span class="green">112.199.115.20</span>(菲律宾)</div>
+                </div>
+            </div>
+            <div class="forbidden-text1">
+
+                您所在的地区被禁止访问我们的网站。给您造成的不便，敬请谅解。<br><br>
+
+                有任何疑问？请通过在线客服，联系全年无休的在线客服支持团队，或发送邮件<br>
+                至<span class="green">cs#ig88.com</span>(请将#号替换成@)<br>
+                我们将竭诚为您服务。<br><br>
+
+                谢谢
+            </div>
+            <div class="forbidden-text1">
+                We are not serving your location. Apologise for any inconvenience that this may have caused.<br><br>
+
+                Need assistance? Feel free to contact our Customer Service Support 24/7 via <span class="green">Live Chat</span> or drop us an email to <span class="green">cs@ig88.com</span> which we would be delighted to assist you accordingly.<br><br>
+
+                Thank you.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -13,9 +13,9 @@
     <link rel="shortcut icon" href="/static/images/favicon.ico"/>
     <link rel="bookmark" href="/static/images/favicon.ico"/>
     #lng_css()
-    <!-- build:js(.tmp) /static/js/concat/instant.js -->
+    <!-- build:js(.tmp) /static/js/instant.js -->
     <script src="/static/plugin/jquery/jquery.js"></script>
     <script src="/static/plugin/i18next/i18next.js"></script>
-    <script src="/static/plugin/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/static/plugin/jquery-cookie/jquery.cookie.js"></script>
     <script src="/static/js/translate.js"></script>
     <!-- endbuild -->

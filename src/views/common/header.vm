@@ -14,7 +14,7 @@
                 <a href="/pintai" class="header-btn header-btn1" data-i18n="base:header.go"></a>
                 <a href="#" class="header-btn header-btn2" data-i18n="base:header.down"></a>
                 <div class="language">
-                    <a href="#"><span class="language-now">$lng_text</span><b></b></a>
+                    <em><span class="language-now">$lng_text</span><b></b></em>
                     <div class="language-list">
                         <b></b>
                         <div class="language-list-col">
@@ -37,19 +37,19 @@
             <div class="header-top-right">
                 <ul class="clearfix">
                     #if($username)
-                    <li class="avatars_con"><a href="/member/message"><img class="avatars" src="/static/images/avatars_s.png" width="29" height="29">$username</a></li>
+                    <li class="avatars_con"><a href="/member/message"><img class="avatars" src="/static/images/avatars_s.png" width="29" height="29"><span id="user_status">$username</span></a></li>
                     <li><a href="/member/safe" data-i18n="base:header.safe"></a></li>
                     <li><a href="/payment/deposit" data-i18n="base:header.deposit"></a></li>
                     <li><a href="/member/history" data-i18n="base:header.history"></a></li>
                     <li><a href="/signout" data-i18n="base:header.signout"></a></li>
                     #else
                     <li class="header-login-con">
-                        <form class="header-form">
-                            <input type="text" name="custCode" class="header-text" data-i18n="[placeholder]base:login.name1">
-                            <input type="password" name="passwd" class="header-text" data-i18n="[placeholder]base:login.name2">
+                        <form class="header-form" id="loginform">
+                            <input type="text" id="username" name="username" class="header-text" data-i18n="[placeholder]base:login.name1">
+                            <input type="password" id="password" name="password" class="header-text" data-i18n="[placeholder]base:login.name2">
                             <input type="text" name="validateCode" class="header-text s" data-i18n="[placeholder]base:login.name3">
                             <img class="header-code" src="/validateCode" width="60" height="21">
-                            <button type="button" class="header-login" data-i18n="base:header.login"></button>
+                            <button type="submit" class="header-login" data-i18n="base:header.login"></button>
                         </form>
                     </li>
                     <li><a href="/register" data-i18n="base:header.reg"></a></li>
@@ -168,3 +168,6 @@
         </div>
 
     </div>
+    #if($loginMsg)
+    <input type="hidden" id="user-multiple" value="$loginMsg">
+    #end

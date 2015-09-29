@@ -1,0 +1,47 @@
+@import "sprite_account";
+.account-group{
+  .error{
+    position: absolute;
+    display: block;
+    text-align: left;
+    left: 460px;
+    top: 0px;
+    color:#333;
+    font-size: 12px;
+    @include sprite($error_arrow);
+    height: 32px;
+    line-height: 32px;
+    width: 137px;
+    padding-left: 22px;
+    &.success{
+      display: none !important;
+    }
+  }
+}
+.account-group.red b, .account-group.red b {
+  @include sprite($form_error);
+  position: absolute;
+  left: 441px;
+  top: 12px;
+}
+.account-group.ok b {
+  @include sprite($form_ok);
+  position: absolute;
+  left: 441px;
+  top: 12px;
+}
+.account-group.red input,.account-group.red select {
+  border: 1px solid #ff9999;
+}
+.account-group.ok input, .account-group.ok input, .account-group.ok select, .account-group.ok select {
+  border: 1px solid #66cc99;
+}
+.account-group.red b, .account-group.red b {
+  @include sprite($form_error);
+  position: absolute;
+  left: 441px;
+  top: 12px;
+}
+.account-group.account-group-select.ok b,.account-group.account-group-select.red b {
+  left: 431px;
+}

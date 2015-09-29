@@ -52,7 +52,6 @@
 
     #parse('/common/footer.vm')
     #parse('/common/script.vm')
-    <script src="/static/plugin/jquery.hoverintent/hoverintent.js"></script>
     <script src="/static/js/lottery.js"></script>
 </body>
 </html>

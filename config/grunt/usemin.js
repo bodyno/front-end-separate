@@ -1,5 +1,6 @@
 module.exports = function () {
     var cdnRoot = require('../app').cdnDomain[process.env.DEPLOY_TYPE] || '';
+    //var cdnRoot="http://nobody.com"
     return {
         // look under this files
         css: '<%=yo.dist%>/static/**/*.css',

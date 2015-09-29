@@ -1,16 +1,17 @@
-{
+﻿{
   "msg":{
     "sid-error_SID_ERROR_00":"出现异常,操作失败!",
     "sid-error_SID_ERROR_01":"验证码不存在!",
     "sid-error_SID_ERROR_02":"验证码输入错误!",
     "sid-error_SID_ERROR_03":"数据查询失败!不存在该用户!",
-    "sid-error_SID_ERROR_04":"输入密码错误!请重新输入!",
+    "sid-error_SID_ERROR_04":"输入旧密码错误!请重新输入!",
     "sid-success_SID_SUC_00":"登录成功!",
     "sid-success_SID_SUC_02":"该用户己经存在!",
     "sid-error_SID_ERROR_00":"出现异常,操作失败!",
     "sid-error_SID_ERROR_06":"新密码输入不能为空",
     "sid-error_SID_ERROR_07":"旧密码输入不能为空!",
-    "curAccount_game_extract_funds_fail":"中心钱包余额不足"
+    "curAccount_game_extract_funds_fail":"中心钱包余额不足",
+    "sid-error_SID_ERROR_13":"该用户己锁住,请联系管理员"
   },
   "select":"请选择...",
   "header":{
@@ -90,6 +91,8 @@
   "edit_ok":"修改成功",
   "required":"必填项",
   "no_lang":"暂未开放",
+  "login_text":"请先登录",
+  "test":"1",
   "valid":{
     "1":"请输入会员帐号",
     "2":"请输入密码",
@@ -102,7 +105,7 @@
     "9":"请输入正确的QQ",
     "10":"请输入正确的手机号",
     "11":"请输入正确的证件",
-    "12":"确认密码新密码不同",
+    "12":"新旧密码不能相同",
     "13":"处理中..."
   }
 }

@@ -26,7 +26,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="t">UEDBet不会泄漏任何用户信息，以及发送骚扰电话和短信。</p>
+                        <p class="t">IGame不会泄漏任何用户信息，以及发送骚扰电话和短信。</p>
                         <div class="field"><input type="button" id="phone-btn-1" class="btn-blue" value="下一步"></div>
                     </form>
                 </div>
@@ -165,9 +165,11 @@
     </div>
 </script>
 
+<!--[if lt IE 9]><script src="/static/plugin/excanvas/excanvas.js"></script><![endif]-->
+<!-- build:js(.tmp) /static/js/member.js -->
 <script src="/static/plugin/jquery.knob/jquery.knob.js"></script>
-<!--[if lt IE 9]><script src="/static/js/excanvas.compiled.js"></script><![endif]-->
 <script src="/static/plugin/doT/doT.js"></script>
-<script src="/static/plugin/countdown/jquery.countdown.js"></script>
+<script src="/static/plugin/jquery.countdown/jquery.countdown.js"></script>
 <script src="/static/js/account.js"></script>
+<!-- endbuild -->
 #parse('/common/script.vm')

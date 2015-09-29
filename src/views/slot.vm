@@ -5,105 +5,195 @@
     <script>var translate_page='index';</script>
     #parse('/common/top.vm')
     #set($header='slot')
-    <link rel="stylesheet" href="/static/css/slot.css"/>
+    <link rel="stylesheet" href="/static/css/slot_main.css"/>
 </head>
 <body>
     #parse('/common/old.vm')
     #parse('/common/header.vm')
 
+    <div class="cycle-slideshow" style="height: 368px;"
+         data-cycle-slides=".banner-item"
+         data-cycle-fx="scrollHorz"
+         data-cycle-timeout="10000"
+         data-cycle-pager=">.cycle-pager"
+         data-cycle-pager-template="<span></span>"
+            >
+        <div class="banner-item" style='background: url("/static/images/slot/slot_b1.jpg") no-repeat center;'></div>
+        <div class="banner-item" style='background: url("/static/images/slot/slot_b3.jpg") no-repeat center;'></div>
+        <div class="banner-item" style='background: url("/static/images/slot/slot_b2.jpg") no-repeat center;'></div>
+        <div class="banner-item" style='background: url("/static/images/slot/slot_b4.jpg") no-repeat center;'></div>
+        <div class="cycle-pager"></div>
+    </div>
     <div class="slot">
-        <div class="container">
-            <div class="cycle-slideshow"
-                 data-cycle-slides=".banner-item"
-                 data-cycle-fx="scrollHorz"
-                 data-cycle-timeout="10000"
-                 data-cycle-pager=">.cycle-pager"
-                 data-cycle-pager-template="<span></span>"
-                    >
-                <div class="banner-item" style='background: url("/static/images/slot_banner1.jpg") no-repeat center;'></div>
-                <div class="banner-item" style='background: url("/static/images/slot_banner2.jpg") no-repeat center;'></div>
-                <div class="banner-item" style='background: url("/static/images/slot_banner3.jpg") no-repeat center;'></div>
-                <div class="cycle-pager"></div>
+        <div class="slot-num">
+            <div class="slot-container">
+                <div class="slot-num-text">总奖池已达 - 大奖等你来!</div>
+                <div class="slot-num-title" id="total-ticker">
+                    UPDATING
+                </div>
             </div>
-            <div class="slot-main-con">
-                <div class="slot-con">
-                    <div class="slot-top clearfix">
-                        <ul class="slot-menu clearfix">
-                            <li class="active"><a href="#" data-i18n="slot.1"></a><b></b></li>
-                            <li><a href="#" data-i18n="slot.2"></a><b></b></li>
-                            <li><a href="#" data-i18n="slot.3"></a><b></b></li>
-                            <li><a href="#" data-i18n="slot.4"></a><b></b></li>
-                            <li><a href="#" data-i18n="slot.5"></a><b></b></li>
-                            <li><a href="#" data-i18n="slot.6"></a><b></b></li>
-                        </ul>
-                        <div class="slot-search">
-                            <input type="text" data-i18n="[placeholder]slot.7">
-                            <i></i>
+        </div>
+        <div class="slot-container">
+            <div class="clearfix">
+                <div class="slot-item">
+                    <a href="/slot_pt"><img src="/static/images/slot/slot_img1.jpg"></a>
+                    <div class="slot-item-text">
+                        <div class="slot-item-text1">PT平台</div>
+                        <div class="slot-item-down">下载客户端</div>
+                    </div>
+                    <a href="/slot_pt" class="slot-item-btn">马上进入</a>
+                    <div class="slot-item-more">
+                        立即享受所有您最爱的游戏！
+                    </div>
+                </div>
+                <div class="slot-item">
+                    <a href="/slot_gpi"><img src="/static/images/slot/slot_img2.jpg"></a>
+                    <div class="slot-item-text">
+                        <div class="slot-item-text1">GPI平台</div>
+                    </div>
+                    <a href="/slot_gpi" class="slot-item-btn">马上进入</a>
+                    <div class="slot-item-more">
+                        全新3D技术，流畅的画面，将让您身临其中。
+                    </div>
+                </div>
+                <div class="slot-item" style="margin-right:0;">
+                    <img src="/static/images/slot/slot_img3.jpg">
+                    <div class="slot-item-text">
+                        <div class="slot-item-text1">BETSOFT</div>
+                    </div>
+                    <button type="button" class="slot-item-btn" disabled>敬请期待</button>
+                </div>
+            </div>
+        </div>
+        <div class="slot-container">
+            <div class="slot-game clearfix">
+                <a href="#"><img src="/static/images/slot/slot_game1.png"></a>
+                <a href="#"><img src="/static/images/slot/slot_game2.png"></a>
+                <a href="#" style="top:9px;"><img src="/static/images/slot/slot_game3.png"></a>
+                <a href="#" style="top:3px;"><img src="/static/images/slot/slot_game4.png"></a>
+                <a href="#" style="top:11px;"><img src="/static/images/slot/slot_game5.png"></a>
+                <a href="#" style="top:-9px;margin-right:0;"><img src="/static/images/slot/slot_game6.png"></a>
+            </div>
+            <div class="slot-page slot-left"></div>
+            <div class="slot-page slot-right"></div>
+        </div>
+        <div class="slot-join">
+            立即加入 <span>人气冠军游戏赢取您的</span>累积大奖池！
+        </div>
+        <div class="slot-container" style="margin-top: 40px;padding-bottom: 70px;">
+            <div class="clearfix">
+                <div class="slot-sec">
+                    <div class="slot-title">
+                        <div class="slot-title-main">幸运玩家</div>
+                    </div>
+                    <div class="slot-ward">
+                        <div class="slot-ward-text">
+                            恭喜黑龙江会员2014/07/22<br>
+                            16****@qq.com<br>
+                            使用2元投注额击中神奇四侠累积奖池赢得
+                        </div>
+                        <div class="slot-nice">
+                            CNY229378.72
+                        </div>
+                        <div class="slot-com">
+                            立即加入赢取您的累积大奖池！
                         </div>
                     </div>
-                    <div class="slot-list-con clearfix">
-                        <div class="slot-list">
-                            <div class="slot-list-big clearfix">
-                                #foreach($item in $game)
-                                <div class="slot-item">
-                                    <a href="#" class="slot-item-main">
-                                        <img src="/static/images/slot_tmp.jpg">
-                                        <div class="slot-item-btn">
-                                            <a class="slot-item-btn-begin" href="#" data-i18n="slot.8"></a>
-                                            <a class="slot-item-btn-try" href="#" data-i18n="slot.9"></a>
-                                        </div>
-                                    </a>
-                                    <div class="slot-item-name">玛雅幸运轮</div>
-                                </div>
-                                #end
-                            </div>
-                            <div class="slot-page">
-                                <span class="active"></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="slot-right">
-                            <div class="slot-pot">
-                                <div class="slot-pot-title">JACKPOT</div>
-                                <div class="slot-pot-money">888,999,8888.<em>00</em> <span>$</span></div>
-                            </div>
-                            <div class="slot-top-list">
-                                <div class="slot-top-title">TOP 6 GAMES</div>
-                                #foreach($item in $top)
-                                <div class="slot-top-item clearfix">
-                                    <a href="#" class="slot-top-item-img">
-                                        <img src="/static/images/slot_top_img.jpg" width="130" height="70">
-                                        <span>$item</span>
-                                    </a>
-                                    <div class="slot-top-item-detail">
-                                        <div class="slot-top-item-name clearfix">
-                                            <span>游戏名。。。</span>
-                                            <b>老虎机</b>
-                                        </div>
-                                        <div class="slot-top-item-begin">
-                                            <a href="#" class="begin" data-i18n="slot.10"></a>
-                                            <span>|</span>
-                                            <a href="#" class="try" data-i18n="slot.11"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                #end
-                            </div>
-                        </div>
+                </div>
+                <div class="slot-sec" style="width: 435px;margin-left: 10px;">
+                    <div class="slot-title">
+                        <div class="slot-title-main">人气周排名</div>
+                    </div>
+                    <div class="slot-list">
+                        <table>
+                            <tr>
+                                <th>玩家账号</th>
+                                <th>地区</th>
+                                <th>时间</th>
+                                <th>中奖金额</th>
+                                <th>获奖游戏</th>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                            <tr>
+                                <td>B8ni******03</td>
+                                <td>新乡</td>
+                                <td>03-19 21:30</td>
+                                <td>6098</td>
+                                <td>埃莱克特拉</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="slot-fix slot-fix1"></div>
-    <div class="slot-fix slot-fix2"></div>
 
 
     #parse('/common/footer.vm')
     #parse('/common/script.vm')
-    <script src="http://cache.download.banner.powerplay88.com/integrationjs.php"></script>
-    <script src="/static/js/slot.js"></script>
+    <script src="/static/js/game/jackpot.js"></script>
 
 </body>
 </html>

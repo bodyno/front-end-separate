@@ -15,7 +15,7 @@
             #parse('/payment/payment_top.vm')
             <div id="deposit">
                 <div class="progress">
-                    <div class="step-1">
+                    <div class="step-1" id="step">
                         <span class="txt-1" data-i18n="page.1"></span>
                         <span class="txt-2" data-i18n="page.2"></span>
                         <span class="txt-3" data-i18n="page.3"></span>
@@ -462,7 +462,7 @@
                     <ul>
                         <li>
                             <span class="c btn-copy" data-clipboard-text="{{= it.orderNo }}" data-i18n="company_tmpl.copy;[title]company_tmpl.copy2"></span>
-                            <span class="t" style="margin-right:0;color:#36ad7f;font-weight:bold;" data-i18n="company_tmpl.5"></span>
+                            <span class="t" style="color:#36ad7f;font-weight:bold;" data-i18n="company_tmpl.5"></span>
                             <span class="v" style="color:#36ad7f;font-weight:bold;">{{= it.orderNo }}</span>
                         </li>
                         <li>
@@ -589,9 +589,7 @@
     </script>
 
     #parse('/common/page_footer.vm')
-    <script src="/static/plugin/zeroClipboard/jquery.zclip.min.js"></script>
-    <script src="/static/plugin/doT/doT.js"></script>
-    <script src="/static/plugin/countdown/jquery.countdown.js"></script>
+    <script src="/static/plugin/zeroclipboard/ZeroClipboard.js"></script>
     <script src="/static/js/deposit.js"></script>
 </body>
 </html>

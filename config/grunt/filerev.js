@@ -1,12 +1,17 @@
 module.exports = {
     options: {
+        encoding: 'utf8',
         algorithm: 'md5',
-        length: 8
+        length: 20,
+        process:function(basename, name, extension){
+            return name+"."+extension;
+        }
     },
     dist: {
         src: [
-            '<%=yo.dist%>/static/**/*.{js,css,png,jpg,jpeg,gif,ttf,eot,otf,svg,woff,woff2}',
-            '!<%=yo.dist%>/static/local/**/*'
+            '<%=yo.dist%>/static/**/*.{js,css,png,jpg,jpeg,gif,ttf,eot,otf,svg,woff,woff2,ico}',
+            '!<%=yo.dist%>/static/local/**/*',
+            '!<%=yo.dist%>/static/images/game/**'
         ]
     }
 };

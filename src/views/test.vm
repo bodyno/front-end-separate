@@ -1,0 +1,14 @@
+<script>
+    var list=[];
+    jQuery("#man-wei li").each(function(){
+        var text=jQuery(this).find(".play").attr("href");
+        var temp={
+            "name":jQuery(this).find("span").text(),
+            "id":text.substring(text.indexOf("'")+1,text.indexOf(",")-1),
+            "try":jQuery(this).find(".demo").length?true:false,
+            "img":jQuery(this).find("img").attr("src").replace('http://dwupyun.b0.upaiyun.com/to88/images/','')
+        }
+        list.push(temp);
+    })
+    console.log(JSON.stringify(list))
+</script>

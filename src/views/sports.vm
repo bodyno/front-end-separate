@@ -10,6 +10,8 @@
 <body class="lottery">
     #parse('/common/old.vm')
     #parse('/common/header.vm')
+
+    <input type="hidden" id="token" value="$token">
     <div class="sports">
         <iframe id="iframe" frameborder="0" scrolling="auto" width="100%" height="765"></iframe>
     </div>

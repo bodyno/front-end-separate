@@ -6,3 +6,4 @@
         </div>
     </div>
     <![endif]-->
+<input type="hidden" id="tran-status" data-i18n="[data-id]base:test">

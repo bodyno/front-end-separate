@@ -453,12 +453,4 @@ module.exports = function (app) {
         });
     });
 
-    //提款
-    app.post('/cashier/withdraw', function (req, res) {
-        res.json({
-            "code":"200",
-            "msg":"sid-success:SID_SUC_04"
-        });
-    });
-
 };
