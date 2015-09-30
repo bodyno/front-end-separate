@@ -5,12 +5,15 @@ afterTran2 = function() {
   switchTab = function() {
     var tempEle;
     tempEle = $(".slot-game-one.active");
-    $("#slot-height").css("height", tempEle.data("height"));
     $(".slot-game-one.active img").lazyload();
     if (tempEle.data("load") !== "1") {
       tempEle.data("load", "1");
-      return getJackpot(tempEle.data("id"));
+      if (window.getJackpot) {
+        getJackpot(tempEle.data("id"));
+      }
     }
+    console.log(tempEle.find(".slot-game-main-con").height());
+    return $("#slot-height").height(tempEle.find(".slot-game-main-con").height() + 35);
   };
   moveJackpot = function() {
     return $("#jackpot_loader1 .container").children().each(function() {

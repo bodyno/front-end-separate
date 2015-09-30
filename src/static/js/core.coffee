@@ -206,7 +206,7 @@ afterTranCore = ->
     $.fn.btn = old
     this
 
-  dialog =
+  window.dialog =
     openned: false
 
 ##region close
@@ -297,7 +297,7 @@ isLogin = ->
   else
     dialog.info $.t("base:login_text")
     false
-dialog = undefined
+
 showPopUp = (html, title, width, height, closefn) ->
   $("#popup").remove()
   $div = window.top.$("<div id=\"popup\"></div>")

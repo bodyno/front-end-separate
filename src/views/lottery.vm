@@ -13,7 +13,7 @@
     <div class="lottery">
         <div class="cycle-slideshow"
              data-cycle-slides=".lottery-item"
-             data-cycle-fx="scrollHorz"
+             data-cycle-fx="scrollHorz" data-cycle-log="false"
              data-cycle-timeout="10000"
              data-cycle-pager=">.cycle-pager"
              data-cycle-pager-template="<span></span>"

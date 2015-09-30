@@ -14,7 +14,7 @@ afterTran = ->
     tempArr.push "gameid=" + id + ""
     tempUrl = tempUrl + tempArr.join("&")
     openWindow tempUrl, "onlinew88", 1280, 650, "", ""
-  $(document).on "click", ".slot-item-btn-begin", ->
+  $(document).on "click", ".game-begin", ->
     url = gameOpen($(this).data("id"), 0)  if isLogin()
     false
 

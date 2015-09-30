@@ -2,7 +2,7 @@ var afterTran, getJackpot, jackpot_games;
 
 afterTran = function() {
   getJackpot($(".slot-game-one.active").data("id"));
-  $(document).on("click", ".slot-item-btn-begin", function() {
+  $(document).on("click", ".game-begin", function() {
     var tempId, url;
     if (isLogin()) {
       tempId = $(this).data("id");

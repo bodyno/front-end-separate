@@ -1,11 +1,14 @@
 afterTran2 = ->
   switchTab = ->
     tempEle = $(".slot-game-one.active")
-    $("#slot-height").css "height", tempEle.data("height")
     $(".slot-game-one.active img").lazyload()
     unless tempEle.data("load") is "1"
       tempEle.data "load", "1"
-      getJackpot tempEle.data("id")
+      if window.getJackpot
+        getJackpot tempEle.data("id")
+    console.log(tempEle.find(".slot-game-main-con").height())
+    $("#slot-height").height(tempEle.find(".slot-game-main-con").height()+35)
+
   moveJackpot = ->
     $("#jackpot_loader1 .container").children().each ->
       if $(this).is(":last-child")

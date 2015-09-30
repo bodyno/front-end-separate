@@ -9,8 +9,8 @@
   margin: 0 auto;
   position: relative;
   width: 1000px;
-  overflow: hidden;
   background: #e0e0e0;
+  overflow: hidden;
 }
 .banner-item{
   width: 100%;
@@ -65,7 +65,7 @@
   float: left;
   height: 38px;
   line-height: 38px;
-  padding: 0 51px;
+  padding: 0 21px;
   text-align: center;
   cursor: pointer;
   position: relative;
@@ -194,8 +194,8 @@
   opacity: 0;
   transition: all 0.35s ease-in-out;
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   &.active{
     visibility: visible;
     opacity: 1;
@@ -217,10 +217,9 @@
   position: relative;
   float: left;
   display: block;
-  height: 60px;
+  height: 66px;
   width: 182px;
-  margin-top: 93px;
-  padding: 7px 0;
+  margin-top: 87px;
 }
 .jackpot_loader .jackpot_loader_item .jackpot_loader_item_title {
   display: none;
@@ -239,10 +238,10 @@
 .jackpot_loader .jackpot_loader_item .jackpot_loader_item_name {
   font-size: 12px;
   color: #fff;
-  display: table-cell;
+  display: block;
   text-align: center;
   vertical-align: middle;
-  height: 25px;
+  padding-top: 19px;
   width: 174px;
 }
 .jackpot_loader .jackpot_loader_item .jackpot_loader_item_amount {
@@ -275,7 +274,8 @@
   display: block;
   text-align: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: -11px;
+  margin-bottom: 4px;
 }
 .jackpot_loader .jackpot_loader_item.special .jackpot_loader_item_amount {
   color:#ffcc00;

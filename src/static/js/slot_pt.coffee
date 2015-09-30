@@ -4,7 +4,7 @@ afterTran = ->
   getJackpot $(".slot-game-one.active").data("id")
 
   #PT游戏
-  $(document).on "click", ".slot-item-btn-begin", ->
+  $(document).on "click", ".game-begin", ->
     if isLogin()
       tempId = $(this).data("id")
       url = "http://cache.download.banner.turtledragon88.com/casinoclient.html?game=" + tempId + "&language=zh-CN"
