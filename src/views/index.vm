@@ -15,11 +15,11 @@
              data-cycle-prev=".banner-op-left"
              data-cycle-next=".banner-op-right"
              data-cycle-slides=".banner-item"
-             data-cycle-fx="scrollHorz"
+             data-cycle-fx="scrollHorz" data-cycle-log="false"
              data-cycle-timeout="10000"
              data-cycle-pager=">.cycle-pager"
              data-cycle-pager-template="<span></span>"
-                >
+                >V
             <div class="banner-item" style='background: url("/static/images/banner_index.jpg") no-repeat center;'></div>
             <div class="banner-item" style='background: url("/static/images/banner_index2.jpg") no-repeat center;'></div>
             <div class="banner-item" style='background: url("/static/images/banner_index3.jpg") no-repeat center;'></div>

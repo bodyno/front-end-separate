@@ -15,7 +15,7 @@ afterTran = function() {
     tempUrl = tempUrl + tempArr.join("&");
     return openWindow(tempUrl, "onlinew88", 1280, 650, "", "");
   };
-  $(document).on("click", ".slot-item-btn-begin", function() {
+  $(document).on("click", ".game-begin", function() {
     var url;
     if (isLogin()) {
       url = gameOpen($(this).data("id"), 0);

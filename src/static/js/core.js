@@ -1,7 +1,7 @@
-var afterTranCore, dialog, getQueryString, isLogin, openWindow, resultHandle, showError, showPopUp, validBase;
+var afterTranCore, getQueryString, isLogin, openWindow, resultHandle, showError, showPopUp, validBase;
 
 afterTranCore = function() {
-  var Button, Plugin, dialog, hmTime, lngTime, login_pt, old;
+  var Button, Plugin, hmTime, lngTime, login_pt, old;
   login_pt = function() {
     iapiSetCallout("Login", function(result) {
       console.log(result);
@@ -243,7 +243,7 @@ afterTranCore = function() {
     $.fn.btn = old;
     return this;
   };
-  dialog = {
+  window.dialog = {
     openned: false,
     close: function() {
       window.top.$("#dialog").dialog("close").remove();
@@ -361,8 +361,6 @@ isLogin = function() {
     return false;
   }
 };
-
-dialog = void 0;
 
 showPopUp = function(html, title, width, height, closefn) {
   var $div;

@@ -399,32 +399,35 @@ th {
 }
 
 /*
-  SASS variables are information about icon's compiled state, stored under its original file name
+SCSS variables are information about icon's compiled state, stored under its original file name
 
-  .icon-home
-    width: $icon-home-width
+.icon-home {
+  width: $icon-home-width;
+}
 
-  The large array-like variables contain all information about a single icon
-  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
 
-  At the bottom of this section, we provide information about the spritesheet itself
-  $spritesheet: width height image $spritesheet-sprites
-  */
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
 /*
-  The provided mixins are intended to be used with the array-like variables
+The provided mixins are intended to be used with the array-like variables
 
-  .icon-home
-    @include sprite-width($icon-home)
+.icon-home {
+  @include sprite-width($icon-home);
+}
 
-  .icon-email
-    @include sprite($icon-email)
-  */
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
 /*
-  The `sprites` mixin generates identical output to the CSS template
-    but can be overridden inside of SASS
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
 
-  @include sprites($spritesheet-sprites)
-  */
+@include sprites($spritesheet-sprites);
+*/
 ul, ol {
   list-style: none;
   margin: 0;
@@ -557,32 +560,35 @@ button[disabled] {
 }
 
 /*
-  SASS variables are information about icon's compiled state, stored under its original file name
+SCSS variables are information about icon's compiled state, stored under its original file name
 
-  .icon-home
-    width: $icon-home-width
+.icon-home {
+  width: $icon-home-width;
+}
 
-  The large array-like variables contain all information about a single icon
-  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
 
-  At the bottom of this section, we provide information about the spritesheet itself
-  $spritesheet: width height image $spritesheet-sprites
-  */
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
 /*
-  The provided mixins are intended to be used with the array-like variables
+The provided mixins are intended to be used with the array-like variables
 
-  .icon-home
-    @include sprite-width($icon-home)
+.icon-home {
+  @include sprite-width($icon-home);
+}
 
-  .icon-email
-    @include sprite($icon-email)
-  */
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
 /*
-  The `sprites` mixin generates identical output to the CSS template
-    but can be overridden inside of SASS
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
 
-  @include sprites($spritesheet-sprites)
-  */
+@include sprites($spritesheet-sprites);
+*/
 .language-list {
   position: absolute;
   display: none;
@@ -1027,8 +1033,8 @@ button[disabled] {
   margin: 0 auto;
   position: relative;
   width: 1000px;
-  overflow: hidden;
   background: #e0e0e0;
+  overflow: hidden;
 }
 
 .banner-item {
@@ -1093,7 +1099,7 @@ button[disabled] {
   float: left;
   height: 38px;
   line-height: 38px;
-  padding: 0 51px;
+  padding: 0 21px;
   text-align: center;
   cursor: pointer;
   position: relative;
@@ -1239,8 +1245,8 @@ button[disabled] {
   opacity: 0;
   transition: all 0.35s ease-in-out;
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
 }
 
 .slot-game-one.active {
@@ -1265,10 +1271,9 @@ button[disabled] {
   position: relative;
   float: left;
   display: block;
-  height: 60px;
+  height: 66px;
   width: 182px;
-  margin-top: 93px;
-  padding: 7px 0;
+  margin-top: 87px;
 }
 
 .jackpot_loader .jackpot_loader_item .jackpot_loader_item_title {
@@ -1290,10 +1295,10 @@ button[disabled] {
 .jackpot_loader .jackpot_loader_item .jackpot_loader_item_name {
   font-size: 12px;
   color: #fff;
-  display: table-cell;
+  display: block;
   text-align: center;
   vertical-align: middle;
-  height: 25px;
+  padding-top: 19px;
   width: 174px;
 }
 
@@ -1331,7 +1336,8 @@ button[disabled] {
   display: block;
   text-align: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: -11px;
+  margin-bottom: 4px;
 }
 
 .jackpot_loader .jackpot_loader_item.special .jackpot_loader_item_amount {
