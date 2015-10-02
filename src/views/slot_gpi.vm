@@ -58,9 +58,9 @@
     <div class="slot-item">
         <img data-original="/static/images/game/${type}/$item.img">
         <div class="slot-item-btn">
-            <a class="slot-item-btn-begin game-begin" data-id="$item.id" href="/begin" data-i18n="slot.8"></a>
+            <a class="slot-item-btn-begin game-begin" data-id="$item.id" href="/begin" data-i18n="slot.8">立即游戏</a>
             #if($item.try)
-            <a class="slot-item-btn-try" data-id="$item.id" href="/begin" data-i18n="slot.9"></a>
+            <a class="slot-item-btn-try" data-id="$item.id" href="/begin" data-i18n="slot.9">试玩游戏</a>
             #end
             <a class="slot-item-btn-down" href="/down">客户端下载</a>
         </div>

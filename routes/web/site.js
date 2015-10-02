@@ -60,6 +60,31 @@ module.exports = function (app) {
         }));
     });
 
+    app.get('/slot_mgs', function (req, res) {
+        res.render('slot_mgs', _.extend({},app.locals.middle,{
+        }));
+    });
+
+    app.get('/slot_ttg', function (req, res) {
+        res.render('slot_ttg', _.extend({},app.locals.middle,{
+        }));
+    });
+
+    app.get('/slot_bs', function (req, res) {
+        res.render('slot_bs', _.extend({},app.locals.middle,{
+        }));
+    });
+
+    app.get('/slot_ctxm', function (req, res) {
+        res.render('slot_ctxm', _.extend({},app.locals.middle,{
+        }));
+    });
+
+    app.get('/slot_png', function (req, res) {
+        res.render('slot_png', _.extend({},app.locals.middle,{
+        }));
+    });
+
     app.get('/slot', function (req, res) {
         res.render('slot', _.extend({},app.locals.middle,{
 
@@ -100,6 +125,10 @@ module.exports = function (app) {
 
     app.get('/game', function (req, res) {
         res.render('game/game')
+    });
+
+    app.get('/test', function (req, res) {
+        res.render('test')
     });
 
     app.get('/error', function (req, res) {

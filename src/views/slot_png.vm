@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title data-i18n="base:title.slot"></title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    #set($header='slot')
+    <link rel="stylesheet" href="/static/css/slot.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+
+    #set($type="png")
+
+    #set($game1=
+    [{"name":"魔法5X","id":"199|5xmagic","try":true,"img":"W88-Slots-5xMagic_1.jpg"},{"name":"黑桃A","id":"99|aceofspades","try":true,"img":"W88-Slots-Ace-of-Spades_1.jpg"},{"name":"阿兹特克圣像","id":"243|aztecidols","try":true,"img":"W88-Slots-Aztec-Idols_1.jpg"},{"name":"斗庄家","id":"34|beatme","try":true,"img":"W88-Slots-Beat-Me_1.jpg"},{"name":"贝尔的财富","id":"105|belloffortune","try":true,"img":"W88-Slots-Bell-of-Fortune_1.jpg"},{"name":"21点","id":"52|blackjackmh","try":true,"img":"W88-Slots-BlackJack-MH_1.jpg"},{"name":"赌场Hold ‘Em游戏","id":"57|casinoholdem","try":true,"img":"W88-Slots-Casino-Hold%27em_3.jpg"},{"name":"猫和现金","id":"193|catsandcash","try":true,"img":"W88-Slots-Cats-and-Cash_1.jpg"},{"name":"喜庆中国年","id":"277|chinesenewyear","try":true,"img":"W88-Slots-Chinese-New-Year_1.jpg"},{"name":"警匪对决","id":"194|copsnrobbers","try":true,"img":"W88-Slots-Cops%27n%27Robbers_1.jpg"},{"name":"疯狂的奶牛","id":"284|crazycows","try":true,"img":"W88-Slots-Crazy-Cows_1.jpg"},{"name":"局末平分","id":"275|deucesandjoker","try":true,"img":"W88-Slots-Deuces-%26-Joker-MH_1.jpg"},{"name":"百搭2点","id":"270|deuceswild","try":true,"img":"W88-Slots-Deuces-Wild-MH_1.jpg"},{"name":"双重奖金","id":"274|doublebonus","try":true,"img":"W88-Slots-Double-Bonus-MH_1.jpg"},{"name":"双倍曝光21点专家","id":"54|doubleexposureblackjackmh","try":true,"img":"W88-Slots-Double-Exposure-BlackJack-MH_1.jpg"},{"name":"龙船","id":"238|dragonship","try":true,"img":"W88-Slots-Dragon-Ship_1.jpg"},{"name":"复活节彩蛋","id":"293|eastereggs","try":true,"img":"W88-Slots-Easter-Eggs_1.jpg"},{"name":"魔幻水晶","id":"259|enchantedcrystals","try":true,"img":"W88-Slots-Enchanted-Crystals_1.jpg"},{"name":"魔法草地","id":"225|enchantedmeadow","try":true,"img":"W88-Slots-Enchanted-Meadow_1.jpg"},{"name":"活力小怪物","id":"262|energoonz","try":true,"img":"W88-Slots-Energoonz_1.jpg"},{"name":"英式轮盘","id":"32|englishroulette","try":true,"img":"W88-Slots-English-Roulette_1.jpg"},{"name":"欧洲21点","id":"53|europeanblackjackmh","try":true,"img":"W88-Slots-European-BlackJack-MH_1.jpg"},{"name":"糖果爱消除","id":"286|gemix","try":true,"img":"W88-Slots-GEMiX_1.jpg"},{"name":"礼品店","id":"107|giftshop","try":true,"img":"W88-Slots-Gift-Shop_1.jpg"},{"name":"黄金杯2","id":"246|goldtrophy2","try":true,"img":"W88-Slots-Gold-Trophy-2_1.jpg"},{"name":"黄金进球","id":"108|goldengoal","try":true,"img":"W88-Slots-Golden-Goal_1.jpg"},{"name":"黄金传奇","id":"290|goldenlegend","try":true,"img":"W88-Slots-Golden-Legend.jpg"},{"name":"黄金门票","id":"285|goldenticket","try":true,"img":"W88-Slots-Golden-Ticket_1.jpg"},{"name":"神枪手","id":"244|gunslinger","try":true,"img":"W88-Slots-Gunslinger_1.jpg"},{"name":"爱尔兰黄金","id":"200|irishgold","try":true,"img":"W88-Slots-Irish-Gold_1.jpg"},{"name":"王牌扑克","id":"276|jackpotpoker","try":true,"img":"W88-Slots-Jackpot-Poker-MH_2.jpg"},{"name":"对J高手","id":"269|jacksorbetter","try":true,"img":"W88-Slots-Jacks-or-Better-MH_1.jpg"},{"name":"珠宝盒","id":"242|jewelbox","try":true,"img":"W88-Slots-Jewel-Box_1.jpg"},{"name":"小丑扑克","id":"271|jokerpoker","try":true,"img":"W88-Slots-Joker-Poker-MH_1.jpg"},{"name":"七海寻宝","id":"40|jollyroger","try":true,"img":"W88-Slots-Jolly-Roger_1.jpg"},{"name":"对K高手","id":"272|kingsorbetter","try":true,"img":"W88-Slots-Kings-or-Better-MH_1.jpg"},{"name":"财富女神","id":"278|ladyoffortune","try":true,"img":"W88-Slots-Lady-of-Fortune_1.jpg"},{"name":"小矮妖的埃及之旅","id":"251|leprechaungoesegypt","try":true,"img":"W88-Slots-Leprechaun-goes-Egypt_2.jpg"},{"name":"幸运钻石","id":"5|luckydiamonds","try":true,"img":"W88-Slots-Lucky-Diamonds_2.jpg"},{"name":"圣诞快乐","id":"288|merryxmas","try":true,"img":"W88-Slots-Merry-Xmas_1.jpg"},{"name":"迷你百家乐","id":"11|minibaccarat","try":true,"img":"W88-Slots-Mini-Baccarat_1.jpg"},{"name":"神秘小丑","id":"283|mysteryjoker","try":true,"img":"W88-Slots-Mystery-Joker_1.jpg"},{"name":"神话","id":"245|myth","try":true,"img":"W88-Slots-Myth_1.jpg"},{"name":"水果忍者","id":"253|ninjafruits","try":true,"img":"W88-Slots-Ninja-Fruits_1.jpg"},{"name":"珍珠湖","id":"241|pearllagoon","try":true,"img":"W88-Slots-Pearl-Lagoon_1.jpg"},{"name":"印度珍珠","id":"282|pearlsofindia","try":true,"img":"W88-Slots-Pearls-of-India_1.jpg"},{"name":"非洲掠影","id":"197|photosafari","try":true,"img":"W88-Slots-Photo-Safari_1.jpg"},{"name":"酷酷汽车","id":"291|pimped","try":true,"img":"W88-Slots-Pimped_1.jpg"},{"name":"太阳神财富","id":"237|richesofra","try":true,"img":"W88-Slots-Riches-of-RA_1.jpg"},{"name":"皇室化妆舞会","id":"298|masquerade","try":true,"img":"W88-Slots-Royal-Masquerade.jpg"},{"name":"涂鸦","id":"93|scratchahoy","try":true,"img":"W88-Slots-Scratch-Ahoy_1.jpg"},{"name":"单盘21点","id":"55|singledeckblackjackmh","try":true,"img":"W88-Slots-Single-Deck-BlackJack-MH_1.jpg"},{"name":"太空竞赛","id":"198|spacerace","try":true,"img":"W88-Slots-Space-Race_1.jpg"},{"name":"时速现金","id":"106|speedcash","try":true,"img":"W88-Slots-Speed-Cash_1.jpg"},{"name":"对十高手","id":"273|tensorbetter","try":true,"img":"W88-Slots-Tens-or-Better-MH_1.jpg"},{"name":"探索摩天楼","id":"287|towerquest","try":true,"img":"W88-Slots-Tower-Quest_1.jpg"},{"name":"三较大小","id":"235|triplechancehilo","try":true,"img":"W88-Slots-Triple-Chance-HiLo_1.jpg"},{"name":"狂野之血","id":"250|wildblood","try":true,"img":"W88-Slots-Wild-Blood_1.jpg"},{"name":"野生甜瓜","id":"4|wildmelon","try":true,"img":"W88-Slots-Wild-Melon_2.jpg"}]
+    )
+
+    #set($game2=
+    [{"name":"涂鸦","id":"93|scratchahoy","try":true,"img":"W88-Slots-Scratch-Ahoy_1.jpg"},{"name":"三较大小","id":"235|triplechancehilo","try":true,"img":"W88-Slots-Triple-Chance-HiLo_1.jpg"}]
+    )
+
+    #set($game3=
+    [{"name":"阿兹特克圣像","id":"243|aztecidols","try":true,"img":"W88-Slots-Aztec-Idols_1.jpg"},{"name":"贝尔的财富","id":"105|belloffortune","try":true,"img":"W88-Slots-Bell-of-Fortune_1.jpg"},{"name":"猫和现金","id":"193|catsandcash","try":true,"img":"W88-Slots-Cats-and-Cash_1.jpg"},{"name":"喜庆中国年","id":"277|chinesenewyear","try":true,"img":"W88-Slots-Chinese-New-Year_1.jpg"},{"name":"疯狂的奶牛","id":"284|crazycows","try":true,"img":"W88-Slots-Crazy-Cows_1.jpg"},{"name":"龙船","id":"238|dragonship","try":true,"img":"W88-Slots-Dragon-Ship_1.jpg"},{"name":"复活节彩蛋","id":"293|eastereggs","try":true,"img":"W88-Slots-Easter-Eggs_1.jpg"},{"name":"魔幻水晶","id":"259|enchantedcrystals","try":true,"img":"W88-Slots-Enchanted-Crystals_1.jpg"},{"name":"魔法草地","id":"225|enchantedmeadow","try":true,"img":"W88-Slots-Enchanted-Meadow_1.jpg"},{"name":"活力小怪物","id":"262|energoonz","try":true,"img":"W88-Slots-Energoonz_1.jpg"},{"name":"礼品店","id":"107|giftshop","try":true,"img":"W88-Slots-Gift-Shop_1.jpg"},{"name":"黄金杯2","id":"246|goldtrophy2","try":true,"img":"W88-Slots-Gold-Trophy-2_1.jpg"},{"name":"黄金进球","id":"108|goldengoal","try":true,"img":"W88-Slots-Golden-Goal_1.jpg"},{"name":"黄金传奇","id":"290|goldenlegend","try":true,"img":"W88-Slots-Golden-Legend.jpg"},{"name":"黄金门票","id":"285|goldenticket","try":true,"img":"W88-Slots-Golden-Ticket_1.jpg"},{"name":"神枪手","id":"244|gunslinger","try":true,"img":"W88-Slots-Gunslinger_1.jpg"},{"name":"珠宝盒","id":"242|jewelbox","try":true,"img":"W88-Slots-Jewel-Box_1.jpg"},{"name":"七海寻宝","id":"40|jollyroger","try":true,"img":"W88-Slots-Jolly-Roger_1.jpg"},{"name":"财富女神","id":"278|ladyoffortune","try":true,"img":"W88-Slots-Lady-of-Fortune_1.jpg"},{"name":"小矮妖的埃及之旅","id":"251|leprechaungoesegypt","try":true,"img":"W88-Slots-Leprechaun-goes-Egypt_2.jpg"},{"name":"圣诞快乐","id":"288|merryxmas","try":true,"img":"W88-Slots-Merry-Xmas_1.jpg"},{"name":"神话","id":"245|myth","try":true,"img":"W88-Slots-Myth_1.jpg"},{"name":"水果忍者","id":"253|ninjafruits","try":true,"img":"W88-Slots-Ninja-Fruits_1.jpg"},{"name":"珍珠湖","id":"241|pearllagoon","try":true,"img":"W88-Slots-Pearl-Lagoon_1.jpg"},{"name":"印度珍珠","id":"282|pearlsofindia","try":true,"img":"W88-Slots-Pearls-of-India_1.jpg"},{"name":"非洲掠影","id":"197|photosafari","try":true,"img":"W88-Slots-Photo-Safari_1.jpg"},{"name":"酷酷汽车","id":"291|pimped","try":true,"img":"W88-Slots-Pimped_1.jpg"},{"name":"太阳神财富","id":"237|richesofra","try":true,"img":"W88-Slots-Riches-of-RA_1.jpg"},{"name":"皇室化妆舞会","id":"298|masquerade","try":true,"img":"W88-Slots-Royal-Masquerade.jpg"},{"name":"太空竞赛","id":"198|spacerace","try":true,"img":"W88-Slots-Space-Race_1.jpg"},{"name":"探索摩天楼","id":"287|towerquest","try":true,"img":"W88-Slots-Tower-Quest_1.jpg"},{"name":"狂野之血","id":"250|wildblood","try":true,"img":"W88-Slots-Wild-Blood_1.jpg"}]
+    )
+
+    #set($game4=
+    [{"name":"局末平分","id":"275|deucesandjoker","try":true,"img":"W88-Slots-Deuces-%26-Joker-MH_1.jpg"},{"name":"百搭2点","id":"270|deuceswild","try":true,"img":"W88-Slots-Deuces-Wild-MH_1.jpg"},{"name":"双重奖金","id":"274|doublebonus","try":true,"img":"W88-Slots-Double-Bonus-MH_1.jpg"},{"name":"王牌扑克","id":"276|jackpotpoker","try":true,"img":"W88-Slots-Jackpot-Poker-MH_2.jpg"},{"name":"对J高手","id":"269|jacksorbetter","try":true,"img":"W88-Slots-Jacks-or-Better-MH_1.jpg"},{"name":"小丑扑克","id":"271|jokerpoker","try":true,"img":"W88-Slots-Joker-Poker-MH_1.jpg"},{"name":"对K高手","id":"272|kingsorbetter","try":true,"img":"W88-Slots-Kings-or-Better-MH_1.jpg"},{"name":"对十高手","id":"273|tensorbetter","try":true,"img":"W88-Slots-Tens-or-Better-MH_1.jpg"}]
+    )
+
+    #macro( game ,$game )
+    #foreach($item in $game)
+    <div class="slot-item">
+        <img data-original="/static/images/game/${type}/$item.img">
+        <div class="slot-item-btn">
+            <a class="slot-item-btn-begin game-begin" data-id="$item.id" href="/begin" data-i18n="slot.8">立即游戏</a>
+            #if($item.try)
+            <a class="slot-item-btn-try" data-id="$item.id" href="/begin" data-i18n="slot.9">试玩游戏</a>
+            #end
+            <a class="slot-item-btn-down" href="/down">客户端下载</a>
+        </div>
+        <div class="slot-item-name">$item.name</div>
+        <div class="slot-item-value" id="$item.id"></div>
+    </div>
+    #end
+    #end
+
+    #macro( gamelist ,$game, $active)
+    <div class="slot-game-one #if($active)active#end" #if($active)data-load="1"#end>
+        <div class="slot-game-main">
+            <div class="slot-game-main-con clearfix">
+                #game($game)
+            </div>
+        </div>
+    </div>
+    #end
+
+    <input type="hidden" id="token" value="$token">
+    <div class="cycle-slideshow" style="height: 366px;"
+            >
+        <div class="banner-item" style='background: url("/static/images/slot/slot_banner1.jpg") no-repeat center;'></div>
+        <div class="cycle-pager"></div>
+    </div>
+    <div class="slot-reward">
+        <div class="slot-container">
+            <div class="reward-text-con">
+                <div class="reward-text">总奖池已达</div>
+                <div class="slot-num-title" id="total-ticker">
+                    UPDATING
+                </div>
+            </div>
+            <div class="reward-text-img"></div>
+        </div>
+    </div>
+    <div class="slot-type">
+        <div class="slot-container clearfix $type">
+            <div class="slot-type-list active"><i></i><div>所有游戏</div></div>
+            <div class="slot-type-list"><i></i><div>特色游戏</div></div>
+            <div class="slot-type-list"><i></i><div>老虎机</div></div>
+            <div class="slot-type-list"><i></i><div>视频扑克</div></div>
+        </div>
+    </div>
+    <div class="slot-game">
+        <div class="slot-container">
+            <div class="slot-container-inner" id="slot-height" style="height: 2130px;">
+                #gamelist($game1,"active")
+                #gamelist($game2)
+                #gamelist($game3)
+                #gamelist($game4)
+                #gamelist($game5)
+                #gamelist($game6)
+                #gamelist($game7)
+                #gamelist($game8)
+                #gamelist($game9)
+            </div>
+        </div>
+    </div>
+
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script src="/static/plugin/jquery.lazyload/jquery.lazyload.js"></script>
+    <script src="/static/js/game/jackpot.js"></script>
+    <script src="/static/js/slot_slide.js"></script>
+    <script src="/static/js/slot_gpi.js"></script>
+    <script src="/static/js/slot_list.js"></script>
+
+</body>
+</html>

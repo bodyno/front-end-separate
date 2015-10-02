@@ -1,0 +1,150 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title data-i18n="base:title.slot"></title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    #set($header='slot')
+    <link rel="stylesheet" href="/static/css/slot.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+
+    #set($type="ctxm")
+
+    #set($game1=
+    [{"name":"热带古巴","id":"","try":true,"img":"Cubana_Tropicana.jpg"},{"name":"双倍奖金老虎机","id":"","try":true,"img":"W88-Slots-Double-Bonus-Slots.JPG"},{"name":"战东风","id":"","try":true,"img":"East-Wind-Battle.jpg"},{"name":"恐怖屋","id":"","try":true,"img":"House_Of_Scare.jpg"},{"name":"玛雅幸运之轮","id":"","try":true,"img":"W88-Slots-Maya-Wheel-of-Luck.jpg"},{"name":"幸运之夜","id":"","try":true,"img":"W88-Slots-Midnight-Lucky-Sky.jpg"},{"name":"不间断聚会","id":"","try":true,"img":"Non-Stop_Party.jpg"},{"name":"疯狂怪兽","id":"","try":true,"img":"W88-Slots-Pipezillas.jpg"},{"name":"啾啾老虎机","id":"","try":true,"img":"W88-Slots-Choo-Choo-Slots.jpg"},{"name":"卡拉OK明星老虎机","id":"","try":true,"img":"W88-Slots-Karaoke-Star.jpg"},{"name":"金印老虎机","id":"","try":true,"img":"W88-Slots-Golden-India.jpg"},{"name":"疯狂的老鼠","id":"","try":true,"img":"W88-Slots-Rock-The-Mouse.jpg"}]
+    )
+
+    #set($game2=
+    [{"name":"累积二十一点","id":"","try":true,"img":"Blackjack_Progressive.jpg"},{"name":"阿兹特克老虎机","id":"","try":true,"img":"Aztec_Slots.jpg"},{"name":"足球杯赛","id":"","try":true,"img":"Football_Cup.jpg"},{"name":"奇异赛车","id":"","try":true,"img":"Freaky_Cars.jpg"},{"name":"奇异狂野西部","id":"","try":true,"img":"Freaky_Wild_West.jpg"},{"name":"水果色拉老虎机","id":"","try":true,"img":"Fruit_Salad_Jackpot.jpg"},{"name":"魔罐","id":"","try":true,"img":"Magic_Pot.jpg"},{"name":"午夜派对","id":"","try":true,"img":"Party_Night.jpg"},{"name":"北极传说","id":"","try":true,"img":"Polar_Tale.jpg"},{"name":"星际强盗","id":"","try":true,"img":"Space_Robbers.jpg"},{"name":"夏日梦想","id":"","try":true,"img":"Summer_Dream.jpg"},{"name":"竞技场扑克","id":"","try":true,"img":"Coliseum_Poker.jpg"}]
+    )
+
+    #set($game3=
+    [{"name":"狂野大中华","id":"","try":true,"img":"China_MegaWild.jpg"},{"name":"热带古巴","id":"","try":true,"img":"Cubana_Tropicana.jpg"},{"name":"双倍奖金老虎机","id":"","try":true,"img":"W88-Slots-Double-Bonus-Slots.JPG"},{"name":"战东风","id":"","try":true,"img":"East-Wind-Battle.jpg"},{"name":"金条老虎机","id":"","try":true,"img":"Gold_in_Bars.jpg"},{"name":"热7老虎机","id":"","try":true,"img":"Hot_7s.jpg"},{"name":"玛雅幸运之轮","id":"","try":true,"img":"W88-Slots-Maya-Wheel-of-Luck.jpg"},{"name":"幸运之夜","id":"","try":true,"img":"W88-Slots-Midnight-Lucky-Sky.jpg"},{"name":"纽约黑帮","id":"","try":true,"img":"New_York_Gangs.jpg"},{"name":"午夜派对","id":"","try":true,"img":"Party_Night.jpg"},{"name":"疯狂怪兽","id":"","try":true,"img":"W88-Slots-Pipezillas.jpg"},{"name":"疯狂的老鼠","id":"","try":true,"img":"W88-Slots-Rock-The-Mouse.jpg"}]
+    )
+
+    #set($game4=
+    [{"name":"方程式刮刮乐","id":"","try":true,"img":"Formula_Scratch.jpg"},{"name":"怪兽刮刮乐","id":"","try":true,"img":"Monsters_Scratch.jpg"},{"name":"泰迪刮刮乐","id":"","try":true,"img":"Teddy_Scratch.jpg"},{"name":"累积二十一点","id":"","try":true,"img":"Blackjack_Progressive.jpg"},{"name":"奇异狂野西部","id":"","try":true,"img":"Freaky_Wild_West.jpg"},{"name":"水果色拉老虎机","id":"","try":true,"img":"Fruit_Salad_Jackpot.jpg"},{"name":"金条老虎机","id":"","try":true,"img":"Gold_in_Bars.jpg"},{"name":"热7老虎机","id":"","try":true,"img":"Hot_7s.jpg"},{"name":"纽约黑帮","id":"","try":true,"img":"New_York_Gangs.jpg"},{"name":"疯狂的老鼠","id":"","try":true,"img":"W88-Slots-Rock-The-Mouse.jpg"},{"name":"竞技场扑克","id":"","try":true,"img":"Coliseum_Poker.jpg"},{"name":"4线竞技场扑克","id":"","try":true,"img":"Coliseum_Poker_4-Line.jpg"},{"name":"10行竞技场扑克","id":"","try":true,"img":"Coliseum_Poker_10-Line.jpg"},{"name":"25行竞技场扑克","id":"","try":true,"img":"Coliseum_Poker_25-Line.jpg"},{"name":"50行竞技场扑克","id":"","try":true,"img":"Coliseum_Poker_50-Line.jpg"}]
+    )
+
+    #set($game5=
+    [{"name":"棒球刮刮乐","id":"","try":true,"img":"Basebull_Scratch.jpg"},{"name":"宾果刮刮乐","id":"","try":true,"img":"Bingo_Scratch.jpg"},{"name":"热带古巴刮刮乐","id":"","try":true,"img":"Cubana_Tropicana_Scratch.jpg"},{"name":"复活节盛宴刮刮乐","id":"","try":true,"img":"Easter_Feast_Scratch.jpg"},{"name":"方程式刮刮乐","id":"","try":true,"img":"Formula_Scratch.jpg"},{"name":"多彩猜豆","id":"","try":true,"img":"Freaky_Thimbles.jpg"},{"name":"黑帮财宝","id":"","try":true,"img":"Gangsters_Loot.jpg"},{"name":"黄金999.9","id":"","try":true,"img":"Gold_999.9.jpg"},{"name":"随手射击","id":"","try":true,"img":"Hockey_Potshot.jpg"},{"name":"即开彩票","id":"","try":true,"img":"Instant_Lotto.jpg"},{"name":"爱的日子刮刮乐","id":"","try":true,"img":"Jour_de_lAmour_Scratch.jpg"},{"name":"基诺","id":"","try":true,"img":"Keno.jpg"},{"name":"魔罐刮刮乐","id":"","try":true,"img":"Magic_Pot_Scratch.jpg"},{"name":"怪兽刮刮乐","id":"","try":true,"img":"Monsters_Scratch.jpg"},{"name":"月球刮刮乐","id":"","try":true,"img":"Moonapolis.jpg"},{"name":"足球刮刮乐","id":"","try":true,"img":"Soccer_Scratch.jpg"},{"name":"足球点射","id":"","try":true,"img":"Soccer_Shot.jpg"},{"name":"闪耀王后","id":"","try":true,"img":"Sparkle_Ladies.jpg"},{"name":"泰迪刮刮乐","id":"","try":true,"img":"Teddy_Scratch.jpg"}]
+    )
+
+    #set($game6=
+    [{"name":"百家乐","id":"","try":true,"img":"Baccarat.jpg"},{"name":"21点","id":"","try":true,"img":"Blackjack.jpg"},{"name":"经典21点","id":"","try":true,"img":"Blackjack_Classic.jpg"},{"name":"累积二十一点","id":"","try":true,"img":"Blackjack_Progressive.jpg"},{"name":"投降21点","id":"","try":true,"img":"Blackjack_Surrender.jpg"},{"name":"经典投降21点","id":"","try":true,"img":"Blackjack_Surrender_Classic.jpg"},{"name":"经典全亮二十一点","id":"","try":true,"img":"Face_Up_21_Blackjack.jpg"},{"name":"绿洲扑克","id":"","try":true,"img":"Oasis_Poker.jpg"},{"name":"牌九扑克","id":"","try":true,"img":"Pai_Gow_Poker.jpg"},{"name":"完美对子二十一点","id":"","try":true,"img":"Perfect_Pairs_Blackjack.jpg"},{"name":"英式二十一点","id":"","try":true,"img":"Pontoon.jpg"},{"name":"俄罗斯扑克","id":"","try":true,"img":"Russian_Poker.jpg"},{"name":"西班牙二十一点","id":"","try":true,"img":"Spanish_Blackjack.jpg"},{"name":"多座位百家乐","id":"","try":true,"img":"VIP-Baccarat.jpg"}]
+    )
+
+    #set($game7=
+    [{"name":"爱琴海群岛","id":"","try":true,"img":"Archipelago.jpg"},{"name":"亚特兰蒂斯潜水","id":"","try":true,"img":"Atlantis_Dive.jpg"},{"name":"阿兹特克老虎机","id":"","try":true,"img":"Aztec_Slots.jpg"},{"name":"生死战地老虎机","id":"","try":true,"img":"Battleground_Spins.jpg"},{"name":"狂野大中华","id":"","try":true,"img":"China_MegaWild.jpg"},{"name":"艳后宝藏","id":"","try":true,"img":"Cleopatra_Treasure.jpg"},{"name":"热带古巴","id":"","try":true,"img":"Cubana_Tropicana.jpg"},{"name":"双倍奖金老虎机","id":"","try":true,"img":"W88-Slots-Double-Bonus-Slots.JPG"},{"name":"战东风","id":"","try":true,"img":"East-Wind-Battle.jpg"},{"name":"复活节盛宴","id":"","try":true,"img":"Easter_Feast.jpg"},{"name":"农场老虎机","id":"","try":true,"img":"Farm_Slot.jpg"},{"name":"足球杯赛","id":"","try":true,"img":"Football_Cup.jpg"},{"name":"奇异土匪","id":"","try":true,"img":"Freaky_Bandits.jpg"},{"name":"奇异赛车","id":"","try":true,"img":"Freaky_Cars.jpg"},{"name":"奇异牛仔","id":"","try":true,"img":"Freaky_Cowboys.jpg"},{"name":"奇异水果","id":"","try":true,"img":"Freaky_Fruits.jpg"},{"name":"奇异体操馆","id":"","try":true,"img":"Freaky_Gym.jpg"},{"name":"奇异狂野西部","id":"","try":true,"img":"Freaky_Wild_West.jpg"},{"name":"3D奇异体操馆","id":"","try":true,"img":"Freaky_Wild_West_3D.jpg"},{"name":"水果色拉老虎机","id":"","try":true,"img":"Fruit_Salad_Jackpot.jpg"},{"name":"宝石与城市","id":"","try":true,"img":"Gems_and_the_City.jpg"},{"name":"圣诞财神爷","id":"","try":true,"img":"Generous_Santa.jpg"},{"name":"金条老虎机","id":"","try":true,"img":"Gold_in_Bars.jpg"},{"name":"热7老虎机","id":"","try":true,"img":"Hot_7s.jpg"},{"name":"恐怖屋","id":"","try":true,"img":"House_Of_Scare.jpg"},{"name":"魔罐","id":"","try":true,"img":"Magic_Pot.jpg"},{"name":"玛雅幸运之轮","id":"","try":true,"img":"W88-Slots-Maya-Wheel-of-Luck.jpg"},{"name":"墨西哥老虎机","id":"","try":true,"img":"Mexican_Slots.jpg"},{"name":"幸运之夜","id":"","try":true,"img":"W88-Slots-Midnight-Lucky-Sky.jpg"},{"name":"神秘老虎机","id":"","try":true,"img":"Mystic_Slots.jpg"},{"name":"纽约黑帮","id":"","try":true,"img":"New_York_Gangs.jpg"},{"name":"不间断聚会","id":"","try":true,"img":"Non-Stop_Party.jpg"},{"name":"奥林匹克老虎机","id":"","try":true,"img":"Olympic_Slots.jpg"},{"name":"午夜派对","id":"","try":true,"img":"Party_Night.jpg"},{"name":"疯狂怪兽","id":"","try":true,"img":"W88-Slots-Pipezillas.jpg"},{"name":"海盗老虎机","id":"","try":true,"img":"Pirate_Slots.jpg"},{"name":"北极传说","id":"","try":true,"img":"Polar_Tale.jpg"},{"name":"小鸡快跑老虎机","id":"","try":true,"img":"Run_Chicken_Run.jpg"},{"name":"星际强盗","id":"","try":true,"img":"Space_Robbers.jpg"},{"name":"旋转世界","id":"","try":true,"img":"Spin_the_World.jpg"},{"name":"夏日梦想","id":"","try":true,"img":"Summer_Dream.jpg"},{"name":"图腾探秘","id":"","try":true,"img":"Totem_Quest.jpg"},{"name":"吸血鬼杀手","id":"","try":true,"img":"Vampire_Slayers.jpg"},{"name":"世界杯足球老虎机","id":"","try":true,"img":"World-Cup_Soccer_Spins.jpg"},{"name":"啾啾老虎机","id":"","try":true,"img":"W88-Slots-Choo-Choo-Slots.jpg"},{"name":"卡拉OK明星老虎机","id":"","try":true,"img":"W88-Slots-Karaoke-Star.jpg"},{"name":"金印老虎机","id":"","try":true,"img":"W88-Slots-Golden-India.jpg"},{"name":"疯狂的老鼠","id":"","try":true,"img":"W88-Slots-Rock-The-Mouse.jpg"}]
+    )
+
+    #set($game8=
+    [{"name":"美式轮盘","id":"","try":true,"img":"American_Roulette.jpg"},{"name":"欧式轮盘","id":"","try":true,"img":"European_Roulette.jpg"},{"name":"轮盘赌专家","id":"","try":true,"img":"Roulette_Pro.jpg"},{"name":"骰宝","id":"","try":true,"img":"Sic_Bo.jpg"}]
+    )
+
+    #set($game9=
+    [{"name":"竞技场扑克","id":"","try":true,"img":"Coliseum_Poker.jpg"},{"name":"4线竞技场扑克","id":"","try":true,"img":"Coliseum_Poker_4-Line.jpg"},{"name":"10行竞技场扑克","id":"","try":true,"img":"Coliseum_Poker_10-Line.jpg"},{"name":"25行竞技场扑克","id":"","try":true,"img":"Coliseum_Poker_25-Line.jpg"},{"name":"50行竞技场扑克","id":"","try":true,"img":"Coliseum_Poker_50-Line.jpg"},{"name":"万能两点","id":"","try":true,"img":"Deuces_Wild.jpg"},{"name":"4线万能两点","id":"","try":true,"img":"Deuces_Wild_4-Line.jpg"},{"name":"10行万能两点","id":"","try":true,"img":"Deuces_Wild_10-Line.jpg"},{"name":"25行万能两点","id":"","try":true,"img":"Deuces_Wild_25-Line.jpg"},{"name":"50行万能两点","id":"","try":true,"img":"Deuces_Wild_50-Line.jpg"},{"name":"花牌和A","id":"","try":true,"img":"Face_the_Ace.jpg"},{"name":"4行花牌和A","id":"","try":true,"img":"Face_the_Ace_4-Line.jpg"},{"name":"10行花牌和A","id":"","try":true,"img":"Face_the_Ace_10-Line.jpg"},{"name":"25行花牌和A","id":"","try":true,"img":"Face_the_Ace_25-Line.jpg"},{"name":"50行花牌和A","id":"","try":true,"img":"Face_the_Ace_50-Line.jpg"},{"name":"五张A","id":"","try":true,"img":"Five_Aces.jpg"},{"name":"好过杰克","id":"","try":true,"img":"Jacks_or_Better.jpg"},{"name":"4线好过杰克","id":"","try":true,"img":"Jacks_or_Better_4-Line.jpg"},{"name":"10行好过杰克","id":"","try":true,"img":"Jacks_or_Better_10-Line.jpg"},{"name":"25行好过杰克","id":"","try":true,"img":"Jacks_or_Better_25-Line.jpg"},{"name":"50行好过杰克","id":"","try":true,"img":"Jacks_or_Better_50-Line.jpg"},{"name":"万能小丑","id":"","try":true,"img":"Joker_Wild.jpg"},{"name":"4线万能小丑","id":"","try":true,"img":"Joker_Wild_4-Line.jpg"},{"name":"10线万能小丑","id":"","try":true,"img":"Joker_Wild_10-Line.jpg"},{"name":"25线万能小丑","id":"","try":true,"img":"Joker_Wild_25-Line.jpg"},{"name":"50线万能小丑","id":"","try":true,"img":"Joker_Wild_50-Line.jpg"},{"name":"冲击波扑克","id":"","try":true,"img":"Shockwave_Poker.jpg"}]
+    )
+
+    #macro( game ,$game )
+    #foreach($item in $game)
+    <div class="slot-item">
+        <img data-original="/static/images/game/${type}/$item.img">
+        <div class="slot-item-btn">
+            <a class="slot-item-btn-begin game-begin" data-id="$item.id" href="/begin" data-i18n="slot.8">立即游戏</a>
+            #if($item.try)
+            <a class="slot-item-btn-try" data-id="$item.id" href="/begin" data-i18n="slot.9">试玩游戏</a>
+            #end
+            <a class="slot-item-btn-down" href="/down">客户端下载</a>
+        </div>
+        <div class="slot-item-name">$item.name</div>
+        <div class="slot-item-value" id="$item.id"></div>
+    </div>
+    #end
+    #end
+
+    #macro( gamelist ,$game, $active)
+    <div class="slot-game-one #if($active)active#end" #if($active)data-load="1"#end>
+        <div class="slot-game-main">
+            <div class="slot-game-main-con clearfix">
+                #game($game)
+            </div>
+        </div>
+    </div>
+    #end
+
+    <input type="hidden" id="token" value="$token">
+    <div class="cycle-slideshow" style="height: 366px;"
+            >
+        <div class="banner-item" style='background: url("/static/images/slot/slot_banner1.jpg") no-repeat center;'></div>
+        <div class="cycle-pager"></div>
+    </div>
+    <div class="slot-reward">
+        <div class="slot-container">
+            <div class="reward-text-con">
+                <div class="reward-text">总奖池已达</div>
+                <div class="slot-num-title" id="total-ticker">
+                    UPDATING
+                </div>
+            </div>
+            <div class="reward-text-img"></div>
+        </div>
+    </div>
+    <div id="jackpot_loader1" class="jackpot_loader">
+        <div class="container">
+            #set($list=
+            [{"name":"热7老虎机","amount":"RMB 8,292.12","img":"Hot_7s.jpg","id":"xc_hot7sslots"},{"name":"纽约黑帮","amount":"RMB 40,846.83","img":"New_York_Gangs.jpg","id":"xc_gangsterslots"},{"name":"疯狂的老鼠","amount":"RMB 10,073.02","img":"W88-Slots-Rock-The-Mouse.jpg","id":"xc_rockthemouseslots"},{"name":"竞技场扑克","amount":"RMB 5,487.27","img":"Coliseum_Poker.jpg","id":"xc_coliseum"},{"name":"4线竞技场扑克","amount":"RMB 5,487.27","img":"Coliseum_Poker_4-Line.jpg","id":"xc_coliseum4l"},{"name":"10行竞技场扑克","amount":"RMB 5,487.27","img":"Coliseum_Poker_10-Line.jpg","id":"xc_coliseum10l"},{"name":"25行竞技场扑克","amount":"RMB 5,487.27","img":"Coliseum_Poker_25-Line.jpg","id":"xc_coliseum25l"},{"name":"50行竞技场扑克","amount":"RMB 5,487.27","img":"Coliseum_Poker_50-Line.jpg","id":"xc_coliseum50l"},{"name":"方程式刮刮乐","amount":"RMB 14,534.04","img":"Formula_Scratch.jpg","id":"xc_formulascratch"},{"name":"怪兽刮刮乐","amount":"RMB 7,439.15","img":"Monsters_Scratch.jpg","id":"xc_monstersscratch"},{"name":"泰迪刮刮乐","amount":"RMB 1,137.26","img":"Teddy_Scratch.jpg","id":"xc_teddyscratch"},{"name":"累积二十一点","amount":"RMB 5,199.53","img":"Blackjack_Progressive.jpg","id":"xc_blackjack_progressive"},{"name":"奇异狂野西部","amount":"RMB 38,175.59","img":"Freaky_Wild_West.jpg","id":"xc_freakywildwestslots"},{"name":"水果色拉老虎机","amount":"RMB 8,490.43","img":"Fruit_Salad_Jackpot.jpg","id":"xc_fruitsaladjackpotslots"},{"name":"金条老虎机","amount":"RMB 27,603.63","img":"Gold_in_Bars.jpg","id":"xc_goldinbarsslots"}]
+            )
+            #foreach($item in $list)
+            <a class="jackpot_loader_item game-begin #if($velocityCount==3)special#end" href="#" data-id="$item.id">
+                <div class="jackpot_loader_item_title">累积大奖池</div>
+                <img src="/static/images/game/${type}/slide/${item.img}">
+                <div class="jackpot_loader_item_name">$item.name</div>
+                <div class="jackpot_loader_item_amount">$item.amount</div>
+            </a>
+            #end
+        </div>
+    </div>
+    <div class="slot-type">
+        <div class="slot-container clearfix $type">
+            <div class="slot-type-list active"><i></i><div>最新游戏</div></div>
+            <div class="slot-type-list"><i></i><div>特色游戏</div></div>
+            <div class="slot-type-list"><i></i><div>热门游戏</div></div>
+            <div class="slot-type-list"><i></i><div>累积奖池</div></div>
+            <div class="slot-type-list"><i></i><div>街机游戏</div></div>
+            <div class="slot-type-list"><i></i><div>卡牌游戏</div></div>
+            <div class="slot-type-list"><i></i><div>老虎机</div></div>
+            <div class="slot-type-list"><i></i><div>桌面游戏</div></div>
+            <div class="slot-type-list"><i></i><div>视频扑克</div></div>
+        </div>
+    </div>
+    <div class="slot-game">
+        <div class="slot-container">
+            <div class="slot-container-inner" id="slot-height" style="height: 450px;">
+                #gamelist($game1,"active")
+                #gamelist($game2)
+                #gamelist($game3)
+                #gamelist($game4)
+                #gamelist($game5)
+                #gamelist($game6)
+                #gamelist($game7)
+                #gamelist($game8)
+                #gamelist($game9)
+            </div>
+        </div>
+    </div>
+
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script src="/static/plugin/jquery.lazyload/jquery.lazyload.js"></script>
+    <script src="/static/js/game/jackpot.js"></script>
+    <script src="/static/js/slot_slide.js"></script>
+    <script src="/static/js/slot_gpi.js"></script>
+    <script src="/static/js/slot_list.js"></script>
+
+</body>
+</html>

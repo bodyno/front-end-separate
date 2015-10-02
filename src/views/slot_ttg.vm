@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title data-i18n="base:title.slot"></title>
+    <script>var translate_page='index';</script>
+    #parse('/common/top.vm')
+    #set($header='slot')
+    <link rel="stylesheet" href="/static/css/slot.css"/>
+</head>
+<body>
+    #parse('/common/old.vm')
+    #parse('/common/header.vm')
+
+    #set($type="ttg")
+
+    #set($game1=
+    [{"name":"战斗英雄","id":"1006|ActionHeroes|0","try":true,"img":"Action-Heroes.jpg"},{"name":"夺钞票 2","id":"1008|CashGrabII|0","try":true,"img":"CashGrabII.jpg"},{"name":"辣椒掘金","id":"533|ChilliGold|0","try":true,"img":"ChilliGold.jpg"},{"name":"金海豚","id":"1003|DolphinGold|0","try":true,"img":"DolphinGold.jpg"},{"name":"五个海盗","id":"1012|FivePirates|0","try":true,"img":"Five-Pirates.jpg"},{"name":"幸运赔付","id":"1000|FortunePays|0","try":true,"img":"FortunePays.jpg"},{"name":"疯狂的猴子","id":"1016|MadMonkey|0","try":true,"img":"MadMonkey.jpg"},{"name":"美猴园","id":"1014|MoreMonkeys|0","try":true,"img":"MoreMonkeys.jpg"},{"name":"炙热自由旋转","id":"1015|RedHotFreeSpins|0","try":true,"img":"W88-Slots-Red-Hot-Free-Spins.jpg"},{"name":"银狮","id":"1007|SilverLion|0","try":true,"img":"SilverLion.jpg"},{"name":"西游记","id":"1004|JourneyWest|0","try":true,"img":"TheJourneyWest.jpg"},{"name":"12 生肖野","id":"1002|ZodiacWilds|0","try":true,"img":"ZodiacWild.jpg"}]
+    )
+
+    #set($game2=
+    [{"name":"亚瑟的探索 II","id":"462|ArthursQuestIISlots|0","try":true,"img":"ArthursQuestII.jpg"},{"name":"夺钞票","id":"391|GenericSlots|21","try":true,"img":"CashGrab.jpg"},{"name":"地狱的钞票","id":"40|FiveReelSlots|0","try":true,"img":"CashInferno.jpg"},{"name":"德拉科的怒火","id":"475|DracosFire|0","try":true,"img":"DracosFire.jpg"},{"name":"幸运财富猫","id":"540|Fortune8Cat|0","try":true,"img":"Fortune8Cat.jpg"},{"name":"水果派对","id":"411|FruitParty|0","try":true,"img":"FruitParty.jpg"},{"name":"幸运女孩","id":"17|GenericSlots|11","try":true,"img":"LuckyCherry.jpg"},{"name":"决战将军","id":"483|ShogunShowdown|0","try":true,"img":"ShogunShowdown.jpg"},{"name":"罪恶的旋转","id":"474|SinfulSpinsSlots|0","try":true,"img":"SinfulSpins.jpg"},{"name":"神奇的宙斯","id":"486|ThunderingZeus|0","try":true,"img":"ThunderingZeus.jpg"},{"name":"吸血鬼和狼人","id":"480|VampiresVsWerewolves|0","try":true,"img":"VampiresvsWerewolves.jpg"},{"name":"木乃伊","id":"428|WildMummySlots|0","try":true,"img":"WildMummy.jpg"}]
+    )
+
+    #set($game3=
+    [{"name":"天使的触摸","id":"477|AngelsTouch|0","try":true,"img":"AngelsTouch.jpg"},{"name":"吧台铃铛","id":"473|BarsAndBellsSlots|0","try":true,"img":"BarsandBells.jpg"},{"name":"夺钞票 2","id":"1008|CashGrabII|0","try":true,"img":"CashGrabII.jpg"},{"name":"天龙8s","id":"423|Dragon8sSlots|0","try":true,"img":"Dragon8s.jpg"},{"name":"青蛙与苍蝇","id":"526|FrogsNFlies|0","try":true,"img":"FrogsnFlies.jpg"},{"name":"福之星","id":"1001|FuStar|0","try":true,"img":"FuStar.jpg"},{"name":"消失的佛寺","id":"484|LostTemple|0","try":true,"img":"LostTemple.jpg"},{"name":"疯狂的猴子","id":"1016|MadMonkey|0","try":true,"img":"MadMonkey.jpg"},{"name":"武士的公主","id":"515|SamuraiPrincess|0","try":true,"img":"SamuraiPrincess.jpg"},{"name":"塞伦盖提的钻石","id":"478|SerengetiDiamonds|0","try":true,"img":"SerengetiDiamonds.jpg"},{"name":"银狮","id":"1007|SilverLion|0","try":true,"img":"SilverLion.jpg"},{"name":"西游记","id":"1004|JourneyWest|0","try":true,"img":"TheJourneyWest.jpg"}]
+    )
+
+    #set($game4=
+    [{"name":"战斗英雄","id":"1006|ActionHeroes|0","try":true,"img":"Action-Heroes.jpg"},{"name":"亚马逊河大冒险","id":"414|AmazonAdventureSlots|0","try":true,"img":"AmazonAdventure.jpg"},{"name":"天使的触摸","id":"477|AngelsTouch|0","try":true,"img":"AngelsTouch.jpg"},{"name":"亚瑟的探索","id":"63|ArthursQuest|0","try":true,"img":"ArthursQuest.jpg"},{"name":"亚瑟的探索 II","id":"462|ArthursQuestIISlots|0","try":true,"img":"ArthursQuestII.jpg"},{"name":"吧台铃铛","id":"473|BarsAndBellsSlots|0","try":true,"img":"BarsandBells.jpg"},{"name":"爆破浆果","id":"444|BerryBlastSlots|0","try":true,"img":"BerryBlast.jpg"},{"name":"靶心","id":"64|BullsEyeBucks|0","try":true,"img":"BullseyeBucks.jpg"},{"name":"夺钞票","id":"391|GenericSlots|21","try":true,"img":"CashGrab.jpg"},{"name":"夺钞票 2","id":"1008|CashGrabII|0","try":true,"img":"CashGrabII.jpg"},{"name":"地狱的钞票","id":"40|FiveReelSlots|0","try":true,"img":"CashInferno.jpg"},{"name":"辣椒掘金","id":"533|ChilliGold|0","try":true,"img":"ChilliGold.jpg"},{"name":"金海豚","id":"1003|DolphinGold|0","try":true,"img":"DolphinGold.jpg"},{"name":"德拉科的怒火","id":"475|DracosFire|0","try":true,"img":"DracosFire.jpg"},{"name":"天龙8s","id":"423|Dragon8sSlots|0","try":true,"img":"Dragon8s.jpg"},{"name":"梦幻","id":"437|FanCashticSlots|0","try":true,"img":"Fancashtic.jpg"},{"name":"极速轨道","id":"10|FastTrack|0","try":true,"img":"FastTrack.jpg"},{"name":"五个海盗","id":"1012|FivePirates|0","try":true,"img":"Five-Pirates.jpg"},{"name":"幸运财富猫","id":"540|Fortune8Cat|0","try":true,"img":"Fortune8Cat.jpg"},{"name":"幸运赔付","id":"1000|FortunePays|0","try":true,"img":"FortunePays.jpg"},{"name":"算命先生","id":"446|FortuneTellerSlots|0","try":true,"img":"FortuneTeller.jpg"},{"name":"青蛙与苍蝇","id":"526|FrogsNFlies|0","try":true,"img":"FrogsnFlies.jpg"},{"name":"水果派对","id":"411|FruitParty|0","try":true,"img":"FruitParty.jpg"},{"name":"福之星","id":"1001|FuStar|0","try":true,"img":"FuStar.jpg"},{"name":"哇哦","id":"401|GoooalSlots|0","try":true,"img":"Goooal.jpg"},{"name":"一杆进洞","id":"18|HoleInOne|0","try":true,"img":"HoleInOne.jpg"},{"name":"好莱坞卷轴","id":"15|HollywoodReels|0","try":true,"img":"HollywoodReels.jpg"},{"name":"假日累积奖池","id":"413|JackpotHolidaySlots|0","try":true,"img":"JackpotHoliday.jpg"},{"name":"跳跃的黄金","id":"57|GenericSlots|10","try":true,"img":"JumpingforGold.jpg"},{"name":"赏金猎人","id":"440|KatLeeSlots|0","try":true,"img":"KatLeeBountyHunter.jpg"},{"name":"女人的魅力","id":"439|LadysCharmsSlots|0","try":true,"img":"LadysCharms.jpg"},{"name":"消失的佛寺","id":"484|LostTemple|0","try":true,"img":"LostTemple.jpg"},{"name":"幸运女孩","id":"17|GenericSlots|11","try":true,"img":"LuckyCherry.jpg"},{"name":"疯狂的猴子","id":"1016|MadMonkey|0","try":true,"img":"MadMonkey.jpg"},{"name":"神奇的树林","id":"452|MagicalGroveSlots|0","try":true,"img":"MagicalGrove.jpg"},{"name":"猴子的爱","id":"421|MonkeyLoveSlots|0","try":true,"img":"MonkeyLove.jpg"},{"name":"美猴园","id":"1014|MoreMonkeys|0","try":true,"img":"MoreMonkeys.jpg"},{"name":"海王星的黄金","id":"416|NeptunesGoldSlots|0","try":true,"img":"NeptunesGold.jpg"},{"name":"啤酒节","id":"65|Oktoberfest|0","try":true,"img":"Oktoberfest.jpg"},{"name":"海盗的宝藏","id":"9|GenericSlots|17","try":true,"img":"PirateTreasure.jpg"},{"name":"极地财富","id":"424|PolarRichesSlots|0","try":true,"img":"PolarRiches.jpg"},{"name":"黄金锅","id":"12|GenericSlots|19","try":true,"img":"PotOGold.jpg"},{"name":"炙热自由旋转","id":"1015|RedHotFreeSpins|0","try":true,"img":"W88-Slots-Red-Hot-Free-Spins.jpg"},{"name":"武士的公主","id":"515|SamuraiPrincess|0","try":true,"img":"SamuraiPrincess.jpg"},{"name":"塞伦盖提的钻石","id":"478|SerengetiDiamonds|0","try":true,"img":"SerengetiDiamonds.jpg"},{"name":"决战将军","id":"483|ShogunShowdown|0","try":true,"img":"ShogunShowdown.jpg"},{"name":"银狮","id":"1007|SilverLion|0","try":true,"img":"SilverLion.jpg"},{"name":"罪恶的旋转","id":"474|SinfulSpinsSlots|0","try":true,"img":"SinfulSpins.jpg"},{"name":"太空入侵者","id":"16|GenericSlots|20","try":true,"img":"SpaceInvasion.jpg"},{"name":"旋转赢家","id":"300|GenericSlots|18","try":true,"img":"SpinnWin.jpg"},{"name":"企鹅冲浪","id":"449|SurfsUpSlots|0","try":true,"img":"SurfsUp.jpg"},{"name":"出租车","id":"516|Taxi|0","try":true,"img":"Taxi.jpg"},{"name":"伟大的卡西尼","id":"453|TheGreatCasiniSlots|0","try":true,"img":"TheGreatCasini.jpg"},{"name":"西游记","id":"1004|JourneyWest|0","try":true,"img":"TheJourneyWest.jpg"},{"name":"神奇的宙斯","id":"486|ThunderingZeus|0","try":true,"img":"ThunderingZeus.jpg"},{"name":"旋转老虎机","id":"447|TBSpinNWinSlots|0","try":true,"img":"TripleBonusSpinnWin.jpg"},{"name":"吸血鬼和狼人","id":"480|VampiresVsWerewolves|0","try":true,"img":"VampiresvsWerewolves.jpg"},{"name":"胜利者","id":"468|VictoryRidgeSlots|0","try":true,"img":"VictoryRidge.jpg"},{"name":"威尼斯万岁","id":"438|VivaVeneziaSlots|0","try":true,"img":"VivaVenezia.jpg"},{"name":"木乃伊","id":"428|WildMummySlots|0","try":true,"img":"WildMummy.jpg"},{"name":"狂野西部","id":"11|GenericSlots|16","try":true,"img":"WildWest.jpg"},{"name":"12 生肖野","id":"1002|ZodiacWilds|0","try":true,"img":"ZodiacWild.jpg"}]
+    )
+
+    #set($game5=
+    [{"name":"百家乐","id":"13|Baccarat|0","try":true,"img":"Baccarat.jpg"},{"name":"二十一点","id":"5|Blackjack|0","try":true,"img":"Blackjack.jpg"},{"name":"加勒比海宝藏","id":"469|CaribbeanStudPoker|0","try":true,"img":"CaribbeanStudPoker.jpg"},{"name":"比大小","id":"34|CasinoWar|0","try":true,"img":"CasinoWar.jpg"},{"name":"掷骰子","id":"7|Craps|0","try":true,"img":"Craps.jpg"},{"name":"欧洲21点","id":"38|EuroBlackjack|0","try":true,"img":"EuropeanBlackjack.jpg"},{"name":"欧式轮盘","id":"23|EuroRoulette|0","try":true,"img":"EuropeanRoulette.jpg"},{"name":"21点幸运7","id":"25|Lucky7Blackjack|0","try":true,"img":"Lucky7Blackjack.jpg"},{"name":"无佣百家乐","id":"448|NoCommissionBaccarat|0","try":true,"img":"NoCommissionBaccarat.jpg"},{"name":"牌九扑克","id":"14|PaigowPoker|0","try":true,"img":"PaiGowPoker.jpg"},{"name":"完美对子21点","id":"454|PerfectPairsBlackjack|0","try":true,"img":"PerfectPairsBlackjack.jpg"},{"name":"红狗","id":"44|RedDog|0","try":true,"img":"RedDog.jpg"},{"name":"轮盘","id":"8|Roulette|0","try":true,"img":"Roulette.jpg"},{"name":"单投21点","id":"523|SideBetBlackjack|0","try":true,"img":"SidebetBlackjack.jpg"},{"name":"决斗21点","id":"58|SDBlackjack|0","try":true,"img":"SingleDeckBlackjack.jpg"},{"name":"德州扑克奖金","id":"457|TexasHoldEmBonus|0","try":true,"img":"TexasHoldEmBonus.jpg"},{"name":"三张牌扑克","id":"32|ThreeCardPoker|0","try":true,"img":"ThreeCardPoker.jpg"}]
+    )
+
+    #macro( game ,$game )
+    #foreach($item in $game)
+    <div class="slot-item">
+        <img data-original="/static/images/game/${type}/$item.img">
+        <div class="slot-item-btn">
+            <a class="slot-item-btn-begin game-begin" data-id="$item.id" href="/begin" data-i18n="slot.8">立即游戏</a>
+            #if($item.try)
+            <a class="slot-item-btn-try" data-id="$item.id" href="/begin" data-i18n="slot.9">试玩游戏</a>
+            #end
+            <a class="slot-item-btn-down" href="/down">客户端下载</a>
+        </div>
+        <div class="slot-item-name">$item.name</div>
+        <div class="slot-item-value" id="$item.id"></div>
+    </div>
+    #end
+    #end
+
+    #macro( gamelist ,$game, $active)
+    <div class="slot-game-one #if($active)active#end" #if($active)data-load="1"#end>
+        <div class="slot-game-main">
+            <div class="slot-game-main-con clearfix">
+                #game($game)
+            </div>
+        </div>
+    </div>
+    #end
+
+    <input type="hidden" id="token" value="$token">
+    <div class="cycle-slideshow" style="height: 366px;"
+            >
+        <div class="banner-item" style='background: url("/static/images/slot/slot_banner1.jpg") no-repeat center;'></div>
+        <div class="cycle-pager"></div>
+    </div>
+    <div class="slot-reward">
+        <div class="slot-container">
+            <div class="reward-text-con">
+                <div class="reward-text">总奖池已达</div>
+                <div class="slot-num-title" id="total-ticker">
+                    UPDATING
+                </div>
+            </div>
+            <div class="reward-text-img"></div>
+        </div>
+    </div>
+    <div class="slot-type">
+        <div class="slot-container clearfix $type">
+            <div class="slot-type-list active"><i></i><div>最新游戏</div></div>
+            <div class="slot-type-list"><i></i><div>特色游戏</div></div>
+            <div class="slot-type-list"><i></i><div>热门游戏</div></div>
+            <div class="slot-type-list"><i></i><div>老虎机</div></div>
+            <div class="slot-type-list"><i></i><div>桌面 & 卡牌</div></div>
+        </div>
+    </div>
+    <div class="slot-game">
+        <div class="slot-container">
+            <div class="slot-container-inner" id="slot-height" style="height: 450px;">
+                #gamelist($game1,"active")
+                #gamelist($game2)
+                #gamelist($game3)
+                #gamelist($game4)
+                #gamelist($game5)
+            </div>
+        </div>
+    </div>
+
+
+    #parse('/common/footer.vm')
+    #parse('/common/script.vm')
+    <script src="/static/plugin/jquery.lazyload/jquery.lazyload.js"></script>
+    <script src="/static/js/game/jackpot.js"></script>
+    <script src="/static/js/slot_slide.js"></script>
+    <script src="/static/js/slot_gpi.js"></script>
+    <script src="/static/js/slot_list.js"></script>
+
+</body>
+</html>

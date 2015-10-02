@@ -10,15 +10,16 @@ var routes = require('./routes/routes');//路由
 
 
 var app = express();
+var dir=process.env.dir||"src";
 
 //设置vm模版
-app.engine(".vm", vm({root: __dirname + "/src/views"}))
+app.engine(".vm", vm({root: __dirname + "/"+dir+"/views"}))
 app.set('view engine', 'vm')
-app.set("views", __dirname + "/src/views")
+app.set("views", __dirname + "/"+dir+"/views")
 
 app.use(logger('dev'));
 //是否使用favicon图标--不需要 页面已写
-//app.use(favicon(__dirname + '/src/static/images/favicon.ico'));
+app.use(favicon(__dirname + '/src/static/images/favicon.ico'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
@@ -27,7 +28,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-app.use(express.static(path.join(__dirname + "/src")));
+app.use(express.static(path.join(__dirname + "/"+dir+"")));
 
 //路由
 routes(app);

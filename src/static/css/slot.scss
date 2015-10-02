@@ -97,6 +97,21 @@
     z-index: 9;
   }
 }
+.ttg .slot-type-list{
+  padding: 0 71px;
+}
+.mgs .slot-type-list{
+  padding: 0 42px;
+}
+.bs .slot-type-list{
+  padding: 0 28px;
+}
+.ctxm .slot-type-list{
+  padding: 0 27px;
+}
+.png .slot-type-list{
+  padding: 0 97px;
+}
 .slot-game{
   background: url("../images/slot/slot_bg.jpg") no-repeat center top;
   padding-bottom: 50px;
@@ -127,7 +142,7 @@
   color:#fff;
   background: #000;
   background: rgba(0,0,0,.8);
-  line-height: 38px;
+  padding: 9px 0;
   font-size: 14px;
   z-index: 10;
   transition: all 0.35s ease;

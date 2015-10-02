@@ -57,9 +57,37 @@
                     </div>
                 </div>
                 <div class="slot-item" style="margin-right:0;">
-                    <img src="/static/images/slot/slot_img3.jpg">
+                    <a href="/slot_mgs"><img src="/static/images/slot/slot_img3.jpg"></a>
                     <div class="slot-item-text">
-                        <div class="slot-item-text1">BETSOFT</div>
+                        <div class="slot-item-text1">MGS</div>
+                    </div>
+                    <button type="button" class="slot-item-btn" disabled>敬请期待</button>
+                </div>
+                <div class="slot-item">
+                    <a href="/slot_ttg"><img src="/static/images/slot/slot_img3.jpg"></a>
+                    <div class="slot-item-text">
+                        <div class="slot-item-text1">TTG</div>
+                    </div>
+                    <button type="button" class="slot-item-btn" disabled>敬请期待</button>
+                </div>
+                <div class="slot-item">
+                    <a href="/slot_bs"><img src="/static/images/slot/slot_img3.jpg"></a>
+                    <div class="slot-item-text">
+                        <div class="slot-item-text1">BS</div>
+                    </div>
+                    <button type="button" class="slot-item-btn" disabled>敬请期待</button>
+                </div>
+                <div class="slot-item" style="margin-right:0;">
+                    <a href="/slot_ctxm"><img src="/static/images/slot/slot_img3.jpg"></a>
+                    <div class="slot-item-text">
+                        <div class="slot-item-text1">CTXM</div>
+                    </div>
+                    <button type="button" class="slot-item-btn" disabled>敬请期待</button>
+                </div>
+                <div class="slot-item">
+                    <a href="/slot_png"><img src="/static/images/slot/slot_img3.jpg"></a>
+                    <div class="slot-item-text">
+                        <div class="slot-item-text1">PNG</div>
                     </div>
                     <button type="button" class="slot-item-btn" disabled>敬请期待</button>
                 </div>

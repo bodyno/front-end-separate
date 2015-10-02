@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -399,32 +398,35 @@ th {
 }
 
 /*
-  SASS variables are information about icon's compiled state, stored under its original file name
+SCSS variables are information about icon's compiled state, stored under its original file name
 
-  .icon-home
-    width: $icon-home-width
+.icon-home {
+  width: $icon-home-width;
+}
 
-  The large array-like variables contain all information about a single icon
-  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
 
-  At the bottom of this section, we provide information about the spritesheet itself
-  $spritesheet: width height image $spritesheet-sprites
-  */
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
 /*
-  The provided mixins are intended to be used with the array-like variables
+The provided mixins are intended to be used with the array-like variables
 
-  .icon-home
-    @include sprite-width($icon-home)
+.icon-home {
+  @include sprite-width($icon-home);
+}
 
-  .icon-email
-    @include sprite($icon-email)
-  */
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
 /*
-  The `sprites` mixin generates identical output to the CSS template
-    but can be overridden inside of SASS
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
 
-  @include sprites($spritesheet-sprites)
-  */
+@include sprites($spritesheet-sprites);
+*/
 ul, ol {
   list-style: none;
   margin: 0;
@@ -478,7 +480,6 @@ a:link, a:hover {
   margin-right: 0;
 }
 
-/*轮播 */
 .cycle-pager {
   width: 100%;
   margin: auto;
@@ -529,7 +530,6 @@ a:link, a:hover {
   margin-top: 10px;
 }
 
-/*低版本浏览器 */
 .browser-updatetips {
   text-align: center;
   background: #00ce98;
@@ -557,32 +557,35 @@ button[disabled] {
 }
 
 /*
-  SASS variables are information about icon's compiled state, stored under its original file name
+SCSS variables are information about icon's compiled state, stored under its original file name
 
-  .icon-home
-    width: $icon-home-width
+.icon-home {
+  width: $icon-home-width;
+}
 
-  The large array-like variables contain all information about a single icon
-  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
 
-  At the bottom of this section, we provide information about the spritesheet itself
-  $spritesheet: width height image $spritesheet-sprites
-  */
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
 /*
-  The provided mixins are intended to be used with the array-like variables
+The provided mixins are intended to be used with the array-like variables
 
-  .icon-home
-    @include sprite-width($icon-home)
+.icon-home {
+  @include sprite-width($icon-home);
+}
 
-  .icon-email
-    @include sprite($icon-email)
-  */
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
 /*
-  The `sprites` mixin generates identical output to the CSS template
-    but can be overridden inside of SASS
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
 
-  @include sprites($spritesheet-sprites)
-  */
+@include sprites($spritesheet-sprites);
+*/
 .language-list {
   position: absolute;
   display: none;
@@ -821,19 +824,19 @@ button[disabled] {
 }
 
 .header-text::-webkit-input-placeholder {
-  color: #b1c3c0;
+  color: #e4e5e5;
 }
 
 .header-text:-moz-placeholder {
-  color: #b1c3c0;
+  color: #e4e5e5;
 }
 
 .header-text::-moz-placeholder {
-  color: #b1c3c0;
+  color: #e4e5e5;
 }
 
 .header-text:-ms-input-placeholder {
-  color: #b1c3c0;
+  color: #e4e5e5;
 }
 
 .header-text {

@@ -8,12 +8,12 @@ ul, ol {
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   font-weight: normal;
 }
 
-button,input,textarea,select {
+button, input, textarea, select {
   outline: none;
 }
 
@@ -45,7 +45,7 @@ a {
   outline: none;
 }
 
-a:link,a:hover {
+a:link, a:hover {
   text-decoration: none;
 }
 
@@ -53,7 +53,7 @@ a:link,a:hover {
   margin-right: 0;
 }
 
-/*轮播 */
+
 .cycle-pager {
   width: 100%;
   margin: auto;
@@ -96,7 +96,7 @@ a:link,a:hover {
   margin-top: 10px;
 }
 
-/*低版本浏览器 */
+
 .browser-updatetips {
   text-align: center;
   background: lighten($primary, 10%);

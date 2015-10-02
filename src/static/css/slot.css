@@ -481,7 +481,6 @@ a:link, a:hover {
   margin-right: 0;
 }
 
-/*轮播 */
 .cycle-pager {
   width: 100%;
   margin: auto;
@@ -532,7 +531,6 @@ a:link, a:hover {
   margin-top: 10px;
 }
 
-/*低版本浏览器 */
 .browser-updatetips {
   text-align: center;
   background: #00ce98;
@@ -827,19 +825,19 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .header-text::-webkit-input-placeholder {
-  color: #b1c3c0;
+  color: #e4e5e5;
 }
 
 .header-text:-moz-placeholder {
-  color: #b1c3c0;
+  color: #e4e5e5;
 }
 
 .header-text::-moz-placeholder {
-  color: #b1c3c0;
+  color: #e4e5e5;
 }
 
 .header-text:-ms-input-placeholder {
-  color: #b1c3c0;
+  color: #e4e5e5;
 }
 
 .header-text {
@@ -1136,6 +1134,26 @@ The `sprites` mixin generates identical output to the CSS template
   z-index: 9;
 }
 
+.ttg .slot-type-list {
+  padding: 0 71px;
+}
+
+.mgs .slot-type-list {
+  padding: 0 42px;
+}
+
+.bs .slot-type-list {
+  padding: 0 28px;
+}
+
+.ctxm .slot-type-list {
+  padding: 0 27px;
+}
+
+.png .slot-type-list {
+  padding: 0 97px;
+}
+
 .slot-game {
   background: url("../images/slot/slot_bg.jpg") no-repeat center top;
   padding-bottom: 50px;
@@ -1170,7 +1188,7 @@ The `sprites` mixin generates identical output to the CSS template
   color: #fff;
   background: #000;
   background: rgba(0, 0, 0, 0.8);
-  line-height: 38px;
+  padding: 9px 0;
   font-size: 14px;
   z-index: 10;
   transition: all 0.35s ease;
