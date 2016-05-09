@@ -1,8 +1,8 @@
 module.exports = {
-    deploy: {
-        expand: true,
-        cwd: 'dist/views',
-        src: '**/*.vm',
-        dest: 'dist/views'
-    }
+  build: {
+    expand: true,
+    cwd: 'dist/views',
+    src: '**/*.html',
+    dest: 'dist/views'
+  }
 }

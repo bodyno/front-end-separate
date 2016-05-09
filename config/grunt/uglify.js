@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     options:{
         preserveComments:false
@@ -7,14 +5,16 @@ module.exports = {
     dist: {
         files: [{
             expand: true,
-            cwd: '<%=yo.dist%>/static/js/',
+            cwd: '<%=yo.dist%>/static/scripts/',
             src: '**/*.js',
-            dest: '<%=yo.dist%>/static/js/'
-        },{
+            dest: '<%=yo.dist%>/static/scripts/'
+        }
+        ,{
             expand: true,
             cwd: '<%=yo.dist%>/static/plugin/',
             src: '**/*.js',
             dest: '<%=yo.dist%>/static/plugin/'
-        }]
+        }
+        ]
     }
 };

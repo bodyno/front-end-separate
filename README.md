@@ -1,48 +1,84 @@
-# express-velocity-front-end
+# front-end-separate
 
-##基于express和grunt的前后端分离框架:+1::+1::+1:
+一个前后端分离的脚手架工具（自主研发）
 
-模版基于java-velocity模板引擎
+所有静态资源都md5全并压缩打包,css,js,img,html
 
-express为路由提供服务
+已在生产环境验证
 
-项目中src为原代码文件夹，dist为输出文件夹
+基于express和grunt的前后端分离框架:+1::+1::+1:
 
-开发使用src，线上使用dist，并且支持一键cdn部署，加速你的项目
+模板引擎使用的是nunjucks，好处是可以实现模版继承，又不像jade一样把html标签都简化了
 
-项目启动时，修改任何服务器代码，可以实现自动重启--基于nodemon
+express提供路由服务
 
-支持sass(已从less迁移到sass)，sass精灵小图片
+项目中app为原代码文件（开发用），dist为打包后的文件（用于线上）
+
+开发使用app，线上使用dist，支持一键cdn部署，加速你的项目
+
+项目启动时，修改任何express代码，可以实现自动重启--基于nodemon
+
+支持sass图片精灵（自动打包精灵图片，再也不用手动去拼凑了）
 
 基于grunt md5 打包合并
 
-新增html已经压缩成一行
+线上输出的html已经压缩成一行（让你的代码更有Geeker范）
 
 ###怎么使用:
 
-首先 clone 代码
+clone 代码
 
-然后启动命令行工具
+启动命令行:
 
-依次输入下列指命
+如果没有安装grunt，请先全局安装grunt
+```bash
+$ npm i grunt-cli -g
+```
+安装npm包(可能需要一段时间，请耐心等待)
 
 ```bash
-npm install
-bower-installer
-grunt copy:vendor
-grunt
+$ npm i
 ```
 
-推荐一个这个bower工具[bower-installer](https://github.com/blittle/bower-installer)非常好用，只下载依赖的文件，其余的都不会存在项目中
+开发模式(可以打开浏览器localhost:3001开始开发，端口配置文件里可以更改)
 
-浏览器输入localhost,你就可以看到漂亮的页面了
+```bash
+$ grunt
+```
+
+打包
+
+```bash
+$ grunt build
+```
+打包成CDN模式(config/config.js中可配置cdn路径)
+
+```bash
+$ grunt buildCdn
+```
+
+browserSync(可以实现更改静态资源自动刷新了)
+
+```bash
+$ grunt serve
+```
+
+浏览器输入localhost:3001,你就可以看到漂亮的页面了
 
 打包命令 grunt build  会生成dist文件夹，里面可以看到js、css都加了md5缀
 
-###如果大家喜欢的话，请点一下star并且follow一下本人，这是对本人最大的支持
+tip:scss推荐用Webstorm自带的File watch功能，非常方便（安装node-sass即可）
 
-###我会继续完善这个项目的，并一直维护下去，如果有任何问题，欢迎在issues里面提出:wink:
+-关于图片精灵
 
-###感谢大家支持!
+$ grunt sprite 执行即可得到精灵图片，如需配置请去config/grunt/sprite.js下配置更多的图片精灵
 
-###——Nobody:point_up::point_up::point_up:
+在scss中引用@import "sprite" 样式中写如:@include sprite($index_bg); 即可使用;
+
+如果大家喜欢的话，请点一下star此项目或follow一下本人，即是对本人最大的支持
+
+我会继续完善这个项目的，并一直维护下去，如果有任何问题，欢迎在issues里面提出:wink:
+
+感谢大家支持!
+
+——Nobody:point_up::point_up::point_up:

@@ -1,9 +1,0 @@
-<!--[if lt IE 9]>
-    <div class="browser-updatetips">
-        <div class="container">
-            <div class="mw" data-i18n="[html]base:old">
-            </div>
-        </div>
-    </div>
-    <![endif]-->
-<input type="hidden" id="tran-status" data-i18n="[data-id]base:test">
