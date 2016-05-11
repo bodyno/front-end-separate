@@ -50,10 +50,11 @@ $ npm i
 $ grunt
 ```
 
-打包
+打包并运行打包后的代码
 
 ```bash
 $ grunt build
+$ npm run prod
 ```
 打包成CDN模式(config/config.js中可配置cdn路径)
 
